@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "antisolarblocks:block/duckweeds"
+      },
+      {
+        "model": "antisolarblocks:block/duckweeds",
+        "y": 90
+      },
+      {
+        "model": "antisolarblocks:block/duckweeds",
+        "y": 180
+      },
+      {
+        "model": "antisolarblocks:block/duckweeds",
+        "y": 270
+      }
+    ]
+  }
+}

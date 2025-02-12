@@ -1,0 +1,6 @@
+{
+  "parent": "antisolarblocks:block/template_tube_side",
+  "textures": {
+    "wall": "antisolarblocks:block/small_forsythia_log_side"
+  }
+}

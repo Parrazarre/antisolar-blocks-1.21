@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "antisolarblocks:block/satin_spar_gypsum_crystal"
+  }
+}

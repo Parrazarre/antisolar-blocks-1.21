@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "antisolarblocks:block/giant_pinecone_block_south",
+    "side": "antisolarblocks:block/giant_pinecone_block",
+    "top": "antisolarblocks:block/giant_pinecone_block"
+  }
+}

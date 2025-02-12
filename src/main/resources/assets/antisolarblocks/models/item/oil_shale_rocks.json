@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "antisolarblocks:block/oil_shale_rocks_0"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "antisolarblocks:block/oil_shale_rocks_1"
+  }
+}

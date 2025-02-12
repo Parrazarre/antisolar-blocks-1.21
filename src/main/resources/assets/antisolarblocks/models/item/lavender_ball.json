@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "antisolarblocks:item/lavender",
+    "layer1": "antisolarblocks:item/lavender_overlay"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "antisolarblocks:item/weavers_broom",
+    "layer1": "antisolarblocks:item/weavers_broom_overlay"
+  }
+}

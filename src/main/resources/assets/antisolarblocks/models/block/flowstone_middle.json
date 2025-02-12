@@ -1,0 +1,32 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "antisolarblocks:block/flowstone",
+		"1": "antisolarblocks:block/flowstone_extra",
+		"particle": "antisolarblocks:block/flowstone"
+	},
+	"elements": [
+		{
+			"from": [4, 0, 4],
+			"to": [12, 16, 12],
+			"faces": {
+				"north": {"uv": [0, 0, 8, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 8, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 8, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 8, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 8, 8], "texture": "#0"},
+				"down": {"uv": [0, 0, 8, 8], "texture": "#0"}
+			}
+		},
+		{
+			"from": [4.05, -15.95, 4.05],
+			"to": [11.95, -0.05, 11.95],
+			"faces": {
+				"north": {"uv": [0, 0, 8, 16], "texture": "#1"},
+				"east": {"uv": [0, 0, 8, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 8, 16], "texture": "#1"},
+				"west": {"uv": [0, 0, 8, 16], "texture": "#1"}
+			}
+		}
+	]
+}

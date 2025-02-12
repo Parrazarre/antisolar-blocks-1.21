@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "antisolarblocks:block/oil_shale_rocks_0"
+      }
+    ,
+      {
+        "model": "antisolarblocks:block/oil_shale_rocks_1"
+      },
+      {
+        "model": "antisolarblocks:block/oil_shale_rocks_0",
+        "y": 180
+      }
+    ,
+      {
+        "model": "antisolarblocks:block/oil_shale_rocks_1",
+        "y": 180
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "antisolarblocks:block/anorthite_feldspar_rocks_0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "antisolarblocks:block/cattails_bottom"
+    },
+    "half=upper": {
+      "model": "antisolarblocks:block/cattails_top"
+    }
+  }
+}

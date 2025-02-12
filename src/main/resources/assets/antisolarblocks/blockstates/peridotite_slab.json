@@ -1,0 +1,86 @@
+{
+  "variants": {
+    "type=bottom":
+      {
+        "model": "antisolarblocks:block/peridotite_slab"
+      },
+    "type=double": [
+      {
+        "model": "antisolarblocks:block/peridotite"
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "x": 90
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "x": 180
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "x": 270
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "y": 90
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "x": 180,
+        "y": 90
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "x": 270,
+        "y": 90
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "y": 180
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "x": 90,
+        "y": 180
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "x": 180,
+        "y": 180
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "x": 270,
+        "y": 180
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "y": 270
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "x": 90,
+        "y": 270
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "x": 180,
+        "y": 270
+      },
+      {
+        "model": "antisolarblocks:block/peridotite",
+        "x": 270,
+        "y": 270
+      }
+    ],
+    "type=top":
+      {
+        "model": "antisolarblocks:block/peridotite_slab_top"
+      }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "variants": {
+    "facing=down": [{
+      "model": "antisolarblocks:block/satin_spar_gypsum_crystal",
+      "x": 180
+    },
+      {
+      "model": "antisolarblocks:block/satin_spar_gypsum_crystal_2",
+      "x": 180
+    }],
+    "facing=east": [{
+      "model": "antisolarblocks:block/satin_spar_gypsum_crystal",
+      "x": 90,
+      "y": 90
+    },
+      {
+        "model": "antisolarblocks:block/satin_spar_gypsum_crystal_2",
+        "x": 90,
+        "y": 90
+      }],
+    "facing=north": [{
+      "model": "antisolarblocks:block/satin_spar_gypsum_crystal",
+      "x": 90
+    },
+      {
+        "model": "antisolarblocks:block/satin_spar_gypsum_crystal_2",
+        "x": 90
+      }],
+    "facing=south": [{
+      "model": "antisolarblocks:block/satin_spar_gypsum_crystal",
+      "x": 90,
+      "y": 180
+    },
+      {
+        "model": "antisolarblocks:block/satin_spar_gypsum_crystal_2",
+        "x": 90,
+        "y": 180
+      }],
+    "facing=up": [{
+      "model": "antisolarblocks:block/satin_spar_gypsum_crystal"
+    },
+      {
+        "model": "antisolarblocks:block/satin_spar_gypsum_crystal_2"
+      }],
+    "facing=west": [{
+      "model": "antisolarblocks:block/satin_spar_gypsum_crystal",
+      "x": 90,
+      "y": 270
+    },
+      {
+        "model": "antisolarblocks:block/satin_spar_gypsum_crystal_2",
+        "x": 90,
+        "y": 270
+      }]
+  }
+}

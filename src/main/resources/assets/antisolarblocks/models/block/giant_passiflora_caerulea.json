@@ -1,0 +1,8 @@
+{
+  "parent": "antisolarblocks:block/passiflora_template",
+  "textures": {
+    "pistil": "antisolarblocks:block/giant_passiflora_caerulea_pistil",
+    "petals": "antisolarblocks:block/giant_passiflora_caerulea_petals",
+    "corona": "antisolarblocks:block/giant_passiflora_caerulea_corona"
+  }
+}

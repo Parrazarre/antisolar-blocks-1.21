@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/cube_column_horizontal",
+	"textures": {
+		"end": "antisolarblocks:block/giant_pinecone_peduncle",
+		"side": "antisolarblocks:block/giant_pinecone_block"
+	}
+}

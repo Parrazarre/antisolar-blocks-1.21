@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "thickness=base": {
+      "model": "antisolarblocks:block/flowstone_base"
+    },
+    "thickness=frustum": {
+      "model": "antisolarblocks:block/flowstone_frustum"
+    },
+    "thickness=middle": {
+      "model": "antisolarblocks:block/flowstone_middle"
+    },
+    "thickness=tip": {
+      "model": "antisolarblocks:block/flowstone_tip"
+    }
+  }
+}

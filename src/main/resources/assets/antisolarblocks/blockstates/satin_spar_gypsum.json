@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [{
+      "model": "antisolarblocks:block/satin_spar_gypsum"
+    },
+      {
+      "model": "antisolarblocks:block/satin_spar_gypsum_2"
+    }]
+  }
+}

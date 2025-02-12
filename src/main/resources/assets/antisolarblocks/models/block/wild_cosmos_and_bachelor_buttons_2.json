@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/flowerbed_2",
+  "textures": {
+    "flowerbed": "antisolarblocks:block/wild_cosmos_and_bachelor_buttons",
+    "stem": "antisolarblocks:block/wild_cosmos_and_bachelor_buttons_stem"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "antisolarblocks:block/opaque_door_top_left",
+  "textures": {
+    "bottom": "antisolarblocks:block/yew_door_bottom",
+    "top": "antisolarblocks:block/yew_door_top"
+  }
+}

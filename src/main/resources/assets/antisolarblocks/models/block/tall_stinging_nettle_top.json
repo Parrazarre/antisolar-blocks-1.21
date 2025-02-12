@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/tinted_cross",
+  "textures": {
+    "cross": "antisolarblocks:block/tall_stinging_nettle_top"
+  }
+}

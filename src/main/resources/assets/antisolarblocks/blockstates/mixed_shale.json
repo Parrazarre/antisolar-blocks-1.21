@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "": [{
+        "model": "antisolarblocks:block/mixed_shale_0"
+      }
+    ,
+      {
+        "model": "antisolarblocks:block/mixed_shale_1"
+      }
+    ,
+      {
+        "model": "antisolarblocks:block/mixed_shale_2"
+      }
+    ,
+      {
+        "model": "antisolarblocks:block/mixed_shale_3"
+      }
+    ,
+      {
+        "model": "antisolarblocks:block/mixed_shale_4"
+      }
+    ,
+      {
+        "model": "antisolarblocks:block/mixed_shale_5"
+      }]
+  }
+}

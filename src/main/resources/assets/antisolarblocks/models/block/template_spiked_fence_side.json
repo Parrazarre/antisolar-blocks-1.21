@@ -1,0 +1,31 @@
+{
+	"textures": {
+		"particle": "#fence"
+	},
+	"elements": [
+		{
+			"name": "wall",
+			"from": [8, 0, 0],
+			"to": [8, 12, 8],
+			"faces": {
+				"north": {"uv": [8, 4, 8, 16], "texture": "#fence", "cullface": "north"},
+				"east": {"uv": [8, 4, 16, 16], "texture": "#fence"},
+				"west": {"uv": [0, 4, 8, 16], "texture": "#fence"},
+				"up": {"uv": [8, 0, 8, 8], "texture": "#fence"},
+				"down": {"uv": [8, 8, 8, 16], "texture": "#fence", "cullface": "down"}
+			}
+		},
+		{
+			"from": [8, 12, 0],
+			"to": [8, 16, 8],
+			"faces": {
+				"north": {"uv": [0, 0, 0, 4], "texture": "#extra"},
+				"east": {"uv": [8, 12, 16, 16], "texture": "#extra"},
+				"south": {"uv": [0, 0, 0, 4], "texture": "#extra"},
+				"west": {"uv": [0, 12, 8, 16], "texture": "#extra"},
+				"up": {"uv": [0, 8, 0, 0], "texture": "#extra"},
+				"down": {"uv": [0, 0, 0, 8], "texture": "#extra"}
+			}
+		}
+	]
+}

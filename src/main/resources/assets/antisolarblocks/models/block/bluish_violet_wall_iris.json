@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "antisolarblocks:block/bluish_violet_wall_iris"
+  }
+}

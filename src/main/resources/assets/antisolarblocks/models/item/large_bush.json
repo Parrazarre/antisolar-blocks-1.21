@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "antisolarblocks:item/large_bush_item",
+    "layer1": "antisolarblocks:item/large_icon"
+  }
+}

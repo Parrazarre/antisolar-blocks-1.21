@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "antisolarblocks:block/taller_grass_bottom"
+    },
+    "half=upper": {
+      "model": "antisolarblocks:block/taller_grass"
+    }
+  }
+}

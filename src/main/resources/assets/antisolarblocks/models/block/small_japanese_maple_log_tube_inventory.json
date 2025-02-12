@@ -1,0 +1,7 @@
+{
+  "parent": "antisolarblocks:block/tube_inventory",
+  "textures": {
+    "wall": "antisolarblocks:block/small_japanese_maple_log_side",
+    "end": "antisolarblocks:block/small_japanese_maple_log_end"
+  }
+}

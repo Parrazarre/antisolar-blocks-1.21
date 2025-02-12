@@ -1,0 +1,37 @@
+{
+	"ambientocclusion": false,
+	"textures": {
+		"0": "antisolarblocks:block/basket_of_gold",
+		"particle": "antisolarblocks:block/basket_of_gold"
+	},
+	"elements": [
+		{
+			"from": [0, -1, 8],
+			"to": [6, 17, 8],
+			"shade": false,
+			"rotation": {"angle": -45, "axis": "x", "origin": [5, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 10, 16, 16], "rotation": 90, "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 16], "rotation": 180, "texture": "#0"},
+				"south": {"uv": [0, 10, 16, 16], "rotation": 270, "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 16], "rotation": 180, "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 6], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 6], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"from": [0, 8, -1],
+			"to": [6, 8, 17],
+			"shade": false,
+			"rotation": {"angle": -45, "axis": "x", "origin": [5, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 6, 0], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 0], "rotation": 180, "texture": "#0"},
+				"south": {"uv": [0, 0, 6, 0], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 0], "rotation": 180, "texture": "#0"},
+				"up": {"uv": [0, 10, 16, 16], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [0, 10, 16, 16], "rotation": 270, "texture": "#0"}
+			}
+		}
+	]
+}

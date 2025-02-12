@@ -1,0 +1,166 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"texture_size": [24, 24],
+	"textures": {
+		"particle": "#petals"
+	},
+	"elements": [
+		{
+			"from": [9, 3, 0],
+			"to": [25, 3, 16],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [8, 0, 8], "rescale": true},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#corona"},
+				"down": {"uv": [16, 16, 0, 0], "rotation": 270, "texture": "#corona"}
+			}
+		},
+		{
+			"from": [-9, 3, 0],
+			"to": [7, 3, 16],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [8, 0, 8], "rescale": true},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 270, "texture": "#corona"},
+				"down": {"uv": [16, 16, 0, 0], "rotation": 90, "texture": "#corona"}
+			}
+		},
+		{
+			"from": [0, 3, 9],
+			"to": [16, 3, 25],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 0, 8], "rescale": true},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#corona"},
+				"down": {"uv": [16, 16, 0, 0], "rotation": 180, "texture": "#corona"}
+			}
+		},
+		{
+			"from": [0, 3, -9],
+			"to": [16, 3, 7],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 0, 8], "rescale": true},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#corona"},
+				"down": {"uv": [16, 16, 0, 0], "texture": "#corona"}
+			}
+		},
+		{
+			"from": [8, 0, -4],
+			"to": [32, 0, 20],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [8, -3, 8], "rescale": true},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#petals"},
+				"down": {"uv": [0, 16, 16, 0], "rotation": 270, "texture": "#petals"}
+			}
+		},
+		{
+			"from": [-16, 0, -4],
+			"to": [8, 0, 20],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [8, -3, 8], "rescale": true},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 270, "texture": "#petals"},
+				"down": {"uv": [0, 16, 16, 0], "rotation": 90, "texture": "#petals"}
+			}
+		},
+		{
+			"from": [-4, 0, -16],
+			"to": [20, 0, 8],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, -3, 8], "rescale": true},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#petals"},
+				"down": {"uv": [0, 16, 16, 0], "texture": "#petals"}
+			}
+		},
+		{
+			"from": [-4, 0, 8],
+			"to": [20, 0, 32],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, -3, 8], "rescale": true},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#petals"},
+				"down": {"uv": [0, 16, 16, 0], "rotation": 180, "texture": "#petals"}
+			}
+		},
+		{
+			"from": [8, 0, 0],
+			"to": [8, 16, 16],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 0, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#pistil"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#pistil"}
+			}
+		},
+		{
+			"from": [8, 0, 0],
+			"to": [8, 16, 16],
+			"shade": false,
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 0, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#pistil"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#pistil"}
+			}
+		}
+	],
+	"gui_light": "front",
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 1.75, 1.25],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 1.75, 1.25],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [55, 225, 0],
+			"scale": [0.3, 0.4, 0.3]
+		},
+		"head": {
+			"rotation": [3, 10, -2],
+			"translation": [0, 13.75, 0]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -2.5],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "corona",
+			"origin": [8, 8, 8],
+			"color": 9,
+			"children": [0, 1, 2, 3]
+		},
+		{
+			"name": "petals",
+			"origin": [8, 8, 8],
+			"color": 2,
+			"children": [4, 5, 6, 7]
+		},
+		{
+			"name": "pistil",
+			"origin": [8, 0, 8],
+			"color": 0,
+			"children": [8, 9]
+		}
+	]
+}

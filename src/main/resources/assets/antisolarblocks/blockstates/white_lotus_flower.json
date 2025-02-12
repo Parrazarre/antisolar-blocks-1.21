@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "antisolarblocks:block/white_lotus_flower"
+      },
+      {
+        "model": "antisolarblocks:block/white_lotus_flower",
+        "y": 90
+      },
+      {
+        "model": "antisolarblocks:block/white_lotus_flower",
+        "y": 180
+      },
+      {
+        "model": "antisolarblocks:block/white_lotus_flower",
+        "y": 270
+      }
+    ]
+  }
+}

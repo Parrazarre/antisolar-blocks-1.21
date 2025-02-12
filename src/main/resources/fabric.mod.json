@@ -3,9 +3,9 @@
 	"id": "antisolarblocks",
 	"version": "${version}",
 	"name": "Antisolar Blocks",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A mod that adds a bunch of decorative blocks made to work with the Antisolar Mod but also as a standalone",
 	"authors": [
-		"Me!"
+		"Parrazarre, Ariel, Sheepy & The Great Owl Master"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
 			"net.parra.antisolarblocks.AntisolarBlocks"
+		],
+		"client": [
+			"net.parra.antisolarblocks.AntisolarBlocksClient"
 		],
 		"fabric-datagen": [
 			"net.parra.antisolarblocks.AntisolarBlocksDataGenerator"

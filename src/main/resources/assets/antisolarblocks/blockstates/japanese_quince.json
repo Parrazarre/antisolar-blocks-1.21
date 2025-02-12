@@ -1,0 +1,140 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "antisolarblocks:block/japanese_quince_north"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/japanese_quince"
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/japanese_quince_east",
+        "uvlock": true
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/japanese_quince_east",
+        "uvlock": true
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/japanese_quince_south",
+        "uvlock": true
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/japanese_quince_south",
+        "uvlock": true
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/japanese_quince_west",
+        "uvlock": true
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/japanese_quince_west",
+        "uvlock": true
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/japanese_quince_down",
+        "uvlock": true
+      },
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/japanese_quince_down",
+        "uvlock": true
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/japanese_quince",
+        "uvlock": true
+      },
+      "when": {
+        "down": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/japanese_quince",
+        "uvlock": true
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    }
+  ]
+}

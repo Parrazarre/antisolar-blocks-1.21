@@ -1,0 +1,120 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "antisolarblocks:block/virginia_creeper"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/virginia_creeper"
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/virginia_creeper",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/virginia_creeper",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/virginia_creeper",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/virginia_creeper",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/virginia_creeper",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/virginia_creeper",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/virginia_creeper",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/virginia_creeper",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    }
+  ]
+}

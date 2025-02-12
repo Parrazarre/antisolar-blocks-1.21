@@ -1,0 +1,140 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "antisolarblocks:block/basket_of_gold_north"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/basket_of_gold"
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/basket_of_gold_east",
+        "uvlock": true
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/basket_of_gold_east",
+        "uvlock": true
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/basket_of_gold_south",
+        "uvlock": true
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/basket_of_gold_south",
+        "uvlock": true
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/basket_of_gold_west",
+        "uvlock": true
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/basket_of_gold_west",
+        "uvlock": true
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/basket_of_gold_down",
+        "uvlock": true
+      },
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/basket_of_gold_down",
+        "uvlock": true
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/basket_of_gold",
+        "uvlock": true
+      },
+      "when": {
+        "down": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "antisolarblocks:block/basket_of_gold",
+        "uvlock": true
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    }
+  ]
+}

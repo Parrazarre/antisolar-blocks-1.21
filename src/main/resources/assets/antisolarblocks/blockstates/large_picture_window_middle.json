@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "antisolarblocks:block/large_picture_window_middle_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "antisolarblocks:block/large_picture_window_middle"
+    },
+    "axis=z": {
+      "model": "antisolarblocks:block/large_picture_window_middle_horizontal",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "antisolarblocks:block/template_spiked_fence_post",
+	"textures": {
+		"post": "antisolarblocks:block/wrought_iron_fence_post",
+		"extra": "antisolarblocks:block/wrought_iron_fence_extra"
+	}
+}
