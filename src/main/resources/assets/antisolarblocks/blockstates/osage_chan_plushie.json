@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "antisolarblocks:block/osage_chan_plushie"
+    },
+    "facing=west": {
+      "model": "antisolarblocks:block/osage_chan_plushie",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "antisolarblocks:block/osage_chan_plushie",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "antisolarblocks:block/osage_chan_plushie",
+      "y": 270
+    }
+  }
+}

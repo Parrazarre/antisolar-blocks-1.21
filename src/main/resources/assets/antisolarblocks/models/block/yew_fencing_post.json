@@ -1,0 +1,7 @@
+{
+	"parent": "antisolarblocks:block/template_spiked_fence_post",
+	"textures": {
+		"post": "antisolarblocks:block/yew_fencing_post",
+		"extra": "antisolarblocks:block/yew_fencing_extra"
+	}
+}

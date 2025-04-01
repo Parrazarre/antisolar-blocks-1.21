@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "antisolarblocks:block/mixed_stone_bricks_0",
+    "side": "antisolarblocks:block/mixed_stone_bricks_0",
+    "top": "antisolarblocks:block/mixed_stone_bricks_0"
+  }
+}

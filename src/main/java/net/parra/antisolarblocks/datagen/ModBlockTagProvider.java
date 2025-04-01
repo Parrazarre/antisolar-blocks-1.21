@@ -539,6 +539,65 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.KHEWRA_SALT_STAIRS)
                 .add(ModBlocks.KHEWRA_SALT_SLAB)
                 .add(ModBlocks.KHEWRA_SALT_WALL)
+                .add(ModBlocks.SALT_LAMP)
+
+                .add(ModBlocks.PACKED_KAOLINITE_CLAY)
+                .add(ModBlocks.PACKED_KAOLINITE_CLAY_STAIRS)
+                .add(ModBlocks.PACKED_KAOLINITE_CLAY_SLAB)
+                .add(ModBlocks.PACKED_KAOLINITE_CLAY_WALL)
+                .add(ModBlocks.KAOLINITE_BRICKS)
+                .add(ModBlocks.KAOLINITE_BRICK_STAIRS)
+                .add(ModBlocks.KAOLINITE_BRICK_SLAB)
+                .add(ModBlocks.KAOLINITE_BRICK_WALL)
+                .add(ModBlocks.HARDENED_KAOLINITE_CLAY)
+                .add(ModBlocks.HARDENED_KAOLINITE_CLAY_STAIRS)
+                .add(ModBlocks.HARDENED_KAOLINITE_CLAY_SLAB)
+
+                .add(ModBlocks.CRUMBLING_STONE_BRICKS)
+
+                .add(ModBlocks.RAW_SUNSTONE)
+                .add(ModBlocks.RAW_SUNSTONE_STAIRS)
+                .add(ModBlocks.RAW_SUNSTONE_SLAB)
+                .add(ModBlocks.RAW_SUNSTONE_WALL)
+                .add(ModBlocks.SUNSTONE)
+                .add(ModBlocks.SUNSTONE_STAIRS)
+                .add(ModBlocks.SUNSTONE_SLAB)
+                .add(ModBlocks.SUNSTONE_WALL)
+
+                .add(ModBlocks.MOONSTONE)
+
+                .add(ModBlocks.LIMBURGITE)
+                .add(ModBlocks.LIMBURGITE_STAIRS)
+                .add(ModBlocks.LIMBURGITE_SLAB)
+                .add(ModBlocks.LIMBURGITE_WALL)
+                .add(ModBlocks.POLISHED_LIMBURGITE)
+                .add(ModBlocks.POLISHED_LIMBURGITE_STAIRS)
+                .add(ModBlocks.POLISHED_LIMBURGITE_SLAB)
+                .add(ModBlocks.LIMBURGITE_TILES)
+                .add(ModBlocks.LIMBURGITE_TILE_STAIRS)
+                .add(ModBlocks.LIMBURGITE_TILE_SLAB)
+
+                .add(ModBlocks.MIXED_STONE_BRICKS)
+                .add(ModBlocks.MIXED_STONE_BRICK_STAIRS)
+                .add(ModBlocks.MIXED_STONE_BRICK_SLAB)
+
+                .add(ModBlocks.HAWAIITE)
+                .add(ModBlocks.HAWAIITE_STAIRS)
+                .add(ModBlocks.HAWAIITE_SLAB)
+                .add(ModBlocks.HAWAIITE_WALL)
+                .add(ModBlocks.POLISHED_HAWAIITE)
+                .add(ModBlocks.POLISHED_HAWAIITE_STAIRS)
+                .add(ModBlocks.POLISHED_HAWAIITE_SLAB)
+
+                .add(ModBlocks.SCORIA)
+                .add(ModBlocks.SCORIA_STAIRS)
+                .add(ModBlocks.SCORIA_SLAB)
+                .add(ModBlocks.SCORIA_WALL)
+
+                .add(ModBlocks.PUMICE)
+                .add(ModBlocks.PUMICE_STAIRS)
+                .add(ModBlocks.PUMICE_SLAB)
+                .add(ModBlocks.PUMICE_WALL)
         ;
 
 
@@ -551,13 +610,32 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.VERY_MOSSY_ANCIENT_CLAY)
                 .add(ModBlocks.LATERITE_SOIL)
                 .add(ModBlocks.GLACIAL_TILL)
-                .add(ModBlocks.TUFFACIOUS_CLAY);
+                .add(ModBlocks.TUFFACIOUS_CLAY)
+                .add(ModBlocks.KAOLINITE_CLAY)
+                .add(ModBlocks.SCORIACEOUS_LAPILLI);
 
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+                .add(ModBlocks.CHISELED_BAMBOO_PLANKS)
+                .add(ModBlocks.CHISELED_BIRCH_PLANKS)
+                .add(ModBlocks.CHISELED_JUNGLE_PLANKS)
+                .add(ModBlocks.CHISELED_DARK_OAK_PLANKS)
                 .add(ModBlocks.CHISELED_SPRUCE_PLANKS)
 
+                .add(ModBlocks.ACACIA_FENCING)
+                .add(ModBlocks.BAMBOO_FENCING)
+                .add(ModBlocks.BIRCH_FENCING)
+                .add(ModBlocks.CHERRY_FENCING)
+                .add(ModBlocks.CRIMSON_FENCING)
+                .add(ModBlocks.DARK_OAK_FENCING)
+                .add(ModBlocks.JUNGLE_FENCING)
+                .add(ModBlocks.MANGROVE_FENCING)
                 .add(ModBlocks.OAK_FENCING)
+                .add(ModBlocks.SPRUCE_FENCING)
+                .add(ModBlocks.WARPED_FENCING)
+                .add(ModBlocks.SUGAR_MAPLE_FENCING)
+                .add(ModBlocks.WHITE_PINE_FENCING)
+                .add(ModBlocks.YEW_FENCING)
 
                 .add(ModBlocks.SUGAR_MAPLE_LOG)
                 .add(ModBlocks.SUGAR_MAPLE_WOOD)
@@ -578,6 +656,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.GIANT_PINECONE_PEDUNCLE)
 
                 .add(ModBlocks.PILE_OF_WOOD)
+                .add(ModBlocks.STRIPPED_PILE_OF_WOOD)
 
                 .add(ModBlocks.WHITE_PINE_LOG)
                 .add(ModBlocks.WHITE_PINE_WOOD)
@@ -682,12 +761,34 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_HYDROXYLAPATITE_WALL)
                 .add(ModBlocks.WROUGHT_IRON_FENCE)
                 .add(ModBlocks.FOYAITE_WALL)
-                .add(ModBlocks.OAK_FENCING)
                 .add(ModBlocks.GABBRO_WALL)
                 .add(ModBlocks.FLOWSTONE_WALL)
                 .add(ModBlocks.SMOOTH_MICROCLINE_WALL)
                 .add(ModBlocks.ORTHOCLASE_FELDSPAR_WALL)
                 .add(ModBlocks.KHEWRA_SALT_WALL)
+                .add(ModBlocks.PACKED_KAOLINITE_CLAY_WALL)
+                .add(ModBlocks.KAOLINITE_BRICK_WALL)
+                .add(ModBlocks.RAW_SUNSTONE_WALL)
+                .add(ModBlocks.SUNSTONE_WALL)
+                .add(ModBlocks.LIMBURGITE_WALL)
+                .add(ModBlocks.HAWAIITE_WALL)
+                .add(ModBlocks.SCORIA_WALL)
+                .add(ModBlocks.PUMICE_WALL)
+
+                .add(ModBlocks.ACACIA_FENCING)
+                .add(ModBlocks.BAMBOO_FENCING)
+                .add(ModBlocks.BIRCH_FENCING)
+                .add(ModBlocks.CHERRY_FENCING)
+                .add(ModBlocks.CRIMSON_FENCING)
+                .add(ModBlocks.DARK_OAK_FENCING)
+                .add(ModBlocks.JUNGLE_FENCING)
+                .add(ModBlocks.MANGROVE_FENCING)
+                .add(ModBlocks.OAK_FENCING)
+                .add(ModBlocks.SPRUCE_FENCING)
+                .add(ModBlocks.WARPED_FENCING)
+                .add(ModBlocks.SUGAR_MAPLE_FENCING)
+                .add(ModBlocks.WHITE_PINE_FENCING)
+                .add(ModBlocks.YEW_FENCING)
         ;
 
         getOrCreateTagBuilder(BlockTags.FLOWERS)
@@ -705,6 +806,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.LIGHT_BLUE_VIOLA_TRICOLOR)
                 .add(ModBlocks.BLUE_VIOLA_TRICOLOR)
                 .add(ModBlocks.COBALT_VIOLA_TRICOLOR)
+
+                .add(ModBlocks.HOT_PINK_HYACINTH)
+                .add(ModBlocks.CORAL_HYACINTH)
+                .add(ModBlocks.YELLOW_HYACINTH)
+                .add(ModBlocks.BLUE_HYACINTH)
+                .add(ModBlocks.PURPLE_HYACINTH)
+                .add(ModBlocks.INDIGO_HYACINTH)
+                .add(ModBlocks.PINK_HYACINTH)
+                .add(ModBlocks.LIGHT_PINK_HYACINTH)
+                .add(ModBlocks.WHITE_HYACINTH)
+
                 .add(ModBlocks.BLUE_STARS)
                 .add(ModBlocks.LAVENDER_BLUE_WALL_IRIS)
                 .add(ModBlocks.WHITE_WALL_IRIS)
@@ -722,12 +834,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.RED_BLANKET_FLOWER)
                 .add(ModBlocks.RED_NEMESIA)
                 .add(ModBlocks.EUPHORBIA_X_MARTINI)
+                .add(ModBlocks.SILVER_VASE)
                 .add(ModBlocks.HUMMINGBIRD_FUCHSIA)
+                .add(ModBlocks.ASIAN_BLEEDING_HEART)
                 .add(ModBlocks.WEAVERS_BROOM)
                 .add(ModBlocks.LAVENDER_BALL)
                 .add(ModBlocks.DOG_ROSE_BUSH)
                 .add(ModBlocks.GIANT_PASSIFLORA_INCARNATA)
-                .add(ModBlocks.GIANT_PASSIFLORA_CAERULA);
+                .add(ModBlocks.GIANT_PASSIFLORA_CAERULA)
+
+                .add(ModBlocks.WILDFLOWERS)
+                .add(ModBlocks.WILD_COSMOS_AND_BACHELOR_BUTTONS);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.JADE_ORE)
@@ -817,14 +934,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ANCIENT_CLAY)
                 .add(ModBlocks.MOSSY_ANCIENT_CLAY)
                 .add(ModBlocks.VERY_MOSSY_ANCIENT_CLAY)
-                .add(ModBlocks.TUFFACIOUS_CLAY);
+                .add(ModBlocks.TUFFACIOUS_CLAY)
+                .add(ModBlocks.SCORIACEOUS_LAPILLI);
 
         getOrCreateTagBuilder(BlockTags.SAND)
                 .add(ModBlocks.LATERITE_SOIL)
-                .add(ModBlocks.GLACIAL_TILL);
+                .add(ModBlocks.GLACIAL_TILL)
+                .add(ModBlocks.SCORIACEOUS_LAPILLI);
 
         getOrCreateTagBuilder(BlockTags.CLIMBABLE)
-                .add(ModBlocks.VIRGINIA_CREEPER);
+                .add(ModBlocks.VIRGINIA_CREEPER)
+                .add(ModBlocks.ROPE);
 
         getOrCreateTagBuilder(BlockTags.INSIDE_STEP_SOUND_BLOCKS)
                 .add(ModBlocks.WHITE_LOTUS_FLOWER)
@@ -835,7 +955,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.WHITE_LOTUS_FLOWER)
                 .add(ModBlocks.PINK_LOTUS_FLOWER)
                 .add(ModBlocks.BRAMBLES)
-                .add(ModBlocks.DUCKWEEDS);
+                .add(ModBlocks.DUCKWEEDS)
+                .add(ModBlocks.ROPE);
 
         getOrCreateTagBuilder(BlockTags.FROG_PREFER_JUMP_TO)
                 .add(ModBlocks.WHITE_LOTUS_FLOWER)

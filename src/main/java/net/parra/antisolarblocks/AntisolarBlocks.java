@@ -4,15 +4,15 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
-import net.minecraft.item.PlaceableOnWaterItem;
 import net.parra.antisolarblocks.block.ModBlocks;
-import net.parra.antisolarblocks.datagen.ModModelProvider;
 import net.parra.antisolarblocks.entity.ModEntities;
 import net.parra.antisolarblocks.item.ModItemGroups;
 import net.parra.antisolarblocks.item.ModItems;
+import net.parra.antisolarblocks.particle.ModParticles;
 import net.parra.antisolarblocks.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import net.parra.antisolarblocks.block.entity.ModBlockEntityType;
 
 public class AntisolarBlocks implements ModInitializer {
 	public static final String MOD_ID = "antisolarblocks";
@@ -24,6 +24,8 @@ public class AntisolarBlocks implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModEntities.registerModEntities();
+		ModBlockEntityType.registerModBlockEntityType();
+		ModParticles.registerModParticles();
 
 		ModWorldGeneration.generateModWorldGen();
 
@@ -35,6 +37,8 @@ public class AntisolarBlocks implements ModInitializer {
 
 		StrippableBlockRegistry.register(ModBlocks.YEW_LOG, ModBlocks.STRIPPED_YEW_LOG);
 		StrippableBlockRegistry.register(ModBlocks.YEW_WOOD, ModBlocks.STRIPPED_YEW_WOOD);
+
+		StrippableBlockRegistry.register(ModBlocks.PILE_OF_WOOD, ModBlocks.STRIPPED_PILE_OF_WOOD);
 
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SMALL_BUSH, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.LARGE_BUSH, 60, 100);

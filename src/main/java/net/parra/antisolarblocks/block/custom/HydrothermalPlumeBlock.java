@@ -24,6 +24,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.*;
 import net.parra.antisolarblocks.block.ModBlocks;
+import net.parra.antisolarblocks.particle.ModParticles;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
@@ -137,7 +138,7 @@ public class HydrothermalPlumeBlock extends Block implements FluidDrainable {
         double e = (double)pos.getY();
         double f = (double)pos.getZ();
         if ((Boolean)state.get(DRAG)) {
-            world.addImportantParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, d + 0.5, e + 0.8, f, 0.0, 0.0, 0.0);
+            world.addImportantParticle(ModParticles.DARK_PLUME_PARTICLE, d + 0.5, e + 0.8, f, 0.01, 0.1, 0.01);
             if (random.nextInt(200) == 0) {
                 world.playSound(
                         d,
@@ -151,9 +152,9 @@ public class HydrothermalPlumeBlock extends Block implements FluidDrainable {
                 );
             }
         } else {
-            world.addImportantParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, d + 0.5, e, f + 0.5, 0.0, 0.04, 0.0);
+            world.addImportantParticle(ModParticles.DARK_PLUME_PARTICLE, d + 0.5, e, f + 0.5, 0.01, 0.1, 0.01);
             world.addImportantParticle(
-                    ParticleTypes.CAMPFIRE_COSY_SMOKE, d + (double)random.nextFloat(), e + (double)random.nextFloat(), f + (double)random.nextFloat(), 0.0, 0.04, 0.0
+                    ModParticles.DARK_PLUME_PARTICLE, d + (double)random.nextFloat(), e + (double)random.nextFloat(), f + (double)random.nextFloat(), 0.0, 0.04, 0.0
             );
             if (random.nextInt(200) == 0) {
                 world.playSound(

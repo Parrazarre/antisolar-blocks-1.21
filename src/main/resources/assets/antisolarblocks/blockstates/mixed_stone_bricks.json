@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "": [{
+        "model": "antisolarblocks:block/mixed_stone_bricks_0"
+      }
+    ,
+      {
+        "model": "antisolarblocks:block/mixed_stone_bricks_1"
+      }]
+  }
+}

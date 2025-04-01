@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "antisolarblocks:block/raw_sunstone_slab"
+    },
+    "type=double": {
+      "model": "antisolarblocks:block/raw_sunstone"
+    },
+    "type=top": {
+      "model": "antisolarblocks:block/raw_sunstone_slab_top"
+    }
+  }
+}

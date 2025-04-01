@@ -58,6 +58,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STAR_JASMINE);
         addDrop(ModBlocks.BASKET_OF_GOLD);
         addDrop(ModBlocks.HUMMINGBIRD_FUCHSIA);
+        addDrop(ModBlocks.ASIAN_BLEEDING_HEART);
 
         addDrop(ModBlocks.ROUGH_COBBLESTONE_BRICKS);
         addDrop(ModBlocks.ROUGH_COBBLESTONE_BRICK_STAIRS);
@@ -68,6 +69,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COBBLESTONE_BRICK_WALL);
         addDrop(ModBlocks.COBBLESTONE_PATH);
 
+        addDrop(ModBlocks.CHISELED_BAMBOO_PLANKS);
+        addDrop(ModBlocks.CHISELED_BIRCH_PLANKS);
+        addDrop(ModBlocks.CHISELED_JUNGLE_PLANKS);
+        addDrop(ModBlocks.CHISELED_DARK_OAK_PLANKS);
         addDrop(ModBlocks.CHISELED_SPRUCE_PLANKS);
 
         addDrop(ModBlocks.SUGAR_MAPLE_LOG);
@@ -145,7 +150,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SATIN_SPAR_GYPSUM);
         addDrop(ModBlocks.SATIN_SPAR_GYPSUM_CRYSTAL);
 
-        addDrop(ModBlocks.ANCIENT_CLAY);
+        addDrop(ModBlocks.ANCIENT_CLAY, multipleOreDrops(ModBlocks.ANCIENT_CLAY, ModItems.ANCIENT_CLAY_BALL, 4,4));
         addDrop(ModBlocks.MOSSY_ANCIENT_CLAY);
         addDrop(ModBlocks.VERY_MOSSY_ANCIENT_CLAY);
 
@@ -254,6 +259,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GIANT_PINECONE_PEDUNCLE);
 
         addDrop(ModBlocks.PILE_OF_WOOD);
+        addDrop(ModBlocks.STRIPPED_PILE_OF_WOOD);
 
         addDrop(ModBlocks.JADE_ORE, multipleOreDrops(ModBlocks.JADE_ORE, ModItems.JADE, 3, 7));
         addDrop(ModBlocks.JADE_BLOCK);
@@ -451,7 +457,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WILDFLOWERS, flowerbedDrops(ModBlocks.WILDFLOWERS));
         addDrop(ModBlocks.WILD_COSMOS_AND_BACHELOR_BUTTONS, flowerbedDrops(ModBlocks.WILD_COSMOS_AND_BACHELOR_BUTTONS));
 
-        addDrop(ModBlocks.TUFFACIOUS_CLAY);
+        addDrop(ModBlocks.TUFFACIOUS_CLAY, multipleOreDrops(ModBlocks.TUFFACIOUS_CLAY, ModItems.TUFFACIOUS_CLAY_BALL, 4,4));
         addDrop(ModBlocks.TUFFACIOUS_CLAY_BRICKS);
         addDrop(ModBlocks.TUFFACIOUS_CLAY_BRICK_STAIRS);
         addDrop(ModBlocks.TUFFACIOUS_CLAY_BRICK_SLAB, slabDrops(ModBlocks.TUFFACIOUS_CLAY_BRICK_SLAB));
@@ -605,6 +611,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.BLAHAJ);
         addDrop(ModBlocks.TETO_PLUSHIE);
         addDrop(ModBlocks.GUMI_PLUSHIE);
+        addDrop(ModBlocks.OSAGE_CHAN_PLUSHIE);
 
         addDrop(ModBlocks.CHLORAPATITE);
         addDrop(ModBlocks.CHLORAPATITE_STAIRS);
@@ -668,7 +675,20 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FOYAITE_TILE_STAIRS);
         addDrop(ModBlocks.FOYAITE_TILE_SLAB, slabDrops(ModBlocks.FOYAITE_TILE_SLAB));
 
+        addDrop(ModBlocks.ACACIA_FENCING);
+        addDrop(ModBlocks.BAMBOO_FENCING);
+        addDrop(ModBlocks.BIRCH_FENCING);
+        addDrop(ModBlocks.CHERRY_FENCING);
+        addDrop(ModBlocks.CRIMSON_FENCING);
+        addDrop(ModBlocks.DARK_OAK_FENCING);
+        addDrop(ModBlocks.JUNGLE_FENCING);
+        addDrop(ModBlocks.MANGROVE_FENCING);
         addDrop(ModBlocks.OAK_FENCING);
+        addDrop(ModBlocks.SPRUCE_FENCING);
+        addDrop(ModBlocks.WARPED_FENCING);
+        addDrop(ModBlocks.SUGAR_MAPLE_FENCING);
+        addDrop(ModBlocks.WHITE_PINE_FENCING);
+        addDrop(ModBlocks.YEW_FENCING);
 
         addDrop(ModBlocks.GABBRO);
         addDrop(ModBlocks.GABBRO_STAIRS);
@@ -713,6 +733,81 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.KHEWRA_SALT_STAIRS);
         addDrop(ModBlocks.KHEWRA_SALT_SLAB, slabDrops(ModBlocks.KHEWRA_SALT_SLAB));
         addDrop(ModBlocks.KHEWRA_SALT_WALL);
+        addDrop(ModBlocks.SALT_LAMP);
+
+        addDrop(ModBlocks.KAOLINITE_CLAY, multipleOreDrops(ModBlocks.KAOLINITE_CLAY, ModItems.KAOLINITE_CLAY_CHUNK, 4,4));
+        addDrop(ModBlocks.PACKED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.PACKED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.PACKED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.PACKED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.PACKED_KAOLINITE_CLAY_WALL);
+        addDrop(ModBlocks.KAOLINITE_BRICKS);
+        addDrop(ModBlocks.KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.HARDENED_KAOLINITE_CLAY_SLAB));
+
+        addDrop(ModBlocks.ROPE);
+
+        addDropWithSilkTouch(ModBlocks.CRUMBLING_STONE_BRICKS);
+
+        addDrop(ModBlocks.RAW_SUNSTONE);
+        addDrop(ModBlocks.RAW_SUNSTONE_STAIRS);
+        addDrop(ModBlocks.RAW_SUNSTONE_SLAB, slabDrops(ModBlocks.RAW_SUNSTONE_SLAB));
+        addDrop(ModBlocks.RAW_SUNSTONE_WALL);
+        addDrop(ModBlocks.SUNSTONE);
+        addDrop(ModBlocks.SUNSTONE_STAIRS);
+        addDrop(ModBlocks.SUNSTONE_SLAB, slabDrops(ModBlocks.SUNSTONE_SLAB));
+        addDrop(ModBlocks.SUNSTONE_WALL);
+
+        addDrop(ModBlocks.MOONSTONE);
+
+        addDrop(ModBlocks.HOT_PINK_HYACINTH);
+        addDrop(ModBlocks.CORAL_HYACINTH);
+        addDrop(ModBlocks.YELLOW_HYACINTH);
+        addDrop(ModBlocks.BLUE_HYACINTH);
+        addDrop(ModBlocks.PURPLE_HYACINTH);
+        addDrop(ModBlocks.INDIGO_HYACINTH);
+        addDrop(ModBlocks.PINK_HYACINTH);
+        addDrop(ModBlocks.LIGHT_PINK_HYACINTH);
+        addDrop(ModBlocks.WHITE_HYACINTH);
+
+        addDrop(ModBlocks.SILVER_VASE);
+
+        addDrop(ModBlocks.LIMBURGITE);
+        addDrop(ModBlocks.LIMBURGITE_STAIRS);
+        addDrop(ModBlocks.LIMBURGITE_SLAB, slabDrops(ModBlocks.LIMBURGITE_SLAB));
+        addDrop(ModBlocks.LIMBURGITE_WALL);
+        addDrop(ModBlocks.POLISHED_LIMBURGITE);
+        addDrop(ModBlocks.POLISHED_LIMBURGITE_STAIRS);
+        addDrop(ModBlocks.POLISHED_LIMBURGITE_SLAB, slabDrops(ModBlocks.POLISHED_LIMBURGITE_SLAB));
+        addDrop(ModBlocks.LIMBURGITE_TILES);
+        addDrop(ModBlocks.LIMBURGITE_TILE_STAIRS);
+        addDrop(ModBlocks.LIMBURGITE_TILE_SLAB, slabDrops(ModBlocks.LIMBURGITE_TILE_SLAB));
+
+        addDrop(ModBlocks.MIXED_STONE_BRICKS);
+        addDrop(ModBlocks.MIXED_STONE_BRICK_STAIRS);
+        addDrop(ModBlocks.MIXED_STONE_BRICK_SLAB, slabDrops(ModBlocks.MIXED_STONE_BRICK_SLAB));
+
+        addDrop(ModBlocks.HAWAIITE);
+        addDrop(ModBlocks.HAWAIITE_STAIRS);
+        addDrop(ModBlocks.HAWAIITE_SLAB, slabDrops(ModBlocks.HAWAIITE_SLAB));
+        addDrop(ModBlocks.HAWAIITE_WALL);
+        addDrop(ModBlocks.POLISHED_HAWAIITE);
+        addDrop(ModBlocks.POLISHED_HAWAIITE_STAIRS);
+        addDrop(ModBlocks.POLISHED_HAWAIITE_SLAB, slabDrops(ModBlocks.POLISHED_HAWAIITE_SLAB));
+
+        addDrop(ModBlocks.SCORIACEOUS_LAPILLI);
+        addDrop(ModBlocks.SCORIA);
+        addDrop(ModBlocks.SCORIA_STAIRS);
+        addDrop(ModBlocks.SCORIA_SLAB, slabDrops(ModBlocks.SCORIA_SLAB));
+        addDrop(ModBlocks.SCORIA_WALL);
+
+        addDrop(ModBlocks.PUMICE);
+        addDrop(ModBlocks.PUMICE_STAIRS);
+        addDrop(ModBlocks.PUMICE_SLAB, slabDrops(ModBlocks.PUMICE_SLAB));
+        addDrop(ModBlocks.PUMICE_WALL);
     }
 
 

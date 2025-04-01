@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "antisolarblocks:block/raw_sunstone"
+  }
+}

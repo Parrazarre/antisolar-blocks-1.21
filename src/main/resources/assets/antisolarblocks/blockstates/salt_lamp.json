@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "antisolarblocks:block/salt_lamp"
+    },
+    "hanging=true": {
+      "model": "antisolarblocks:block/salt_lamp_hanging"
+    }
+  }
+}

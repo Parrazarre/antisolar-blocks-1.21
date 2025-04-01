@@ -35,6 +35,7 @@ public class BlahajBlock extends HorizontalFacingBlock implements Equipment, Wat
 
     public BlahajBlock(Settings settings) {
         super(settings);
+        this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, Boolean.valueOf(false)));
     }
 
     @Override

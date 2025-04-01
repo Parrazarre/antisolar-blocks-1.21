@@ -443,6 +443,45 @@ public class ModModelProvider extends FabricModelProvider {
                 khewraSaltBlockPool = blockStateModelGenerator
                 .registerCubeAllModelTexturePool(ModBlocks.KHEWRA_SALT_BLOCK);
 
+        BlockStateModelGenerator.BlockTexturePool
+                packedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.PACKED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                kaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                hardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.HARDENED_KAOLINITE_CLAY);
+
+        BlockStateModelGenerator.BlockTexturePool
+                sunstonePool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.SUNSTONE);
+
+        BlockStateModelGenerator.BlockTexturePool
+                limburgitePool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.LIMBURGITE);
+        BlockStateModelGenerator.BlockTexturePool
+                polishedLimburgitePool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.POLISHED_LIMBURGITE);
+        BlockStateModelGenerator.BlockTexturePool
+                limburgiteTilesPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.LIMBURGITE_TILES);
+
+        BlockStateModelGenerator.BlockTexturePool
+                hawaiitePool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.HAWAIITE);
+        BlockStateModelGenerator.BlockTexturePool
+                polishedHawaiitePool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.POLISHED_HAWAIITE);
+
+        BlockStateModelGenerator.BlockTexturePool
+                scoriaPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.SCORIA);
+
+        BlockStateModelGenerator.BlockTexturePool
+                pumicePool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.PUMICE);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GNEISS);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGIC);
@@ -450,6 +489,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_CLAY);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_ANCIENT_CLAY);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VERY_MOSSY_ANCIENT_CLAY);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_BAMBOO_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_BIRCH_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_JUNGLE_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_DARK_OAK_PLANKS);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_BLUESCHIST);
 
@@ -543,6 +587,14 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STONE_SHELL_PAVEMENT);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHLORAPATITE_SHELL_PAVEMENT);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HYDROXYLAPATITE_SHELL_PAVEMENT);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KAOLINITE_CLAY);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRUMBLING_STONE_BRICKS);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOONSTONE);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SCORIACEOUS_LAPILLI);
 
         chertPool.stairs(ModBlocks.CHERT_STAIRS);
         chertPool.slab(ModBlocks.CHERT_SLAB);
@@ -992,6 +1044,46 @@ public class ModModelProvider extends FabricModelProvider {
         khewraSaltBlockPool.stairs(ModBlocks.KHEWRA_SALT_STAIRS);
         khewraSaltBlockPool.slab(ModBlocks.KHEWRA_SALT_SLAB);
         khewraSaltBlockPool.wall(ModBlocks.KHEWRA_SALT_WALL);
+
+        packedKaoliniteClayPool.stairs(ModBlocks.PACKED_KAOLINITE_CLAY_STAIRS);
+        packedKaoliniteClayPool.slab(ModBlocks.PACKED_KAOLINITE_CLAY_SLAB);
+        packedKaoliniteClayPool.wall(ModBlocks.PACKED_KAOLINITE_CLAY_WALL);
+
+        kaoliniteBricksPool.stairs(ModBlocks.KAOLINITE_BRICK_STAIRS);
+        kaoliniteBricksPool.slab(ModBlocks.KAOLINITE_BRICK_SLAB);
+        kaoliniteBricksPool.wall(ModBlocks.KAOLINITE_BRICK_WALL);
+
+        hardenedKaoliniteClayPool.stairs(ModBlocks.HARDENED_KAOLINITE_CLAY_STAIRS);
+        hardenedKaoliniteClayPool.slab(ModBlocks.HARDENED_KAOLINITE_CLAY_SLAB);
+
+        sunstonePool.stairs(ModBlocks.SUNSTONE_STAIRS);
+        sunstonePool.slab(ModBlocks.SUNSTONE_SLAB);
+        sunstonePool.wall(ModBlocks.SUNSTONE_WALL);
+
+        limburgitePool.stairs(ModBlocks.LIMBURGITE_STAIRS);
+        limburgitePool.slab(ModBlocks.LIMBURGITE_SLAB);
+        limburgitePool.wall(ModBlocks.LIMBURGITE_WALL);
+
+        polishedLimburgitePool.stairs(ModBlocks.POLISHED_LIMBURGITE_STAIRS);
+        polishedLimburgitePool.slab(ModBlocks.POLISHED_LIMBURGITE_SLAB);
+
+        limburgiteTilesPool.stairs(ModBlocks.LIMBURGITE_TILE_STAIRS);
+        limburgiteTilesPool.slab(ModBlocks.LIMBURGITE_TILE_SLAB);
+
+        hawaiitePool.stairs(ModBlocks.HAWAIITE_STAIRS);
+        hawaiitePool.slab(ModBlocks.HAWAIITE_SLAB);
+        hawaiitePool.wall(ModBlocks.HAWAIITE_WALL);
+
+        polishedHawaiitePool.stairs(ModBlocks.POLISHED_HAWAIITE_STAIRS);
+        polishedHawaiitePool.slab(ModBlocks.POLISHED_HAWAIITE_SLAB);
+
+        scoriaPool.stairs(ModBlocks.SCORIA_STAIRS);
+        scoriaPool.slab(ModBlocks.SCORIA_SLAB);
+        scoriaPool.wall(ModBlocks.SCORIA_WALL);
+
+        pumicePool.stairs(ModBlocks.PUMICE_STAIRS);
+        pumicePool.slab(ModBlocks.PUMICE_SLAB);
+        pumicePool.wall(ModBlocks.PUMICE_WALL);
     }
 
     @Override

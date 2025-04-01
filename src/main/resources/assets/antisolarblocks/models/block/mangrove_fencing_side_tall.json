@@ -1,0 +1,6 @@
+{
+	"parent": "antisolarblocks:block/template_spiked_fence_side_tall",
+	"textures": {
+		"fence": "antisolarblocks:block/mangrove_fencing"
+	}
+}

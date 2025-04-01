@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [{
+      "model": "antisolarblocks:block/raw_sunstone"
+    },{
+      "model": "antisolarblocks:block/raw_sunstone_alt"
+    },{
+      "model": "antisolarblocks:block/raw_sunstone_alt2"
+    }
+    ]
+  }
+}

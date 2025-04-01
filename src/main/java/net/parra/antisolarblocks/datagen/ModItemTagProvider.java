@@ -42,11 +42,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.GIANT_PASSIFLORA_INCARNATA.asItem())
                 .add(ModBlocks.GIANT_PASSIFLORA_CAERULA.asItem())
                 .add(ModBlocks.BLAHAJ.asItem())
-                .add(ModBlocks.TETO_PLUSHIE.asItem());
+                .add(ModBlocks.TETO_PLUSHIE.asItem())
+                .add(ModBlocks.GUMI_PLUSHIE.asItem())
+                .add(ModBlocks.OSAGE_CHAN_PLUSHIE.asItem());
 
 
         getOrCreateTagBuilder(ConventionalItemTags.FOODS)
-                .add(ModItems.HIMALAYAN_SALT);
+                .add(ModItems.HIMALAYAN_SALT)
+                .add(ModItems.KAOLINITE_CLAY_CHUNK);
 
     }
 }

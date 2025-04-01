@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "antisolarblocks:block/mixed_stone_brick_slab"
+    },
+    "type=double": {
+      "model": "antisolarblocks:block/mixed_stone_bricks_0"
+    },
+    "type=top": {
+      "model": "antisolarblocks:block/mixed_stone_brick_slab_top"
+    }
+  }
+}

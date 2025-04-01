@@ -4,6 +4,9 @@
   "item.antisolarblocks.twig": "Twig",
   "item.antisolarblocks.ancient_clay_ball": "Ancient Clay Ball",
   "item.antisolarblocks.ancient_brick": "Ancient Brick",
+  "item.antisolarblocks.tuffacious_clay_ball": "Tuffacious Clay Ball",
+  "item.antisolarblocks.kaolinite_clay_chunk": "Kaolinite Clay Chunk",
+  "item.antisolarblocks.kaolinite_brick": "Kaolinite Brick",
   "item.antisolarblocks.jade": "Jade",
   "item.antisolarblocks.rose_quartz": "Rose Quartz",
   "item.antisolarblocks.charoite": "Charoite",
@@ -14,6 +17,7 @@
   "block.antisolarblocks.blahaj": "Blåhaj",
   "block.antisolarblocks.teto_plushie": "Teto Plushie",
   "block.antisolarblocks.gumi_plushie": "Gumi Plushie",
+  "block.antisolarblocks.osage_chan_plushie": "Osage Chan Plushie",
   "block.antisolarblocks.feather_block": "Feather Block",
 
   "block.antisolarblocks.small_bush": "Small Bush",
@@ -45,6 +49,16 @@
   "block.antisolarblocks.blue_viola_tricolor": "Blue Viola Tricolor",
   "block.antisolarblocks.cobalt_viola_tricolor": "Cobalt Viola Tricolor",
 
+  "block.antisolarblocks.hot_pink_hyacinth": "Hot Pink Hyacinth",
+  "block.antisolarblocks.coral_hyacinth": "Coral Hyacinth",
+  "block.antisolarblocks.yellow_hyacinth": "Yellow Hyacinth",
+  "block.antisolarblocks.blue_hyacinth": "Blue Hyacinth",
+  "block.antisolarblocks.purple_hyacinth": "Purple Hyacinth",
+  "block.antisolarblocks.indigo_hyacinth": "Indigo Hyacinth",
+  "block.antisolarblocks.pink_hyacinth": "Pink Hyacinth",
+  "block.antisolarblocks.light_pink_hyacinth": "Light Pink Hyacinth",
+  "block.antisolarblocks.white_hyacinth": "White Hyacinth",
+
   "block.antisolarblocks.blue_stars": "Blue Stars",
   "block.antisolarblocks.lavender_blue_wall_iris": "Lavender Blue Wall Iris",
   "block.antisolarblocks.white_wall_iris": "White Wall Iris",
@@ -64,6 +78,7 @@
   "block.antisolarblocks.flowering_oxyria": "Flowering Oxyria",
   "block.antisolarblocks.oxyria": "Oxyria",
   "block.antisolarblocks.euphorbia_x_martini": "Euphorbia x Martini",
+  "block.antisolarblocks.silver_vase": "Silver Vase",
 
   "block.antisolarblocks.wildflowers": "Wildflowers",
   "block.antisolarblocks.wild_cosmos_and_bachelor_buttons": "Wild Cosmos And Bachelor Buttons",
@@ -76,6 +91,7 @@
   "block.antisolarblocks.brambles": "Brambles",
 
   "block.antisolarblocks.hummingbird_fuchsia": "Hummingbird Fuchsia",
+  "block.antisolarblocks.asian_bleeding_heart": "Asian Bleeding-Heart",
 
   "block.antisolarblocks.rough_cobblestone_bricks": "Rough Cobblestone Bricks",
   "block.antisolarblocks.rough_cobblestone_brick_stairs": "Rough Cobblestone Brick Stairs",
@@ -84,8 +100,14 @@
   "block.antisolarblocks.cobblestone_brick_stairs": "Cobblestone Brick Stairs",
   "block.antisolarblocks.cobblestone_brick_slab": "Cobblestone Brick Slab",
   "block.antisolarblocks.cobblestone_brick_wall": "Cobblestone Brick Wall",
+  "block.antisolarblocks.mixed_stone_bricks": "Mixed Stone Bricks",
+  "block.antisolarblocks.mixed_stone_brick_stairs": "Mixed Stone Brick Stairs",
+  "block.antisolarblocks.mixed_stone_brick_slab": "Mixed Stone Brick Slab",
   "block.antisolarblocks.cobblestone_path": "Cobblestone Path",
   "block.antisolarblocks.stone_shell_pavement": "Stone Shell Pavement",
+  "block.antisolarblocks.crumbling_stone_bricks": "Crumbling Stone Bricks",
+
+  "block.antisolarblocks.rope": "Rope",
 
   "block.antisolarblocks.wrought_iron_fence": "Wrought Iron Fence",
 
@@ -94,9 +116,26 @@
   "block.antisolarblocks.large_picture_window_middle": "Large Picture Window Middle",
   "block.antisolarblocks.large_picture_window_top": "Large Picture Window Top",
 
-  "block.antisolarblocks.chiseled_spruce_planks": "Chiseled Spruce Planks",
-
+  "block.antisolarblocks.acacia_fencing": "Acacia Fencing",
+  "block.antisolarblocks.bamboo_fencing": "Bamboo Fencing",
+  "block.antisolarblocks.birch_fencing": "Birch Fencing",
+  "block.antisolarblocks.cherry_fencing": "Cherry Fencing",
+  "block.antisolarblocks.crimson_fencing": "Crimson Fencing",
+  "block.antisolarblocks.dark_oak_fencing": "Dark Oak Fencing",
+  "block.antisolarblocks.jungle_fencing": "Jungle Fencing",
+  "block.antisolarblocks.mangrove_fencing": "Mangrove Fencing",
   "block.antisolarblocks.oak_fencing": "Oak Fencing",
+  "block.antisolarblocks.spruce_fencing": "Spruce Fencing",
+  "block.antisolarblocks.warped_fencing": "Warped Fencing",
+  "block.antisolarblocks.sugar_maple_fencing": "Sugar Maple Fencing",
+  "block.antisolarblocks.white_pine_fencing": "White Pine Fencing",
+  "block.antisolarblocks.yew_fencing": "Yew Fencing",
+
+  "block.antisolarblocks.chiseled_bamboo_planks": "Chiseled Bamboo Planks",
+  "block.antisolarblocks.chiseled_birch_planks": "Chiseled Birch Planks",
+  "block.antisolarblocks.chiseled_jungle_planks": "Chiseled Jungle Planks",
+  "block.antisolarblocks.chiseled_dark_oak_planks": "Chiseled Dark Oak Planks",
+  "block.antisolarblocks.chiseled_spruce_planks": "Chiseled Spruce Planks",
 
   "block.antisolarblocks.sugar_maple_log": "Sugar Maple Log",
   "block.antisolarblocks.sugar_maple_wood": "Sugar Maple Wood",
@@ -323,6 +362,7 @@
   "block.antisolarblocks.giant_pinecone_peduncle": "Giant Pinecone Peduncle",
 
   "block.antisolarblocks.pile_of_wood": "Pile Of Wood",
+  "block.antisolarblocks.stripped_pile_of_wood": "Stripped Pile Of Wood",
 
   "block.antisolarblocks.block_of_rubble": "Block Of Rubble",
 
@@ -681,9 +721,61 @@
   "block.antisolarblocks.khewra_salt_stairs": "Khewra Salt Stairs",
   "block.antisolarblocks.khewra_salt_slab": "Khewra Salt Slab",
   "block.antisolarblocks.khewra_salt_wall": "Khewra Salt Wall",
+  "block.antisolarblocks.salt_lamp": "Salt Lamp",
 
+  "block.antisolarblocks.kaolinite_clay": "Kaolinite Clay",
+  "block.antisolarblocks.packed_kaolinite_clay": "Packed Kaolinite Clay",
+  "block.antisolarblocks.packed_kaolinite_clay_stairs": "Packed Kaolinite Clay Stairs",
+  "block.antisolarblocks.packed_kaolinite_clay_slab": "Packed Kaolinite Clay Slab",
+  "block.antisolarblocks.packed_kaolinite_clay_wall": "Packed Kaolinite Clay Wall",
+  "block.antisolarblocks.kaolinite_bricks": "Kaolinite Bricks",
+  "block.antisolarblocks.kaolinite_brick_stairs": "Kaolinite Brick Stairs",
+  "block.antisolarblocks.kaolinite_brick_slab": "Kaolinite Brick Slab",
+  "block.antisolarblocks.kaolinite_brick_wall": "Kaolinite Brick Wall",
+  "block.antisolarblocks.hardened_kaolinite_clay": "Hardened Kaolinite Clay",
+  "block.antisolarblocks.hardened_kaolinite_clay_stairs": "Hardened Kaolinite Clay Stairs",
+  "block.antisolarblocks.hardened_kaolinite_clay_slab": "Hardened Kaolinite Clay Slab",
 
+  "block.antisolarblocks.raw_sunstone": "Raw Sunstone",
+  "block.antisolarblocks.raw_sunstone_stairs": "Raw Sunstone Stairs",
+  "block.antisolarblocks.raw_sunstone_slab": "Raw Sunstone Slab",
+  "block.antisolarblocks.raw_sunstone_wall": "Raw Sunstone Wall",
+  "block.antisolarblocks.sunstone": "Sunstone",
+  "block.antisolarblocks.sunstone_stairs": "Sunstone Stairs",
+  "block.antisolarblocks.sunstone_slab": "Sunstone Slab",
+  "block.antisolarblocks.sunstone_wall": "Sunstone Wall",
 
+  "block.antisolarblocks.moonstone": "Moonstone",
+
+  "block.antisolarblocks.limburgite": "Limburgite",
+  "block.antisolarblocks.limburgite_stairs": "Limburgite Stairs",
+  "block.antisolarblocks.limburgite_slab": "Limburgite Slab",
+  "block.antisolarblocks.limburgite_wall": "Limburgite Wall",
+  "block.antisolarblocks.polished_limburgite": "Polished Limburgite",
+  "block.antisolarblocks.polished_limburgite_stairs": "Polished Limburgite Stairs",
+  "block.antisolarblocks.polished_limburgite_slab": "Polished Limburgite Slab",
+  "block.antisolarblocks.limburgite_tiles": "Limburgite Tiles",
+  "block.antisolarblocks.limburgite_tile_stairs": "Limburgite Tile Stairs",
+  "block.antisolarblocks.limburgite_tile_slab": "Limburgite Tile Slab",
+
+  "block.antisolarblocks.hawaiite": "Hawaiite",
+  "block.antisolarblocks.hawaiite_stairs": "Hawaiite Stairs",
+  "block.antisolarblocks.hawaiite_slab": "Hawaiite Slab",
+  "block.antisolarblocks.hawaiite_wall": "Hawaiite Wall",
+  "block.antisolarblocks.polished_hawaiite": "Polished Hawaiite",
+  "block.antisolarblocks.polished_hawaiite_stairs": "Polished Hawaiite Stairs",
+  "block.antisolarblocks.polished_hawaiite_slab": "Polished Hawaiite Slab",
+
+  "block.antisolarblocks.scoriaceous_lapilli": "Scoriaceous Lapilli",
+  "block.antisolarblocks.scoria": "Scoria",
+  "block.antisolarblocks.scoria_stairs": "Scoria Stairs",
+  "block.antisolarblocks.scoria_slab": "Scoria Slab",
+  "block.antisolarblocks.scoria_wall": "Scoria Wall",
+
+  "block.antisolarblocks.pumice": "Pumice",
+  "block.antisolarblocks.pumice_stairs": "Pumice Stairs",
+  "block.antisolarblocks.pumice_slab": "Pumice Slab",
+  "block.antisolarblocks.pumice_wall": "Pumice Wall",
 
 
 

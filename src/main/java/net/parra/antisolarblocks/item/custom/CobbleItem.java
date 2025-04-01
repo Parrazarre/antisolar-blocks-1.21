@@ -19,6 +19,11 @@ public class CobbleItem extends Item {
         super(settings);
     }
 
+    // Debug Message
+    //if (!world.isClient && attacker.isPlayer()) {
+    //    attacker.sendMessage(Text.literal("FeatherEmittingItem postHit called!").formatted(Formatting.GREEN));
+    //}
+
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
