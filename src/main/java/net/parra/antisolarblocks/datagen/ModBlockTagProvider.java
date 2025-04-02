@@ -612,7 +612,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.GLACIAL_TILL)
                 .add(ModBlocks.TUFFACIOUS_CLAY)
                 .add(ModBlocks.KAOLINITE_CLAY)
-                .add(ModBlocks.SCORIACEOUS_LAPILLI);
+                .add(ModBlocks.SCORIACEOUS_LAPILLI)
+                .add(ModBlocks.PUMICEOUS_LAPILLI);
 
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
@@ -935,12 +936,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MOSSY_ANCIENT_CLAY)
                 .add(ModBlocks.VERY_MOSSY_ANCIENT_CLAY)
                 .add(ModBlocks.TUFFACIOUS_CLAY)
-                .add(ModBlocks.SCORIACEOUS_LAPILLI);
+                .add(ModBlocks.SCORIACEOUS_LAPILLI)
+                .add(ModBlocks.PUMICEOUS_LAPILLI);
 
         getOrCreateTagBuilder(BlockTags.SAND)
                 .add(ModBlocks.LATERITE_SOIL)
                 .add(ModBlocks.GLACIAL_TILL)
-                .add(ModBlocks.SCORIACEOUS_LAPILLI);
+                .add(ModBlocks.SCORIACEOUS_LAPILLI)
+                .add(ModBlocks.PUMICEOUS_LAPILLI);
 
         getOrCreateTagBuilder(BlockTags.CLIMBABLE)
                 .add(ModBlocks.VIRGINIA_CREEPER)

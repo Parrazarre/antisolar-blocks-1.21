@@ -804,6 +804,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SCORIA_SLAB, slabDrops(ModBlocks.SCORIA_SLAB));
         addDrop(ModBlocks.SCORIA_WALL);
 
+        addDrop(ModBlocks.PUMICEOUS_LAPILLI);
         addDrop(ModBlocks.PUMICE);
         addDrop(ModBlocks.PUMICE_STAIRS);
         addDrop(ModBlocks.PUMICE_SLAB, slabDrops(ModBlocks.PUMICE_SLAB));

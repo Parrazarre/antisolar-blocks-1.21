@@ -595,6 +595,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOONSTONE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SCORIACEOUS_LAPILLI);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PUMICEOUS_LAPILLI);
 
         chertPool.stairs(ModBlocks.CHERT_STAIRS);
         chertPool.slab(ModBlocks.CHERT_SLAB);

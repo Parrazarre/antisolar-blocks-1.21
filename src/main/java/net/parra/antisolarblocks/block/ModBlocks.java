@@ -711,7 +711,7 @@ public class ModBlocks {
                             .luminance(state -> 8)
             )
     );
-    public static final Block WHITE_LOTUS_FLOWER = registerBlock("white_lotus_flower",
+    public static final Block WHITE_LOTUS_FLOWER = registerBlockNoItem("white_lotus_flower",
         new LilyPadBlock(
                 AbstractBlock.Settings.create()
                         .mapColor(MapColor.DARK_GREEN)
@@ -721,7 +721,7 @@ public class ModBlocks {
                         .pistonBehavior(PistonBehavior.DESTROY)
         )
     );
-    public static final Block PINK_LOTUS_FLOWER = registerBlock("pink_lotus_flower",
+    public static final Block PINK_LOTUS_FLOWER = registerBlockNoItem("pink_lotus_flower",
             new LilyPadBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.DARK_GREEN)
@@ -731,7 +731,7 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
-    public static final Block DUCKWEEDS = registerBlock("duckweeds",
+    public static final Block DUCKWEEDS = registerBlockNoItem("duckweeds",
             new LilyPadBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.DARK_GREEN)
@@ -5012,7 +5012,7 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
-    public static final Block BLAHAJ = registerBlock("blahaj",
+    public static final Block BLAHAJ = registerBlockNoItem("blahaj",
             new BlahajBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.WATER_BLUE)
@@ -5023,7 +5023,7 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
-    public static final Block TETO_PLUSHIE = registerBlock("teto_plushie",
+    public static final Block TETO_PLUSHIE = registerBlockNoItem("teto_plushie",
             new TetoBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.BRIGHT_RED)
@@ -5034,7 +5034,7 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
-    public static final Block GUMI_PLUSHIE = registerBlock("gumi_plushie",
+    public static final Block GUMI_PLUSHIE = registerBlockNoItem("gumi_plushie",
             new TetoBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.EMERALD_GREEN)
@@ -5045,7 +5045,7 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
-    public static final Block OSAGE_CHAN_PLUSHIE = registerBlock("osage_chan_plushie",
+    public static final Block OSAGE_CHAN_PLUSHIE = registerBlockNoItem("osage_chan_plushie",
             new TetoBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.BLACK)
@@ -5573,7 +5573,7 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
-    public static final Block FEATHER_BLOCK = registerBlock("feather_block",
+    public static final Block FEATHER_BLOCK = registerBlockNoItem("feather_block",
             new NoFallDamageBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.WHITE)
@@ -6745,6 +6745,16 @@ public class ModBlocks {
                             .strength(1.5F, 6.0F)
             )
     );
+    public static final Block PUMICEOUS_LAPILLI = registerBlock("pumiceous_lapilli",
+            new ColoredFallingBlock(
+                    new ColorCode(-8356741),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.SNARE)
+                            .strength(0.5F)
+                            .sounds(BlockSoundGroup.GRAVEL)
+            )
+    );
     public static final Block PUMICE = registerBlock("pumice",
             new Block(
                     AbstractBlock.Settings.create()
@@ -6791,6 +6801,10 @@ public class ModBlocks {
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(AntisolarBlocks.MOD_ID, name),
                 new BlockItem(block, new Item.Settings()));
+    }
+
+    private static Block registerBlockNoItem(String name, Block block) {
+        return Registry.register(Registries.BLOCK, Identifier.of(AntisolarBlocks.MOD_ID, name), block);
     }
 
     public static void registerModBlocks() {

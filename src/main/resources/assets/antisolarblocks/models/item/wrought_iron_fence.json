@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "antisolarblocks:block/wrought_iron_fence"
+    "layer0": "antisolarblocks:item/wrought_iron_fence"
   }
 }

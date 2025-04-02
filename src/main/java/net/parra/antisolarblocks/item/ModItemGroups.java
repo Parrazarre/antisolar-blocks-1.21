@@ -791,6 +791,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SCORIA_SLAB);
                         entries.add(ModBlocks.SCORIA_WALL);
 
+                        entries.add(ModBlocks.PUMICEOUS_LAPILLI);
                         entries.add(ModBlocks.PUMICE);
                         entries.add(ModBlocks.PUMICE_STAIRS);
                         entries.add(ModBlocks.PUMICE_SLAB);
