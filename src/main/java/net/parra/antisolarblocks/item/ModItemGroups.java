@@ -34,6 +34,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PARRADIO);
                         entries.add(ModBlocks.BLAHAJ);
                         entries.add(ModBlocks.TETO_PLUSHIE);
+                        entries.add(ModBlocks.MIKU_PLUSHIE);
+                        entries.add(ModBlocks.AKITA_NERU_PLUSHIE);
                         entries.add(ModBlocks.GUMI_PLUSHIE);
                         entries.add(ModBlocks.OSAGE_CHAN_PLUSHIE);
 
@@ -122,6 +124,7 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.ROPE);
 
+                        entries.add(ModBlocks.CHISELED_OAK_PLANKS);
                         entries.add(ModBlocks.OAK_FENCING);
                         entries.add(ModBlocks.CHISELED_SPRUCE_PLANKS);
                         entries.add(ModBlocks.SPRUCE_FENCING);
@@ -129,14 +132,19 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BIRCH_FENCING);
                         entries.add(ModBlocks.CHISELED_JUNGLE_PLANKS);
                         entries.add(ModBlocks.JUNGLE_FENCING);
+                        entries.add(ModBlocks.CHISELED_ACACIA_PLANKS);
                         entries.add(ModBlocks.ACACIA_FENCING);
                         entries.add(ModBlocks.CHISELED_DARK_OAK_PLANKS);
                         entries.add(ModBlocks.DARK_OAK_FENCING);
+                        entries.add(ModBlocks.CHISELED_MANGROVE_PLANKS);
                         entries.add(ModBlocks.MANGROVE_FENCING);
+                        entries.add(ModBlocks.CHISELED_CHERRY_PLANKS);
                         entries.add(ModBlocks.CHERRY_FENCING);
                         entries.add(ModBlocks.CHISELED_BAMBOO_PLANKS);
                         entries.add(ModBlocks.BAMBOO_FENCING);
+                        entries.add(ModBlocks.CHISELED_CRIMSON_PLANKS);
                         entries.add(ModBlocks.CRIMSON_FENCING);
+                        entries.add(ModBlocks.CHISELED_WARPED_PLANKS);
                         entries.add(ModBlocks.WARPED_FENCING);
 
                         entries.add(ModBlocks.SUGAR_MAPLE_LOG);
@@ -154,6 +162,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SUGAR_MAPLE_BUTTON);
                         entries.add(ModBlocks.SUGAR_MAPLE_LEAVES);
                         entries.add(ModBlocks.SUGAR_MAPLE_SAPLING);
+                        entries.add(ModBlocks.CHISELED_SUGAR_MAPLE_PLANKS);
                         entries.add(ModBlocks.SUGAR_MAPLE_FENCING);
 
                         entries.add(ModBlocks.WHITE_PINE_LOG);
@@ -171,6 +180,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.WHITE_PINE_BUTTON);
                         entries.add(ModBlocks.WHITE_PINE_LEAVES);
                         entries.add(ModBlocks.WHITE_PINE_SAPLING);
+                        entries.add(ModBlocks.CHISELED_WHITE_PINE_PLANKS);
                         entries.add(ModBlocks.WHITE_PINE_FENCING);
 
                         entries.add(ModBlocks.YEW_LOG);
@@ -188,6 +198,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.YEW_BUTTON);
                         entries.add(ModBlocks.YEW_LEAVES);
                         entries.add(ModBlocks.YEW_SAPLING);
+                        entries.add(ModBlocks.CHISELED_YEW_PLANKS);
                         entries.add(ModBlocks.YEW_FENCING);
 
                         entries.add(ModBlocks.GIANT_PINECONE_BLOCK);
@@ -286,6 +297,60 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ANCIENT_CLAY);
                         entries.add(ModBlocks.MOSSY_ANCIENT_CLAY);
                         entries.add(ModBlocks.VERY_MOSSY_ANCIENT_CLAY);
+
+                        entries.add(ModBlocks.ANCIENT_BRICKS);
+                        entries.add(ModBlocks.WHITE_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.LIGHT_GRAY_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.GRAY_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.BLACK_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.BROWN_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.RED_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.ORANGE_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.YELLOW_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.LIME_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.GREEN_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.CYAN_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.LIGHT_BLUE_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.BLUE_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.PURPLE_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.MAGENTA_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.PINK_ANCIENT_BRICKS);
+
+                        entries.add(ModBlocks.ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.WHITE_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.GRAY_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.BLACK_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.BROWN_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.RED_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.ORANGE_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.YELLOW_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.LIME_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.GREEN_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.CYAN_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.BLUE_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.PURPLE_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.MAGENTA_ANCIENT_BRICK_STAIRS);
+                        entries.add(ModBlocks.PINK_ANCIENT_BRICK_STAIRS);
+
+                        entries.add(ModBlocks.ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.WHITE_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.GRAY_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.BLACK_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.BROWN_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.RED_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.ORANGE_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.YELLOW_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.LIME_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.GREEN_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.CYAN_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.BLUE_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.PURPLE_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.MAGENTA_ANCIENT_BRICK_SLAB);
+                        entries.add(ModBlocks.PINK_ANCIENT_BRICK_SLAB);
 
                         entries.add(ModBlocks.ANDESITE_BRICKS);
                         entries.add(ModBlocks.ANDESITE_BRICK_STAIRS);
@@ -764,7 +829,14 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SUNSTONE_SLAB);
                         entries.add(ModBlocks.SUNSTONE_WALL);
 
+                        entries.add(ModBlocks.RAW_MOONSTONE);
+                        entries.add(ModBlocks.RAW_MOONSTONE_STAIRS);
+                        entries.add(ModBlocks.RAW_MOONSTONE_SLAB);
+                        entries.add(ModBlocks.RAW_MOONSTONE_WALL);
                         entries.add(ModBlocks.MOONSTONE);
+                        entries.add(ModBlocks.MOONSTONE_STAIRS);
+                        entries.add(ModBlocks.MOONSTONE_SLAB);
+                        entries.add(ModBlocks.MOONSTONE_WALL);
 
                         entries.add(ModBlocks.LIMBURGITE);
                         entries.add(ModBlocks.LIMBURGITE_STAIRS);

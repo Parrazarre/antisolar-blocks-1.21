@@ -37,6 +37,8 @@ public class ModItems {
 
     public static final Item BLAHAJ = registerItem("blahaj", new FeatherEmittingItem(ModBlocks.BLAHAJ, new Item.Settings()));
     public static final Item TETO_PLUSHIE = registerItem("teto_plushie", new FeatherEmittingItem(ModBlocks.TETO_PLUSHIE, new Item.Settings()));
+    public static final Item MIKU_PLUSHIE = registerItem("miku_plushie", new FeatherEmittingItem(ModBlocks.MIKU_PLUSHIE, new Item.Settings()));
+    public static final Item AKITA_NERU_PLUSHIE = registerItem("akita_neru_plushie", new FeatherEmittingItem(ModBlocks.AKITA_NERU_PLUSHIE, new Item.Settings()));
     public static final Item GUMI_PLUSHIE = registerItem("gumi_plushie", new FeatherEmittingItem(ModBlocks.GUMI_PLUSHIE, new Item.Settings()));
     public static final Item OSAGE_CHAN_PLUSHIE = registerItem("osage_chan_plushie", new FeatherEmittingItem(ModBlocks.OSAGE_CHAN_PLUSHIE, new Item.Settings()));
 

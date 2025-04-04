@@ -482,18 +482,84 @@ public class ModModelProvider extends FabricModelProvider {
                 pumicePool = blockStateModelGenerator
                 .registerCubeAllModelTexturePool(ModBlocks.PUMICE);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GNEISS);
+        BlockStateModelGenerator.BlockTexturePool
+                ancientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                whiteAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.WHITE_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                lightGrayAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.LIGHT_GRAY_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                grayAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.GRAY_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                blackAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.BLACK_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                brownAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.BROWN_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                redAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.RED_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                orangeAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.ORANGE_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                yellowAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.YELLOW_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                limeAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.LIME_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                greenAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.GREEN_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                cyanAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.CYAN_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                lightBlueAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.LIGHT_BLUE_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                blueAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.BLUE_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                purpleAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.PURPLE_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                magentaAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.MAGENTA_ANCIENT_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                pinkAncientBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.PINK_ANCIENT_BRICKS);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGIC);
+        BlockStateModelGenerator.BlockTexturePool
+                rawMoonstonePool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.RAW_MOONSTONE);
+        BlockStateModelGenerator.BlockTexturePool
+                moonstonePool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.MOONSTONE);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GNEISS);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_CLAY);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_ANCIENT_CLAY);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VERY_MOSSY_ANCIENT_CLAY);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_ACACIA_PLANKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_BAMBOO_PLANKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_BIRCH_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_CHERRY_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_CRIMSON_PLANKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_JUNGLE_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_MANGROVE_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_OAK_PLANKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_DARK_OAK_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_WARPED_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_SUGAR_MAPLE_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_WHITE_PINE_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_YEW_PLANKS);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_BLUESCHIST);
 
@@ -591,8 +657,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KAOLINITE_CLAY);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRUMBLING_STONE_BRICKS);
-
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOONSTONE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SCORIACEOUS_LAPILLI);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PUMICEOUS_LAPILLI);
@@ -1061,6 +1125,14 @@ public class ModModelProvider extends FabricModelProvider {
         sunstonePool.slab(ModBlocks.SUNSTONE_SLAB);
         sunstonePool.wall(ModBlocks.SUNSTONE_WALL);
 
+        rawMoonstonePool.stairs(ModBlocks.RAW_MOONSTONE_STAIRS);
+        rawMoonstonePool.slab(ModBlocks.RAW_MOONSTONE_SLAB);
+        rawMoonstonePool.wall(ModBlocks.RAW_MOONSTONE_WALL);
+
+        moonstonePool.stairs(ModBlocks.MOONSTONE_STAIRS);
+        moonstonePool.slab(ModBlocks.MOONSTONE_SLAB);
+        moonstonePool.wall(ModBlocks.MOONSTONE_WALL);
+
         limburgitePool.stairs(ModBlocks.LIMBURGITE_STAIRS);
         limburgitePool.slab(ModBlocks.LIMBURGITE_SLAB);
         limburgitePool.wall(ModBlocks.LIMBURGITE_WALL);
@@ -1085,6 +1157,41 @@ public class ModModelProvider extends FabricModelProvider {
         pumicePool.stairs(ModBlocks.PUMICE_STAIRS);
         pumicePool.slab(ModBlocks.PUMICE_SLAB);
         pumicePool.wall(ModBlocks.PUMICE_WALL);
+
+        ancientBricksPool.stairs(ModBlocks.ANCIENT_BRICK_STAIRS);
+        ancientBricksPool.slab(ModBlocks.ANCIENT_BRICK_SLAB);
+        whiteAncientBricksPool.stairs(ModBlocks.WHITE_ANCIENT_BRICK_STAIRS);
+        whiteAncientBricksPool.slab(ModBlocks.WHITE_ANCIENT_BRICK_SLAB);
+        lightGrayAncientBricksPool.stairs(ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_STAIRS);
+        lightGrayAncientBricksPool.slab(ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_SLAB);
+        grayAncientBricksPool.stairs(ModBlocks.GRAY_ANCIENT_BRICK_STAIRS);
+        grayAncientBricksPool.slab(ModBlocks.GRAY_ANCIENT_BRICK_SLAB);
+        blackAncientBricksPool.stairs(ModBlocks.BLACK_ANCIENT_BRICK_STAIRS);
+        blackAncientBricksPool.slab(ModBlocks.BLACK_ANCIENT_BRICK_SLAB);
+        brownAncientBricksPool.stairs(ModBlocks.BROWN_ANCIENT_BRICK_STAIRS);
+        brownAncientBricksPool.slab(ModBlocks.BROWN_ANCIENT_BRICK_SLAB);
+        redAncientBricksPool.stairs(ModBlocks.RED_ANCIENT_BRICK_STAIRS);
+        redAncientBricksPool.slab(ModBlocks.RED_ANCIENT_BRICK_SLAB);
+        orangeAncientBricksPool.stairs(ModBlocks.ORANGE_ANCIENT_BRICK_STAIRS);
+        orangeAncientBricksPool.slab(ModBlocks.ORANGE_ANCIENT_BRICK_SLAB);
+        yellowAncientBricksPool.stairs(ModBlocks.YELLOW_ANCIENT_BRICK_STAIRS);
+        yellowAncientBricksPool.slab(ModBlocks.YELLOW_ANCIENT_BRICK_SLAB);
+        limeAncientBricksPool.stairs(ModBlocks.LIME_ANCIENT_BRICK_STAIRS);
+        limeAncientBricksPool.slab(ModBlocks.LIME_ANCIENT_BRICK_SLAB);
+        greenAncientBricksPool.stairs(ModBlocks.GREEN_ANCIENT_BRICK_STAIRS);
+        greenAncientBricksPool.slab(ModBlocks.GREEN_ANCIENT_BRICK_SLAB);
+        cyanAncientBricksPool.stairs(ModBlocks.CYAN_ANCIENT_BRICK_STAIRS);
+        cyanAncientBricksPool.slab(ModBlocks.CYAN_ANCIENT_BRICK_SLAB);
+        lightBlueAncientBricksPool.stairs(ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_STAIRS);
+        lightBlueAncientBricksPool.slab(ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_SLAB);
+        blueAncientBricksPool.stairs(ModBlocks.BLUE_ANCIENT_BRICK_STAIRS);
+        blueAncientBricksPool.slab(ModBlocks.BLUE_ANCIENT_BRICK_SLAB);
+        purpleAncientBricksPool.stairs(ModBlocks.PURPLE_ANCIENT_BRICK_STAIRS);
+        purpleAncientBricksPool.slab(ModBlocks.PURPLE_ANCIENT_BRICK_SLAB);
+        magentaAncientBricksPool.stairs(ModBlocks.MAGENTA_ANCIENT_BRICK_STAIRS);
+        magentaAncientBricksPool.slab(ModBlocks.MAGENTA_ANCIENT_BRICK_SLAB);
+        pinkAncientBricksPool.stairs(ModBlocks.PINK_ANCIENT_BRICK_STAIRS);
+        pinkAncientBricksPool.slab(ModBlocks.PINK_ANCIENT_BRICK_SLAB);
     }
 
     @Override

@@ -962,15 +962,24 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.GRAVEL)
             )
     );
-    public static final Block CHISELED_BAMBOO_PLANKS = registerBlock("chiseled_bamboo_planks",
-            new GrateBlock(
+    public static final Block CHISELED_OAK_PLANKS = registerBlock("chiseled_oak_planks",
+            new Block(
                     AbstractBlock.Settings.create()
-                            .mapColor(MapColor.YELLOW)
+                            .mapColor(MapColor.OAK_TAN)
                             .instrument(NoteBlockInstrument.BASS)
                             .strength(2.0F, 3.0F)
                             .sounds(BlockSoundGroup.WOOD)
                             .burnable()
-                            .nonOpaque()
+            )
+    );
+    public static final Block CHISELED_SPRUCE_PLANKS = registerBlock("chiseled_spruce_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.SPRUCE_BROWN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
             )
     );
     public static final Block CHISELED_BIRCH_PLANKS = registerBlock("chiseled_birch_planks",
@@ -993,6 +1002,26 @@ public class ModBlocks {
                             .burnable()
             )
     );
+    public static final Block CHISELED_ACACIA_PLANKS = registerBlock("chiseled_acacia_planks",
+            new GrateBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block CHISELED_CHERRY_PLANKS = registerBlock("chiseled_cherry_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_WHITE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
     public static final Block CHISELED_DARK_OAK_PLANKS = registerBlock("chiseled_dark_oak_planks",
             new Block(
                     AbstractBlock.Settings.create()
@@ -1003,10 +1032,70 @@ public class ModBlocks {
                             .burnable()
             )
     );
-    public static final Block CHISELED_SPRUCE_PLANKS = registerBlock("chiseled_spruce_planks",
+    public static final Block CHISELED_MANGROVE_PLANKS = registerBlock("chiseled_mangrove_planks",
             new Block(
                     AbstractBlock.Settings.create()
-                            .mapColor(MapColor.SPRUCE_BROWN)
+                            .mapColor(MapColor.RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block CHISELED_BAMBOO_PLANKS = registerBlock("chiseled_bamboo_planks",
+            new GrateBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block CHISELED_CRIMSON_PLANKS = registerBlock("chiseled_crimson_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DULL_PINK)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block CHISELED_WARPED_PLANKS = registerBlock("chiseled_warped_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_AQUA)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block CHISELED_SUGAR_MAPLE_PLANKS = registerBlock("chiseled_sugar_maple_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block CHISELED_WHITE_PINE_PLANKS = registerBlock("chiseled_white_pine_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block CHISELED_YEW_PLANKS = registerBlock("chiseled_yew_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_GRAY)
                             .instrument(NoteBlockInstrument.BASS)
                             .strength(2.0F, 3.0F)
                             .sounds(BlockSoundGroup.WOOD)
@@ -4184,7 +4273,7 @@ public class ModBlocks {
             )
     );
     public static final Block ORNATE_PICTURE_WINDOW = registerBlock("ornate_picture_window",
-            new TransparentBlock(
+            new PictureWindowBlock(
                     AbstractBlock.Settings.create()
                             .instrument(NoteBlockInstrument.HAT)
                             .strength(0.3F)
@@ -4197,7 +4286,7 @@ public class ModBlocks {
             )
     );
     public static final Block LARGE_PICTURE_WINDOW_BOTTOM = registerBlock("large_picture_window_bottom",
-            new PillarBlock(
+            new PictureWindowBlock(
                     AbstractBlock.Settings.create()
                             .instrument(NoteBlockInstrument.HAT)
                             .strength(0.3F)
@@ -4210,7 +4299,7 @@ public class ModBlocks {
             )
     );
     public static final Block LARGE_PICTURE_WINDOW_MIDDLE = registerBlock("large_picture_window_middle",
-            new PillarBlock(
+            new PictureWindowBlock(
                     AbstractBlock.Settings.create()
                             .instrument(NoteBlockInstrument.HAT)
                             .strength(0.3F)
@@ -4223,7 +4312,7 @@ public class ModBlocks {
             )
     );
     public static final Block LARGE_PICTURE_WINDOW_TOP = registerBlock("large_picture_window_top",
-            new PillarBlock(
+            new PictureWindowBlock(
                     AbstractBlock.Settings.create()
                             .instrument(NoteBlockInstrument.HAT)
                             .strength(0.3F)
@@ -5034,6 +5123,28 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block MIKU_PLUSHIE = registerBlockNoItem("miku_plushie",
+            new TetoBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.CYAN)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block AKITA_NERU_PLUSHIE = registerBlockNoItem("akita_neru_plushie",
+            new TetoBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.YELLOW)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block GUMI_PLUSHIE = registerBlockNoItem("gumi_plushie",
             new TetoBlock(
                     AbstractBlock.Settings.create()
@@ -5208,15 +5319,6 @@ public class ModBlocks {
                             .sounds(BlockSoundGroup.DECORATED_POT)
                             .requiresTool()
                             .strength(1.5F, 6.0F)
-            )
-    );
-    public static final Block MAGIC = registerBlock("magic",
-            new MagicBlock(
-                    AbstractBlock.Settings.create()
-                            .mapColor(MapColor.TERRACOTTA_PINK)
-                            .instrument(NoteBlockInstrument.BASEDRUM)
-                            .sounds(BlockSoundGroup.SLIME)
-                            .breakInstantly()
             )
     );
     public static final Block SMALL_JAPANESE_MAPLE_LOG = registerBlock("small_japanese_maple_log",
@@ -6503,10 +6605,78 @@ public class ModBlocks {
                             .strength(1.5F, 6.0F)
             )
     );
-    public static final Block MOONSTONE = registerBlock("moonstone",
-            new MoonstoneBlock(
+    public static final Block RAW_MOONSTONE = registerBlock("raw_moonstone",
+            new Block(
                     AbstractBlock.Settings.create()
-                            .mapColor(MapColor.LIGHT_BLUE)
+                            .mapColor(MapColor.LIGHT_BLUE_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RAW_MOONSTONE_STAIRS = registerBlock("raw_moonstone_stairs",
+            new StairsBlock(
+                    ModBlocks.RAW_MOONSTONE.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RAW_MOONSTONE_SLAB = registerBlock("raw_moonstone_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RAW_MOONSTONE_WALL = registerBlock("raw_moonstone_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MOONSTONE = registerBlock("moonstone",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE_GRAY)
+                            .instrument(NoteBlockInstrument.CHIME)
+                            .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MOONSTONE_STAIRS = registerBlock("moonstone_stairs",
+            new StairsBlock(
+                    ModBlocks.MOONSTONE.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE_GRAY)
+                            .instrument(NoteBlockInstrument.CHIME)
+                            .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MOONSTONE_SLAB = registerBlock("moonstone_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE_GRAY)
+                            .instrument(NoteBlockInstrument.CHIME)
+                            .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MOONSTONE_WALL = registerBlock("moonstone_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE_GRAY)
                             .instrument(NoteBlockInstrument.CHIME)
                             .sounds(BlockSoundGroup.AMETHYST_BLOCK)
                             .requiresTool()
@@ -6787,6 +6957,482 @@ public class ModBlocks {
             new WallBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ANCIENT_BRICKS = registerBlock("ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block WHITE_ANCIENT_BRICKS = registerBlock("white_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_WHITE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_GRAY_ANCIENT_BRICKS = registerBlock("light_gray_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GRAY_ANCIENT_BRICKS = registerBlock("gray_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLACK_ANCIENT_BRICKS = registerBlock("black_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BLACK)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BROWN_ANCIENT_BRICKS = registerBlock("brown_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BROWN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RED_ANCIENT_BRICKS = registerBlock("red_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_RED)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ORANGE_ANCIENT_BRICKS = registerBlock("orange_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_ORANGE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block YELLOW_ANCIENT_BRICKS = registerBlock("yellow_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_YELLOW)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIME_ANCIENT_BRICKS = registerBlock("lime_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIME)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GREEN_ANCIENT_BRICKS = registerBlock("green_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_GREEN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block CYAN_ANCIENT_BRICKS = registerBlock("cyan_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_CYAN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_BLUE_ANCIENT_BRICKS = registerBlock("light_blue_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLUE_ANCIENT_BRICKS = registerBlock("blue_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BLUE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PURPLE_ANCIENT_BRICKS = registerBlock("purple_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_PURPLE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MAGENTA_ANCIENT_BRICKS = registerBlock("magenta_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_MAGENTA)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PINK_ANCIENT_BRICKS = registerBlock("pink_ancient_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_PINK)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ANCIENT_BRICK_STAIRS = registerBlock("ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block WHITE_ANCIENT_BRICK_STAIRS = registerBlock("white_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.WHITE_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_WHITE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_GRAY_ANCIENT_BRICK_STAIRS = registerBlock("light_gray_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.LIGHT_GRAY_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GRAY_ANCIENT_BRICK_STAIRS = registerBlock("gray_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.GRAY_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLACK_ANCIENT_BRICK_STAIRS = registerBlock("black_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.BLACK_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BLACK)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BROWN_ANCIENT_BRICK_STAIRS = registerBlock("brown_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.BROWN_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BROWN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RED_ANCIENT_BRICK_STAIRS = registerBlock("red_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.RED_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_RED)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ORANGE_ANCIENT_BRICK_STAIRS = registerBlock("orange_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.ORANGE_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_ORANGE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block YELLOW_ANCIENT_BRICK_STAIRS = registerBlock("yellow_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.YELLOW_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_YELLOW)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIME_ANCIENT_BRICK_STAIRS = registerBlock("lime_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.LIME_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIME)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GREEN_ANCIENT_BRICK_STAIRS = registerBlock("green_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.GREEN_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_GREEN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block CYAN_ANCIENT_BRICK_STAIRS = registerBlock("cyan_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.CYAN_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_CYAN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_BLUE_ANCIENT_BRICK_STAIRS = registerBlock("light_blue_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.LIGHT_BLUE_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLUE_ANCIENT_BRICK_STAIRS = registerBlock("blue_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.BLUE_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BLUE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PURPLE_ANCIENT_BRICK_STAIRS = registerBlock("purple_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.PURPLE_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_PURPLE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MAGENTA_ANCIENT_BRICK_STAIRS = registerBlock("magenta_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.MAGENTA_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_MAGENTA)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PINK_ANCIENT_BRICK_STAIRS = registerBlock("pink_ancient_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.PINK_ANCIENT_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_PINK)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ANCIENT_BRICK_SLAB = registerBlock("ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block WHITE_ANCIENT_BRICK_SLAB = registerBlock("white_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_WHITE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_GRAY_ANCIENT_BRICK_SLAB = registerBlock("light_gray_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GRAY_ANCIENT_BRICK_SLAB = registerBlock("gray_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLACK_ANCIENT_BRICK_SLAB = registerBlock("black_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BLACK)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BROWN_ANCIENT_BRICK_SLAB = registerBlock("brown_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BROWN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RED_ANCIENT_BRICK_SLAB = registerBlock("red_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_RED)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ORANGE_ANCIENT_BRICK_SLAB = registerBlock("orange_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_ORANGE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block YELLOW_ANCIENT_BRICK_SLAB = registerBlock("yellow_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_YELLOW)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIME_ANCIENT_BRICK_SLAB = registerBlock("lime_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIME)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GREEN_ANCIENT_BRICK_SLAB = registerBlock("green_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_GREEN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block CYAN_ANCIENT_BRICK_SLAB = registerBlock("cyan_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_CYAN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_BLUE_ANCIENT_BRICK_SLAB = registerBlock("light_blue_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLUE_ANCIENT_BRICK_SLAB = registerBlock("blue_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BLUE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PURPLE_ANCIENT_BRICK_SLAB = registerBlock("purple_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_PURPLE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MAGENTA_ANCIENT_BRICK_SLAB = registerBlock("magenta_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_MAGENTA)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PINK_ANCIENT_BRICK_SLAB = registerBlock("pink_ancient_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_PINK)
                             .instrument(NoteBlockInstrument.BASEDRUM)
                             .requiresTool()
                             .strength(1.5F, 6.0F)

@@ -2,6 +2,7 @@ package net.parra.antisolarblocks.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -25,11 +26,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
 
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ACACIA_PLANKS, Blocks.BAMBOO_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BAMBOO_PLANKS, Blocks.BAMBOO_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BIRCH_PLANKS, Blocks.BIRCH_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_CHERRY_PLANKS, Blocks.BAMBOO_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_CRIMSON_PLANKS, Blocks.BAMBOO_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_JUNGLE_PLANKS, Blocks.JUNGLE_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_MANGROVE_PLANKS, Blocks.MANGROVE_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_OAK_PLANKS, Blocks.MANGROVE_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_DARK_OAK_PLANKS, Blocks.DARK_OAK_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_SPRUCE_PLANKS, Blocks.SPRUCE_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_WARPED_PLANKS, Blocks.WARPED_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_SUGAR_MAPLE_PLANKS, Blocks.WARPED_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_WHITE_PINE_PLANKS, Blocks.WARPED_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_YEW_PLANKS, Blocks.WARPED_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ANDESITE, Blocks.ANDESITE_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ANDESITE_BRICKS, ModBlocks.ANDESITE_BRICK_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BLUESCHIST, ModBlocks.BLUESCHIST_SLAB);
@@ -37,6 +47,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_GREENSCHIST, ModBlocks.GREENSCHIST_SLAB);
 
         offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_CLAY, ModItems.ANCIENT_CLAY_BALL);
+        offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_BRICKS, ModItems.ANCIENT_BRICK);
         offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.COBBLESTONE_BRICKS, ModItems.COBBLE_BRICK);
         offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TUFFACIOUS_CLAY, ModItems.TUFFACIOUS_CLAY_BALL);
         offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KAOLINITE_CLAY, ModItems.KAOLINITE_CLAY_CHUNK);
@@ -135,83 +146,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.YEW_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.YEW_PLANKS))
                 .offerTo(exporter);
 
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TRAVERTINE_SLAB, ModBlocks.TRAVERTINE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TRAVERTINE_SLAB, ModBlocks.POLISHED_TRAVERTINE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TRACHYANDESITE_SLAB, ModBlocks.TRACHYANDESITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TRACHYANDESITE_SLAB, ModBlocks.POLISHED_TRACHYANDESITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PICRITE_BASALT_SLAB, ModBlocks.PICRITE_BASALT);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_PICRITE_BASALT_SLAB, ModBlocks.POLISHED_PICRITE_BASALT);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHLORAPATITE_SLAB, ModBlocks.CHLORAPATITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CHLORAPATITE_SLAB, ModBlocks.POLISHED_CHLORAPATITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXTRA_POLISHED_CHLORAPATITE_SLAB, ModBlocks.EXTRA_POLISHED_CHLORAPATITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FULLY_POLISHED_CHLORAPATITE_SLAB, ModBlocks.FULLY_POLISHED_CHLORAPATITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.DACITE_SLAB, ModBlocks.DACITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DACITE, ModBlocks.POLISHED_DACITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.DACITE_TILE_SLAB, ModBlocks.DACITE_TILES);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.HYDROXYLAPATITE_SLAB, ModBlocks.HYDROXYLAPATITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_HYDROXYLAPATITE_SLAB, ModBlocks.POLISHED_HYDROXYLAPATITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.HYDROXYLAPATITE_TILE_SLAB, ModBlocks.HYDROXYLAPATITE_TILES);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FOYAITE_SLAB, ModBlocks.FOYAITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_FOYAITE_SLAB, ModBlocks.POLISHED_FOYAITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FOYAITE_TILE_SLAB, ModBlocks.FOYAITE_TILES);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GABBRO_SLAB, ModBlocks.GABBRO_SLAB);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_GABBRO_SLAB, ModBlocks.POLISHED_GABBRO);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GABBRO_BRICK_SLAB, ModBlocks.GABBRO_BRICKS);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FLOWSTONE_SLAB, ModBlocks.FLOWSTONE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MICROCLINE_SLAB, ModBlocks.POLISHED_MICROCLINE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_MICROCLINE_SLAB, ModBlocks.SMOOTH_MICROCLINE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORTHOCLASE_FELDSPAR_SLAB, ModBlocks.ORTHOCLASE_FELDSPAR);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR_SLAB, ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORTHOCLASE_FELDSPAR_TILE_SLAB, ModBlocks.ORTHOCLASE_FELDSPAR_TILES);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KHEWRA_SALT_SLAB, ModBlocks.KHEWRA_SALT_BLOCK);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_KAOLINITE_CLAY_SLAB, ModBlocks.PACKED_KAOLINITE_CLAY);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KAOLINITE_BRICK_SLAB, ModBlocks.KAOLINITE_BRICKS);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.HARDENED_KAOLINITE_CLAY);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_SUNSTONE_SLAB, ModBlocks.RAW_SUNSTONE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNSTONE_SLAB, ModBlocks.SUNSTONE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMBURGITE_SLAB, ModBlocks.LIMBURGITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_LIMBURGITE_SLAB, ModBlocks.POLISHED_LIMBURGITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMBURGITE_TILE_SLAB, ModBlocks.LIMBURGITE_TILES);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.HAWAIITE_SLAB, ModBlocks.HAWAIITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_HAWAIITE_SLAB, ModBlocks.POLISHED_HAWAIITE);
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCORIA_SLAB, ModBlocks.SCORIA);
-
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.TRAVERTINE_WALL, ModBlocks.TRAVERTINE);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.TRACHYANDESITE_WALL, ModBlocks.TRACHYANDESITE);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.PICRITE_BASALT_WALL, ModBlocks.PICRITE_BASALT);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_PICRITE_BASALT_WALL, ModBlocks.POLISHED_PICRITE_BASALT);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_CHLORAPATITE_WALL, ModBlocks.POLISHED_CHLORAPATITE);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.EXTRA_POLISHED_CHLORAPATITE_WALL, ModBlocks.EXTRA_POLISHED_CHLORAPATITE);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_WALL, ModBlocks.FULLY_POLISHED_CHLORAPATITE);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.DACITE_WALL, ModBlocks.DACITE);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_HYDROXYLAPATITE_WALL, ModBlocks.POLISHED_HYDROXYLAPATITE);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.FOYAITE_WALL, ModBlocks.FOYAITE);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.GABBRO_WALL, ModBlocks.GABBRO);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.FLOWSTONE_WALL, ModBlocks.FLOWSTONE_BLOCK);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.SMOOTH_MICROCLINE_WALL, ModBlocks.SMOOTH_MICROCLINE);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORTHOCLASE_FELDSPAR_WALL, ModBlocks.ORTHOCLASE_FELDSPAR);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.KHEWRA_SALT_WALL, ModBlocks.KHEWRA_SALT_BLOCK);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.PACKED_KAOLINITE_CLAY_WALL, ModBlocks.PACKED_KAOLINITE_CLAY);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.KAOLINITE_BRICK_WALL, ModBlocks.KAOLINITE_BRICKS);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.RAW_SUNSTONE_WALL, ModBlocks.RAW_SUNSTONE);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.SUNSTONE_WALL, ModBlocks.SUNSTONE);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIMBURGITE_WALL, ModBlocks.LIMBURGITE);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.HAWAIITE_WALL, ModBlocks.HAWAIITE);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.SCORIA_WALL, ModBlocks.SCORIA);
-
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PUMICE_SLAB, ModBlocks.PUMICE);
-        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.PUMICE_WALL, ModBlocks.PUMICE);
-        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PUMICE_STAIRS, ModBlocks.PUMICE);
-        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PUMICE_SLAB, ModBlocks.PUMICE, 2);
-        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PUMICE_WALL, ModBlocks.PUMICE);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PUMICE_STAIRS, 4)
-                .input('T', ModBlocks.PUMICE)
-                .pattern("T  ")
-                .pattern("TT ")
-                .pattern("TTT")
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PUMICE), FabricRecipeProvider.conditionsFromItem(ModBlocks.PUMICE))
-                .offerTo(exporter);
-
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROUGH_COBBLESTONE_BRICK_SLAB, ModBlocks.ROUGH_COBBLESTONE_BRICKS);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ROUGH_COBBLESTONE_BRICK_STAIRS, ModBlocks.ROUGH_COBBLESTONE_BRICKS);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ROUGH_COBBLESTONE_BRICK_SLAB, ModBlocks.ROUGH_COBBLESTONE_BRICKS, 2);
@@ -236,6 +170,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.COBBLESTONE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.COBBLESTONE_BRICKS))
                 .offerTo(exporter);
 
+        offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CLAY_ROOF_TILES, Blocks.PINK_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_CLAY_ROOF_TILES, Blocks.PINK_TERRACOTTA);
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CLAY_ROOF_TILE_SLAB, ModBlocks.PINK_CLAY_ROOF_TILES);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_CLAY_ROOF_TILE_STAIRS, ModBlocks.PINK_CLAY_ROOF_TILES);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_CLAY_ROOF_TILE_SLAB, ModBlocks.PINK_CLAY_ROOF_TILES, 2);
@@ -2234,6 +2170,1038 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("TT ")
                 .pattern("TTT")
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_BURGUNDY_SILTSTONE), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_BURGUNDY_SILTSTONE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_BRICK_SLAB, ModBlocks.ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ANCIENT_BRICK_STAIRS, ModBlocks.ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ANCIENT_BRICK_SLAB, ModBlocks.ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.WHITE_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.WHITE_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_ANCIENT_BRICK_SLAB, ModBlocks.WHITE_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.WHITE_ANCIENT_BRICK_STAIRS, ModBlocks.WHITE_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.WHITE_ANCIENT_BRICK_SLAB, ModBlocks.WHITE_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.WHITE_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.WHITE_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.WHITE_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.WHITE_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.LIGHT_GRAY_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_SLAB, ModBlocks.LIGHT_GRAY_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_STAIRS, ModBlocks.LIGHT_GRAY_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_SLAB, ModBlocks.LIGHT_GRAY_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.LIGHT_GRAY_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIGHT_GRAY_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIGHT_GRAY_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GRAY_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.GRAY_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_ANCIENT_BRICK_SLAB, ModBlocks.GRAY_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GRAY_ANCIENT_BRICK_STAIRS, ModBlocks.GRAY_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GRAY_ANCIENT_BRICK_SLAB, ModBlocks.GRAY_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GRAY_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.GRAY_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GRAY_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.GRAY_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLACK_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.BLACK_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_ANCIENT_BRICK_SLAB, ModBlocks.BLACK_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLACK_ANCIENT_BRICK_STAIRS, ModBlocks.BLACK_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLACK_ANCIENT_BRICK_SLAB, ModBlocks.BLACK_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLACK_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.BLACK_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLACK_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLACK_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BROWN_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.BROWN_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_ANCIENT_BRICK_SLAB, ModBlocks.BROWN_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BROWN_ANCIENT_BRICK_STAIRS, ModBlocks.BROWN_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BROWN_ANCIENT_BRICK_SLAB, ModBlocks.BROWN_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BROWN_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.BROWN_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BROWN_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.BROWN_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RED_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.RED_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_ANCIENT_BRICK_SLAB, ModBlocks.RED_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RED_ANCIENT_BRICK_STAIRS, ModBlocks.RED_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RED_ANCIENT_BRICK_SLAB, ModBlocks.RED_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RED_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.RED_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.RED_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.RED_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ORANGE_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.ORANGE_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_ANCIENT_BRICK_SLAB, ModBlocks.ORANGE_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORANGE_ANCIENT_BRICK_STAIRS, ModBlocks.ORANGE_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORANGE_ANCIENT_BRICK_SLAB, ModBlocks.ORANGE_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ORANGE_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.ORANGE_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.YELLOW_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.YELLOW_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_ANCIENT_BRICK_SLAB, ModBlocks.YELLOW_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.YELLOW_ANCIENT_BRICK_STAIRS, ModBlocks.YELLOW_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.YELLOW_ANCIENT_BRICK_SLAB, ModBlocks.YELLOW_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.YELLOW_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.YELLOW_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.YELLOW_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.YELLOW_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIME_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.LIME_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_ANCIENT_BRICK_SLAB, ModBlocks.LIME_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIME_ANCIENT_BRICK_STAIRS, ModBlocks.LIME_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIME_ANCIENT_BRICK_SLAB, ModBlocks.LIME_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIME_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.LIME_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIME_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIME_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GREEN_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.GREEN_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_ANCIENT_BRICK_SLAB, ModBlocks.GREEN_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GREEN_ANCIENT_BRICK_STAIRS, ModBlocks.GREEN_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GREEN_ANCIENT_BRICK_SLAB, ModBlocks.GREEN_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GREEN_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.GREEN_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GREEN_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.GREEN_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CYAN_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.CYAN_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_ANCIENT_BRICK_SLAB, ModBlocks.CYAN_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.CYAN_ANCIENT_BRICK_STAIRS, ModBlocks.CYAN_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.CYAN_ANCIENT_BRICK_SLAB, ModBlocks.CYAN_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CYAN_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.CYAN_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.CYAN_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.CYAN_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.LIGHT_BLUE_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_SLAB, ModBlocks.LIGHT_BLUE_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_STAIRS, ModBlocks.LIGHT_BLUE_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_SLAB, ModBlocks.LIGHT_BLUE_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.LIGHT_BLUE_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIGHT_BLUE_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIGHT_BLUE_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLUE_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.BLUE_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_ANCIENT_BRICK_SLAB, ModBlocks.BLUE_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLUE_ANCIENT_BRICK_STAIRS, ModBlocks.BLUE_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLUE_ANCIENT_BRICK_SLAB, ModBlocks.BLUE_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLUE_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.BLUE_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PURPLE_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.PURPLE_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_ANCIENT_BRICK_SLAB, ModBlocks.PURPLE_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PURPLE_ANCIENT_BRICK_STAIRS, ModBlocks.PURPLE_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PURPLE_ANCIENT_BRICK_SLAB, ModBlocks.PURPLE_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PURPLE_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.PURPLE_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PURPLE_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.PURPLE_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MAGENTA_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.MAGENTA_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_ANCIENT_BRICK_SLAB, ModBlocks.MAGENTA_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MAGENTA_ANCIENT_BRICK_STAIRS, ModBlocks.MAGENTA_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MAGENTA_ANCIENT_BRICK_SLAB, ModBlocks.MAGENTA_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MAGENTA_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.MAGENTA_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MAGENTA_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MAGENTA_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PINK_ANCIENT_BRICKS, 8)
+                .input('A', ModItemTagProvider.ModTags.Items.ANCIENT_BRICKS)
+                .input('D', ConventionalItemTags.PINK_DYES)
+                .pattern("AAA")
+                .pattern("ADA")
+                .pattern("AAA")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_ANCIENT_BRICK_SLAB, ModBlocks.PINK_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_ANCIENT_BRICK_STAIRS, ModBlocks.PINK_ANCIENT_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_ANCIENT_BRICK_SLAB, ModBlocks.PINK_ANCIENT_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PINK_ANCIENT_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.PINK_ANCIENT_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PINK_ANCIENT_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.PINK_ANCIENT_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TRAVERTINE_SLAB, ModBlocks.TRAVERTINE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.TRAVERTINE_WALL, ModBlocks.TRAVERTINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.TRAVERTINE_STAIRS, ModBlocks.TRAVERTINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.TRAVERTINE_SLAB, ModBlocks.TRAVERTINE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.TRAVERTINE_WALL, ModBlocks.TRAVERTINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_TRAVERTINE, ModBlocks.TRAVERTINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_TRAVERTINE_STAIRS, ModBlocks.TRAVERTINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_TRAVERTINE_SLAB, ModBlocks.TRAVERTINE, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.TRAVERTINE_STAIRS, 4)
+                .input('T', ModBlocks.TRAVERTINE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TRAVERTINE), FabricRecipeProvider.conditionsFromItem(ModBlocks.TRAVERTINE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TRAVERTINE_SLAB, ModBlocks.POLISHED_TRAVERTINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_TRAVERTINE_STAIRS, ModBlocks.POLISHED_TRAVERTINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_TRAVERTINE_SLAB, ModBlocks.POLISHED_TRAVERTINE, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POLISHED_TRAVERTINE_STAIRS, 4)
+                .input('T', ModBlocks.POLISHED_TRAVERTINE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_TRAVERTINE), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_TRAVERTINE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TRACHYANDESITE_SLAB, ModBlocks.TRACHYANDESITE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.TRACHYANDESITE_WALL, ModBlocks.TRACHYANDESITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.TRACHYANDESITE_STAIRS, ModBlocks.TRACHYANDESITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.TRACHYANDESITE_SLAB, ModBlocks.TRACHYANDESITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.TRACHYANDESITE_WALL, ModBlocks.TRACHYANDESITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_TRACHYANDESITE, ModBlocks.TRACHYANDESITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_TRACHYANDESITE_STAIRS, ModBlocks.TRACHYANDESITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_TRACHYANDESITE_SLAB, ModBlocks.TRACHYANDESITE, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.TRACHYANDESITE_STAIRS, 4)
+                .input('T', ModBlocks.TRACHYANDESITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TRACHYANDESITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.TRACHYANDESITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TRACHYANDESITE_SLAB, ModBlocks.POLISHED_TRACHYANDESITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_TRACHYANDESITE_STAIRS, ModBlocks.POLISHED_TRACHYANDESITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_TRACHYANDESITE_SLAB, ModBlocks.POLISHED_TRACHYANDESITE, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POLISHED_TRACHYANDESITE_STAIRS, 4)
+                .input('T', ModBlocks.POLISHED_TRACHYANDESITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_TRACHYANDESITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_TRACHYANDESITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PICRITE_BASALT_SLAB, ModBlocks.PICRITE_BASALT);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.PICRITE_BASALT_WALL, ModBlocks.PICRITE_BASALT);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PICRITE_BASALT_STAIRS, ModBlocks.PICRITE_BASALT);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PICRITE_BASALT_SLAB, ModBlocks.PICRITE_BASALT, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PICRITE_BASALT_WALL, ModBlocks.PICRITE_BASALT);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_PICRITE_BASALT, ModBlocks.PICRITE_BASALT);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_PICRITE_BASALT_STAIRS, ModBlocks.PICRITE_BASALT);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_PICRITE_BASALT_SLAB, ModBlocks.PICRITE_BASALT, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_PICRITE_BASALT_WALL, ModBlocks.PICRITE_BASALT);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PICRITE_BASALT_STAIRS, 4)
+                .input('T', ModBlocks.PICRITE_BASALT)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PICRITE_BASALT), FabricRecipeProvider.conditionsFromItem(ModBlocks.PICRITE_BASALT))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_PICRITE_BASALT_SLAB, ModBlocks.POLISHED_PICRITE_BASALT);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_PICRITE_BASALT_WALL, ModBlocks.POLISHED_PICRITE_BASALT);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_PICRITE_BASALT_STAIRS, ModBlocks.POLISHED_PICRITE_BASALT);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_PICRITE_BASALT_SLAB, ModBlocks.POLISHED_PICRITE_BASALT, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_PICRITE_BASALT_WALL, ModBlocks.POLISHED_PICRITE_BASALT);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POLISHED_PICRITE_BASALT_STAIRS, 4)
+                .input('T', ModBlocks.POLISHED_PICRITE_BASALT)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_PICRITE_BASALT), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_PICRITE_BASALT))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHLORAPATITE_SLAB, ModBlocks.CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.CHLORAPATITE_STAIRS, ModBlocks.CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.CHLORAPATITE_SLAB, ModBlocks.CHLORAPATITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_CHLORAPATITE, ModBlocks.CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_CHLORAPATITE_STAIRS, ModBlocks.CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_CHLORAPATITE_SLAB, ModBlocks.CHLORAPATITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_CHLORAPATITE_WALL, ModBlocks.CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.EXTRA_POLISHED_CHLORAPATITE, ModBlocks.CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.EXTRA_POLISHED_CHLORAPATITE_STAIRS, ModBlocks.CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.EXTRA_POLISHED_CHLORAPATITE_SLAB, ModBlocks.CHLORAPATITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.EXTRA_POLISHED_CHLORAPATITE_WALL, ModBlocks.CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE, ModBlocks.CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_STAIRS, ModBlocks.CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_SLAB, ModBlocks.CHLORAPATITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_WALL, ModBlocks.CHLORAPATITE);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CHLORAPATITE_STAIRS, 4)
+                .input('T', ModBlocks.CHLORAPATITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.CHLORAPATITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.CHLORAPATITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CHLORAPATITE_SLAB, ModBlocks.POLISHED_CHLORAPATITE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_CHLORAPATITE_WALL, ModBlocks.POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_CHLORAPATITE_STAIRS, ModBlocks.POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_CHLORAPATITE_SLAB, ModBlocks.POLISHED_CHLORAPATITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_CHLORAPATITE_WALL, ModBlocks.POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.EXTRA_POLISHED_CHLORAPATITE, ModBlocks.POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.EXTRA_POLISHED_CHLORAPATITE_STAIRS, ModBlocks.POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.EXTRA_POLISHED_CHLORAPATITE_SLAB, ModBlocks.POLISHED_CHLORAPATITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.EXTRA_POLISHED_CHLORAPATITE_WALL, ModBlocks.POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE, ModBlocks.POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_STAIRS, ModBlocks.POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_SLAB, ModBlocks.POLISHED_CHLORAPATITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_WALL, ModBlocks.POLISHED_CHLORAPATITE);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POLISHED_CHLORAPATITE_STAIRS, 4)
+                .input('T', ModBlocks.POLISHED_CHLORAPATITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_CHLORAPATITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_CHLORAPATITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXTRA_POLISHED_CHLORAPATITE_SLAB, ModBlocks.EXTRA_POLISHED_CHLORAPATITE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.EXTRA_POLISHED_CHLORAPATITE_WALL, ModBlocks.EXTRA_POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.EXTRA_POLISHED_CHLORAPATITE_STAIRS, ModBlocks.EXTRA_POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.EXTRA_POLISHED_CHLORAPATITE_SLAB, ModBlocks.EXTRA_POLISHED_CHLORAPATITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.EXTRA_POLISHED_CHLORAPATITE_WALL, ModBlocks.EXTRA_POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE, ModBlocks.EXTRA_POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_STAIRS, ModBlocks.EXTRA_POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_SLAB, ModBlocks.EXTRA_POLISHED_CHLORAPATITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_WALL, ModBlocks.EXTRA_POLISHED_CHLORAPATITE);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.EXTRA_POLISHED_CHLORAPATITE_STAIRS, 4)
+                .input('T', ModBlocks.EXTRA_POLISHED_CHLORAPATITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.EXTRA_POLISHED_CHLORAPATITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.EXTRA_POLISHED_CHLORAPATITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FULLY_POLISHED_CHLORAPATITE_SLAB, ModBlocks.FULLY_POLISHED_CHLORAPATITE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_WALL, ModBlocks.FULLY_POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_STAIRS, ModBlocks.FULLY_POLISHED_CHLORAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_SLAB, ModBlocks.FULLY_POLISHED_CHLORAPATITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_WALL, ModBlocks.FULLY_POLISHED_CHLORAPATITE);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.FULLY_POLISHED_CHLORAPATITE_STAIRS, 4)
+                .input('T', ModBlocks.FULLY_POLISHED_CHLORAPATITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FULLY_POLISHED_CHLORAPATITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.FULLY_POLISHED_CHLORAPATITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.DACITE_SLAB, ModBlocks.DACITE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.DACITE_WALL, ModBlocks.DACITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.DACITE_STAIRS, ModBlocks.DACITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.DACITE_SLAB, ModBlocks.DACITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.DACITE_WALL, ModBlocks.DACITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_DACITE, ModBlocks.DACITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_DACITE_STAIRS, ModBlocks.DACITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_DACITE_SLAB, ModBlocks.DACITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.DACITE_TILES, ModBlocks.DACITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.DACITE_TILE_STAIRS, ModBlocks.DACITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.DACITE_TILE_SLAB, ModBlocks.DACITE, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.DACITE_STAIRS, 4)
+                .input('T', ModBlocks.DACITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.DACITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.DACITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DACITE, ModBlocks.POLISHED_DACITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_DACITE_STAIRS, ModBlocks.POLISHED_DACITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_DACITE_SLAB, ModBlocks.POLISHED_DACITE, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POLISHED_DACITE_STAIRS, 4)
+                .input('T', ModBlocks.POLISHED_DACITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_DACITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_DACITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.DACITE_TILE_SLAB, ModBlocks.DACITE_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.DACITE_TILE_STAIRS, ModBlocks.DACITE_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.DACITE_TILE_SLAB, ModBlocks.DACITE_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.DACITE_TILE_STAIRS, 4)
+                .input('T', ModBlocks.DACITE_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.DACITE_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.DACITE_TILES))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.HYDROXYLAPATITE_SLAB, ModBlocks.HYDROXYLAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.HYDROXYLAPATITE_STAIRS, ModBlocks.HYDROXYLAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.HYDROXYLAPATITE_SLAB, ModBlocks.HYDROXYLAPATITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_HYDROXYLAPATITE, ModBlocks.HYDROXYLAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_HYDROXYLAPATITE_STAIRS, ModBlocks.HYDROXYLAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_HYDROXYLAPATITE_SLAB, ModBlocks.HYDROXYLAPATITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_HYDROXYLAPATITE_WALL, ModBlocks.HYDROXYLAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.HYDROXYLAPATITE_TILES, ModBlocks.HYDROXYLAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.HYDROXYLAPATITE_TILE_STAIRS, ModBlocks.HYDROXYLAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.HYDROXYLAPATITE_TILE_SLAB, ModBlocks.HYDROXYLAPATITE, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.HYDROXYLAPATITE_STAIRS, 4)
+                .input('T', ModBlocks.HYDROXYLAPATITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HYDROXYLAPATITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.HYDROXYLAPATITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_HYDROXYLAPATITE_SLAB, ModBlocks.POLISHED_HYDROXYLAPATITE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_HYDROXYLAPATITE_WALL, ModBlocks.POLISHED_HYDROXYLAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_HYDROXYLAPATITE_STAIRS, ModBlocks.POLISHED_HYDROXYLAPATITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_HYDROXYLAPATITE_SLAB, ModBlocks.POLISHED_HYDROXYLAPATITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_HYDROXYLAPATITE_WALL, ModBlocks.POLISHED_HYDROXYLAPATITE);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POLISHED_HYDROXYLAPATITE_STAIRS, 4)
+                .input('T', ModBlocks.POLISHED_HYDROXYLAPATITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_HYDROXYLAPATITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_HYDROXYLAPATITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.HYDROXYLAPATITE_TILE_SLAB, ModBlocks.HYDROXYLAPATITE_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.HYDROXYLAPATITE_TILE_STAIRS, ModBlocks.HYDROXYLAPATITE_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.HYDROXYLAPATITE_TILE_SLAB, ModBlocks.HYDROXYLAPATITE_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.HYDROXYLAPATITE_TILE_STAIRS, 4)
+                .input('T', ModBlocks.HYDROXYLAPATITE_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HYDROXYLAPATITE_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.HYDROXYLAPATITE_TILES))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FOYAITE_SLAB, ModBlocks.FOYAITE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.FOYAITE_WALL, ModBlocks.FOYAITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FOYAITE_STAIRS, ModBlocks.FOYAITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FOYAITE_SLAB, ModBlocks.FOYAITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FOYAITE_WALL, ModBlocks.FOYAITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_FOYAITE, ModBlocks.FOYAITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_FOYAITE_STAIRS, ModBlocks.FOYAITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_FOYAITE_SLAB, ModBlocks.FOYAITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FOYAITE_TILES, ModBlocks.FOYAITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FOYAITE_TILE_STAIRS, ModBlocks.FOYAITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FOYAITE_TILE_SLAB, ModBlocks.FOYAITE, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.FOYAITE_STAIRS, 4)
+                .input('T', ModBlocks.FOYAITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FOYAITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.FOYAITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_FOYAITE_SLAB, ModBlocks.POLISHED_FOYAITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_FOYAITE_STAIRS, ModBlocks.POLISHED_FOYAITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_FOYAITE_SLAB, ModBlocks.POLISHED_FOYAITE, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POLISHED_FOYAITE_STAIRS, 4)
+                .input('T', ModBlocks.POLISHED_FOYAITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_FOYAITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_FOYAITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FOYAITE_TILE_SLAB, ModBlocks.FOYAITE_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FOYAITE_TILE_STAIRS, ModBlocks.FOYAITE_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FOYAITE_TILE_SLAB, ModBlocks.FOYAITE_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.FOYAITE_TILE_STAIRS, 4)
+                .input('T', ModBlocks.FOYAITE_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FOYAITE_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.FOYAITE_TILES))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GABBRO_SLAB, ModBlocks.GABBRO);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.GABBRO_WALL, ModBlocks.GABBRO);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GABBRO_STAIRS, ModBlocks.GABBRO);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GABBRO_SLAB, ModBlocks.GABBRO, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GABBRO_WALL, ModBlocks.GABBRO);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_GABBRO, ModBlocks.GABBRO);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_GABBRO_STAIRS, ModBlocks.GABBRO);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_GABBRO_SLAB, ModBlocks.GABBRO, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GABBRO_BRICKS, ModBlocks.GABBRO);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GABBRO_BRICK_STAIRS, ModBlocks.GABBRO);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GABBRO_BRICK_SLAB, ModBlocks.GABBRO, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GABBRO_STAIRS, 4)
+                .input('T', ModBlocks.GABBRO)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GABBRO), FabricRecipeProvider.conditionsFromItem(ModBlocks.GABBRO))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_GABBRO_SLAB, ModBlocks.POLISHED_GABBRO);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_GABBRO_STAIRS, ModBlocks.POLISHED_GABBRO);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_GABBRO_SLAB, ModBlocks.POLISHED_GABBRO, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POLISHED_GABBRO_STAIRS, 4)
+                .input('T', ModBlocks.POLISHED_GABBRO)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_GABBRO), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_GABBRO))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GABBRO_BRICK_SLAB, ModBlocks.GABBRO_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GABBRO_BRICK_STAIRS, ModBlocks.GABBRO_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GABBRO_BRICK_SLAB, ModBlocks.GABBRO_BRICKS, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GABBRO_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.GABBRO_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GABBRO_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.GABBRO_BRICKS))
+                .offerTo(exporter);
+
+        offerShapelessRecipe(exporter, ModBlocks.FLOWSTONE, ModBlocks.FLOWSTONE_BLOCK, "to_normal",1);
+        offerShapelessRecipe(exporter, ModBlocks.FLOWSTONE_BLOCK, ModBlocks.FLOWSTONE, "to_block",1);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FLOWSTONE_SLAB, ModBlocks.FLOWSTONE_BLOCK);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.FLOWSTONE_WALL, ModBlocks.FLOWSTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FLOWSTONE_STAIRS, ModBlocks.FLOWSTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FLOWSTONE_SLAB, ModBlocks.FLOWSTONE_BLOCK, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.FLOWSTONE_WALL, ModBlocks.FLOWSTONE_BLOCK);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.FLOWSTONE_STAIRS, 4)
+                .input('T', ModBlocks.FLOWSTONE_BLOCK)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FLOWSTONE_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FLOWSTONE_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MICROCLINE,4)
+                .input('M', ModBlocks.MICROCLINE)
+                .pattern("MM")
+                .pattern("MM")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MICROCLINE), FabricRecipeProvider.conditionsFromItem(ModBlocks.MICROCLINE))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_MICROCLINE,4)
+                .input('M', ModBlocks.POLISHED_MICROCLINE)
+                .pattern("MM")
+                .pattern("MM")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_MICROCLINE), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_MICROCLINE))
+                .offerTo(exporter);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_MICROCLINE, ModBlocks.MICROCLINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_MICROCLINE_STAIRS, ModBlocks.MICROCLINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_MICROCLINE_SLAB, ModBlocks.MICROCLINE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SMOOTH_MICROCLINE, ModBlocks.MICROCLINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SMOOTH_MICROCLINE_STAIRS, ModBlocks.MICROCLINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SMOOTH_MICROCLINE_SLAB, ModBlocks.MICROCLINE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SMOOTH_MICROCLINE_WALL, ModBlocks.MICROCLINE);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MICROCLINE_SLAB, ModBlocks.POLISHED_MICROCLINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_MICROCLINE_STAIRS, ModBlocks.POLISHED_MICROCLINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_MICROCLINE_SLAB, ModBlocks.POLISHED_MICROCLINE, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POLISHED_MICROCLINE_STAIRS, 4)
+                .input('T', ModBlocks.POLISHED_MICROCLINE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_MICROCLINE), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_MICROCLINE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_MICROCLINE_SLAB, ModBlocks.SMOOTH_MICROCLINE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.SMOOTH_MICROCLINE_WALL, ModBlocks.SMOOTH_MICROCLINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SMOOTH_MICROCLINE_STAIRS, ModBlocks.SMOOTH_MICROCLINE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SMOOTH_MICROCLINE_SLAB, ModBlocks.SMOOTH_MICROCLINE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SMOOTH_MICROCLINE_WALL, ModBlocks.SMOOTH_MICROCLINE);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SMOOTH_MICROCLINE_STAIRS, 4)
+                .input('T', ModBlocks.SMOOTH_MICROCLINE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.SMOOTH_MICROCLINE), FabricRecipeProvider.conditionsFromItem(ModBlocks.SMOOTH_MICROCLINE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORTHOCLASE_FELDSPAR_SLAB, ModBlocks.ORTHOCLASE_FELDSPAR);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORTHOCLASE_FELDSPAR_WALL, ModBlocks.ORTHOCLASE_FELDSPAR);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORTHOCLASE_FELDSPAR_STAIRS, ModBlocks.ORTHOCLASE_FELDSPAR);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORTHOCLASE_FELDSPAR_SLAB, ModBlocks.ORTHOCLASE_FELDSPAR, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORTHOCLASE_FELDSPAR_WALL, ModBlocks.ORTHOCLASE_FELDSPAR);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR, ModBlocks.ORTHOCLASE_FELDSPAR);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR_STAIRS, ModBlocks.ORTHOCLASE_FELDSPAR);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR_SLAB, ModBlocks.ORTHOCLASE_FELDSPAR, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORTHOCLASE_FELDSPAR_TILES, ModBlocks.ORTHOCLASE_FELDSPAR);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORTHOCLASE_FELDSPAR_TILE_STAIRS, ModBlocks.ORTHOCLASE_FELDSPAR);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORTHOCLASE_FELDSPAR_TILE_SLAB, ModBlocks.ORTHOCLASE_FELDSPAR, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ORTHOCLASE_FELDSPAR_STAIRS, 4)
+                .input('T', ModBlocks.ORTHOCLASE_FELDSPAR)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORTHOCLASE_FELDSPAR), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORTHOCLASE_FELDSPAR))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR_SLAB, ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR_STAIRS, ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR_SLAB, ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR_STAIRS, 4)
+                .input('T', ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_ORTHOCLASE_FELDSPAR))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORTHOCLASE_FELDSPAR_TILE_SLAB, ModBlocks.ORTHOCLASE_FELDSPAR_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORTHOCLASE_FELDSPAR_TILE_STAIRS, ModBlocks.ORTHOCLASE_FELDSPAR_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORTHOCLASE_FELDSPAR_TILE_SLAB, ModBlocks.ORTHOCLASE_FELDSPAR_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ORTHOCLASE_FELDSPAR_TILE_STAIRS, 4)
+                .input('T', ModBlocks.ORTHOCLASE_FELDSPAR_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORTHOCLASE_FELDSPAR_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORTHOCLASE_FELDSPAR_TILES))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KHEWRA_SALT_SLAB, ModBlocks.KHEWRA_SALT_BLOCK);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.KHEWRA_SALT_WALL, ModBlocks.KHEWRA_SALT_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.KHEWRA_SALT_STAIRS, ModBlocks.KHEWRA_SALT_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.KHEWRA_SALT_SLAB, ModBlocks.KHEWRA_SALT_BLOCK, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.KHEWRA_SALT_WALL, ModBlocks.KHEWRA_SALT_BLOCK);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.KHEWRA_SALT_STAIRS, 4)
+                .input('T', ModBlocks.KHEWRA_SALT_BLOCK)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.KHEWRA_SALT_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.KHEWRA_SALT_BLOCK))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_KAOLINITE_CLAY_SLAB, ModBlocks.PACKED_KAOLINITE_CLAY);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.PACKED_KAOLINITE_CLAY_WALL, ModBlocks.PACKED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PACKED_KAOLINITE_CLAY_STAIRS, ModBlocks.PACKED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PACKED_KAOLINITE_CLAY_SLAB, ModBlocks.PACKED_KAOLINITE_CLAY, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PACKED_KAOLINITE_CLAY_WALL, ModBlocks.PACKED_KAOLINITE_CLAY);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PACKED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.PACKED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PACKED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.PACKED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KAOLINITE_BRICK_SLAB, ModBlocks.KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.KAOLINITE_BRICK_WALL, ModBlocks.KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.KAOLINITE_BRICK_STAIRS, ModBlocks.KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.KAOLINITE_BRICK_SLAB, ModBlocks.KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.KAOLINITE_BRICK_WALL, ModBlocks.KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNSTONE,4)
+                .input('M', ModBlocks.RAW_SUNSTONE)
+                .pattern("MM")
+                .pattern("MM")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.RAW_SUNSTONE), FabricRecipeProvider.conditionsFromItem(ModBlocks.RAW_SUNSTONE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_SUNSTONE_SLAB, ModBlocks.RAW_SUNSTONE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.RAW_SUNSTONE_WALL, ModBlocks.RAW_SUNSTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RAW_SUNSTONE_STAIRS, ModBlocks.RAW_SUNSTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RAW_SUNSTONE_SLAB, ModBlocks.RAW_SUNSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RAW_SUNSTONE_WALL, ModBlocks.RAW_SUNSTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SUNSTONE, ModBlocks.RAW_SUNSTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SUNSTONE_STAIRS, ModBlocks.RAW_SUNSTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SUNSTONE_SLAB, ModBlocks.RAW_SUNSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SUNSTONE_WALL, ModBlocks.RAW_SUNSTONE);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RAW_SUNSTONE_STAIRS, 4)
+                .input('T', ModBlocks.RAW_SUNSTONE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.RAW_SUNSTONE), FabricRecipeProvider.conditionsFromItem(ModBlocks.RAW_SUNSTONE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNSTONE_SLAB, ModBlocks.SUNSTONE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.SUNSTONE_WALL, ModBlocks.SUNSTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SUNSTONE_STAIRS, ModBlocks.SUNSTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SUNSTONE_SLAB, ModBlocks.SUNSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SUNSTONE_WALL, ModBlocks.SUNSTONE);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SUNSTONE_STAIRS, 4)
+                .input('T', ModBlocks.SUNSTONE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.SUNSTONE), FabricRecipeProvider.conditionsFromItem(ModBlocks.SUNSTONE))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOONSTONE,4)
+                .input('M', ModBlocks.RAW_MOONSTONE)
+                .pattern("MM")
+                .pattern("MM")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.RAW_MOONSTONE), FabricRecipeProvider.conditionsFromItem(ModBlocks.RAW_MOONSTONE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_MOONSTONE_SLAB, ModBlocks.RAW_MOONSTONE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.RAW_MOONSTONE_WALL, ModBlocks.RAW_MOONSTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RAW_MOONSTONE_STAIRS, ModBlocks.RAW_MOONSTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RAW_MOONSTONE_SLAB, ModBlocks.RAW_MOONSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RAW_MOONSTONE_WALL, ModBlocks.RAW_MOONSTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MOONSTONE, ModBlocks.RAW_MOONSTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MOONSTONE_STAIRS, ModBlocks.RAW_MOONSTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MOONSTONE_SLAB, ModBlocks.RAW_MOONSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MOONSTONE_WALL, ModBlocks.RAW_MOONSTONE);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RAW_MOONSTONE_STAIRS, 4)
+                .input('T', ModBlocks.RAW_MOONSTONE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.RAW_MOONSTONE), FabricRecipeProvider.conditionsFromItem(ModBlocks.RAW_MOONSTONE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOONSTONE_SLAB, ModBlocks.MOONSTONE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.MOONSTONE_WALL, ModBlocks.MOONSTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MOONSTONE_STAIRS, ModBlocks.MOONSTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MOONSTONE_SLAB, ModBlocks.MOONSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MOONSTONE_WALL, ModBlocks.MOONSTONE);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MOONSTONE_STAIRS, 4)
+                .input('T', ModBlocks.MOONSTONE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MOONSTONE), FabricRecipeProvider.conditionsFromItem(ModBlocks.MOONSTONE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMBURGITE_SLAB, ModBlocks.LIMBURGITE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIMBURGITE_WALL, ModBlocks.LIMBURGITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIMBURGITE_STAIRS, ModBlocks.LIMBURGITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIMBURGITE_SLAB, ModBlocks.LIMBURGITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIMBURGITE_WALL, ModBlocks.LIMBURGITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_LIMBURGITE, ModBlocks.LIMBURGITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_LIMBURGITE_STAIRS, ModBlocks.LIMBURGITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_LIMBURGITE_SLAB, ModBlocks.LIMBURGITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIMBURGITE_TILES, ModBlocks.LIMBURGITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIMBURGITE_TILE_STAIRS, ModBlocks.LIMBURGITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIMBURGITE_TILE_SLAB, ModBlocks.LIMBURGITE, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIMBURGITE_STAIRS, 4)
+                .input('T', ModBlocks.LIMBURGITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIMBURGITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIMBURGITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_LIMBURGITE_SLAB, ModBlocks.POLISHED_LIMBURGITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_LIMBURGITE_STAIRS, ModBlocks.POLISHED_LIMBURGITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_LIMBURGITE_SLAB, ModBlocks.POLISHED_LIMBURGITE, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POLISHED_LIMBURGITE_STAIRS, 4)
+                .input('T', ModBlocks.POLISHED_LIMBURGITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_LIMBURGITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_LIMBURGITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMBURGITE_TILE_SLAB, ModBlocks.LIMBURGITE_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIMBURGITE_TILE_STAIRS, ModBlocks.LIMBURGITE_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIMBURGITE_TILE_SLAB, ModBlocks.LIMBURGITE_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIMBURGITE_TILE_STAIRS, 4)
+                .input('T', ModBlocks.LIMBURGITE_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIMBURGITE_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIMBURGITE_TILES))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.HAWAIITE_SLAB, ModBlocks.HAWAIITE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.HAWAIITE_WALL, ModBlocks.HAWAIITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.HAWAIITE_STAIRS, ModBlocks.HAWAIITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.HAWAIITE_SLAB, ModBlocks.HAWAIITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.HAWAIITE_WALL, ModBlocks.HAWAIITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_HAWAIITE, ModBlocks.HAWAIITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_HAWAIITE_STAIRS, ModBlocks.HAWAIITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_HAWAIITE_SLAB, ModBlocks.HAWAIITE, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.HAWAIITE_STAIRS, 4)
+                .input('T', ModBlocks.HAWAIITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HAWAIITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.HAWAIITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_HAWAIITE_SLAB, ModBlocks.POLISHED_HAWAIITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_HAWAIITE_STAIRS, ModBlocks.POLISHED_HAWAIITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_HAWAIITE_SLAB, ModBlocks.POLISHED_HAWAIITE, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POLISHED_HAWAIITE_STAIRS, 4)
+                .input('T', ModBlocks.POLISHED_HAWAIITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_HAWAIITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_HAWAIITE))
+                .offerTo(exporter);
+
+        offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PUMICE, ModBlocks.PUMICEOUS_LAPILLI);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PUMICE_SLAB, ModBlocks.PUMICE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.PUMICE_WALL, ModBlocks.PUMICE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PUMICE_STAIRS, ModBlocks.PUMICE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PUMICE_SLAB, ModBlocks.PUMICE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PUMICE_WALL, ModBlocks.PUMICE);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PUMICE_STAIRS, 4)
+                .input('T', ModBlocks.PUMICE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PUMICE), FabricRecipeProvider.conditionsFromItem(ModBlocks.PUMICE))
+                .offerTo(exporter);
+
+        offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCORIA, ModBlocks.SCORIACEOUS_LAPILLI);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCORIA_SLAB, ModBlocks.SCORIA);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.SCORIA_WALL, ModBlocks.SCORIA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SCORIA_STAIRS, ModBlocks.SCORIA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SCORIA_SLAB, ModBlocks.SCORIA, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SCORIA_WALL, ModBlocks.SCORIA);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SCORIA_STAIRS, 4)
+                .input('T', ModBlocks.SCORIA)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.SCORIA), FabricRecipeProvider.conditionsFromItem(ModBlocks.SCORIA))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.BLAHAJ, 2)
+                .input('L', Blocks.LIGHT_BLUE_WOOL)
+                .input('P', Blocks.PINK_WOOL)
+                .input('H', ItemTags.FISHES)
+                .input('B', ModBlocks.BLAHAJ)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LHL")
+                .pattern("FBF")
+                .pattern("PHP")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.TETO_PLUSHIE,2)
+                .input('R', Blocks.RED_WOOL)
+                .input('G', Blocks.GRAY_WOOL)
+                .input('B', Items.BREAD)
+                .input('T', ModBlocks.TETO_PLUSHIE)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("RBR")
+                .pattern("FTF")
+                .pattern("GBG")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.MIKU_PLUSHIE,2)
+                .input('L', Blocks.LIGHT_BLUE_WOOL)
+                .input('G', Blocks.LIGHT_GRAY_WOOL)
+                .input('A', Blocks.ALLIUM)
+                .input('M', ModBlocks.MIKU_PLUSHIE)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LAL")
+                .pattern("FMF")
+                .pattern("GAG")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.AKITA_NERU_PLUSHIE,2)
+                .input('Y', Blocks.YELLOW_WOOL)
+                .input('B', Blocks.BROWN_WOOL)
+                .input('R', Items.REDSTONE)
+                .input('A', ModBlocks.AKITA_NERU_PLUSHIE)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("YRY")
+                .pattern("FAF")
+                .pattern("BRB")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.GUMI_PLUSHIE,2)
+                .input('L', Blocks.LIME_WOOL)
+                .input('O', Blocks.ORANGE_WOOL)
+                .input('C', Items.CARROT)
+                .input('G', ModBlocks.GUMI_PLUSHIE)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LCL")
+                .pattern("FGF")
+                .pattern("OCO")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.OSAGE_CHAN_PLUSHIE,2)
+                .input('B', Blocks.BLACK_WOOL)
+                .input('L', Blocks.LIGHT_GRAY_WOOL)
+                .input('E', Items.ENDER_PEARL)
+                .input('M', ModBlocks.OSAGE_CHAN_PLUSHIE)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("BEB")
+                .pattern("FMF")
+                .pattern("LEL")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
                 .offerTo(exporter);
     }
 }

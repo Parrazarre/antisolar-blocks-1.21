@@ -2,8 +2,14 @@ package net.parra.antisolarblocks.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.Identifier;
+import net.parra.antisolarblocks.AntisolarBlocks;
 import net.parra.antisolarblocks.block.ModBlocks;
 
 import java.util.concurrent.CompletableFuture;
@@ -564,7 +570,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SUNSTONE_SLAB)
                 .add(ModBlocks.SUNSTONE_WALL)
 
+                .add(ModBlocks.RAW_MOONSTONE)
+                .add(ModBlocks.RAW_MOONSTONE_STAIRS)
+                .add(ModBlocks.RAW_MOONSTONE_SLAB)
+                .add(ModBlocks.RAW_MOONSTONE_WALL)
                 .add(ModBlocks.MOONSTONE)
+                .add(ModBlocks.MOONSTONE_STAIRS)
+                .add(ModBlocks.MOONSTONE_SLAB)
+                .add(ModBlocks.MOONSTONE_WALL)
 
                 .add(ModBlocks.LIMBURGITE)
                 .add(ModBlocks.LIMBURGITE_STAIRS)
@@ -598,6 +611,60 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PUMICE_STAIRS)
                 .add(ModBlocks.PUMICE_SLAB)
                 .add(ModBlocks.PUMICE_WALL)
+
+                .add(ModBlocks.ANCIENT_BRICKS)
+                .add(ModBlocks.WHITE_ANCIENT_BRICKS)
+                .add(ModBlocks.LIGHT_GRAY_ANCIENT_BRICKS)
+                .add(ModBlocks.GRAY_ANCIENT_BRICKS)
+                .add(ModBlocks.BLACK_ANCIENT_BRICKS)
+                .add(ModBlocks.BROWN_ANCIENT_BRICKS)
+                .add(ModBlocks.RED_ANCIENT_BRICKS)
+                .add(ModBlocks.ORANGE_ANCIENT_BRICKS)
+                .add(ModBlocks.YELLOW_ANCIENT_BRICKS)
+                .add(ModBlocks.LIME_ANCIENT_BRICKS)
+                .add(ModBlocks.GREEN_ANCIENT_BRICKS)
+                .add(ModBlocks.CYAN_ANCIENT_BRICKS)
+                .add(ModBlocks.LIGHT_BLUE_ANCIENT_BRICKS)
+                .add(ModBlocks.BLUE_ANCIENT_BRICKS)
+                .add(ModBlocks.PURPLE_ANCIENT_BRICKS)
+                .add(ModBlocks.MAGENTA_ANCIENT_BRICKS)
+                .add(ModBlocks.PINK_ANCIENT_BRICKS)
+
+                .add(ModBlocks.ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.WHITE_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.GRAY_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.BLACK_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.BROWN_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.RED_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.ORANGE_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.YELLOW_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.LIME_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.GREEN_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.CYAN_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.BLUE_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.PURPLE_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.MAGENTA_ANCIENT_BRICK_STAIRS)
+                .add(ModBlocks.PINK_ANCIENT_BRICK_STAIRS)
+
+                .add(ModBlocks.ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.WHITE_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.GRAY_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.BLACK_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.BROWN_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.RED_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.ORANGE_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.YELLOW_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.LIME_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.GREEN_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.CYAN_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.BLUE_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.PURPLE_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.MAGENTA_ANCIENT_BRICK_SLAB)
+                .add(ModBlocks.PINK_ANCIENT_BRICK_SLAB)
         ;
 
 
@@ -617,11 +684,20 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+                .add(ModBlocks.CHISELED_ACACIA_PLANKS)
                 .add(ModBlocks.CHISELED_BAMBOO_PLANKS)
                 .add(ModBlocks.CHISELED_BIRCH_PLANKS)
+                .add(ModBlocks.CHISELED_CHERRY_PLANKS)
+                .add(ModBlocks.CHISELED_CRIMSON_PLANKS)
                 .add(ModBlocks.CHISELED_JUNGLE_PLANKS)
+                .add(ModBlocks.CHISELED_MANGROVE_PLANKS)
+                .add(ModBlocks.CHISELED_OAK_PLANKS)
                 .add(ModBlocks.CHISELED_DARK_OAK_PLANKS)
                 .add(ModBlocks.CHISELED_SPRUCE_PLANKS)
+                .add(ModBlocks.CHISELED_WARPED_PLANKS)
+                .add(ModBlocks.CHISELED_SUGAR_MAPLE_PLANKS)
+                .add(ModBlocks.CHISELED_WHITE_PINE_PLANKS)
+                .add(ModBlocks.CHISELED_YEW_PLANKS)
 
                 .add(ModBlocks.ACACIA_FENCING)
                 .add(ModBlocks.BAMBOO_FENCING)
@@ -771,6 +847,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.KAOLINITE_BRICK_WALL)
                 .add(ModBlocks.RAW_SUNSTONE_WALL)
                 .add(ModBlocks.SUNSTONE_WALL)
+                .add(ModBlocks.RAW_MOONSTONE_WALL)
+                .add(ModBlocks.MOONSTONE_WALL)
                 .add(ModBlocks.LIMBURGITE_WALL)
                 .add(ModBlocks.HAWAIITE_WALL)
                 .add(ModBlocks.SCORIA_WALL)
@@ -976,5 +1054,21 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.DRAGON_IMMUNE)
                 .add(ModBlocks.WROUGHT_IRON_FENCE);
+
+        getOrCreateTagBuilder(ModTags.Blocks.PICTURE_WINDOW)
+                .add(ModBlocks.ORNATE_PICTURE_WINDOW)
+                .add(ModBlocks.LARGE_PICTURE_WINDOW_TOP)
+                .add(ModBlocks.LARGE_PICTURE_WINDOW_MIDDLE)
+                .add(ModBlocks.LARGE_PICTURE_WINDOW_BOTTOM);
+
+    }
+    public class ModTags {
+        public static class Blocks {
+            public static final TagKey<Block> PICTURE_WINDOW = createTag("picture_window");
+
+            private static TagKey<Block> createTag(String name) {
+                return TagKey.of(RegistryKeys.BLOCK, Identifier.of(AntisolarBlocks.MOD_ID, name));
+            }
+        }
     }
 }

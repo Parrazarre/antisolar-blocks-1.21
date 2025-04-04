@@ -78,6 +78,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.GIANT_PASSIFLORA_CAERULA.asItem())
                 .add(ModBlocks.BLAHAJ.asItem())
                 .add(ModBlocks.TETO_PLUSHIE.asItem())
+                .add(ModBlocks.MIKU_PLUSHIE.asItem())
+                .add(ModBlocks.AKITA_NERU_PLUSHIE.asItem())
                 .add(ModBlocks.GUMI_PLUSHIE.asItem())
                 .add(ModBlocks.OSAGE_CHAN_PLUSHIE.asItem());
 
@@ -198,12 +200,97 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.STRIPPED_YEW_LOG.asItem())
                 .add(ModBlocks.STRIPPED_YEW_WOOD.asItem());
 
+        getOrCreateTagBuilder(ConventionalItemTags.WHITE_DYED)
+                .add(ModBlocks.WHITE_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.WHITE_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.WHITE_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.LIGHT_GRAY_DYED)
+                .add(ModBlocks.LIGHT_GRAY_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.GRAY_DYED)
+                .add(ModBlocks.GRAY_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.GRAY_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.GRAY_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.BLACK_DYED)
+                .add(ModBlocks.BLACK_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.BLACK_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.BLACK_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.BROWN_DYED)
+                .add(ModBlocks.BROWN_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.BROWN_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.BROWN_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.RED_DYED)
+                .add(ModBlocks.RED_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.RED_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.RED_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.ORANGE_DYED)
+                .add(ModBlocks.ORANGE_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.ORANGE_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.ORANGE_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.YELLOW_DYED)
+                .add(ModBlocks.YELLOW_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.YELLOW_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.YELLOW_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.LIME_DYED)
+                .add(ModBlocks.LIME_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.LIME_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.LIME_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.GREEN_DYED)
+                .add(ModBlocks.GREEN_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.GREEN_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.GREEN_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.CYAN_DYED)
+                .add(ModBlocks.CYAN_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.CYAN_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.CYAN_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.LIGHT_BLUE_DYED)
+                .add(ModBlocks.LIGHT_BLUE_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.BLUE_DYED)
+                .add(ModBlocks.BLUE_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.BLUE_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.BLUE_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.PURPLE_DYED)
+                .add(ModBlocks.PURPLE_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.PURPLE_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.PURPLE_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.MAGENTA_DYED)
+                .add(ModBlocks.MAGENTA_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.MAGENTA_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.MAGENTA_ANCIENT_BRICK_SLAB.asItem());
+        getOrCreateTagBuilder(ConventionalItemTags.PINK_DYED)
+                .add(ModBlocks.PINK_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.PINK_ANCIENT_BRICK_STAIRS.asItem())
+                .add(ModBlocks.PINK_ANCIENT_BRICK_SLAB.asItem());
+
+        getOrCreateTagBuilder(ModTags.Items.ANCIENT_BRICKS)
+                .add(ModBlocks.ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.WHITE_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.LIGHT_GRAY_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.GRAY_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.BLACK_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.BROWN_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.RED_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.ORANGE_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.YELLOW_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.LIME_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.GREEN_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.CYAN_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.LIGHT_BLUE_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.BLUE_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.PURPLE_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.MAGENTA_ANCIENT_BRICKS.asItem())
+                .add(ModBlocks.PINK_ANCIENT_BRICKS.asItem());
+
     }
     public class ModTags {
         public static class Items {
             public static final TagKey<Item> SUGAR_MAPLE_LOGS = createTag("sugar_maple_logs");
-            public static final TagKey<Item> WHITE_PINE_LOGS = createTag("white_pine_logs");;
-            public static final TagKey<Item> YEW_LOGS = createTag("yew_logs");;
+            public static final TagKey<Item> WHITE_PINE_LOGS = createTag("white_pine_logs");
+            public static final TagKey<Item> YEW_LOGS = createTag("yew_logs");
+            public static final TagKey<Item> ANCIENT_BRICKS = createTag("ancient_bricks");
 
             private static TagKey<Item> createTag(String name) {
                 return TagKey.of(RegistryKeys.ITEM, Identifier.of(AntisolarBlocks.MOD_ID, name));

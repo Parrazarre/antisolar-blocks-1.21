@@ -93,7 +93,6 @@ public class AntisolarBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SMALL_JAPANESE_MAPLE_LOG, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.JAPANESE_MAPLE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.JAPANESE_MAPLE_SAPLING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CHISELED_BAMBOO_PLANKS, RenderLayer.getCutout());
 
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SATIN_SPAR_GYPSUM_CRYSTAL, RenderLayer.getCutout());
@@ -106,9 +105,10 @@ public class AntisolarBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PARRADIO, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLAHAJ, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TETO_PLUSHIE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MIKU_PLUSHIE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AKITA_NERU_PLUSHIE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GUMI_PLUSHIE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OSAGE_CHAN_PLUSHIE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MAGIC, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ROPE, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WROUGHT_IRON_FENCE, RenderLayer.getCutout());

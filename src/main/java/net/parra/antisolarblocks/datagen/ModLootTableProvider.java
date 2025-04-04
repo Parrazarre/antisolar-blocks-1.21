@@ -69,11 +69,20 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COBBLESTONE_BRICK_WALL);
         addDrop(ModBlocks.COBBLESTONE_PATH);
 
+        addDrop(ModBlocks.CHISELED_ACACIA_PLANKS);
         addDrop(ModBlocks.CHISELED_BAMBOO_PLANKS);
         addDrop(ModBlocks.CHISELED_BIRCH_PLANKS);
+        addDrop(ModBlocks.CHISELED_CHERRY_PLANKS);
+        addDrop(ModBlocks.CHISELED_CRIMSON_PLANKS);
         addDrop(ModBlocks.CHISELED_JUNGLE_PLANKS);
+        addDrop(ModBlocks.CHISELED_MANGROVE_PLANKS);
+        addDrop(ModBlocks.CHISELED_OAK_PLANKS);
         addDrop(ModBlocks.CHISELED_DARK_OAK_PLANKS);
         addDrop(ModBlocks.CHISELED_SPRUCE_PLANKS);
+        addDrop(ModBlocks.CHISELED_WARPED_PLANKS);
+        addDrop(ModBlocks.CHISELED_SUGAR_MAPLE_PLANKS);
+        addDrop(ModBlocks.CHISELED_WHITE_PINE_PLANKS);
+        addDrop(ModBlocks.CHISELED_YEW_PLANKS);
 
         addDrop(ModBlocks.SUGAR_MAPLE_LOG);
         addDrop(ModBlocks.SUGAR_MAPLE_WOOD);
@@ -610,6 +619,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.BLAHAJ);
         addDrop(ModBlocks.TETO_PLUSHIE);
+        addDrop(ModBlocks.MIKU_PLUSHIE);
+        addDrop(ModBlocks.AKITA_NERU_PLUSHIE);
         addDrop(ModBlocks.GUMI_PLUSHIE);
         addDrop(ModBlocks.OSAGE_CHAN_PLUSHIE);
 
@@ -761,7 +772,14 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SUNSTONE_SLAB, slabDrops(ModBlocks.SUNSTONE_SLAB));
         addDrop(ModBlocks.SUNSTONE_WALL);
 
+        addDrop(ModBlocks.RAW_MOONSTONE);
+        addDrop(ModBlocks.RAW_MOONSTONE_STAIRS);
+        addDrop(ModBlocks.RAW_MOONSTONE_SLAB, slabDrops(ModBlocks.RAW_MOONSTONE_SLAB));
+        addDrop(ModBlocks.RAW_MOONSTONE_WALL);
         addDrop(ModBlocks.MOONSTONE);
+        addDrop(ModBlocks.MOONSTONE_STAIRS);
+        addDrop(ModBlocks.MOONSTONE_SLAB, slabDrops(ModBlocks.MOONSTONE_SLAB));
+        addDrop(ModBlocks.MOONSTONE_WALL);
 
         addDrop(ModBlocks.HOT_PINK_HYACINTH);
         addDrop(ModBlocks.CORAL_HYACINTH);
@@ -809,6 +827,60 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PUMICE_STAIRS);
         addDrop(ModBlocks.PUMICE_SLAB, slabDrops(ModBlocks.PUMICE_SLAB));
         addDrop(ModBlocks.PUMICE_WALL);
+
+        addDrop(ModBlocks.ANCIENT_BRICKS);
+        addDrop(ModBlocks.WHITE_ANCIENT_BRICKS);
+        addDrop(ModBlocks.LIGHT_GRAY_ANCIENT_BRICKS);
+        addDrop(ModBlocks.GRAY_ANCIENT_BRICKS);
+        addDrop(ModBlocks.BLACK_ANCIENT_BRICKS);
+        addDrop(ModBlocks.BROWN_ANCIENT_BRICKS);
+        addDrop(ModBlocks.RED_ANCIENT_BRICKS);
+        addDrop(ModBlocks.ORANGE_ANCIENT_BRICKS);
+        addDrop(ModBlocks.YELLOW_ANCIENT_BRICKS);
+        addDrop(ModBlocks.LIME_ANCIENT_BRICKS);
+        addDrop(ModBlocks.GREEN_ANCIENT_BRICKS);
+        addDrop(ModBlocks.CYAN_ANCIENT_BRICKS);
+        addDrop(ModBlocks.LIGHT_BLUE_ANCIENT_BRICKS);
+        addDrop(ModBlocks.BLUE_ANCIENT_BRICKS);
+        addDrop(ModBlocks.PURPLE_ANCIENT_BRICKS);
+        addDrop(ModBlocks.MAGENTA_ANCIENT_BRICKS);
+        addDrop(ModBlocks.PINK_ANCIENT_BRICKS);
+
+        addDrop(ModBlocks.ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.WHITE_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.GRAY_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.BLACK_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.BROWN_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.RED_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.ORANGE_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.YELLOW_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.LIME_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.GREEN_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.CYAN_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.BLUE_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.PURPLE_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.MAGENTA_ANCIENT_BRICK_STAIRS);
+        addDrop(ModBlocks.PINK_ANCIENT_BRICK_STAIRS);
+
+        addDrop(ModBlocks.ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.WHITE_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.WHITE_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.LIGHT_GRAY_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.GRAY_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.GRAY_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.BLACK_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.BLACK_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.BROWN_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.BROWN_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.RED_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.RED_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.ORANGE_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.ORANGE_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.YELLOW_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.YELLOW_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.LIME_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.LIME_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.GREEN_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.GREEN_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.CYAN_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.CYAN_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.LIGHT_BLUE_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.BLUE_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.BLUE_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.PURPLE_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.PURPLE_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.MAGENTA_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.MAGENTA_ANCIENT_BRICK_SLAB));
+        addDrop(ModBlocks.PINK_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.PINK_ANCIENT_BRICK_SLAB));
     }
 
 
