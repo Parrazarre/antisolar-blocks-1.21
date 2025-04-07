@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "antisolarblocks:block/bluish_violet_wall_iris"
+  }
+}

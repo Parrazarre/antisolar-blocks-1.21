@@ -3,14 +3,12 @@ package net.parra.antisolarblocks.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
-import net.minecraft.block.GrassBlock;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
-import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
@@ -29,32 +27,56 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.SMALL_BUSH);
+        addPottedPlantDrops(ModBlocks.POTTED_SMALL_BUSH);
         addDrop(ModBlocks.LARGE_BUSH);
         addDrop(ModBlocks.WEAVERS_BROOM);
         addDrop(ModBlocks.DARK_WILD_GRASS);
+        addPottedPlantDrops(ModBlocks.POTTED_DARK_WILD_GRASS);
         addDrop(ModBlocks.LIGHT_WILD_GRASS);
+        addPottedPlantDrops(ModBlocks.POTTED_LIGHT_WILD_GRASS);
 
         addDrop(ModBlocks.PINK_VIOLA_TRICOLOR);
+        addPottedPlantDrops(ModBlocks.POTTED_PINK_VIOLA_TRICOLOR);
         addDrop(ModBlocks.INDIGO_WHITE_VIOLA_TRICOLOR);
+        addPottedPlantDrops(ModBlocks.POTTED_INDIGO_WHITE_VIOLA_TRICOLOR);
         addDrop(ModBlocks.WHITE_VIOLA_TRICOLOR);
+        addPottedPlantDrops(ModBlocks.POTTED_WHITE_VIOLA_TRICOLOR);
         addDrop(ModBlocks.HONEY_VIOLA_TRICOLOR);
+        addPottedPlantDrops(ModBlocks.POTTED_HONEY_VIOLA_TRICOLOR);
         addDrop(ModBlocks.YELLOW_VIOLA_TRICOLOR);
+        addPottedPlantDrops(ModBlocks.POTTED_YELLOW_VIOLA_TRICOLOR);
         addDrop(ModBlocks.PURPLE_VIOLA_TRICOLOR);
+        addPottedPlantDrops(ModBlocks.POTTED_PURPLE_VIOLA_TRICOLOR);
         addDrop(ModBlocks.PURPLE_CROWN_VIOLA_TRICOLOR);
+        addPottedPlantDrops(ModBlocks.POTTED_PURPLE_CROWN_VIOLA_TRICOLOR);
         addDrop(ModBlocks.VIOLA_TRICOLOR);
+        addPottedPlantDrops(ModBlocks.POTTED_VIOLA_TRICOLOR);
         addDrop(ModBlocks.PEARL_VIOLET_VIOLA_TRICOLOR);
+        addPottedPlantDrops(ModBlocks.POTTED_PEARL_VIOLET_VIOLA_TRICOLOR);
         addDrop(ModBlocks.HONEY_VIOLET_VIOLA_TRICOLOR);
+        addPottedPlantDrops(ModBlocks.POTTED_HONEY_VIOLET_VIOLA_TRICOLOR);
         addDrop(ModBlocks.LIGHT_PINK_VIOLA_TRICOLOR);
+        addPottedPlantDrops(ModBlocks.POTTED_LIGHT_PINK_VIOLA_TRICOLOR);
         addDrop(ModBlocks.LIGHT_BLUE_VIOLA_TRICOLOR);
+        addPottedPlantDrops(ModBlocks.POTTED_LIGHT_BLUE_VIOLA_TRICOLOR);
         addDrop(ModBlocks.BLUE_VIOLA_TRICOLOR);
+        addPottedPlantDrops(ModBlocks.POTTED_BLUE_VIOLA_TRICOLOR);
         addDrop(ModBlocks.COBALT_VIOLA_TRICOLOR);
+        addPottedPlantDrops(ModBlocks.POTTED_COBALT_VIOLA_TRICOLOR);
         addDrop(ModBlocks.BLUE_STARS);
+        addPottedPlantDrops(ModBlocks.POTTED_BLUE_STARS);
         addDrop(ModBlocks.LAVENDER_BLUE_WALL_IRIS);
+        addPottedPlantDrops(ModBlocks.POTTED_LAVENDER_BLUE_WALL_IRIS);
         addDrop(ModBlocks.WHITE_WALL_IRIS);
+        addPottedPlantDrops(ModBlocks.POTTED_WHITE_WALL_IRIS);
         addDrop(ModBlocks.BLUE_LILAC_WALL_IRIS);
+        addPottedPlantDrops(ModBlocks.POTTED_BLUE_LILAC_WALL_IRIS);
         addDrop(ModBlocks.PURPLE_BLUE_WALL_IRIS);
+        addPottedPlantDrops(ModBlocks.POTTED_PURPLE_BLUE_WALL_IRIS);
         addDrop(ModBlocks.SKY_BLUE_WALL_IRIS);
+        addPottedPlantDrops(ModBlocks.POTTED_SKY_BLUE_WALL_IRIS);
         addDrop(ModBlocks.BLUISH_VIOLET_WALL_IRIS);
+        addPottedPlantDrops(ModBlocks.POTTED_BLUISH_VIOLET_WALL_IRIS);
         addDrop(ModBlocks.STAR_JASMINE);
         addDrop(ModBlocks.BASKET_OF_GOLD);
         addDrop(ModBlocks.HUMMINGBIRD_FUCHSIA);
@@ -99,6 +121,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SUGAR_MAPLE_BUTTON);
         addDrop(ModBlocks.SUGAR_MAPLE_LEAVES,leavesDrops(ModBlocks.SUGAR_MAPLE_LEAVES, ModBlocks.SUGAR_MAPLE_SAPLING, 0.0625f));
         addDrop(ModBlocks.SUGAR_MAPLE_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_SUGAR_MAPLE_SAPLING);
 
         addDrop(ModBlocks.PERIDOTITE);
         addDrop(ModBlocks.PERIDOTITE_STAIRS);
@@ -446,6 +469,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WHITE_PINE_BUTTON);
         addDrop(ModBlocks.WHITE_PINE_LEAVES, leavesDrops(ModBlocks.WHITE_PINE_LEAVES, ModBlocks.WHITE_PINE_SAPLING, 0.0625f));
         addDrop(ModBlocks.WHITE_PINE_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_WHITE_PINE_SAPLING);
 
         addDropWithSilkTouch(ModBlocks.ORNATE_PICTURE_WINDOW);
         addDropWithSilkTouch(ModBlocks.LARGE_PICTURE_WINDOW_BOTTOM);
@@ -497,7 +521,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.LARIMAR_WALL);
 
         addDrop(ModBlocks.BLANKET_FLOWER);
+        addPottedPlantDrops(ModBlocks.POTTED_BLANKET_FLOWER);
         addDrop(ModBlocks.RED_BLANKET_FLOWER);
+        addPottedPlantDrops(ModBlocks.POTTED_RED_BLANKET_FLOWER);
         addDrop(ModBlocks.RED_NEMESIA);
         addDrop(ModBlocks.EUPHORBIA_X_MARTINI);
 
@@ -527,6 +553,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.YEW_BUTTON);
         addDrop(ModBlocks.YEW_LEAVES, leavesDrops(ModBlocks.YEW_LEAVES, ModBlocks.YEW_SAPLING, 0.0625f));
         addDrop(ModBlocks.YEW_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_YEW_SAPLING);
 
         addDrop(ModBlocks.GRAY_SILTSTONE);
         addDrop(ModBlocks.GRAY_SILTSTONE_STAIRS);
@@ -580,10 +607,12 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SMALL_FORSYTHIA_LOG);
         addDrop(ModBlocks.FORSYTHIA_FLOWERS, leavesDrops(ModBlocks.FORSYTHIA_FLOWERS, ModBlocks.FORSYTHIA_SAPLING, 0.125f));
         addDrop(ModBlocks.FORSYTHIA_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_FORSYTHIA_SAPLING);
 
         addDrop(ModBlocks.SMALL_JAPANESE_MAPLE_LOG);
         addDrop(ModBlocks.JAPANESE_MAPLE_LEAVES, leavesDrops(ModBlocks.JAPANESE_MAPLE_LEAVES, ModBlocks.JAPANESE_MAPLE_SAPLING, 0.0625f));
         addDrop(ModBlocks.JAPANESE_MAPLE_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_JAPANESE_MAPLE_SAPLING);
 
         addDrop(ModBlocks.LAVENDER_BALL);
         addDrop(ModBlocks.DOG_ROSE_BUSH);

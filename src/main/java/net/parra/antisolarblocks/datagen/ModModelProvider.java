@@ -587,17 +587,17 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerDoor(ModBlocks.SUGAR_MAPLE_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.SUGAR_MAPLE_TRAPDOOR);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.SUGAR_MAPLE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.SUGAR_MAPLE_SAPLING, ModBlocks.POTTED_SUGAR_MAPLE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.YEW_TRAPDOOR);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.YEW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.YEW_SAPLING, ModBlocks.POTTED_YEW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YEW_LEAVES);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHAROITE_ORE);
 
         blockStateModelGenerator.registerDoor(ModBlocks.WHITE_PINE_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.WHITE_PINE_TRAPDOOR);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.WHITE_PINE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.WHITE_PINE_SAPLING, ModBlocks.POTTED_WHITE_PINE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerLog(ModBlocks.WHITE_PINE_LOG)
                 .log(ModBlocks.WHITE_PINE_LOG)
                 .wood(ModBlocks.WHITE_PINE_WOOD);
@@ -607,10 +607,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSingleton(ModBlocks.WHITE_PINE_LEAVES, TexturedModel.LEAVES);
 
         blockStateModelGenerator.registerSingleton(ModBlocks.FORSYTHIA_FLOWERS, TexturedModel.LEAVES);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.FORSYTHIA_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.FORSYTHIA_SAPLING, ModBlocks.POTTED_FORSYTHIA_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerSingleton(ModBlocks.JAPANESE_MAPLE_LEAVES, TexturedModel.LEAVES);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.JAPANESE_MAPLE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.JAPANESE_MAPLE_SAPLING, ModBlocks.POTTED_JAPANESE_MAPLE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ORNATE_PICTURE_WINDOW);
@@ -621,24 +621,24 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TUFFACIOUS_CLAY);
 
-        blockStateModelGenerator.registerTintableCross(ModBlocks.BLANKET_FLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.RED_BLANKET_FLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.BLANKET_FLOWER, ModBlocks.POTTED_BLANKET_FLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.RED_BLANKET_FLOWER, ModBlocks.POTTED_RED_BLANKET_FLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOCK_OF_RUBBLE);
 
-        blockStateModelGenerator.registerTintableCross(ModBlocks.INDIGO_WHITE_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.WHITE_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.HONEY_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.YELLOW_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.PURPLE_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.PURPLE_CROWN_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.PEARL_VIOLET_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.HONEY_VIOLET_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.LIGHT_PINK_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.LIGHT_BLUE_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.BLUE_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.COBALT_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.INDIGO_WHITE_VIOLA_TRICOLOR, ModBlocks.POTTED_INDIGO_WHITE_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.WHITE_VIOLA_TRICOLOR, ModBlocks.POTTED_WHITE_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.HONEY_VIOLA_TRICOLOR, ModBlocks.POTTED_HONEY_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.YELLOW_VIOLA_TRICOLOR, ModBlocks.POTTED_YELLOW_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.PURPLE_VIOLA_TRICOLOR, ModBlocks.POTTED_PURPLE_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.PURPLE_CROWN_VIOLA_TRICOLOR, ModBlocks.POTTED_PURPLE_CROWN_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.VIOLA_TRICOLOR, ModBlocks.POTTED_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.PEARL_VIOLET_VIOLA_TRICOLOR, ModBlocks.POTTED_PEARL_VIOLET_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.HONEY_VIOLET_VIOLA_TRICOLOR, ModBlocks.POTTED_HONEY_VIOLET_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LIGHT_PINK_VIOLA_TRICOLOR, ModBlocks.POTTED_LIGHT_PINK_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LIGHT_BLUE_VIOLA_TRICOLOR, ModBlocks.POTTED_LIGHT_BLUE_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.BLUE_VIOLA_TRICOLOR, ModBlocks.POTTED_BLUE_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.COBALT_VIOLA_TRICOLOR, ModBlocks.POTTED_COBALT_VIOLA_TRICOLOR, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerTintableCross(ModBlocks.SHORT_STINGING_NETTLE, BlockStateModelGenerator.TintType.TINTED);
 

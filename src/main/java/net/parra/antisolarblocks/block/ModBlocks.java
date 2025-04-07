@@ -11,7 +11,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.ColorCode;
 import net.minecraft.util.Colors;
-import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
@@ -32,6 +31,14 @@ public class ModBlocks {
                             .sounds(BlockSoundGroup.GRASS)
                             .offset(AbstractBlock.OffsetType.XYZ)
                             .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_SMALL_BUSH = registerBlockNoItem("potted_small_bush",
+            new FlowerPotBlock(SMALL_BUSH,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -133,6 +140,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_DARK_WILD_GRASS = registerBlockNoItem("potted_dark_wild_grass",
+            new FlowerPotBlock(DARK_WILD_GRASS,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block LIGHT_WILD_GRASS = registerBlock("light_wild_grass",
             new FlowerBlock(
                     StatusEffects.WEAVING,
@@ -144,6 +159,14 @@ public class ModBlocks {
                             .sounds(BlockSoundGroup.GRASS)
                             .offset(AbstractBlock.OffsetType.XYZ)
                             .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_LIGHT_WILD_GRASS = registerBlockNoItem("potted_light_wild_grass",
+            new FlowerPotBlock(LIGHT_WILD_GRASS,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -174,6 +197,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_PINK_VIOLA_TRICOLOR = registerBlockNoItem("potted_pink_viola_tricolor",
+            new FlowerPotBlock(PINK_VIOLA_TRICOLOR,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block INDIGO_WHITE_VIOLA_TRICOLOR = registerBlock("indigo_white_viola_tricolor",
             new FlowerBlock(
                     StatusEffects.REGENERATION,
@@ -184,6 +215,14 @@ public class ModBlocks {
                             .breakInstantly()
                             .sounds(BlockSoundGroup.GRASS)
                             .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_INDIGO_WHITE_VIOLA_TRICOLOR = registerBlockNoItem("potted_indigo_white_viola_tricolor",
+            new FlowerPotBlock(INDIGO_WHITE_VIOLA_TRICOLOR,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -200,6 +239,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_WHITE_VIOLA_TRICOLOR = registerBlockNoItem("potted_white_viola_tricolor",
+            new FlowerPotBlock(WHITE_VIOLA_TRICOLOR,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block HONEY_VIOLA_TRICOLOR = registerBlock("honey_viola_tricolor",
             new FlowerBlock(
                     StatusEffects.REGENERATION,
@@ -210,6 +257,14 @@ public class ModBlocks {
                             .breakInstantly()
                             .sounds(BlockSoundGroup.GRASS)
                             .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_HONEY_VIOLA_TRICOLOR = registerBlockNoItem("potted_honey_viola_tricolor",
+            new FlowerPotBlock(HONEY_VIOLA_TRICOLOR,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -226,6 +281,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_YELLOW_VIOLA_TRICOLOR = registerBlockNoItem("potted_yellow_viola_tricolor",
+            new FlowerPotBlock(YELLOW_VIOLA_TRICOLOR,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block PURPLE_VIOLA_TRICOLOR = registerBlock("purple_viola_tricolor",
             new FlowerBlock(
                     StatusEffects.REGENERATION,
@@ -236,6 +299,14 @@ public class ModBlocks {
                             .breakInstantly()
                             .sounds(BlockSoundGroup.GRASS)
                             .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_PURPLE_VIOLA_TRICOLOR = registerBlockNoItem("potted_purple_viola_tricolor",
+            new FlowerPotBlock(PURPLE_VIOLA_TRICOLOR,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -252,6 +323,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_PURPLE_CROWN_VIOLA_TRICOLOR = registerBlockNoItem("potted_purple_crown_viola_tricolor",
+            new FlowerPotBlock(PURPLE_CROWN_VIOLA_TRICOLOR,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block VIOLA_TRICOLOR = registerBlock("viola_tricolor",
             new FlowerBlock(
                     StatusEffects.REGENERATION,
@@ -262,6 +341,14 @@ public class ModBlocks {
                             .breakInstantly()
                             .sounds(BlockSoundGroup.GRASS)
                             .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_VIOLA_TRICOLOR = registerBlockNoItem("potted_viola_tricolor",
+            new FlowerPotBlock(VIOLA_TRICOLOR,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -278,6 +365,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_PEARL_VIOLET_VIOLA_TRICOLOR = registerBlockNoItem("potted_pearl_violet_viola_tricolor",
+            new FlowerPotBlock(PEARL_VIOLET_VIOLA_TRICOLOR,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block HONEY_VIOLET_VIOLA_TRICOLOR = registerBlock("honey_violet_viola_tricolor",
             new FlowerBlock(
                     StatusEffects.REGENERATION,
@@ -288,6 +383,14 @@ public class ModBlocks {
                             .breakInstantly()
                             .sounds(BlockSoundGroup.GRASS)
                             .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_HONEY_VIOLET_VIOLA_TRICOLOR = registerBlockNoItem("potted_honey_violet_viola_tricolor",
+            new FlowerPotBlock(HONEY_VIOLET_VIOLA_TRICOLOR,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -304,6 +407,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_LIGHT_PINK_VIOLA_TRICOLOR = registerBlockNoItem("potted_light_pink_viola_tricolor",
+            new FlowerPotBlock(LIGHT_PINK_VIOLA_TRICOLOR,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block LIGHT_BLUE_VIOLA_TRICOLOR = registerBlock("light_blue_viola_tricolor",
             new FlowerBlock(
                     StatusEffects.REGENERATION,
@@ -314,6 +425,14 @@ public class ModBlocks {
                             .breakInstantly()
                             .sounds(BlockSoundGroup.GRASS)
                             .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_LIGHT_BLUE_VIOLA_TRICOLOR = registerBlockNoItem("potted_light_blue_viola_tricolor",
+            new FlowerPotBlock(LIGHT_BLUE_VIOLA_TRICOLOR,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -330,6 +449,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_BLUE_VIOLA_TRICOLOR = registerBlockNoItem("potted_blue_viola_tricolor",
+            new FlowerPotBlock(BLUE_VIOLA_TRICOLOR,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block COBALT_VIOLA_TRICOLOR = registerBlock("cobalt_viola_tricolor",
             new FlowerBlock(
                     StatusEffects.REGENERATION,
@@ -340,6 +467,14 @@ public class ModBlocks {
                             .breakInstantly()
                             .sounds(BlockSoundGroup.GRASS)
                             .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_COBALT_VIOLA_TRICOLOR = registerBlockNoItem("potted_cobalt_viola_tricolor",
+            new FlowerPotBlock(COBALT_VIOLA_TRICOLOR,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -475,6 +610,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_BLUE_STARS = registerBlockNoItem("potted_blue_stars",
+            new FlowerPotBlock(BLUE_STARS,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
 
     public static final Block LAVENDER_BLUE_WALL_IRIS = registerBlock("lavender_blue_wall_iris",
             new FlowerBlock(
@@ -486,6 +629,14 @@ public class ModBlocks {
                             .breakInstantly()
                             .sounds(BlockSoundGroup.GRASS)
                             .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_LAVENDER_BLUE_WALL_IRIS = registerBlockNoItem("potted_lavender_blue_wall_iris",
+            new FlowerPotBlock(LAVENDER_BLUE_WALL_IRIS,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -502,6 +653,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_WHITE_WALL_IRIS = registerBlockNoItem("potted_white_wall_iris",
+            new FlowerPotBlock(WHITE_WALL_IRIS,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block BLUE_LILAC_WALL_IRIS = registerBlock("blue_lilac_wall_iris",
             new FlowerBlock(
                     StatusEffects.LEVITATION,
@@ -512,6 +671,14 @@ public class ModBlocks {
                             .breakInstantly()
                             .sounds(BlockSoundGroup.GRASS)
                             .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_BLUE_LILAC_WALL_IRIS = registerBlockNoItem("potted_blue_lilac_wall_iris",
+            new FlowerPotBlock(BLUE_LILAC_WALL_IRIS,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -528,6 +695,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_PURPLE_BLUE_WALL_IRIS = registerBlockNoItem("potted_purple_blue_wall_iris",
+            new FlowerPotBlock(PURPLE_BLUE_WALL_IRIS,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block SKY_BLUE_WALL_IRIS = registerBlock("sky_blue_wall_iris",
             new FlowerBlock(
                     StatusEffects.LEVITATION,
@@ -538,6 +713,14 @@ public class ModBlocks {
                             .breakInstantly()
                             .sounds(BlockSoundGroup.GRASS)
                             .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_SKY_BLUE_WALL_IRIS = registerBlockNoItem("potted_sky_blue_wall_iris",
+            new FlowerPotBlock(SKY_BLUE_WALL_IRIS,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -554,6 +737,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_BLUISH_VIOLET_WALL_IRIS = registerBlockNoItem("potted_bluish_violet_wall_iris",
+            new FlowerPotBlock(BLUISH_VIOLET_WALL_IRIS,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block BLANKET_FLOWER = registerBlock("blanket_flower",
             new FlowerBlock(
                     StatusEffects.FIRE_RESISTANCE,
@@ -567,6 +758,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_BLANKET_FLOWER = registerBlockNoItem("potted_blanket_flower",
+            new FlowerPotBlock(BLANKET_FLOWER,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block RED_BLANKET_FLOWER = registerBlock("red_blanket_flower",
             new FlowerBlock(
                     StatusEffects.FIRE_RESISTANCE,
@@ -577,6 +776,14 @@ public class ModBlocks {
                             .breakInstantly()
                             .sounds(BlockSoundGroup.GRASS)
                             .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_RED_BLANKET_FLOWER = registerBlockNoItem("potted_red_blanket_flower",
+            new FlowerPotBlock(RED_BLANKET_FLOWER,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -3907,6 +4114,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_SUGAR_MAPLE_SAPLING = registerBlockNoItem("potted_sugar_maple_sapling",
+            new FlowerPotBlock(SUGAR_MAPLE_SAPLING,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block CHAROITE_ORE = registerBlock("charoite_ore",
             new ExperienceDroppingBlock(
                     UniformIntProvider.create(1, 3),
@@ -4269,6 +4484,14 @@ public class ModBlocks {
                             .ticksRandomly()
                             .breakInstantly()
                             .sounds(BlockSoundGroup.GRASS)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_WHITE_PINE_SAPLING = registerBlockNoItem("potted_white_pine_sapling",
+            new FlowerPotBlock(WHITE_PINE_SAPLING,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -4830,6 +5053,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_YEW_SAPLING = registerBlockNoItem("potted_yew_sapling",
+            new FlowerPotBlock(YEW_SAPLING,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block GRAY_SILTSTONE = registerBlock("gray_siltstone",
             new Block(
                     AbstractBlock.Settings.create()
@@ -5290,6 +5521,14 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block POTTED_FORSYTHIA_SAPLING = registerBlockNoItem("potted_forsythia_sapling",
+            new FlowerPotBlock(FORSYTHIA_SAPLING,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block PINK_CLAY_ROOF_TILES = registerBlock("pink_clay_roof_tiles",
             new GlazedTerracottaBlock(
                     AbstractBlock.Settings.create()
@@ -5356,6 +5595,14 @@ public class ModBlocks {
                             .ticksRandomly()
                             .breakInstantly()
                             .sounds(BlockSoundGroup.GRASS)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_JAPANESE_MAPLE_SAPLING = registerBlockNoItem("potted_japanese_maple_sapling",
+            new FlowerPotBlock(JAPANESE_MAPLE_SAPLING,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
