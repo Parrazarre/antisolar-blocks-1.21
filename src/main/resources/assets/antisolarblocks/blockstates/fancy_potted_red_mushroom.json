@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "antisolarblocks:block/fancy_pot_red_mushroom_south"
+    },
+    "facing=west": {
+      "model": "antisolarblocks:block/fancy_pot_red_mushroom_west"
+    },
+    "facing=north": {
+      "model": "antisolarblocks:block/fancy_pot_red_mushroom_north"
+    },
+    "facing=east": {
+      "model": "antisolarblocks:block/fancy_pot_red_mushroom_east"
+    }
+  }
+}

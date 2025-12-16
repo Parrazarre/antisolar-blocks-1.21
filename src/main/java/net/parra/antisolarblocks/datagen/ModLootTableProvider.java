@@ -3,18 +3,24 @@ package net.parra.antisolarblocks.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.parra.antisolarblocks.block.ModBlocks;
+import net.parra.antisolarblocks.block.custom.*;
 import net.parra.antisolarblocks.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -28,12 +34,17 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         addDrop(ModBlocks.SMALL_BUSH);
         addPottedPlantDrops(ModBlocks.POTTED_SMALL_BUSH);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_SMALL_BUSH);
         addDrop(ModBlocks.LARGE_BUSH);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_LARGE_BUSH);
+        addDrop(ModBlocks.LARGE_DRY_BUSH);
         addDrop(ModBlocks.WEAVERS_BROOM);
         addDrop(ModBlocks.DARK_WILD_GRASS);
         addPottedPlantDrops(ModBlocks.POTTED_DARK_WILD_GRASS);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_DARK_WILD_GRASS);
         addDrop(ModBlocks.LIGHT_WILD_GRASS);
         addPottedPlantDrops(ModBlocks.POTTED_LIGHT_WILD_GRASS);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_LIGHT_WILD_GRASS);
 
         addDrop(ModBlocks.PINK_VIOLA_TRICOLOR);
         addPottedPlantDrops(ModBlocks.POTTED_PINK_VIOLA_TRICOLOR);
@@ -122,6 +133,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SUGAR_MAPLE_LEAVES,leavesDrops(ModBlocks.SUGAR_MAPLE_LEAVES, ModBlocks.SUGAR_MAPLE_SAPLING, 0.0625f));
         addDrop(ModBlocks.SUGAR_MAPLE_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_SUGAR_MAPLE_SAPLING);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_SUGAR_MAPLE_SAPLING);
 
         addDrop(ModBlocks.PERIDOTITE);
         addDrop(ModBlocks.PERIDOTITE_STAIRS);
@@ -470,6 +482,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WHITE_PINE_LEAVES, leavesDrops(ModBlocks.WHITE_PINE_LEAVES, ModBlocks.WHITE_PINE_SAPLING, 0.0625f));
         addDrop(ModBlocks.WHITE_PINE_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_WHITE_PINE_SAPLING);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_WHITE_PINE_SAPLING);
 
         addDropWithSilkTouch(ModBlocks.ORNATE_PICTURE_WINDOW);
         addDropWithSilkTouch(ModBlocks.LARGE_PICTURE_WINDOW_BOTTOM);
@@ -478,6 +491,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.FLOWERING_OXYRIA);
         addDrop(ModBlocks.OXYRIA);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_OXYRIA);
 
         addDrop(ModBlocks.GLACIAL_TILL);
 
@@ -525,7 +539,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RED_BLANKET_FLOWER);
         addPottedPlantDrops(ModBlocks.POTTED_RED_BLANKET_FLOWER);
         addDrop(ModBlocks.RED_NEMESIA);
+        addTriplePottedPlantDrops(ModBlocks.POTTED_RED_NEMESIA);
         addDrop(ModBlocks.EUPHORBIA_X_MARTINI);
+        addDrop(ModBlocks.EMPETRUM);
 
         addDrop(ModBlocks.PIGEONITE);
         addDrop(ModBlocks.PIGEONITE_STAIRS);
@@ -554,6 +570,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.YEW_LEAVES, leavesDrops(ModBlocks.YEW_LEAVES, ModBlocks.YEW_SAPLING, 0.0625f));
         addDrop(ModBlocks.YEW_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_YEW_SAPLING);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_YEW_SAPLING);
 
         addDrop(ModBlocks.GRAY_SILTSTONE);
         addDrop(ModBlocks.GRAY_SILTSTONE_STAIRS);
@@ -608,14 +625,20 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FORSYTHIA_FLOWERS, leavesDrops(ModBlocks.FORSYTHIA_FLOWERS, ModBlocks.FORSYTHIA_SAPLING, 0.125f));
         addDrop(ModBlocks.FORSYTHIA_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_FORSYTHIA_SAPLING);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_FORSYTHIA_SAPLING);
 
         addDrop(ModBlocks.SMALL_JAPANESE_MAPLE_LOG);
         addDrop(ModBlocks.JAPANESE_MAPLE_LEAVES, leavesDrops(ModBlocks.JAPANESE_MAPLE_LEAVES, ModBlocks.JAPANESE_MAPLE_SAPLING, 0.0625f));
         addDrop(ModBlocks.JAPANESE_MAPLE_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_JAPANESE_MAPLE_SAPLING);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_JAPANESE_MAPLE_SAPLING);
 
         addDrop(ModBlocks.LAVENDER_BALL);
         addDrop(ModBlocks.DOG_ROSE_BUSH);
+
+        addDrop(ModBlocks.MAGENTA_CLAY_ROOF_TILES);
+        addDrop(ModBlocks.MAGENTA_CLAY_ROOF_TILE_STAIRS);
+        addDrop(ModBlocks.MAGENTA_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.MAGENTA_CLAY_ROOF_TILE_SLAB));
 
         addDrop(ModBlocks.PINK_CLAY_ROOF_TILES);
         addDrop(ModBlocks.PINK_CLAY_ROOF_TILE_STAIRS);
@@ -670,6 +693,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FULLY_POLISHED_CHLORAPATITE_WALL);
 
         addDrop(ModBlocks.SHORT_STINGING_NETTLE, shortPlantDrops(ModBlocks.SHORT_STINGING_NETTLE));
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_SHORT_STINGING_NETTLE);
         addDrop(ModBlocks.TALL_STINGING_NETTLE, tallPlantDrops(ModBlocks.TALL_STINGING_NETTLE, ModBlocks.SHORT_STINGING_NETTLE));
 
         addDrop(ModBlocks.FEATHER_BLOCK);
@@ -811,14 +835,23 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MOONSTONE_WALL);
 
         addDrop(ModBlocks.HOT_PINK_HYACINTH);
+        addTriplePottedPlantDrops(ModBlocks.POTTED_HOT_PINK_HYACINTH);
         addDrop(ModBlocks.CORAL_HYACINTH);
+        addTriplePottedPlantDrops(ModBlocks.POTTED_CORAL_HYACINTH);
         addDrop(ModBlocks.YELLOW_HYACINTH);
+        addTriplePottedPlantDrops(ModBlocks.POTTED_YELLOW_HYACINTH);
         addDrop(ModBlocks.BLUE_HYACINTH);
+        addTriplePottedPlantDrops(ModBlocks.POTTED_BLUE_HYACINTH);
         addDrop(ModBlocks.PURPLE_HYACINTH);
+        addTriplePottedPlantDrops(ModBlocks.POTTED_PURPLE_HYACINTH);
         addDrop(ModBlocks.INDIGO_HYACINTH);
+        addTriplePottedPlantDrops(ModBlocks.POTTED_INDIGO_HYACINTH);
         addDrop(ModBlocks.PINK_HYACINTH);
+        addTriplePottedPlantDrops(ModBlocks.POTTED_PINK_HYACINTH);
         addDrop(ModBlocks.LIGHT_PINK_HYACINTH);
+        addTriplePottedPlantDrops(ModBlocks.POTTED_LIGHT_PINK_HYACINTH);
         addDrop(ModBlocks.WHITE_HYACINTH);
+        addTriplePottedPlantDrops(ModBlocks.POTTED_WHITE_HYACINTH);
 
         addDrop(ModBlocks.SILVER_VASE);
 
@@ -910,6 +943,115 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PURPLE_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.PURPLE_ANCIENT_BRICK_SLAB));
         addDrop(ModBlocks.MAGENTA_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.MAGENTA_ANCIENT_BRICK_SLAB));
         addDrop(ModBlocks.PINK_ANCIENT_BRICK_SLAB, slabDrops(ModBlocks.PINK_ANCIENT_BRICK_SLAB));
+
+        addDrop(ModBlocks.TRIPLE_FLOWER_POT);
+
+        addDrop(ModBlocks.CAMOUFLAGED_FLOWER_POT);
+
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_FERN);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_CACTUS);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_DEAD_BUSH);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_BAMBOO);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_AZALEA_BUSH);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_OAK_SAPLING);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_SPRUCE_SAPLING);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_BIRCH_SAPLING);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_JUNGLE_SAPLING);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_ACACIA_SAPLING);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_DARK_OAK_SAPLING);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_MANGROVE_PROPAGULE);
+        addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_CHERRY_SAPLING);
+
+        addFancyFlowerPot_LVDDrops(ModBlocks.FANCY_POTTED_LAVENDER_BALL);
+        addDrop(ModBlocks.FANCY_LAVENDER_BALL_POT);
+
+        addFancyFlowerPot_DRBDrops(ModBlocks.FANCY_POTTED_DOG_ROSE_BUSH);
+        addDrop(ModBlocks.FANCY_DOG_ROSE_BUSH_POT);
+
+        addFancyFlowerPot_DWGDrops(ModBlocks.FANCY_POTTED_DARK_WILD_GRASS);
+        addDrop(ModBlocks.FANCY_DARK_WILD_GRASS_POT);
+
+        addFancyFlowerPot_SWIDrops(ModBlocks.FANCY_POTTED_SKY_BLUE_WALL_IRIS);
+        addDrop(ModBlocks.FANCY_SKY_BLUE_WALL_IRIS_POT);
+
+        addFancyFlowerPot_JPQDrops(ModBlocks.FANCY_POTTED_JAPANESE_QUINCE);
+        addDrop(ModBlocks.FANCY_JAPANESE_QUINCE_POT);
+
+        addFancyFlowerPot_YLVDrops(ModBlocks.FANCY_POTTED_YELLOW_VIOLA_TRICOLOR);
+        addDrop(ModBlocks.FANCY_YELLOW_VIOLA_TRICOLOR_POT);
+
+        addFancyFlowerPot_LPVDrops(ModBlocks.FANCY_POTTED_LIGHT_PINK_VIOLA_TRICOLOR);
+        addDrop(ModBlocks.FANCY_LIGHT_PINK_VIOLA_TRICOLOR_POT);
+
+        addFancyFlowerPot_PCVDrops(ModBlocks.FANCY_POTTED_PURPLE_CROWN_VIOLA_TRICOLOR);
+        addDrop(ModBlocks.FANCY_PURPLE_CROWN_VIOLA_TRICOLOR_POT);
+
+        addFancyFlowerPot_BHYDrops(ModBlocks.FANCY_POTTED_BLUE_HYACINTH);
+        addDrop(ModBlocks.FANCY_BLUE_HYACINTH_POT);
+
+        addFancyFlowerPot_IHYDrops(ModBlocks.FANCY_POTTED_INDIGO_HYACINTH);
+        addDrop(ModBlocks.FANCY_INDIGO_HYACINTH_POT);
+
+        addFancyFlowerPot_WHYDrops(ModBlocks.FANCY_POTTED_WHITE_HYACINTH);
+        addDrop(ModBlocks.FANCY_WHITE_HYACINTH_POT);
+
+        addFancyFlowerPot_0BFDrops(ModBlocks.FANCY_POTTED_BLANKET_FLOWER);
+        addDrop(ModBlocks.FANCY_BLANKET_FLOWER_POT);
+
+        addFancyDirectionalFlowerPotBlock_RBFDrops(ModBlocks.FANCY_POTTED_RED_BLANKET_FLOWER);
+        addDrop(ModBlocks.FANCY_RED_BLANKET_FLOWER_POT);
+
+        addFancyFlowerPot_EXMDrops(ModBlocks.FANCY_POTTED_EUPHORBIA_X_MARTINI);
+        addDrop(ModBlocks.FANCY_EUPHORBIA_X_MARTINI_POT);
+
+        addFancyFlowerPot_SIVDrops(ModBlocks.FANCY_POTTED_SILVER_VASE);
+        addDrop(ModBlocks.FANCY_SILVER_VASE_POT);
+
+        addFancyFlowerPot_WABDrops(ModBlocks.FANCY_POTTED_WILD_COSMOS_AND_BACHELOR_BUTTONS);
+        addDrop(ModBlocks.FANCY_WILD_COSMOS_AND_BACHELOR_BUTTONS_POT);
+
+        addFancyFlowerPot_FLADrops(ModBlocks.FANCY_POTTED_FLOWERING_AZALEA);
+        addDrop(ModBlocks.FANCY_FLOWERING_AZALEA_POT);
+
+        addFancyDirectionalFlowerPotBlock_RMHDrops(ModBlocks.FANCY_POTTED_RED_MUSHROOM);
+        addDrop(ModBlocks.FANCY_RED_MUSHROOM_POT);
+
+        addFancyFlowerPot_DDBDrops(ModBlocks.FANCY_POTTED_DEAD_BUSH);
+        addDrop(ModBlocks.FANCY_DEAD_BUSH_POT);
+
+        addFancyFlowerPot_AUMDrops(ModBlocks.FANCY_POTTED_ALLIUM);
+        addDrop(ModBlocks.FANCY_ALLIUM_POT);
+
+        addFancyFlowerPot_RTLDrops(ModBlocks.FANCY_POTTED_RED_TULIP);
+        addDrop(ModBlocks.FANCY_RED_TULIP_POT);
+
+        addFancyFlowerPot_OTLDrops(ModBlocks.FANCY_POTTED_ORANGE_TULIP);
+        addDrop(ModBlocks.FANCY_ORANGE_TULIP_POT);
+
+        addFancyFlowerPot_PTLDrops(ModBlocks.FANCY_POTTED_PINK_TULIP);
+        addDrop(ModBlocks.FANCY_PINK_TULIP_POT);
+
+        addFancyFlowerPot_CRNDrops(ModBlocks.FANCY_POTTED_CORNFLOWER);
+        addDrop(ModBlocks.FANCY_CORNFLOWER_POT);
+
+        addFancyFlowerPot_LOVDrops(ModBlocks.FANCY_POTTED_LILY_OF_THE_VALLEY);
+        addDrop(ModBlocks.FANCY_LILY_OF_THE_VALLEY_POT);
+
+        addFancyDirectionalFlowerPotBlock_WIRDrops(ModBlocks.FANCY_POTTED_WITHER_ROSE);
+        addDrop(ModBlocks.FANCY_WITHER_ROSE_POT);
+
+        addFancyFlowerPot_SNFDrops(ModBlocks.FANCY_POTTED_SUNFLOWER);
+        addDrop(ModBlocks.FANCY_SUNFLOWER_POT);
+
+        addFancyFlowerPot_ROBDrops(ModBlocks.FANCY_POTTED_ROSE_BUSH);
+        addDrop(ModBlocks.FANCY_ROSE_BUSH_POT);
+
+        addFancyFlowerPot_POPDrops(ModBlocks.FANCY_POTTED_POPPY);
+        addDrop(ModBlocks.FANCY_POPPY_POT);
+
+        addFancyFlowerPot_AZADrops(ModBlocks.FANCY_POTTED_AZALEA);
+        addDrop(ModBlocks.FANCY_AZALEA_POT);
+
     }
 
 
@@ -919,5 +1061,453 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
                 ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
                 .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
+    }
+
+    public void addTriplePottedPlantDrops(Block block) {
+        this.addDrop(block, tripleflowerPot -> this.triplePottedPlantDrops(((TripleFlowerPotBlock)tripleflowerPot).getContent()));
+    }
+
+    public final LootTable.Builder triplePottedPlantDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.TRIPLE_FLOWER_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.TRIPLE_FLOWER_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addCamouflagedPottedPlantDrops(Block block) {
+        this.addDrop(block, camouflagedFlowerPot -> this.camouflagedPottedPlantDrops(((CamouflagedFlowerPotBlock)camouflagedFlowerPot).getContent()));
+    }
+
+    public final LootTable.Builder camouflagedPottedPlantDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.CAMOUFLAGED_FLOWER_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.CAMOUFLAGED_FLOWER_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyDirectionalFlowerPotBlock_RBFDrops(Block block) {
+        this.addDrop(block, fancyDirectionalFlowerPotBlock_RBF -> this.FancyDirectionalFlowerPotBlock_RBFDrops(((FancyDirectionalFlowerPotBlock_RBF)fancyDirectionalFlowerPotBlock_RBF).getContent()));
+    }
+
+    public final LootTable.Builder FancyDirectionalFlowerPotBlock_RBFDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_RED_BLANKET_FLOWER_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_RED_BLANKET_FLOWER_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyDirectionalFlowerPotBlock_WIRDrops(Block block) {
+        this.addDrop(block, fancyDirectionalFlowerPotBlock_WIR -> this.FancyDirectionalFlowerPotBlock_WIRDrops(((FancyDirectionalFlowerPotBlock_WIR)fancyDirectionalFlowerPotBlock_WIR).getContent()));
+    }
+
+    public final LootTable.Builder FancyDirectionalFlowerPotBlock_WIRDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_WITHER_ROSE_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_WITHER_ROSE_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyDirectionalFlowerPotBlock_RMHDrops(Block block) {
+        this.addDrop(block, fancyDirectionalFlowerPotBlock_RMH -> this.FancyDirectionalFlowerPotBlock_RMHDrops(((FancyDirectionalFlowerPotBlock_RMH)fancyDirectionalFlowerPotBlock_RMH).getContent()));
+    }
+
+    public final LootTable.Builder FancyDirectionalFlowerPotBlock_RMHDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_RED_MUSHROOM_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_RED_MUSHROOM_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_CRNDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_CRN -> this.FancyFlowerPot_CRNDrops(((FancyFlowerPot_CRN)fancyFlowerPot_CRN).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_CRNDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_CORNFLOWER_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_CORNFLOWER_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_SNFDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_SNF -> this.FancyFlowerPot_SNFDrops(((FancyFlowerPot_SNF)fancyFlowerPot_SNF).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_SNFDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_SUNFLOWER_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_SUNFLOWER_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_WHYDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_WHY -> this.FancyFlowerPot_WHYDrops(((FancyFlowerPot_WHY)fancyFlowerPot_WHY).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_WHYDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_WHITE_HYACINTH_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_WHITE_HYACINTH_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_PCVDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_PCV -> this.FancyFlowerPot_PCVDrops(((FancyFlowerPot_PCV)fancyFlowerPot_PCV).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_PCVDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_PURPLE_CROWN_VIOLA_TRICOLOR_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_PURPLE_CROWN_VIOLA_TRICOLOR_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_LPVDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_LPV -> this.FancyFlowerPot_LPVDrops(((FancyFlowerPot_LPV)fancyFlowerPot_LPV).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_LPVDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_LIGHT_PINK_VIOLA_TRICOLOR_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_LIGHT_PINK_VIOLA_TRICOLOR_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_DRBDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_DRB -> this.FancyFlowerPot_DRBDrops(((FancyFlowerPot_DRB)fancyFlowerPot_DRB).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_DRBDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_DOG_ROSE_BUSH_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_DOG_ROSE_BUSH_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_LVDDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_LVD -> this.FancyFlowerPot_LVDDrops(((FancyFlowerPot_LVD)fancyFlowerPot_LVD).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_LVDDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_LAVENDER_BALL_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_LAVENDER_BALL_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_EXMDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_EXM -> this.FancyFlowerPot_EXMDrops(((FancyFlowerPot_EXM)fancyFlowerPot_EXM).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_EXMDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_EUPHORBIA_X_MARTINI_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_EUPHORBIA_X_MARTINI_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_0BFDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_0BF -> this.FancyFlowerPot_0BFDrops(((FancyFlowerPot_0BF)fancyFlowerPot_0BF).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_0BFDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_BLANKET_FLOWER_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_BLANKET_FLOWER_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_DWGDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_DWG -> this.FancyFlowerPot_DWGDrops(((FancyFlowerPot_DWG)fancyFlowerPot_DWG).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_DWGDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_DARK_WILD_GRASS_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_DARK_WILD_GRASS_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_JPQDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_JPQ -> this.FancyFlowerPot_JPQDrops(((FancyFlowerPot_JPQ)fancyFlowerPot_JPQ).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_JPQDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_JAPANESE_QUINCE_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_JAPANESE_QUINCE_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_WABDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_WAB -> this.FancyFlowerPot_WABDrops(((FancyFlowerPot_WAB)fancyFlowerPot_WAB).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_WABDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_WILD_COSMOS_AND_BACHELOR_BUTTONS_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_WILD_COSMOS_AND_BACHELOR_BUTTONS_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_DDBDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_DDB -> this.FancyFlowerPot_DDBDrops(((FancyFlowerPot_DDB)fancyFlowerPot_DDB).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_DDBDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_DEAD_BUSH_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_DEAD_BUSH_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_SWIDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_SWI -> this.FancyFlowerPot_SWIDrops(((FancyFlowerPot_SWI)fancyFlowerPot_SWI).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_SWIDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_SKY_BLUE_WALL_IRIS_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_SKY_BLUE_WALL_IRIS_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_LOVDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_LOV -> this.FancyFlowerPot_LOVDrops(((FancyFlowerPot_LOV)fancyFlowerPot_LOV).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_LOVDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_LILY_OF_THE_VALLEY_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_LILY_OF_THE_VALLEY_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_AUMDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_AUM -> this.FancyFlowerPot_AUMDrops(((FancyFlowerPot_AUM)fancyFlowerPot_AUM).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_AUMDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_ALLIUM_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_ALLIUM_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_ROBDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_ROB -> this.FancyFlowerPot_ROBDrops(((FancyFlowerPot_ROB)fancyFlowerPot_ROB).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_ROBDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_ROSE_BUSH_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_ROSE_BUSH_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_YLVDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_YLV -> this.FancyFlowerPot_YLVDrops(((FancyFlowerPot_YLV)fancyFlowerPot_YLV).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_YLVDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_YELLOW_VIOLA_TRICOLOR_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_YELLOW_VIOLA_TRICOLOR_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_FLADrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_FLA -> this.FancyFlowerPot_FLADrops(((FancyFlowerPot_FLA)fancyFlowerPot_FLA).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_FLADrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_FLOWERING_AZALEA_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_FLOWERING_AZALEA_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_BHYDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_BHY -> this.FancyFlowerPot_BHYDrops(((FancyFlowerPot_BHY)fancyFlowerPot_BHY).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_BHYDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_BLUE_HYACINTH_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_BLUE_HYACINTH_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_IHYDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_IHY -> this.FancyFlowerPot_IHYDrops(((FancyFlowerPot_IHY)fancyFlowerPot_IHY).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_IHYDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_INDIGO_HYACINTH_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_INDIGO_HYACINTH_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_RTLDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_RTL -> this.FancyFlowerPot_RTLDrops(((FancyFlowerPot_RTL)fancyFlowerPot_RTL).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_RTLDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_RED_TULIP_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_RED_TULIP_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_POPDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_POP -> this.FancyFlowerPot_POPDrops(((FancyFlowerPot_POP)fancyFlowerPot_POP).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_POPDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_POPPY_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_POPPY_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_AZADrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_AZA -> this.FancyFlowerPot_AZADrops(((FancyFlowerPot_AZA)fancyFlowerPot_AZA).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_AZADrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_AZALEA_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_AZALEA_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_OTLDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_OTL -> this.FancyFlowerPot_OTLDrops(((FancyFlowerPot_OTL)fancyFlowerPot_OTL).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_OTLDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_ORANGE_TULIP_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_ORANGE_TULIP_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_PTLDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_PTL -> this.FancyFlowerPot_PTLDrops(((FancyFlowerPot_PTL)fancyFlowerPot_PTL).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_PTLDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_PINK_TULIP_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_PINK_TULIP_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_SIVDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_SIV -> this.FancyFlowerPot_SIVDrops(((FancyFlowerPot_SIV)fancyFlowerPot_SIV).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_SIVDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_SILVER_VASE_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_SILVER_VASE_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
     }
 }

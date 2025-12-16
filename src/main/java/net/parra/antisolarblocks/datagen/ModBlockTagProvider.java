@@ -1,8 +1,10 @@
 package net.parra.antisolarblocks.datagen;
 
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
@@ -424,6 +426,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_TRAVERTINE_SLAB)
 
                 .add(ModBlocks.PARRADIO)
+
+                .add(ModBlocks.MAGENTA_CLAY_ROOF_TILES)
+                .add(ModBlocks.MAGENTA_CLAY_ROOF_TILE_STAIRS)
+                .add(ModBlocks.MAGENTA_CLAY_ROOF_TILE_SLAB)
 
                 .add(ModBlocks.PINK_CLAY_ROOF_TILES)
                 .add(ModBlocks.PINK_CLAY_ROOF_TILE_STAIRS)
@@ -1060,6 +1066,112 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.LARGE_PICTURE_WINDOW_TOP)
                 .add(ModBlocks.LARGE_PICTURE_WINDOW_MIDDLE)
                 .add(ModBlocks.LARGE_PICTURE_WINDOW_BOTTOM);
+
+        getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+                .add(ModBlocks.POTTED_SMALL_BUSH)
+                .add(ModBlocks.POTTED_SUGAR_MAPLE_SAPLING)
+                .add(ModBlocks.POTTED_WHITE_PINE_SAPLING)
+                .add(ModBlocks.POTTED_YEW_SAPLING)
+                .add(ModBlocks.POTTED_FORSYTHIA_SAPLING)
+                .add(ModBlocks.POTTED_JAPANESE_MAPLE_SAPLING)
+                .add(ModBlocks.POTTED_DARK_WILD_GRASS)
+                .add(ModBlocks.POTTED_LIGHT_WILD_GRASS)
+
+                .add(ModBlocks.POTTED_PINK_VIOLA_TRICOLOR)
+                .add(ModBlocks.POTTED_INDIGO_WHITE_VIOLA_TRICOLOR)
+                .add(ModBlocks.POTTED_WHITE_VIOLA_TRICOLOR)
+                .add(ModBlocks.POTTED_HONEY_VIOLA_TRICOLOR)
+                .add(ModBlocks.POTTED_YELLOW_VIOLA_TRICOLOR)
+                .add(ModBlocks.POTTED_PURPLE_VIOLA_TRICOLOR)
+                .add(ModBlocks.POTTED_PURPLE_CROWN_VIOLA_TRICOLOR)
+                .add(ModBlocks.POTTED_VIOLA_TRICOLOR)
+                .add(ModBlocks.POTTED_PEARL_VIOLET_VIOLA_TRICOLOR)
+                .add(ModBlocks.POTTED_HONEY_VIOLET_VIOLA_TRICOLOR)
+                .add(ModBlocks.POTTED_LIGHT_PINK_VIOLA_TRICOLOR)
+                .add(ModBlocks.POTTED_LIGHT_BLUE_VIOLA_TRICOLOR)
+                .add(ModBlocks.POTTED_BLUE_VIOLA_TRICOLOR)
+                .add(ModBlocks.POTTED_COBALT_VIOLA_TRICOLOR)
+
+                .add(ModBlocks.POTTED_BLUE_STARS)
+                .add(ModBlocks.POTTED_BLANKET_FLOWER)
+                .add(ModBlocks.POTTED_RED_BLANKET_FLOWER)
+
+                .add(ModBlocks.POTTED_LAVENDER_BLUE_WALL_IRIS)
+                .add(ModBlocks.POTTED_WHITE_WALL_IRIS)
+                .add(ModBlocks.POTTED_BLUE_LILAC_WALL_IRIS)
+                .add(ModBlocks.POTTED_PURPLE_BLUE_WALL_IRIS)
+                .add(ModBlocks.POTTED_SKY_BLUE_WALL_IRIS)
+                .add(ModBlocks.POTTED_BLUISH_VIOLET_WALL_IRIS)
+
+                .add(ModBlocks.POTTED_HOT_PINK_HYACINTH)
+                .add(ModBlocks.POTTED_CORAL_HYACINTH)
+                .add(ModBlocks.POTTED_YELLOW_HYACINTH)
+                .add(ModBlocks.POTTED_BLUE_HYACINTH)
+                .add(ModBlocks.POTTED_PURPLE_HYACINTH)
+                .add(ModBlocks.POTTED_INDIGO_HYACINTH)
+                .add(ModBlocks.POTTED_PINK_HYACINTH)
+                .add(ModBlocks.POTTED_LIGHT_PINK_HYACINTH)
+                .add(ModBlocks.POTTED_WHITE_HYACINTH)
+
+                .add(ModBlocks.POTTED_RED_NEMESIA)
+
+                .add(ModBlocks.CAMOUFLAGED_POTTED_SMALL_BUSH)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_LARGE_BUSH)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_SHORT_STINGING_NETTLE)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_DARK_WILD_GRASS)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_LIGHT_WILD_GRASS)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_OXYRIA)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_SUGAR_MAPLE_SAPLING)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_WHITE_PINE_SAPLING)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_YEW_SAPLING)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_FORSYTHIA_SAPLING)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_JAPANESE_MAPLE_SAPLING)
+
+                .add(ModBlocks.CAMOUFLAGED_POTTED_FERN)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_CACTUS)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_DEAD_BUSH)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_BAMBOO)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_AZALEA_BUSH)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_OAK_SAPLING)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_SPRUCE_SAPLING)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_BIRCH_SAPLING)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_JUNGLE_SAPLING)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_ACACIA_SAPLING)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_DARK_OAK_SAPLING)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_MANGROVE_PROPAGULE)
+                .add(ModBlocks.CAMOUFLAGED_POTTED_CHERRY_SAPLING)
+
+                .add(ModBlocks.FANCY_POTTED_LAVENDER_BALL)
+                .add(ModBlocks.FANCY_POTTED_DOG_ROSE_BUSH)
+                .add(ModBlocks.FANCY_POTTED_DARK_WILD_GRASS)
+                .add(ModBlocks.FANCY_POTTED_SKY_BLUE_WALL_IRIS)
+                .add(ModBlocks.FANCY_POTTED_JAPANESE_QUINCE)
+                .add(ModBlocks.FANCY_POTTED_LIGHT_PINK_VIOLA_TRICOLOR)
+                .add(ModBlocks.FANCY_POTTED_YELLOW_VIOLA_TRICOLOR)
+                .add(ModBlocks.FANCY_POTTED_PURPLE_CROWN_VIOLA_TRICOLOR)
+                .add(ModBlocks.FANCY_POTTED_BLUE_HYACINTH)
+                .add(ModBlocks.FANCY_POTTED_INDIGO_HYACINTH)
+                .add(ModBlocks.FANCY_POTTED_WHITE_HYACINTH)
+                .add(ModBlocks.FANCY_POTTED_BLANKET_FLOWER)
+                .add(ModBlocks.FANCY_POTTED_RED_BLANKET_FLOWER)
+                .add(ModBlocks.FANCY_POTTED_EUPHORBIA_X_MARTINI)
+                .add(ModBlocks.FANCY_POTTED_SILVER_VASE)
+                .add(ModBlocks.FANCY_POTTED_WILD_COSMOS_AND_BACHELOR_BUTTONS)
+
+                .add(ModBlocks.FANCY_POTTED_AZALEA)
+                .add(ModBlocks.FANCY_POTTED_FLOWERING_AZALEA)
+                .add(ModBlocks.FANCY_POTTED_RED_MUSHROOM)
+                .add(ModBlocks.FANCY_POTTED_DEAD_BUSH)
+                .add(ModBlocks.FANCY_POTTED_ALLIUM)
+                .add(ModBlocks.FANCY_POTTED_RED_TULIP)
+                .add(ModBlocks.FANCY_POTTED_ORANGE_TULIP)
+                .add(ModBlocks.FANCY_POTTED_PINK_TULIP)
+                .add(ModBlocks.FANCY_POTTED_CORNFLOWER)
+                .add(ModBlocks.FANCY_POTTED_LILY_OF_THE_VALLEY)
+                .add(ModBlocks.FANCY_POTTED_WITHER_ROSE)
+                .add(ModBlocks.FANCY_POTTED_SUNFLOWER)
+                .add(ModBlocks.FANCY_POTTED_ROSE_BUSH)
+                .add(ModBlocks.FANCY_POTTED_POPPY);
 
     }
     public class ModTags {

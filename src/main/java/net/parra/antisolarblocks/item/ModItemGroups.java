@@ -29,6 +29,39 @@ public class ModItemGroups {
                         entries.add(ModItems.ROSE_QUARTZ);
                         entries.add(ModItems.CHAROITE);
 
+                        entries.add(ModBlocks.TRIPLE_FLOWER_POT);
+                        entries.add(ModBlocks.CAMOUFLAGED_FLOWER_POT);
+                        entries.add(ModBlocks.FANCY_AZALEA_POT);
+                        entries.add(ModBlocks.FANCY_FLOWERING_AZALEA_POT);
+                        entries.add(ModBlocks.FANCY_RED_MUSHROOM_POT);
+                        entries.add(ModBlocks.FANCY_DEAD_BUSH_POT);
+                        entries.add(ModBlocks.FANCY_ALLIUM_POT);
+                        entries.add(ModBlocks.FANCY_RED_TULIP_POT);
+                        entries.add(ModBlocks.FANCY_ORANGE_TULIP_POT);
+                        entries.add(ModBlocks.FANCY_PINK_TULIP_POT);
+                        entries.add(ModBlocks.FANCY_CORNFLOWER_POT);
+                        entries.add(ModBlocks.FANCY_LILY_OF_THE_VALLEY_POT);
+                        entries.add(ModBlocks.FANCY_WITHER_ROSE_POT);
+                        entries.add(ModBlocks.FANCY_SUNFLOWER_POT);
+                        entries.add(ModBlocks.FANCY_ROSE_BUSH_POT);
+                        entries.add(ModBlocks.FANCY_POPPY_POT);
+                        entries.add(ModBlocks.FANCY_LAVENDER_BALL_POT);
+                        entries.add(ModBlocks.FANCY_DOG_ROSE_BUSH_POT);
+                        entries.add(ModBlocks.FANCY_DARK_WILD_GRASS_POT);
+                        entries.add(ModBlocks.FANCY_SKY_BLUE_WALL_IRIS_POT);
+                        entries.add(ModBlocks.FANCY_JAPANESE_QUINCE_POT);
+                        entries.add(ModBlocks.FANCY_YELLOW_VIOLA_TRICOLOR_POT);
+                        entries.add(ModBlocks.FANCY_LIGHT_PINK_VIOLA_TRICOLOR_POT);
+                        entries.add(ModBlocks.FANCY_PURPLE_CROWN_VIOLA_TRICOLOR_POT);
+                        entries.add(ModBlocks.FANCY_BLUE_HYACINTH_POT);
+                        entries.add(ModBlocks.FANCY_INDIGO_HYACINTH_POT);
+                        entries.add(ModBlocks.FANCY_WHITE_HYACINTH_POT);
+                        entries.add(ModBlocks.FANCY_BLANKET_FLOWER_POT);
+                        entries.add(ModBlocks.FANCY_RED_BLANKET_FLOWER_POT);
+                        entries.add(ModBlocks.FANCY_EUPHORBIA_X_MARTINI_POT);
+                        entries.add(ModBlocks.FANCY_SILVER_VASE_POT);
+                        entries.add(ModBlocks.FANCY_WILD_COSMOS_AND_BACHELOR_BUTTONS_POT);
+
                         entries.add(ModItems.HIMALAYAN_SALT);
 
                         entries.add(ModBlocks.PARRADIO);
@@ -41,6 +74,7 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.SMALL_BUSH);
                         entries.add(ModBlocks.LARGE_BUSH);
+                        entries.add(ModBlocks.LARGE_DRY_BUSH);
                         entries.add(ModBlocks.WEAVERS_BROOM);
                         entries.add(ModBlocks.LAVENDER_BALL);
                         entries.add(ModBlocks.DOG_ROSE_BUSH);
@@ -99,6 +133,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FLOWERING_OXYRIA);
                         entries.add(ModBlocks.OXYRIA);
                         entries.add(ModBlocks.EUPHORBIA_X_MARTINI);
+                        entries.add(ModBlocks.EMPETRUM);
                         entries.add(ModBlocks.SILVER_VASE);
 
                         entries.add(ModBlocks.WILDFLOWERS);
@@ -223,8 +258,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STONE_SHELL_PAVEMENT);
                         entries.add(ModBlocks.CRUMBLING_STONE_BRICKS);
 
+                        entries.add(ModBlocks.MAGENTA_CLAY_ROOF_TILES);
                         entries.add(ModBlocks.PINK_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.MAGENTA_CLAY_ROOF_TILE_STAIRS);
                         entries.add(ModBlocks.PINK_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.MAGENTA_CLAY_ROOF_TILE_SLAB);
                         entries.add(ModBlocks.PINK_CLAY_ROOF_TILE_SLAB);
 
                         entries.add(ModBlocks.WROUGHT_IRON_FENCE);

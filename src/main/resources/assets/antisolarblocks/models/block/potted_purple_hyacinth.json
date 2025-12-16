@@ -1,0 +1,6 @@
+{
+  "parent": "antisolarblocks:block/triple_flower_pot_cross",
+  "textures": {
+    "plant": "antisolarblocks:block/purple_hyacinth"
+  }
+}

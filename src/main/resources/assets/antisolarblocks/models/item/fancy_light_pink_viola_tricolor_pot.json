@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "antisolarblocks:item/fancy_light_pink_viola_tricolor_pot"
+  }
+}

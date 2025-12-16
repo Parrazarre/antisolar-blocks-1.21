@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "antisolarblocks:block/fancy_pot_empty_red_blanket_flower_south"
+    },
+    "facing=west": {
+      "model": "antisolarblocks:block/fancy_pot_empty_red_blanket_flower_west"
+    },
+    "facing=north": {
+      "model": "antisolarblocks:block/fancy_pot_empty_red_blanket_flower_north"
+    },
+    "facing=east": {
+      "model": "antisolarblocks:block/fancy_pot_empty_red_blanket_flower_east"
+    }
+  }
+}

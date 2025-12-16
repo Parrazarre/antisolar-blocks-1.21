@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "antisolarblocks:block/magenta_clay_roof_tiles",
+    "side": "antisolarblocks:block/magenta_clay_roof_tiles",
+    "top": "antisolarblocks:block/magenta_clay_roof_tiles_south"
+  }
+}

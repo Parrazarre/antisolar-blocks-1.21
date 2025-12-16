@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "antisolarblocks:block/magenta_clay_roof_tiles",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "antisolarblocks:block/magenta_clay_roof_tiles",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "antisolarblocks:block/magenta_clay_roof_tiles"
+    },
+    "facing=west": {
+      "model": "antisolarblocks:block/magenta_clay_roof_tiles",
+      "y": 90
+    }
+  }
+}

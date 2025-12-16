@@ -20,6 +20,7 @@ public class AntisolarBlocksClient implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SMALL_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_BUSH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_DRY_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DARK_WILD_GRASS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LIGHT_WILD_GRASS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TALLER_GRASS, RenderLayer.getCutout());
@@ -83,6 +84,7 @@ public class AntisolarBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LIGHT_PINK_HYACINTH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WHITE_HYACINTH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SILVER_VASE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EMPETRUM, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_SMALL_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_SUGAR_MAPLE_SAPLING, RenderLayer.getCutout());
@@ -117,7 +119,109 @@ public class AntisolarBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_BLANKET_FLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_RED_BLANKET_FLOWER, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TRIPLE_FLOWER_POT, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_HOT_PINK_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_CORAL_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_YELLOW_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_BLUE_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_PURPLE_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_INDIGO_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_PINK_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_LIGHT_PINK_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_WHITE_HYACINTH, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_RED_NEMESIA, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_FLOWER_POT, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_SMALL_BUSH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_LARGE_BUSH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_SHORT_STINGING_NETTLE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_DARK_WILD_GRASS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_LIGHT_WILD_GRASS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_OXYRIA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_SUGAR_MAPLE_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_WHITE_PINE_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_YEW_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_FORSYTHIA_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_JAPANESE_MAPLE_SAPLING, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_FERN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_CACTUS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_DEAD_BUSH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_BAMBOO, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_AZALEA_BUSH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_OAK_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_SPRUCE_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_BIRCH_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_JUNGLE_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_ACACIA_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_DARK_OAK_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_MANGROVE_PROPAGULE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMOUFLAGED_POTTED_CHERRY_SAPLING, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_LAVENDER_BALL_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_LAVENDER_BALL, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_DOG_ROSE_BUSH_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_DOG_ROSE_BUSH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_DARK_WILD_GRASS_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_DARK_WILD_GRASS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_SKY_BLUE_WALL_IRIS_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_SKY_BLUE_WALL_IRIS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_JAPANESE_QUINCE_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_JAPANESE_QUINCE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_YELLOW_VIOLA_TRICOLOR_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_YELLOW_VIOLA_TRICOLOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_LIGHT_PINK_VIOLA_TRICOLOR_POT, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_LIGHT_PINK_VIOLA_TRICOLOR, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_PURPLE_CROWN_VIOLA_TRICOLOR_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_PURPLE_CROWN_VIOLA_TRICOLOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_BLUE_HYACINTH_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_BLUE_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_INDIGO_HYACINTH_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_INDIGO_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_WHITE_HYACINTH_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_WHITE_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_BLANKET_FLOWER_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_BLANKET_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_RED_BLANKET_FLOWER_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_RED_BLANKET_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_EUPHORBIA_X_MARTINI_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_EUPHORBIA_X_MARTINI, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_SILVER_VASE_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_SILVER_VASE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_WILD_COSMOS_AND_BACHELOR_BUTTONS_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_WILD_COSMOS_AND_BACHELOR_BUTTONS, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_FLOWERING_AZALEA_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_FLOWERING_AZALEA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_AZALEA_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_AZALEA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_RED_MUSHROOM_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_RED_MUSHROOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_DEAD_BUSH_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_DEAD_BUSH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_ALLIUM_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_ALLIUM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_RED_TULIP_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_RED_TULIP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_ORANGE_TULIP_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_ORANGE_TULIP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_PINK_TULIP_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_PINK_TULIP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_CORNFLOWER_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_CORNFLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_LILY_OF_THE_VALLEY_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_LILY_OF_THE_VALLEY, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_WITHER_ROSE_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_WITHER_ROSE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_SUNFLOWER_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_SUNFLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_ROSE_BUSH_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_ROSE_BUSH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POPPY_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_POTTED_POPPY, RenderLayer.getCutout());
 
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SMALL_FORSYTHIA_LOG, RenderLayer.getCutout());
@@ -207,6 +311,31 @@ public class AntisolarBlocksClient implements ClientModInitializer {
             return BiomeColors.getFoliageColor(world, pos);
         }, ModBlocks.POTTED_SMALL_BUSH);
 
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                return FoliageColors.getDefaultColor();
+            }
+            return BiomeColors.getFoliageColor(world, pos);
+        }, ModBlocks.CAMOUFLAGED_POTTED_SMALL_BUSH);
+
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                return GrassColors.getDefaultColor();
+            }
+            return BiomeColors.getGrassColor(world, pos);
+        }, ModBlocks.CAMOUFLAGED_POTTED_FERN);
+
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
+            BlockState blockState = ((BlockItem) stack.getItem()).getBlock().getDefaultState();
+            return MinecraftClient.getInstance().getBlockColors().getColor(blockState, null, null, tintIndex);
+        }, ModBlocks.CAMOUFLAGED_FLOWER_POT);
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                return GrassColors.getDefaultColor();
+            }
+            return BiomeColors.getGrassColor(world, pos);
+        }, ModBlocks.CAMOUFLAGED_FLOWER_POT);
+
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
             BlockState blockState = ((BlockItem) stack.getItem()).getBlock().getDefaultState();
             if (tintIndex == 0) {
@@ -222,6 +351,13 @@ public class AntisolarBlocksClient implements ClientModInitializer {
             return BiomeColors.getFoliageColor(world, pos);
         }, ModBlocks.LARGE_BUSH);
 
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                return FoliageColors.getDefaultColor();
+            }
+            return BiomeColors.getFoliageColor(world, pos);
+        }, ModBlocks.CAMOUFLAGED_POTTED_LARGE_BUSH);
+
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
             BlockState blockState = ((BlockItem) stack.getItem()).getBlock().getDefaultState();
             return MinecraftClient.getInstance().getBlockColors().getColor(blockState, null, null, tintIndex);
@@ -276,6 +412,13 @@ public class AntisolarBlocksClient implements ClientModInitializer {
             }
             return BiomeColors.getGrassColor(world, pos);
         }, ModBlocks.SHORT_STINGING_NETTLE);
+
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                return GrassColors.getDefaultColor();
+            }
+            return BiomeColors.getGrassColor(world, pos);
+        }, ModBlocks.CAMOUFLAGED_POTTED_SHORT_STINGING_NETTLE);
 
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
             BlockState blockState = ((BlockItem) stack.getItem()).getBlock().getDefaultState();
@@ -339,6 +482,25 @@ public class AntisolarBlocksClient implements ClientModInitializer {
             } else {
                 return -1;
             }
+        }, ModBlocks.LARGE_DRY_BUSH);
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                if (tintIndex == 0) {
+                    return FoliageColors.getDefaultColor();
+                } else {
+                    return -1;
+                }
+            }
+            return BiomeColors.getFoliageColor(world, pos);
+        }, ModBlocks.LARGE_DRY_BUSH);
+
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
+            BlockState blockState = ((BlockItem) stack.getItem()).getBlock().getDefaultState();
+            if (tintIndex == 0) {
+                return MinecraftClient.getInstance().getBlockColors().getColor(blockState, null, null, tintIndex);
+            } else {
+                return -1;
+            }
         }, ModBlocks.LAVENDER_BALL);
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
             if (world == null || pos == null) {
@@ -350,6 +512,17 @@ public class AntisolarBlocksClient implements ClientModInitializer {
             }
             return BiomeColors.getFoliageColor(world, pos);
         }, ModBlocks.LAVENDER_BALL);
+
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                if (tintIndex == 0) {
+                    return FoliageColors.getDefaultColor();
+                } else {
+                    return -1;
+                }
+            }
+            return BiomeColors.getFoliageColor(world, pos);
+        }, ModBlocks.FANCY_POTTED_LAVENDER_BALL);
 
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
             BlockState blockState = ((BlockItem) stack.getItem()).getBlock().getDefaultState();
@@ -369,6 +542,17 @@ public class AntisolarBlocksClient implements ClientModInitializer {
             }
             return BiomeColors.getFoliageColor(world, pos);
         }, ModBlocks.DOG_ROSE_BUSH);
+
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                if (tintIndex == 0) {
+                    return FoliageColors.getDefaultColor();
+                } else {
+                    return -1;
+                }
+            }
+            return BiomeColors.getFoliageColor(world, pos);
+        }, ModBlocks.FANCY_POTTED_DOG_ROSE_BUSH);
 
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
             if (tintIndex == 0) {

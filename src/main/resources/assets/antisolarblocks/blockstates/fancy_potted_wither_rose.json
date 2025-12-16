@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "antisolarblocks:block/fancy_pot_wither_rose_south"
+    },
+    "facing=west": {
+      "model": "antisolarblocks:block/fancy_pot_wither_rose_west"
+    },
+    "facing=north": {
+      "model": "antisolarblocks:block/fancy_pot_wither_rose_north"
+    },
+    "facing=east": {
+      "model": "antisolarblocks:block/fancy_pot_wither_rose_east"
+    }
+  }
+}

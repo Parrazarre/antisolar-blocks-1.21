@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "antisolarblocks:item/fancy_sky_blue_wall_iris_pot"
+  }
+}

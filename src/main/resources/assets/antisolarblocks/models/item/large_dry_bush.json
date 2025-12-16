@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "antisolarblocks:item/large_dry_bush_leaves",
+    "layer1": "antisolarblocks:item/large_dry_bush_twigs"
+  }
+}

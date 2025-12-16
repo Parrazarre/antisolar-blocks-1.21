@@ -57,6 +57,20 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block LARGE_DRY_BUSH = registerBlock("large_dry_bush",
+            new FlowerBlock(
+                    StatusEffects.WEAVING,
+                    0.35F,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .offset(AbstractBlock.OffsetType.XYZ)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block WEAVERS_BROOM = registerBlock("weavers_broom",
             new FlowerBlock(
                     StatusEffects.WEAVING,
@@ -873,6 +887,17 @@ public class ModBlocks {
                             .breakInstantly()
                             .sounds(BlockSoundGroup.GRASS)
                             .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block EMPETRUM = registerBlock("empetrum",
+            new DeadBushBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .offset(AbstractBlock.OffsetType.XYZ)
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
@@ -5529,6 +5554,37 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block MAGENTA_CLAY_ROOF_TILES = registerBlock("magenta_clay_roof_tiles",
+            new GlazedTerracottaBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_MAGENTA)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MAGENTA_CLAY_ROOF_TILE_STAIRS = registerBlock("magenta_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.MAGENTA_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_MAGENTA)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MAGENTA_CLAY_ROOF_TILE_SLAB = registerBlock("magenta_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_MAGENTA)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
     public static final Block PINK_CLAY_ROOF_TILES = registerBlock("pink_clay_roof_tiles",
             new GlazedTerracottaBlock(
                     AbstractBlock.Settings.create()
@@ -6417,7 +6473,7 @@ public class ModBlocks {
                             .noCollision()
             )
     );
-    public static final Block HYDROTHERMAL_PLUME = registerBlock("hydrothermal_plume",
+    public static final Block HYDROTHERMAL_PLUME = registerBlockNoItem("hydrothermal_plume",
             new HydrothermalPlumeBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.WATER_BLUE)
@@ -7685,6 +7741,364 @@ public class ModBlocks {
                             .strength(1.5F, 6.0F)
             )
     );
+    public static final Block TRIPLE_FLOWER_POT = registerBlock("triple_flower_pot"
+            , createTripleFlowerPotBlock(Blocks.AIR));
+
+    public static final Block POTTED_HOT_PINK_HYACINTH = registerBlockNoItem("potted_hot_pink_hyacinth"
+            , createTripleFlowerPotBlock(ModBlocks.HOT_PINK_HYACINTH));
+    public static final Block POTTED_CORAL_HYACINTH = registerBlockNoItem("potted_coral_hyacinth"
+            , createTripleFlowerPotBlock(ModBlocks.CORAL_HYACINTH));
+    public static final Block POTTED_YELLOW_HYACINTH = registerBlockNoItem("potted_yellow_hyacinth"
+            , createTripleFlowerPotBlock(ModBlocks.YELLOW_HYACINTH));
+    public static final Block POTTED_BLUE_HYACINTH = registerBlockNoItem("potted_blue_hyacinth"
+            , createTripleFlowerPotBlock(ModBlocks.BLUE_HYACINTH));
+    public static final Block POTTED_PURPLE_HYACINTH = registerBlockNoItem("potted_purple_hyacinth"
+            , createTripleFlowerPotBlock(ModBlocks.PURPLE_HYACINTH));
+    public static final Block POTTED_INDIGO_HYACINTH = registerBlockNoItem("potted_indigo_hyacinth"
+            , createTripleFlowerPotBlock(ModBlocks.INDIGO_HYACINTH));
+    public static final Block POTTED_PINK_HYACINTH = registerBlockNoItem("potted_pink_hyacinth"
+            , createTripleFlowerPotBlock(ModBlocks.PINK_HYACINTH));
+    public static final Block POTTED_LIGHT_PINK_HYACINTH = registerBlockNoItem("potted_light_pink_hyacinth"
+            , createTripleFlowerPotBlock(ModBlocks.LIGHT_PINK_HYACINTH));
+    public static final Block POTTED_WHITE_HYACINTH = registerBlockNoItem("potted_white_hyacinth"
+            , createTripleFlowerPotBlock(ModBlocks.WHITE_HYACINTH));
+
+    public static final Block POTTED_RED_NEMESIA = registerBlockNoItem("potted_red_nemesia"
+            , createTripleFlowerPotBlock(ModBlocks.RED_NEMESIA));
+
+    public static final Block CAMOUFLAGED_FLOWER_POT = registerBlock("camouflaged_flower_pot"
+            , createCamouflagedFlowerPotBlock(Blocks.AIR));
+
+    public static final Block CAMOUFLAGED_POTTED_SMALL_BUSH = registerBlockNoItem("camouflaged_potted_small_bush"
+            , createCamouflagedFlowerPotBlock(ModBlocks.SMALL_BUSH));
+    public static final Block CAMOUFLAGED_POTTED_LARGE_BUSH = registerBlockNoItem("camouflaged_potted_large_bush"
+            , createCamouflagedFlowerPotBlock(ModBlocks.LARGE_BUSH));
+    public static final Block CAMOUFLAGED_POTTED_SHORT_STINGING_NETTLE = registerBlockNoItem("camouflaged_potted_short_stinging_nettle"
+            , createCamouflagedFlowerPotBlock(ModBlocks.SHORT_STINGING_NETTLE));
+    public static final Block CAMOUFLAGED_POTTED_DARK_WILD_GRASS = registerBlockNoItem("camouflaged_potted_dark_wild_grass"
+            , createCamouflagedFlowerPotBlock(ModBlocks.DARK_WILD_GRASS));
+    public static final Block CAMOUFLAGED_POTTED_LIGHT_WILD_GRASS = registerBlockNoItem("camouflaged_potted_light_wild_grass"
+            , createCamouflagedFlowerPotBlock(ModBlocks.LIGHT_WILD_GRASS));
+    public static final Block CAMOUFLAGED_POTTED_OXYRIA = registerBlockNoItem("camouflaged_potted_oxyria"
+            , createCamouflagedFlowerPotBlock(ModBlocks.OXYRIA));
+    public static final Block CAMOUFLAGED_POTTED_SUGAR_MAPLE_SAPLING = registerBlockNoItem("camouflaged_potted_sugar_maple_sapling"
+            , createCamouflagedFlowerPotBlock(ModBlocks.SUGAR_MAPLE_SAPLING));
+    public static final Block CAMOUFLAGED_POTTED_WHITE_PINE_SAPLING = registerBlockNoItem("camouflaged_potted_white_pine_sapling"
+            , createCamouflagedFlowerPotBlock(ModBlocks.WHITE_PINE_SAPLING));
+    public static final Block CAMOUFLAGED_POTTED_YEW_SAPLING = registerBlockNoItem("camouflaged_potted_yew_sapling"
+            , createCamouflagedFlowerPotBlock(ModBlocks.YEW_SAPLING));
+    public static final Block CAMOUFLAGED_POTTED_FORSYTHIA_SAPLING = registerBlockNoItem("camouflaged_potted_forsythia_sapling"
+            , createCamouflagedFlowerPotBlock(ModBlocks.FORSYTHIA_SAPLING));
+    public static final Block CAMOUFLAGED_POTTED_JAPANESE_MAPLE_SAPLING = registerBlockNoItem("camouflaged_potted_japanese_maple_sapling"
+            , createCamouflagedFlowerPotBlock(ModBlocks.JAPANESE_MAPLE_SAPLING));
+
+
+    public static final Block CAMOUFLAGED_POTTED_FERN = registerBlockNoItem("camouflaged_potted_fern"
+            , createCamouflagedFlowerPotBlock(Blocks.FERN));
+    public static final Block CAMOUFLAGED_POTTED_CACTUS = registerBlockNoItem("camouflaged_potted_cactus"
+            , createCamouflagedFlowerPotBlock(Blocks.CACTUS));
+    public static final Block CAMOUFLAGED_POTTED_DEAD_BUSH = registerBlockNoItem("camouflaged_potted_dead_bush"
+            , createCamouflagedFlowerPotBlock(Blocks.DEAD_BUSH));
+    public static final Block CAMOUFLAGED_POTTED_BAMBOO = registerBlockNoItem("camouflaged_potted_bamboo"
+            , createCamouflagedFlowerPotBlock(Blocks.BAMBOO));
+    public static final Block CAMOUFLAGED_POTTED_AZALEA_BUSH = registerBlockNoItem("camouflaged_potted_azalea_bush"
+            , createCamouflagedFlowerPotBlock(Blocks.AZALEA));
+    public static final Block CAMOUFLAGED_POTTED_OAK_SAPLING = registerBlockNoItem("camouflaged_potted_oak_sapling"
+            , createCamouflagedFlowerPotBlock(Blocks.OAK_SAPLING));
+    public static final Block CAMOUFLAGED_POTTED_SPRUCE_SAPLING = registerBlockNoItem("camouflaged_potted_spruce_sapling"
+            , createCamouflagedFlowerPotBlock(Blocks.SPRUCE_SAPLING));
+    public static final Block CAMOUFLAGED_POTTED_BIRCH_SAPLING = registerBlockNoItem("camouflaged_potted_birch_sapling"
+            , createCamouflagedFlowerPotBlock(Blocks.BIRCH_SAPLING));
+    public static final Block CAMOUFLAGED_POTTED_JUNGLE_SAPLING = registerBlockNoItem("camouflaged_potted_jungle_sapling"
+            , createCamouflagedFlowerPotBlock(Blocks.JUNGLE_SAPLING));
+    public static final Block CAMOUFLAGED_POTTED_ACACIA_SAPLING = registerBlockNoItem("camouflaged_potted_acacia_sapling"
+            , createCamouflagedFlowerPotBlock(Blocks.ACACIA_SAPLING));
+    public static final Block CAMOUFLAGED_POTTED_DARK_OAK_SAPLING = registerBlockNoItem("camouflaged_potted_dark_oak_sapling"
+            , createCamouflagedFlowerPotBlock(Blocks.DARK_OAK_SAPLING));
+    public static final Block CAMOUFLAGED_POTTED_MANGROVE_PROPAGULE = registerBlockNoItem("camouflaged_potted_mangrove_propagule"
+            , createCamouflagedFlowerPotBlock(Blocks.MANGROVE_PROPAGULE));
+    public static final Block CAMOUFLAGED_POTTED_CHERRY_SAPLING = registerBlockNoItem("camouflaged_potted_cherry_sapling"
+            , createCamouflagedFlowerPotBlock(Blocks.CHERRY_SAPLING));
+
+    public static final Block FANCY_LAVENDER_BALL_POT = registerBlock("fancy_lavender_ball_pot"
+            , createFancyFlowerPot_LVD(Blocks.AIR));
+    public static final Block FANCY_POTTED_LAVENDER_BALL = registerBlockNoItem("fancy_potted_lavender_ball"
+            , createFancyFlowerPot_LVD(ModBlocks.LAVENDER_BALL));
+
+    public static final Block FANCY_DOG_ROSE_BUSH_POT = registerBlock("fancy_dog_rose_bush_pot"
+            , createFancyFlowerPot_DRB(Blocks.AIR));
+    public static final Block FANCY_POTTED_DOG_ROSE_BUSH = registerBlockNoItem("fancy_potted_dog_rose_bush"
+            , createFancyFlowerPot_DRB(ModBlocks.DOG_ROSE_BUSH));
+
+    public static final Block FANCY_DARK_WILD_GRASS_POT = registerBlock("fancy_dark_wild_grass_pot"
+            , createFancyFlowerPot_DWG(Blocks.AIR));
+    public static final Block FANCY_POTTED_DARK_WILD_GRASS = registerBlockNoItem("fancy_potted_dark_wild_grass"
+            , createFancyFlowerPot_DWG(ModBlocks.DARK_WILD_GRASS));
+
+    public static final Block FANCY_SKY_BLUE_WALL_IRIS_POT = registerBlock("fancy_sky_blue_wall_iris_pot"
+            , createFancyFlowerPot_SWI(Blocks.AIR));
+    public static final Block FANCY_POTTED_SKY_BLUE_WALL_IRIS = registerBlockNoItem("fancy_potted_sky_blue_wall_iris"
+            , createFancyFlowerPot_SWI(ModBlocks.SKY_BLUE_WALL_IRIS));
+
+    public static final Block FANCY_JAPANESE_QUINCE_POT = registerBlock("fancy_japanese_quince_pot"
+            , createFancyFlowerPot_JPQ(Blocks.AIR));
+    public static final Block FANCY_POTTED_JAPANESE_QUINCE = registerBlockNoItem("fancy_potted_japanese_quince"
+            , createFancyFlowerPot_JPQ(ModBlocks.JAPANESE_QUINCE));
+
+    public static final Block FANCY_YELLOW_VIOLA_TRICOLOR_POT = registerBlock("fancy_yellow_viola_tricolor_pot"
+            , createFancyFlowerPot_YLV(Blocks.AIR));
+    public static final Block FANCY_POTTED_YELLOW_VIOLA_TRICOLOR = registerBlockNoItem("fancy_potted_yellow_viola_tricolor"
+            , createFancyFlowerPot_YLV(ModBlocks.YELLOW_VIOLA_TRICOLOR));
+
+    public static final Block FANCY_LIGHT_PINK_VIOLA_TRICOLOR_POT = registerBlock("fancy_light_pink_viola_tricolor_pot"
+            , createFancyFlowerPot_LPV(Blocks.AIR));
+    public static final Block FANCY_POTTED_LIGHT_PINK_VIOLA_TRICOLOR = registerBlockNoItem("fancy_potted_light_pink_viola_tricolor"
+            , createFancyFlowerPot_LPV(ModBlocks.LIGHT_PINK_VIOLA_TRICOLOR));
+
+    public static final Block FANCY_PURPLE_CROWN_VIOLA_TRICOLOR_POT = registerBlock("fancy_purple_crown_viola_tricolor_pot"
+            , createFancyFlowerPot_PCV(Blocks.AIR));
+    public static final Block FANCY_POTTED_PURPLE_CROWN_VIOLA_TRICOLOR = registerBlockNoItem("fancy_potted_purple_crown_viola_tricolor"
+            , createFancyFlowerPot_PCV(ModBlocks.PURPLE_CROWN_VIOLA_TRICOLOR));
+
+    public static final Block FANCY_BLUE_HYACINTH_POT = registerBlock("fancy_blue_hyacinth_pot"
+            , createFancyFlowerPot_BHY(Blocks.AIR));
+    public static final Block FANCY_POTTED_BLUE_HYACINTH = registerBlockNoItem("fancy_potted_blue_hyacinth"
+            , createFancyFlowerPot_BHY(ModBlocks.BLUE_HYACINTH));
+
+    public static final Block FANCY_INDIGO_HYACINTH_POT = registerBlock("fancy_indigo_hyacinth_pot"
+            , createFancyFlowerPot_IHY(Blocks.AIR));
+    public static final Block FANCY_POTTED_INDIGO_HYACINTH = registerBlockNoItem("fancy_potted_indigo_hyacinth"
+            , createFancyFlowerPot_IHY(ModBlocks.INDIGO_HYACINTH));
+
+    public static final Block FANCY_WHITE_HYACINTH_POT = registerBlock("fancy_white_hyacinth_pot"
+            , createFancyFlowerPot_WHY(Blocks.AIR));
+    public static final Block FANCY_POTTED_WHITE_HYACINTH = registerBlockNoItem("fancy_potted_white_hyacinth"
+            , createFancyFlowerPot_WHY(ModBlocks.WHITE_HYACINTH));
+
+    public static final Block FANCY_BLANKET_FLOWER_POT = registerBlock("fancy_blanket_flower_pot"
+            , createFancyFlowerPot_0BF(Blocks.AIR));
+    public static final Block FANCY_POTTED_BLANKET_FLOWER = registerBlockNoItem("fancy_potted_blanket_flower"
+            , createFancyFlowerPot_0BF(ModBlocks.BLANKET_FLOWER));
+
+    public static final Block FANCY_RED_BLANKET_FLOWER_POT = registerBlock("fancy_red_blanket_flower_pot"
+            , createFancyDirectionalFlowerPotBlock_RBF(Blocks.AIR));
+    public static final Block FANCY_POTTED_RED_BLANKET_FLOWER = registerBlockNoItem("fancy_potted_red_blanket_flower"
+            , createFancyDirectionalFlowerPotBlock_RBF(ModBlocks.RED_BLANKET_FLOWER));
+
+    public static final Block FANCY_EUPHORBIA_X_MARTINI_POT = registerBlock("fancy_euphorbia_x_martini_pot"
+            , createFancyFlowerPot_EXM(Blocks.AIR));
+    public static final Block FANCY_POTTED_EUPHORBIA_X_MARTINI = registerBlockNoItem("fancy_potted_euphorbia_x_martini"
+            , createFancyFlowerPot_EXM(ModBlocks.EUPHORBIA_X_MARTINI));
+
+    public static final Block FANCY_SILVER_VASE_POT = registerBlock("fancy_silver_vase_pot"
+            , createFancyFlowerPot_SIV(Blocks.AIR));
+    public static final Block FANCY_POTTED_SILVER_VASE = registerBlockNoItem("fancy_potted_silver_vase"
+            , createFancyFlowerPot_SIV(ModBlocks.SILVER_VASE));
+
+    public static final Block FANCY_WILD_COSMOS_AND_BACHELOR_BUTTONS_POT = registerBlock("fancy_wild_cosmos_and_bachelor_buttons_pot"
+            , createFancyFlowerPot_WAB(Blocks.AIR));
+    public static final Block FANCY_POTTED_WILD_COSMOS_AND_BACHELOR_BUTTONS = registerBlockNoItem("fancy_potted_wild_cosmos_and_bachelor_buttons"
+            , createFancyFlowerPot_WAB(ModBlocks.WILD_COSMOS_AND_BACHELOR_BUTTONS));
+
+    public static final Block FANCY_AZALEA_POT = registerBlock("fancy_azalea_pot"
+            , createFancyFlowerPot_AZA(Blocks.AIR));
+    public static final Block FANCY_POTTED_AZALEA = registerBlockNoItem("fancy_potted_azalea"
+            , createFancyFlowerPot_AZA(Blocks.AZALEA));
+
+    public static final Block FANCY_FLOWERING_AZALEA_POT = registerBlock("fancy_flowering_azalea_pot"
+            , createFancyFlowerPot_FLA(Blocks.AIR));
+    public static final Block FANCY_POTTED_FLOWERING_AZALEA = registerBlockNoItem("fancy_potted_flowering_azalea"
+            , createFancyFlowerPot_FLA(Blocks.FLOWERING_AZALEA));
+
+    public static final Block FANCY_RED_MUSHROOM_POT = registerBlock("fancy_red_mushroom_pot"
+            , createFancyDirectionalFlowerPotBlock_RMH(Blocks.AIR));
+    public static final Block FANCY_POTTED_RED_MUSHROOM = registerBlockNoItem("fancy_potted_red_mushroom"
+            , createFancyDirectionalFlowerPotBlock_RMH(Blocks.RED_MUSHROOM));
+
+    public static final Block FANCY_DEAD_BUSH_POT = registerBlock("fancy_dead_bush_pot"
+            , createFancyFlowerPot_DDB(Blocks.AIR));
+    public static final Block FANCY_POTTED_DEAD_BUSH = registerBlockNoItem("fancy_potted_dead_bush"
+            , createFancyFlowerPot_DDB(Blocks.DEAD_BUSH));
+
+    public static final Block FANCY_ALLIUM_POT = registerBlock("fancy_allium_pot"
+            , createFancyFlowerPot_AUM(Blocks.AIR));
+    public static final Block FANCY_POTTED_ALLIUM = registerBlockNoItem("fancy_potted_allium"
+            , createFancyFlowerPot_AUM(Blocks.ALLIUM));
+
+    public static final Block FANCY_RED_TULIP_POT = registerBlock("fancy_red_tulip_pot"
+            , createFancyFlowerPot_RTL(Blocks.AIR));
+    public static final Block FANCY_POTTED_RED_TULIP = registerBlockNoItem("fancy_potted_red_tulip"
+            , createFancyFlowerPot_RTL(Blocks.RED_TULIP));
+
+    public static final Block FANCY_ORANGE_TULIP_POT = registerBlock("fancy_orange_tulip_pot"
+            , createFancyFlowerPot_OTL(Blocks.AIR));
+    public static final Block FANCY_POTTED_ORANGE_TULIP = registerBlockNoItem("fancy_potted_orange_tulip"
+            , createFancyFlowerPot_OTL(Blocks.ORANGE_TULIP));
+
+    public static final Block FANCY_PINK_TULIP_POT = registerBlock("fancy_pink_tulip_pot"
+            , createFancyFlowerPot_PTL(Blocks.AIR));
+
+    public static final Block FANCY_POTTED_PINK_TULIP = registerBlockNoItem("fancy_potted_pink_tulip"
+            , createFancyFlowerPot_PTL(Blocks.PINK_TULIP));
+
+    public static final Block FANCY_CORNFLOWER_POT = registerBlock("fancy_cornflower_pot"
+            , createFancyFlowerPot_CRN(Blocks.AIR));
+    public static final Block FANCY_POTTED_CORNFLOWER = registerBlockNoItem("fancy_potted_cornflower"
+            , createFancyFlowerPot_CRN(Blocks.CORNFLOWER));
+
+    public static final Block FANCY_LILY_OF_THE_VALLEY_POT = registerBlock("fancy_lily_of_the_valley_pot"
+            , createFancyFlowerPot_LOV(Blocks.AIR));
+    public static final Block FANCY_POTTED_LILY_OF_THE_VALLEY = registerBlockNoItem("fancy_potted_lily_of_the_valley"
+            , createFancyFlowerPot_LOV(Blocks.LILY_OF_THE_VALLEY));
+
+    public static final Block FANCY_WITHER_ROSE_POT = registerBlock("fancy_wither_rose_pot"
+            , createFancyDirectionalFlowerPotBlock_WIR(Blocks.AIR));
+    public static final Block FANCY_POTTED_WITHER_ROSE = registerBlockNoItem("fancy_potted_wither_rose"
+            , createFancyDirectionalFlowerPotBlock_WIR(Blocks.WITHER_ROSE));
+
+    public static final Block FANCY_SUNFLOWER_POT = registerBlock("fancy_sunflower_pot"
+            , createFancyFlowerPot_SNF(Blocks.AIR));
+    public static final Block FANCY_POTTED_SUNFLOWER = registerBlockNoItem("fancy_potted_sunflower"
+            , createFancyFlowerPot_SNF(Blocks.SUNFLOWER));
+
+    public static final Block FANCY_ROSE_BUSH_POT = registerBlock("fancy_rose_bush_pot"
+            , createFancyFlowerPot_ROB(Blocks.AIR));
+    public static final Block FANCY_POTTED_ROSE_BUSH = registerBlockNoItem("fancy_potted_rose_bush"
+            , createFancyFlowerPot_ROB(Blocks.ROSE_BUSH));
+
+    public static final Block FANCY_POPPY_POT = registerBlock("fancy_poppy_pot"
+            , createFancyFlowerPot_POP(Blocks.AIR));
+    public static final Block FANCY_POTTED_POPPY = registerBlockNoItem("fancy_potted_poppy"
+            , createFancyFlowerPot_POP(Blocks.POPPY));
+
+
+    public static Block createTripleFlowerPotBlock(Block flower) {
+        return new TripleFlowerPotBlock(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createCamouflagedFlowerPotBlock(Block flower) {
+        return new CamouflagedFlowerPotBlock(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyDirectionalFlowerPotBlock_RBF(Block flower) {
+        return new FancyDirectionalFlowerPotBlock_RBF(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyDirectionalFlowerPotBlock_WIR(Block flower) {
+        return new FancyDirectionalFlowerPotBlock_WIR(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyDirectionalFlowerPotBlock_RMH(Block flower) {
+        return new FancyDirectionalFlowerPotBlock_RMH(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_CRN(Block flower) {
+        return new FancyFlowerPot_CRN(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_SNF(Block flower) {
+        return new FancyFlowerPot_SNF(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_WHY(Block flower) {
+        return new FancyFlowerPot_WHY(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_PCV(Block flower) {
+        return new FancyFlowerPot_PCV(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_LPV(Block flower) {
+        return new FancyFlowerPot_LPV(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY).allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never).sounds(BlockSoundGroup.GLASS));
+    }
+
+    public static Block createFancyFlowerPot_DRB(Block flower) {
+        return new FancyFlowerPot_DRB(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_LVD(Block flower) {
+        return new FancyFlowerPot_LVD(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_EXM(Block flower) {
+        return new FancyFlowerPot_EXM(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_0BF(Block flower) {
+        return new FancyFlowerPot_0BF(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_DWG(Block flower) {
+        return new FancyFlowerPot_DWG(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_JPQ(Block flower) {
+        return new FancyFlowerPot_JPQ(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_WAB(Block flower) {
+        return new FancyFlowerPot_WAB(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_DDB(Block flower) {
+        return new FancyFlowerPot_DDB(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_SWI(Block flower) {
+        return new FancyFlowerPot_SWI(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_LOV(Block flower) {
+        return new FancyFlowerPot_LOV(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_AUM(Block flower) {
+        return new FancyFlowerPot_AUM(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_ROB(Block flower) {
+        return new FancyFlowerPot_ROB(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_YLV(Block flower) {
+        return new FancyFlowerPot_YLV(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_FLA(Block flower) {
+        return new FancyFlowerPot_FLA(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_BHY(Block flower) {
+        return new FancyFlowerPot_BHY(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_IHY(Block flower) {
+        return new FancyFlowerPot_IHY(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_RTL(Block flower) {
+        return new FancyFlowerPot_RTL(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_OTL(Block flower) {
+        return new FancyFlowerPot_OTL(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_POP(Block flower) {
+        return new FancyFlowerPot_POP(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_AZA(Block flower) {
+        return new FancyFlowerPot_AZA(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_PTL(Block flower) {
+        return new FancyFlowerPot_PTL(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_SIV(Block flower) {
+        return new FancyFlowerPot_SIV(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

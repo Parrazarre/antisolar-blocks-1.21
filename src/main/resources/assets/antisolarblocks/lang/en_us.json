@@ -24,6 +24,7 @@
 
   "block.antisolarblocks.small_bush": "Small Bush",
   "block.antisolarblocks.large_bush": "Large Bush",
+  "block.antisolarblocks.large_dry_bush": "Large Dry Bush",
   "block.antisolarblocks.weavers_broom": "Weaver's Broom",
   "block.antisolarblocks.lavender_ball": "Lavender Ball",
   "block.antisolarblocks.dog_rose_bush": "Dog Rose Bush",
@@ -80,6 +81,7 @@
   "block.antisolarblocks.flowering_oxyria": "Flowering Oxyria",
   "block.antisolarblocks.oxyria": "Oxyria",
   "block.antisolarblocks.euphorbia_x_martini": "Euphorbia x Martini",
+  "block.antisolarblocks.empetrum": "Empetrum",
   "block.antisolarblocks.silver_vase": "Silver Vase",
 
   "block.antisolarblocks.wildflowers": "Wildflowers",
@@ -670,6 +672,10 @@
   "block.antisolarblocks.polished_travertine_stairs": "Polished Travertine Stairs",
   "block.antisolarblocks.polished_travertine_slab": "Polished Travertine Slab",
 
+  "block.antisolarblocks.magenta_clay_roof_tiles": "Magenta Clay Roof Tiles",
+  "block.antisolarblocks.magenta_clay_roof_tile_stairs": "Magenta Clay Roof Tile Stairs",
+  "block.antisolarblocks.magenta_clay_roof_tile_slab": "Magenta Clay Roof Tile Slab",
+  
   "block.antisolarblocks.pink_clay_roof_tiles": "Pink Clay Roof Tiles",
   "block.antisolarblocks.pink_clay_roof_tile_stairs": "Pink Clay Roof Tile Stairs",
   "block.antisolarblocks.pink_clay_roof_tile_slab": "Pink Clay Roof Tile Slab",
@@ -850,6 +856,39 @@
   "block.antisolarblocks.pumice_slab": "Pumice Slab",
   "block.antisolarblocks.pumice_wall": "Pumice Wall",
 
+  "block.antisolarblocks.triple_flower_pot": "Triple Flower Pot",
+  "block.antisolarblocks.camouflaged_flower_pot": "Camouflaged Flower Pot",
+  "block.antisolarblocks.fancy_lavender_ball_pot": "Fancy Lavender Ball Pot",
+  "block.antisolarblocks.fancy_dog_rose_bush_pot": "Fancy Dog Rose Bush Pot",
+  "block.antisolarblocks.fancy_dark_wild_grass_pot": "Fancy Dark Wild Grass Pot",
+  "block.antisolarblocks.fancy_sky_blue_wall_iris_pot": "Fancy Sky Blue Wall Iris Pot",
+  "block.antisolarblocks.fancy_japanese_quince_pot": "Fancy Japanese Quince Pot",
+  "block.antisolarblocks.fancy_yellow_viola_tricolor_pot": "Fancy Yellow Viola Tricolor Pot",
+  "block.antisolarblocks.fancy_light_pink_viola_tricolor_pot": "Fancy Light Pink Viola Tricolor Pot",
+  "block.antisolarblocks.fancy_purple_crown_viola_tricolor_pot": "Fancy Purple Crown Viola Tricolor Pot",
+  "block.antisolarblocks.fancy_blue_hyacinth_pot": "Fancy Blue Hyacinth Pot",
+  "block.antisolarblocks.fancy_indigo_hyacinth_pot": "Fancy Indigo Hyacinth Pot",
+  "block.antisolarblocks.fancy_white_hyacinth_pot": "Fancy White Hyacinth Pot",
+  "block.antisolarblocks.fancy_blanket_flower_pot": "Fancy Blanket Flower Pot",
+  "block.antisolarblocks.fancy_red_blanket_flower_pot": "Fancy Red Blanket Flower Pot",
+  "block.antisolarblocks.fancy_euphorbia_x_martini_pot": "Fancy Euphoribia x Martini Pot",
+  "block.antisolarblocks.fancy_silver_vase_pot": "Fancy Silver Vase Pot",
+  "block.antisolarblocks.fancy_wild_cosmos_and_bachelor_buttons_pot": "Fancy Wild Cosmos And Bachelor Buttons Pot",
+  "block.antisolarblocks.fancy_azalea_pot": "Fancy Azalea Pot",
+  "block.antisolarblocks.fancy_flowering_azalea_pot": "Fancy Flowering Azalea Pot",
+  "block.antisolarblocks.fancy_red_mushroom_pot": "Fancy Red Mushroom Pot",
+  "block.antisolarblocks.fancy_dead_bush_pot": "Fancy Dead Bush Pot",
+  "block.antisolarblocks.fancy_allium_pot": "Fancy Allium Pot",
+  "block.antisolarblocks.fancy_red_tulip_pot": "Fancy Red Tulip Pot",
+  "block.antisolarblocks.fancy_orange_tulip_pot": "Fancy Orange Tulip Pot",
+  "block.antisolarblocks.fancy_pink_tulip_pot": "Fancy Pink Tulip Pot",
+  "block.antisolarblocks.fancy_cornflower_pot": "Fancy Cornflower Pot",
+  "block.antisolarblocks.fancy_lily_of_the_valley_pot": "Fancy Lily Of The Valley Pot",
+  "block.antisolarblocks.fancy_wither_rose_pot": "Fancy Wither Rose Pot",
+  "block.antisolarblocks.fancy_sunflower_pot": "Fancy Sunflower Pot",
+  "block.antisolarblocks.fancy_rose_bush_pot": "Fancy Rose Bush Pot",
+  "block.antisolarblocks.fancy_poppy_pot": "Fancy Poppy Pot",
+
 
 
 
@@ -858,6 +897,9 @@
 
 
   "tooltip.antisolarblocks.wearable.head": "§7Equipable on Head§r",
+  "tooltip.antisolarblocks.info.triple_pot": "§7Works only with triple flowers§r",
+  "tooltip.antisolarblocks.info.camouflaged_pot": "§7Works only with non-flowers§r",
+  "tooltip.antisolarblocks.info.fancy_pot": "§7Works only with the specified flower§r",
   "tooltip.antisolarblocks.fact.blahaj": "§3§oPronounced \"Blohai\"§r",
 
   "painting.antisolarblocks.long_seasons.title": "Long Seasons",

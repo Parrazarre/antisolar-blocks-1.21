@@ -1,10 +1,17 @@
 package net.parra.antisolarblocks.datagen;
 
+import com.google.gson.JsonElement;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
+import net.minecraft.util.Identifier;
 import net.parra.antisolarblocks.block.ModBlocks;
 import net.parra.antisolarblocks.item.ModItems;
+
+import java.util.Optional;
+import java.util.function.BiConsumer;
+import java.util.function.Supplier;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -661,6 +668,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SCORIACEOUS_LAPILLI);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PUMICEOUS_LAPILLI);
 
+        blockStateModelGenerator.registerTintableCross(ModBlocks.EMPETRUM, BlockStateModelGenerator.TintType.NOT_TINTED);
+
         chertPool.stairs(ModBlocks.CHERT_STAIRS);
         chertPool.slab(ModBlocks.CHERT_SLAB);
         chertPool.wall(ModBlocks.CHERT_WALL);
@@ -1192,7 +1201,21 @@ public class ModModelProvider extends FabricModelProvider {
         magentaAncientBricksPool.slab(ModBlocks.MAGENTA_ANCIENT_BRICK_SLAB);
         pinkAncientBricksPool.stairs(ModBlocks.PINK_ANCIENT_BRICK_STAIRS);
         pinkAncientBricksPool.slab(ModBlocks.PINK_ANCIENT_BRICK_SLAB);
+
+        //this.registerTripleFlowerPotPlant(blockStateModelGenerator, ModBlocks.HOT_PINK_HYACINTH, ModBlocks.POTTED_HOT_PINK_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        //this.registerTripleFlowerPotPlant(blockStateModelGenerator, ModBlocks.HOT_PINK_HYACINTH, ModBlocks.POTTED_CORAL_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        //this.registerTripleFlowerPotPlant(blockStateModelGenerator, ModBlocks.HOT_PINK_HYACINTH, ModBlocks.POTTED_YELLOW_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        //this.registerTripleFlowerPotPlant(blockStateModelGenerator, ModBlocks.HOT_PINK_HYACINTH, ModBlocks.POTTED_BLUE_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        //this.registerTripleFlowerPotPlant(blockStateModelGenerator, ModBlocks.HOT_PINK_HYACINTH, ModBlocks.POTTED_PURPLE_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        //this.registerTripleFlowerPotPlant(blockStateModelGenerator, ModBlocks.HOT_PINK_HYACINTH, ModBlocks.POTTED_INDIGO_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        //this.registerTripleFlowerPotPlant(blockStateModelGenerator, ModBlocks.HOT_PINK_HYACINTH, ModBlocks.POTTED_PINK_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        //this.registerTripleFlowerPotPlant(blockStateModelGenerator, ModBlocks.HOT_PINK_HYACINTH, ModBlocks.POTTED_LIGHT_PINK_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        //this.registerTripleFlowerPotPlant(blockStateModelGenerator, ModBlocks.HOT_PINK_HYACINTH, ModBlocks.POTTED_WHITE_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        //this.registerTripleFlowerPotPlant(blockStateModelGenerator, ModBlocks.HOT_PINK_HYACINTH, ModBlocks.POTTED_RED_NEMESIA, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
+
+
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -1204,4 +1227,21 @@ public class ModModelProvider extends FabricModelProvider {
 
     }
 
+    public final void registerTripleFlowerPotPlant(BlockStateModelGenerator blockStateModelGenerator, Block plantBlock, Block tripleFlowerPotBlock, BlockStateModelGenerator.TintType tintType) {
+        blockStateModelGenerator.registerTintableCross(plantBlock, tintType);
+        TextureMap textureMap = TextureMap.plant(plantBlock);
+        Identifier identifier = tintType.getFlowerPotCrossModel().upload(tripleFlowerPotBlock, textureMap, blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(tripleFlowerPotBlock, identifier));
+    }
+
+
+    public Model getTripleFlowerPotCrossModel() {
+            return Models.FLOWER_POT_CROSS;
+        }
+
+    public static final Model TRIPLE_FLOWER_POT_CROSS = modblockmodel("triple_flower_pot_cross", TextureKey.PLANT);
+
+    private static Model modblockmodel(String parent, TextureKey... requiredTextureKeys) {
+        return new Model(Optional.of(Identifier.of("antisolarblocks/models/block/" + parent)), Optional.empty(), requiredTextureKeys);
+    }
 }
