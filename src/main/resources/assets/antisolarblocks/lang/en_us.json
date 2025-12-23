@@ -13,6 +13,7 @@
 
   "item.antisolarblocks.himalayan_salt": "Himalayan Salt",
 
+  "block.antisolarblocks.pottery_kiln": "Pottery Kiln",
   "block.antisolarblocks.parradio": "Parradio",
   "block.antisolarblocks.blahaj": "Blåhaj",
   "block.antisolarblocks.teto_plushie": "Teto Plushie",
@@ -84,7 +85,6 @@
   "block.antisolarblocks.empetrum": "Empetrum",
   "block.antisolarblocks.silver_vase": "Silver Vase",
 
-  "block.antisolarblocks.wildflowers": "Wildflowers",
   "block.antisolarblocks.wild_cosmos_and_bachelor_buttons": "Wild Cosmos And Bachelor Buttons",
 
   "block.antisolarblocks.luminescent_briar": "Luminescent Briar",
@@ -901,6 +901,7 @@
   "tooltip.antisolarblocks.info.camouflaged_pot": "§7Works only with non-flowers§r",
   "tooltip.antisolarblocks.info.fancy_pot": "§7Works only with the specified flower§r",
   "tooltip.antisolarblocks.fact.blahaj": "§3§oPronounced \"Blohai\"§r",
+  "tooltip.antisolarblocks.container.pottery_kiln": "Pottery Kiln",
 
   "painting.antisolarblocks.long_seasons.title": "Long Seasons",
   "painting.antisolarblocks.long_seasons.author": "Ayako Mogi",

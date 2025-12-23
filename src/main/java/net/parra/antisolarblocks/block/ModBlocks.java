@@ -912,15 +912,6 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
-    public static final Block WILDFLOWERS = registerBlock("wildflowers",
-            new FlowerbedBlock(
-                    AbstractBlock.Settings.create()
-                            .mapColor(MapColor.DARK_GREEN)
-                            .noCollision()
-                            .sounds(BlockSoundGroup.PINK_PETALS)
-                            .pistonBehavior(PistonBehavior.DESTROY)
-            )
-    );
     public static final Block WILD_COSMOS_AND_BACHELOR_BUTTONS = registerBlock("wild_cosmos_and_bachelor_buttons",
             new FlowerbedBlock(
                     AbstractBlock.Settings.create()
@@ -7597,6 +7588,18 @@ public class ModBlocks {
                             .strength(1.5F, 6.0F)
             )
     );
+
+    public static final Block POTTERY_KILN = registerBlock("pottery_kiln",
+            new PotteryKilnBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.WHITE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+
+
     public static final Block WHITE_ANCIENT_BRICK_SLAB = registerBlock("white_ancient_brick_slab",
             new SlabBlock(
                     AbstractBlock.Settings.create()

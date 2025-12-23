@@ -501,7 +501,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.VIRGINIA_CREEPER, shortPlantDrops(ModBlocks.VIRGINIA_CREEPER));
 
-        addDrop(ModBlocks.WILDFLOWERS, flowerbedDrops(ModBlocks.WILDFLOWERS));
         addDrop(ModBlocks.WILD_COSMOS_AND_BACHELOR_BUTTONS, flowerbedDrops(ModBlocks.WILD_COSMOS_AND_BACHELOR_BUTTONS));
 
         addDrop(ModBlocks.TUFFACIOUS_CLAY, multipleOreDrops(ModBlocks.TUFFACIOUS_CLAY, ModItems.TUFFACIOUS_CLAY_BALL, 4,4));

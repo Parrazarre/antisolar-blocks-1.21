@@ -29,6 +29,8 @@ public class ModItemGroups {
                         entries.add(ModItems.ROSE_QUARTZ);
                         entries.add(ModItems.CHAROITE);
 
+                        entries.add(ModBlocks.POTTERY_KILN);
+
                         entries.add(ModBlocks.TRIPLE_FLOWER_POT);
                         entries.add(ModBlocks.CAMOUFLAGED_FLOWER_POT);
                         entries.add(ModBlocks.FANCY_AZALEA_POT);
@@ -136,7 +138,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.EMPETRUM);
                         entries.add(ModBlocks.SILVER_VASE);
 
-                        entries.add(ModBlocks.WILDFLOWERS);
                         entries.add(ModBlocks.WILD_COSMOS_AND_BACHELOR_BUTTONS);
 
                         entries.add(ModBlocks.LUMINESCENT_BRIAR);

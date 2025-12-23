@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.color.world.BiomeColors;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.world.biome.FoliageColors;
@@ -14,10 +15,15 @@ import net.minecraft.world.biome.GrassColors;
 import net.parra.antisolarblocks.block.ModBlocks;
 import net.parra.antisolarblocks.particle.FeatherParticle;
 import net.parra.antisolarblocks.particle.ModParticles;
+import net.parra.antisolarblocks.screen.ModScreenHandlers;
+import net.parra.antisolarblocks.screen.custom.PotteryKilnScreen;
 
 public class AntisolarBlocksClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+
+        HandledScreens.register(ModScreenHandlers.POTTERY_KILN_SCREEN_HANDLER, PotteryKilnScreen::new);
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SMALL_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_DRY_BUSH, RenderLayer.getCutout());
@@ -61,7 +67,6 @@ public class AntisolarBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OXYRIA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LUMINESCENT_BRIAR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.JAPANESE_QUINCE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WILDFLOWERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WILD_COSMOS_AND_BACHELOR_BUTTONS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLANKET_FLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_BLANKET_FLOWER, RenderLayer.getCutout());
@@ -272,6 +277,7 @@ public class AntisolarBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FLOWSTONE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HYDROTHERMAL_VENT, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SALT_LAMP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTERY_KILN, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SUGAR_MAPLE_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SUGAR_MAPLE_TRAPDOOR, RenderLayer.getCutout());
@@ -431,12 +437,6 @@ public class AntisolarBlocksClient implements ClientModInitializer {
             return BiomeColors.getGrassColor(world, pos);
         }, ModBlocks.TALL_STINGING_NETTLE);
 
-        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
-            if (world == null || pos == null) {
-                return FoliageColors.getDefaultColor();
-            }
-            return BiomeColors.getGrassColor(world, pos);
-        }, ModBlocks.WILDFLOWERS);
 
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
             if (world == null || pos == null) {

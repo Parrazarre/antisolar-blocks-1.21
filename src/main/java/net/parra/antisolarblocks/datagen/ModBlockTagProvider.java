@@ -24,6 +24,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(ModBlocks.POTTERY_KILN)
+
                 .add(ModBlocks.ROUGH_COBBLESTONE_BRICKS)
                 .add(ModBlocks.ROUGH_COBBLESTONE_BRICK_STAIRS)
                 .add(ModBlocks.ROUGH_COBBLESTONE_BRICK_SLAB)
@@ -928,7 +930,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.GIANT_PASSIFLORA_INCARNATA)
                 .add(ModBlocks.GIANT_PASSIFLORA_CAERULA)
 
-                .add(ModBlocks.WILDFLOWERS)
                 .add(ModBlocks.WILD_COSMOS_AND_BACHELOR_BUTTONS);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)

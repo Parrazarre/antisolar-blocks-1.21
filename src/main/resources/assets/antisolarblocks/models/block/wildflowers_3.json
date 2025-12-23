@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/flowerbed_3",
-  "textures": {
-    "flowerbed": "antisolarblocks:block/wildflowers",
-    "stem": "antisolarblocks:block/wildflowers_stem"
-  }
-}

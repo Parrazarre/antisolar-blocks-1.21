@@ -139,7 +139,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.GIANT_PASSIFLORA_INCARNATA.asItem())
                 .add(ModBlocks.GIANT_PASSIFLORA_CAERULA.asItem())
 
-                .add(ModBlocks.WILDFLOWERS.asItem())
                 .add(ModBlocks.WILD_COSMOS_AND_BACHELOR_BUTTONS.asItem());
 
         getOrCreateTagBuilder(ConventionalItemTags.STONES)

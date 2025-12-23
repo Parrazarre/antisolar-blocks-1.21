@@ -4,11 +4,14 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.minecraft.util.Identifier;
 import net.parra.antisolarblocks.block.ModBlocks;
+import net.parra.antisolarblocks.entity.ModBlockEntities;
 import net.parra.antisolarblocks.entity.ModEntities;
 import net.parra.antisolarblocks.item.ModItemGroups;
 import net.parra.antisolarblocks.item.ModItems;
 import net.parra.antisolarblocks.particle.ModParticles;
+import net.parra.antisolarblocks.screen.ModScreenHandlers;
 import net.parra.antisolarblocks.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,14 +21,20 @@ public class AntisolarBlocks implements ModInitializer {
 	public static final String MOD_ID = "antisolarblocks";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+	public static Identifier id(String path) {
+		return Identifier.of(MOD_ID, path);
+	}
+
 	@Override
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModEntities.registerModEntities();
+		ModBlockEntities.registerModBlockEntities();
 		ModBlockEntityType.registerModBlockEntityType();
 		ModParticles.registerModParticles();
+		ModScreenHandlers.registerModScreenHandlers();
 
 		ModWorldGeneration.generateModWorldGen();
 

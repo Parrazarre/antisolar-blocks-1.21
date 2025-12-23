@@ -1784,11 +1784,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.PINK_DYE), FabricRecipeProvider.conditionsFromItem(Items.PINK_DYE))
                 .offerTo(exporter,"silver_vase");
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.YELLOW_DYE)
-                .input(ModBlocks.WILDFLOWERS)
-                .group("wildflowers")
-                .criterion(FabricRecipeProvider.hasItem(Items.YELLOW_DYE), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_DYE))
-                .offerTo(exporter,"wildflowers");
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PURPLE_DYE)
                 .input(ModBlocks.WILD_COSMOS_AND_BACHELOR_BUTTONS)
                 .group("wild_cosmos_and_bachelor_buttons")
