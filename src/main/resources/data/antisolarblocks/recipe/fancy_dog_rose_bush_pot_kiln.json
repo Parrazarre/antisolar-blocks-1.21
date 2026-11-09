@@ -1,0 +1,28 @@
+{
+  "type": "antisolarblocks:pottery_kiln",
+  "ingredients": [
+    {
+      "item": "antisolarblocks:dog_rose_bush"
+    },
+    {
+      "tag": "c:dyes/pink"
+    },
+    {
+      "tag": "c:dyes/light_blue"
+    },
+    {
+      "item": "antisolarblocks:kaolinite_clay_chunk"
+    },
+    {
+      "item": "antisolarblocks:kaolinite_clay_chunk"
+    },
+    {
+      "item": "antisolarblocks:kaolinite_clay_chunk"
+    }
+  ],
+  "result": {
+    "id": "antisolarblocks:fancy_dog_rose_bush_pot",
+    "count": 1
+  },
+  "cooking_time": 200
+}

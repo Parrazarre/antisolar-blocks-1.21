@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=true": {
+      "model": "antisolarblocks:block/giant_pear"
+    },
+    "hanging=false": {
+      "model": "antisolarblocks:block/giant_pear"
+    }
+  }
+}

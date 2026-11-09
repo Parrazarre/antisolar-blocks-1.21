@@ -36,17 +36,54 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.YEW_LOG.asItem())
                 .add(ModBlocks.YEW_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_YEW_LOG.asItem())
-                .add(ModBlocks.STRIPPED_YEW_WOOD.asItem());
+                .add(ModBlocks.STRIPPED_YEW_WOOD.asItem())
+                .add(ModBlocks.PEAR_LOG.asItem())
+                .add(ModBlocks.PEAR_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_PEAR_LOG.asItem())
+                .add(ModBlocks.STRIPPED_PEAR_WOOD.asItem())
+                .add(ModBlocks.MUSA_LOG.asItem())
+                .add(ModBlocks.MUSA_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_MUSA_LOG.asItem())
+                .add(ModBlocks.STRIPPED_MUSA_WOOD.asItem())
+                .add(ModBlocks.ORANGE_LOG.asItem())
+                .add(ModBlocks.ORANGE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_ORANGE_LOG.asItem())
+                .add(ModBlocks.STRIPPED_ORANGE_WOOD.asItem())
+                .add(ModBlocks.ROWAN_LOG.asItem())
+                .add(ModBlocks.ROWAN_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_ROWAN_LOG.asItem())
+                .add(ModBlocks.STRIPPED_ROWAN_WOOD.asItem())
+                .add(ModBlocks.BLUE_MAHOE_LOG.asItem())
+                .add(ModBlocks.BLUE_MAHOE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_BLUE_MAHOE_LOG.asItem())
+                .add(ModBlocks.STRIPPED_BLUE_MAHOE_WOOD.asItem())
+                .add(ModBlocks.MANGO_LOG.asItem())
+                .add(ModBlocks.MANGO_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_MANGO_LOG.asItem())
+                .add(ModBlocks.STRIPPED_MANGO_WOOD.asItem());
+
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.SUGAR_MAPLE_PLANKS.asItem())
                 .add(ModBlocks.WHITE_PINE_PLANKS.asItem())
-                .add(ModBlocks.YEW_PLANKS.asItem());
+                .add(ModBlocks.YEW_PLANKS.asItem())
+                .add(ModBlocks.PEAR_PLANKS.asItem())
+                .add(ModBlocks.MUSA_PLANKS.asItem())
+                .add(ModBlocks.ORANGE_PLANKS.asItem())
+                .add(ModBlocks.ROWAN_PLANKS.asItem())
+                .add(ModBlocks.BLUE_MAHOE_PLANKS.asItem())
+                .add(ModBlocks.MANGO_PLANKS.asItem());
 
         getOrCreateTagBuilder(ItemTags.WOODEN_SLABS)
                 .add(ModBlocks.SUGAR_MAPLE_SLAB.asItem())
                 .add(ModBlocks.WHITE_PINE_SLAB.asItem())
-                .add(ModBlocks.YEW_SLAB.asItem());
+                .add(ModBlocks.YEW_SLAB.asItem())
+                .add(ModBlocks.PEAR_SLAB.asItem())
+                .add(ModBlocks.MUSA_SLAB.asItem())
+                .add(ModBlocks.ORANGE_SLAB.asItem())
+                .add(ModBlocks.ROWAN_SLAB.asItem())
+                .add(ModBlocks.BLUE_MAHOE_SLAB.asItem())
+                .add(ModBlocks.MANGO_SLAB.asItem());
 
         getOrCreateTagBuilder(ConventionalItemTags.WOODEN_RODS)
                 .add(ModItems.TWIG);
@@ -71,19 +108,54 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.FORSYTHIA_FLOWERS.asItem())
                 .add(ModBlocks.SUGAR_MAPLE_LEAVES.asItem())
                 .add(ModBlocks.WHITE_PINE_LEAVES.asItem())
-                .add(ModBlocks.YEW_LEAVES.asItem());
+                .add(ModBlocks.YEW_LEAVES.asItem())
+                .add(ModBlocks.PEAR_LEAVES.asItem())
+                .add(ModBlocks.PEAR_BEARING_LEAVES.asItem())
+                .add(ModBlocks.MUSA_LEAVES.asItem())
+                .add(ModBlocks.ORANGE_LEAVES.asItem())
+                .add(ModBlocks.ORANGE_BEARING_LEAVES.asItem())
+                .add(ModBlocks.RED_ROWAN_LEAVES.asItem())
+                .add(ModBlocks.RED_ROWAN_BEARING_LEAVES.asItem())
+                .add(ModBlocks.YELLOW_ROWAN_LEAVES.asItem())
+                .add(ModBlocks.YELLOW_ROWAN_BEARING_LEAVES.asItem())
+                .add(ModBlocks.BLUE_MAHOE_LEAVES.asItem())
+                .add(ModBlocks.MANGO_LEAVES.asItem())
+                .add(ModBlocks.MANGO_BEARING_LEAVES.asItem());
 
         getOrCreateTagBuilder(ItemTags.EQUIPPABLE_ENCHANTABLE)
                 .add(ModBlocks.GIANT_PASSIFLORA_INCARNATA.asItem())
                 .add(ModBlocks.GIANT_PASSIFLORA_CAERULA.asItem())
                 .add(ModBlocks.BLAHAJ.asItem())
+
+                .add(ModBlocks.AXOLOTL_PLUSHIE_BLUE.asItem())
+                .add(ModBlocks.AXOLOTL_PLUSHIE_BROWN.asItem())
+                .add(ModBlocks.AXOLOTL_PLUSHIE_CYAN.asItem())
+                .add(ModBlocks.AXOLOTL_PLUSHIE_GOLD.asItem())
+                .add(ModBlocks.AXOLOTL_PLUSHIE_PINK.asItem())
+
                 .add(ModBlocks.TETO_PLUSHIE.asItem())
+                .add(ModBlocks.PEARTO_PLUSHIE.asItem())
                 .add(ModBlocks.MIKU_PLUSHIE.asItem())
+                .add(ModBlocks.FIREWORK_MIKU_PLUSHIE.asItem())
+                .add(ModBlocks.CHERRY_MIKU_PLUSHIE.asItem())
                 .add(ModBlocks.AKITA_NERU_PLUSHIE.asItem())
+                .add(ModBlocks.LUKA_PLUSHIE.asItem())
+                .add(ModBlocks.MEIKO_PLUSHIE.asItem())
+                .add(ModBlocks.KAITO_PLUSHIE.asItem())
+                .add(ModBlocks.RIN_PLUSHIE.asItem())
+                .add(ModBlocks.LEN_PLUSHIE.asItem())
+                .add(ModBlocks.LEN_FILIPINO_PLUSHIE.asItem())
                 .add(ModBlocks.GUMI_PLUSHIE.asItem())
-                .add(ModBlocks.OSAGE_CHAN_PLUSHIE.asItem());
+                .add(ModBlocks.OSAGE_CHAN_PLUSHIE.asItem())
+                .add(ModBlocks.FAUST_PLUSHIE.asItem())
+                .add(ModBlocks.LOPUNNY_PLUSHIE.asItem())
+                .add(ModBlocks.OWL_PLUSHIE.asItem())
+                .add(ModBlocks.FLYNN_PLUSHIE.asItem())
+                .add(ModBlocks.HEATHCLIFF_PLUSHIE.asItem())
+                .add(ModBlocks.PARRA_PLUSHIE.asItem());
 
         getOrCreateTagBuilder(ConventionalItemTags.FOODS)
+                .add(ModItems.SALT)
                 .add(ModItems.HIMALAYAN_SALT)
                 .add(ModItems.KAOLINITE_CLAY_CHUNK);
 
@@ -141,6 +213,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
                 .add(ModBlocks.WILD_COSMOS_AND_BACHELOR_BUTTONS.asItem());
 
+        getOrCreateTagBuilder(ConventionalItemTags.SOUP_FOODS)
+                .add(ModItems.LEEK_SOUP);
+
         getOrCreateTagBuilder(ConventionalItemTags.STONES)
                 .add(ModBlocks.PERIDOTITE.asItem())
                 .add(ModBlocks.CHERT.asItem())
@@ -169,6 +244,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.BUFF_SILTSTONE.asItem())
                 .add(ModBlocks.RED_SILTSTONE.asItem())
                 .add(ModBlocks.BURGUNDY_SILTSTONE.asItem())
+                .add(ModBlocks.KIMBERLITE.asItem())
                 .add(ModBlocks.TRAVERTINE.asItem())
                 .add(ModBlocks.TRACHYANDESITE.asItem())
                 .add(ModBlocks.PICRITE_BASALT.asItem())
@@ -198,6 +274,42 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.YEW_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_YEW_LOG.asItem())
                 .add(ModBlocks.STRIPPED_YEW_WOOD.asItem());
+
+        getOrCreateTagBuilder(ModTags.Items.PEAR_LOGS)
+                .add(ModBlocks.PEAR_LOG.asItem())
+                .add(ModBlocks.PEAR_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_PEAR_LOG.asItem())
+                .add(ModBlocks.STRIPPED_PEAR_WOOD.asItem());
+
+        getOrCreateTagBuilder(ModTags.Items.MUSA_LOGS)
+                .add(ModBlocks.MUSA_LOG.asItem())
+                .add(ModBlocks.MUSA_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_MUSA_LOG.asItem())
+                .add(ModBlocks.STRIPPED_MUSA_WOOD.asItem());
+
+        getOrCreateTagBuilder(ModTags.Items.ORANGE_LOGS)
+                .add(ModBlocks.ORANGE_LOG.asItem())
+                .add(ModBlocks.ORANGE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_ORANGE_LOG.asItem())
+                .add(ModBlocks.STRIPPED_ORANGE_WOOD.asItem());
+
+        getOrCreateTagBuilder(ModTags.Items.ROWAN_LOGS)
+                .add(ModBlocks.ROWAN_LOG.asItem())
+                .add(ModBlocks.ROWAN_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_ROWAN_LOG.asItem())
+                .add(ModBlocks.STRIPPED_ROWAN_WOOD.asItem());
+
+        getOrCreateTagBuilder(ModTags.Items.BLUE_MAHOE_LOGS)
+                .add(ModBlocks.BLUE_MAHOE_LOG.asItem())
+                .add(ModBlocks.BLUE_MAHOE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_BLUE_MAHOE_LOG.asItem())
+                .add(ModBlocks.STRIPPED_BLUE_MAHOE_WOOD.asItem());
+
+        getOrCreateTagBuilder(ModTags.Items.MANGO_LOGS)
+                .add(ModBlocks.MANGO_LOG.asItem())
+                .add(ModBlocks.MANGO_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_MANGO_LOG.asItem())
+                .add(ModBlocks.STRIPPED_MANGO_WOOD.asItem());
 
         getOrCreateTagBuilder(ConventionalItemTags.WHITE_DYED)
                 .add(ModBlocks.WHITE_ANCIENT_BRICKS.asItem())
@@ -283,13 +395,39 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.MAGENTA_ANCIENT_BRICKS.asItem())
                 .add(ModBlocks.PINK_ANCIENT_BRICKS.asItem());
 
+
+        getOrCreateTagBuilder(ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .add(ModBlocks.HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.RED_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY.asItem())
+                .add(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY.asItem());
     }
     public class ModTags {
         public static class Items {
             public static final TagKey<Item> SUGAR_MAPLE_LOGS = createTag("sugar_maple_logs");
             public static final TagKey<Item> WHITE_PINE_LOGS = createTag("white_pine_logs");
             public static final TagKey<Item> YEW_LOGS = createTag("yew_logs");
+            public static final TagKey<Item> PEAR_LOGS = createTag("pear_logs");
+            public static final TagKey<Item> MUSA_LOGS = createTag("musa_logs");
+            public static final TagKey<Item> ORANGE_LOGS = createTag("orange_logs");
+            public static final TagKey<Item> ROWAN_LOGS = createTag("rowan_logs");
+            public static final TagKey<Item> BLUE_MAHOE_LOGS = createTag("blue_mahoe_logs");
+            public static final TagKey<Item> MANGO_LOGS = createTag("mango_logs");
             public static final TagKey<Item> ANCIENT_BRICKS = createTag("ancient_bricks");
+            public static final TagKey<Item> HARDENED_KAOLINITE_CLAY = createTag("hardened_kaolinite_clay");
 
             private static TagKey<Item> createTag(String name) {
                 return TagKey.of(RegistryKeys.ITEM, Identifier.of(AntisolarBlocks.MOD_ID, name));

@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "facing=south,modelstate=0": {
+      "model": "antisolarblocks:block/parra_plushie"
+    },
+    "facing=south,modelstate=1": {
+      "model": "antisolarblocks:block/strawberry_cat_plushie"
+    },
+    "facing=south,modelstate=2": {
+      "model": "antisolarblocks:block/block_plushie"
+    },
+    "facing=west,modelstate=0": {
+      "model": "antisolarblocks:block/parra_plushie",
+      "y": 90
+    },
+    "facing=west,modelstate=1": {
+      "model": "antisolarblocks:block/strawberry_cat_plushie",
+      "y": 90
+    },
+    "facing=west,modelstate=2": {
+      "model": "antisolarblocks:block/block_plushie",
+      "y": 90
+    },
+    "facing=north,modelstate=0": {
+      "model": "antisolarblocks:block/parra_plushie",
+      "y": 180
+    },
+    "facing=north,modelstate=1": {
+      "model": "antisolarblocks:block/strawberry_cat_plushie",
+      "y": 180
+    },
+    "facing=north,modelstate=2": {
+      "model": "antisolarblocks:block/block_plushie",
+      "y": 180
+    },
+    "facing=east,modelstate=0": {
+      "model": "antisolarblocks:block/parra_plushie",
+      "y": 270
+    },
+    "facing=east,modelstate=1": {
+      "model": "antisolarblocks:block/strawberry_cat_plushie",
+      "y": 270
+    },
+    "facing=east,modelstate=2": {
+      "model": "antisolarblocks:block/block_plushie",
+      "y": 270
+    }
+  }
+}

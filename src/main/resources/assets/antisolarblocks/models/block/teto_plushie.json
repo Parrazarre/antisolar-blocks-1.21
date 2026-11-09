@@ -1,4 +1,5 @@
 {
+	"format_version": "26.3",
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
@@ -187,6 +188,19 @@
 				"up": {"uv": [5.5, 8.75, 4.75, 7.5], "texture": "#0"},
 				"down": {"uv": [8.25, 5.25, 7.5, 6.5], "texture": "#0"}
 			}
+		},
+		{
+			"from": [5.25, 5, 5.5],
+			"to": [10.75, 7, 7.5],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8, 6, 6.5]},
+			"faces": {
+				"north": {"uv": [6.0625, 2.25, 7.4375, 2.5], "texture": "#0"},
+				"east": {"uv": [6.5, 4, 7, 4.5], "texture": "#0"},
+				"south": {"uv": [14.625, 0, 16, 0.5], "texture": "#0"},
+				"west": {"uv": [6.5, 4, 7, 4.5], "texture": "#0"},
+				"up": {"uv": [6.0625, 2, 7.4375, 2.25], "texture": "#0"},
+				"down": {"uv": [14.625, 0, 16, 0.5], "texture": "#0"}
+			}
 		}
 	],
 	"gui_light": "front",
@@ -214,7 +228,7 @@
 			"scale": [0.5, 0.5, 0.5]
 		},
 		"gui": {
-			"rotation": [30, 225, 0],
+			"rotation": [30, -135, 0],
 			"translation": [0, -0.5, 0],
 			"scale": [0.8, 0.8, 0.8]
 		},
@@ -229,6 +243,7 @@
 		{
 			"name": "head",
 			"origin": [0, 7, 0],
+			"scope": 0,
 			"color": 0,
 			"children": [
 				0,
@@ -236,6 +251,7 @@
 				{
 					"name": "hair",
 					"origin": [2, 9, 7],
+					"scope": 0,
 					"color": 0,
 					"children": [2, 3, 4, 5, 6, 7, 8]
 				}
@@ -244,20 +260,24 @@
 		{
 			"name": "body",
 			"origin": [0, -1, 0],
+			"scope": 0,
 			"color": 0,
 			"children": [9]
 		},
 		{
 			"name": "arms",
 			"origin": [2, -1, 0],
+			"scope": 0,
 			"color": 0,
 			"children": [10, 11]
 		},
 		{
 			"name": "legs",
 			"origin": [8, 0, 8],
+			"scope": 0,
 			"color": 0,
 			"children": [12, 13]
-		}
+		},
+		14
 	]
 }

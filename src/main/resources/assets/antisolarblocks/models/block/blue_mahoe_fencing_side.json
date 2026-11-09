@@ -1,0 +1,7 @@
+{
+	"parent": "antisolarblocks:block/template_spiked_fence_side",
+	"textures": {
+		"fence": "antisolarblocks:block/blue_mahoe_fencing",
+		"extra": "antisolarblocks:block/blue_mahoe_fencing_extra"
+	}
+}

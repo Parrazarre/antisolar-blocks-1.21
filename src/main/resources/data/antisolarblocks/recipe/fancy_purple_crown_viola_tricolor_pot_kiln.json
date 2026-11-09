@@ -1,0 +1,28 @@
+{
+  "type": "antisolarblocks:pottery_kiln",
+  "ingredients": [
+    {
+      "item": "antisolarblocks:purple_crown_viola_tricolor"
+    },
+    {
+      "tag": "c:dyes/yellow"
+    },
+    {
+      "tag": "c:dyes/cyan"
+    },
+    {
+      "item": "antisolarblocks:kaolinite_clay_chunk"
+    },
+    {
+      "item": "antisolarblocks:kaolinite_clay_chunk"
+    },
+    {
+      "item": "antisolarblocks:kaolinite_clay_chunk"
+    }
+  ],
+  "result": {
+    "id": "antisolarblocks:fancy_purple_crown_viola_tricolor_pot",
+    "count": 1
+  },
+  "cooking_time": 200
+}

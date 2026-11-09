@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "antisolarblocks:item/large_white_pampas_grass",
+    "layer1": "antisolarblocks:item/large_white_pampas_grass_overlay"
+  }
+}

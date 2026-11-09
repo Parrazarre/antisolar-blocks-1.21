@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "antisolarblocks:block/red_clay_roof_tiles_south",
+    "side": "antisolarblocks:block/red_clay_roof_tiles",
+    "top": "antisolarblocks:block/red_clay_roof_tiles"
+  }
+}

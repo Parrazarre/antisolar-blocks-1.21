@@ -25,11 +25,37 @@ public class ModItemGroups {
                         entries.add(ModItems.TUFFACIOUS_CLAY_BALL);
                         entries.add(ModItems.KAOLINITE_CLAY_CHUNK);
                         entries.add(ModItems.KAOLINITE_BRICK);
+                        entries.add(ModItems.HIMALAYAN_SALT);
+                        entries.add(ModItems.SALT);
                         entries.add(ModItems.JADE);
                         entries.add(ModItems.ROSE_QUARTZ);
                         entries.add(ModItems.CHAROITE);
 
+                        entries.add(ModItems.RED_RADISH);
+                        entries.add(ModItems.BLACK_RADISH);
+                        entries.add(ModItems.WHITE_RADISH);
+                        entries.add(ModItems.MIXED_RADISH_SEEDS);
+                        entries.add(ModItems.RADISH_TOAST);
+
+                        entries.add(ModBlocks.GIANT_RED_RADISH);
+                        entries.add(ModBlocks.GIANT_BLACK_RADISH);
+                        entries.add(ModBlocks.GIANT_WHITE_RADISH);
+
+                        entries.add(ModItems.LEEK);
+                        entries.add(ModItems.LEEK_SOUP);
+
+                        entries.add(ModItems.PEAR);
+                        entries.add(ModBlocks.GIANT_PEAR);
+                        entries.add(ModItems.BANANA);
+                        entries.add(ModBlocks.BANANA_BUNCH);
+                        entries.add(ModItems.ORANGE);
+                        entries.add(ModItems.MANGO);
+
+                        entries.add(ModItems.RED_ROWAN_BERRIES);
+                        entries.add(ModItems.YELLOW_ROWAN_BERRIES);
+
                         entries.add(ModBlocks.POTTERY_KILN);
+                        entries.add(ModBlocks.BOTANY_TABLE);
 
                         entries.add(ModBlocks.TRIPLE_FLOWER_POT);
                         entries.add(ModBlocks.CAMOUFLAGED_FLOWER_POT);
@@ -63,20 +89,43 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FANCY_EUPHORBIA_X_MARTINI_POT);
                         entries.add(ModBlocks.FANCY_SILVER_VASE_POT);
                         entries.add(ModBlocks.FANCY_WILD_COSMOS_AND_BACHELOR_BUTTONS_POT);
-
-                        entries.add(ModItems.HIMALAYAN_SALT);
+                        entries.add(ModBlocks.FANCY_BOXWOOD_POT);
 
                         entries.add(ModBlocks.PARRADIO);
                         entries.add(ModBlocks.BLAHAJ);
+
+                        entries.add(ModBlocks.AXOLOTL_PLUSHIE_BLUE);
+                        entries.add(ModBlocks.AXOLOTL_PLUSHIE_BROWN);
+                        entries.add(ModBlocks.AXOLOTL_PLUSHIE_CYAN);
+                        entries.add(ModBlocks.AXOLOTL_PLUSHIE_GOLD);
+                        entries.add(ModBlocks.AXOLOTL_PLUSHIE_PINK);
+
                         entries.add(ModBlocks.TETO_PLUSHIE);
+                        entries.add(ModBlocks.PEARTO_PLUSHIE);
                         entries.add(ModBlocks.MIKU_PLUSHIE);
+                        entries.add(ModBlocks.FIREWORK_MIKU_PLUSHIE);
+                        entries.add(ModBlocks.CHERRY_MIKU_PLUSHIE);
                         entries.add(ModBlocks.AKITA_NERU_PLUSHIE);
+                        entries.add(ModBlocks.LUKA_PLUSHIE);
+                        entries.add(ModBlocks.MEIKO_PLUSHIE);
+                        entries.add(ModBlocks.KAITO_PLUSHIE);
+                        entries.add(ModBlocks.RIN_PLUSHIE);
+                        entries.add(ModBlocks.LEN_PLUSHIE);
+                        entries.add(ModBlocks.LEN_FILIPINO_PLUSHIE);
                         entries.add(ModBlocks.GUMI_PLUSHIE);
                         entries.add(ModBlocks.OSAGE_CHAN_PLUSHIE);
+                        entries.add(ModBlocks.PARRA_PLUSHIE);
+                        entries.add(ModBlocks.FAUST_PLUSHIE);
+                        entries.add(ModBlocks.LOPUNNY_PLUSHIE);
+                        entries.add(ModBlocks.OWL_PLUSHIE);
+                        entries.add(ModBlocks.FLYNN_PLUSHIE);
+                        entries.add(ModBlocks.HEATHCLIFF_PLUSHIE);
 
                         entries.add(ModBlocks.SMALL_BUSH);
                         entries.add(ModBlocks.LARGE_BUSH);
                         entries.add(ModBlocks.LARGE_DRY_BUSH);
+                        entries.add(ModBlocks.WHITE_PAMPAS_GRASS);
+                        entries.add(ModBlocks.TALL_WHITE_PAMPAS_GRASS);
                         entries.add(ModBlocks.WEAVERS_BROOM);
                         entries.add(ModBlocks.LAVENDER_BALL);
                         entries.add(ModBlocks.DOG_ROSE_BUSH);
@@ -89,6 +138,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CATTAILS);
                         entries.add(ModBlocks.SHORT_STINGING_NETTLE);
                         entries.add(ModBlocks.TALL_STINGING_NETTLE);
+
+                        entries.add(ModBlocks.BOXWOOD);
 
                         entries.add(ModBlocks.LAVENDER_BLUE_WALL_IRIS);
                         entries.add(ModBlocks.WHITE_WALL_IRIS);
@@ -132,6 +183,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RED_BLANKET_FLOWER);
                         entries.add(ModBlocks.RED_NEMESIA);
 
+                        entries.add(ModBlocks.WHITE_DAFFODIL);
+                        entries.add(ModBlocks.YELLOW_DAFFODIL);
+                        entries.add(ModBlocks.PINK_DAFFODIL);
+
                         entries.add(ModBlocks.FLOWERING_OXYRIA);
                         entries.add(ModBlocks.OXYRIA);
                         entries.add(ModBlocks.EUPHORBIA_X_MARTINI);
@@ -157,6 +212,42 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SMALL_JAPANESE_MAPLE_LOG);
                         entries.add(ModBlocks.JAPANESE_MAPLE_LEAVES);
                         entries.add(ModBlocks.JAPANESE_MAPLE_SAPLING);
+
+                        entries.add(ModBlocks.GIANT_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_WHITE_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_GRAY_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_BLACK_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_PINK_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_MAGENTA_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_PURPLE_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_BLUE_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_CYAN_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_GREEN_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_LIME_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_YELLOW_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_ORANGE_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_RED_HARDENED_KAOLINITE_CLAY_POT);
+                        entries.add(ModBlocks.GIANT_BROWN_HARDENED_KAOLINITE_CLAY_POT);
+                        
+                        entries.add(ModBlocks.GIANT_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_WHITE_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_LIGHT_GRAY_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_GRAY_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_BLACK_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_PINK_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_MAGENTA_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_PURPLE_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_BLUE_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_LIGHT_BLUE_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_CYAN_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_GREEN_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_LIME_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_YELLOW_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_ORANGE_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_RED_TERRACOTTA_POT);
+                        entries.add(ModBlocks.GIANT_BROWN_TERRACOTTA_POT);
 
                         entries.add(ModBlocks.ROPE);
 
@@ -237,6 +328,121 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CHISELED_YEW_PLANKS);
                         entries.add(ModBlocks.YEW_FENCING);
 
+                        entries.add(ModBlocks.PEAR_LOG);
+                        entries.add(ModBlocks.PEAR_WOOD);
+                        entries.add(ModBlocks.STRIPPED_PEAR_LOG);
+                        entries.add(ModBlocks.STRIPPED_PEAR_WOOD);
+                        entries.add(ModBlocks.PEAR_PLANKS);
+                        entries.add(ModBlocks.PEAR_STAIRS);
+                        entries.add(ModBlocks.PEAR_SLAB);
+                        entries.add(ModBlocks.PEAR_FENCE);
+                        entries.add(ModBlocks.PEAR_FENCE_GATE);
+                        entries.add(ModBlocks.PEAR_DOOR);
+                        entries.add(ModBlocks.PEAR_TRAPDOOR);
+                        entries.add(ModBlocks.PEAR_PRESSURE_PLATE);
+                        entries.add(ModBlocks.PEAR_BUTTON);
+                        entries.add(ModBlocks.PEAR_LEAVES);
+                        entries.add(ModBlocks.PEAR_BEARING_LEAVES);
+                        entries.add(ModBlocks.PEAR_SAPLING);
+                        entries.add(ModBlocks.CHISELED_PEAR_PLANKS);
+                        entries.add(ModBlocks.PEAR_FENCING);
+
+                        entries.add(ModBlocks.MUSA_LOG);
+                        entries.add(ModBlocks.MUSA_WOOD);
+                        entries.add(ModBlocks.STRIPPED_MUSA_LOG);
+                        entries.add(ModBlocks.STRIPPED_MUSA_WOOD);
+                        entries.add(ModBlocks.MUSA_PLANKS);
+                        entries.add(ModBlocks.MUSA_STAIRS);
+                        entries.add(ModBlocks.MUSA_SLAB);
+                        entries.add(ModBlocks.MUSA_FENCE);
+                        entries.add(ModBlocks.MUSA_FENCE_GATE);
+                        entries.add(ModBlocks.MUSA_DOOR);
+                        entries.add(ModBlocks.MUSA_TRAPDOOR);
+                        entries.add(ModBlocks.MUSA_PRESSURE_PLATE);
+                        entries.add(ModBlocks.MUSA_BUTTON);
+                        entries.add(ModBlocks.MUSA_LEAVES);
+                        entries.add(ModBlocks.MUSA_SAPLING);
+                        entries.add(ModBlocks.CHISELED_MUSA_PLANKS);
+                        entries.add(ModBlocks.MUSA_FENCING);
+
+                        entries.add(ModBlocks.ORANGE_LOG);
+                        entries.add(ModBlocks.ORANGE_WOOD);
+                        entries.add(ModBlocks.STRIPPED_ORANGE_LOG);
+                        entries.add(ModBlocks.STRIPPED_ORANGE_WOOD);
+                        entries.add(ModBlocks.ORANGE_PLANKS);
+                        entries.add(ModBlocks.ORANGE_STAIRS);
+                        entries.add(ModBlocks.ORANGE_SLAB);
+                        entries.add(ModBlocks.ORANGE_FENCE);
+                        entries.add(ModBlocks.ORANGE_FENCE_GATE);
+                        entries.add(ModBlocks.ORANGE_DOOR);
+                        entries.add(ModBlocks.ORANGE_TRAPDOOR);
+                        entries.add(ModBlocks.ORANGE_PRESSURE_PLATE);
+                        entries.add(ModBlocks.ORANGE_BUTTON);
+                        entries.add(ModBlocks.ORANGE_LEAVES);
+                        entries.add(ModBlocks.ORANGE_BEARING_LEAVES);
+                        entries.add(ModBlocks.ORANGE_SAPLING);
+                        entries.add(ModBlocks.CHISELED_ORANGE_PLANKS);
+                        entries.add(ModBlocks.ORANGE_FENCING);
+
+                        entries.add(ModBlocks.ROWAN_LOG);
+                        entries.add(ModBlocks.ROWAN_WOOD);
+                        entries.add(ModBlocks.STRIPPED_ROWAN_LOG);
+                        entries.add(ModBlocks.STRIPPED_ROWAN_WOOD);
+                        entries.add(ModBlocks.ROWAN_PLANKS);
+                        entries.add(ModBlocks.ROWAN_STAIRS);
+                        entries.add(ModBlocks.ROWAN_SLAB);
+                        entries.add(ModBlocks.ROWAN_FENCE);
+                        entries.add(ModBlocks.ROWAN_FENCE_GATE);
+                        entries.add(ModBlocks.ROWAN_DOOR);
+                        entries.add(ModBlocks.ROWAN_TRAPDOOR);
+                        entries.add(ModBlocks.ROWAN_PRESSURE_PLATE);
+                        entries.add(ModBlocks.ROWAN_BUTTON);
+                        entries.add(ModBlocks.RED_ROWAN_LEAVES);
+                        entries.add(ModBlocks.RED_ROWAN_BEARING_LEAVES);
+                        entries.add(ModBlocks.RED_ROWAN_SAPLING);
+                        entries.add(ModBlocks.YELLOW_ROWAN_LEAVES);
+                        entries.add(ModBlocks.YELLOW_ROWAN_BEARING_LEAVES);
+                        entries.add(ModBlocks.YELLOW_ROWAN_SAPLING);
+                        entries.add(ModBlocks.CHISELED_ROWAN_PLANKS);
+                        entries.add(ModBlocks.ROWAN_FENCING);
+
+                        entries.add(ModBlocks.BLUE_MAHOE_LOG);
+                        entries.add(ModBlocks.BLUE_MAHOE_WOOD);
+                        entries.add(ModBlocks.STRIPPED_BLUE_MAHOE_LOG);
+                        entries.add(ModBlocks.STRIPPED_BLUE_MAHOE_WOOD);
+                        entries.add(ModBlocks.BLUE_MAHOE_PLANKS);
+                        entries.add(ModBlocks.BLUE_MAHOE_STAIRS);
+                        entries.add(ModBlocks.BLUE_MAHOE_SLAB);
+                        entries.add(ModBlocks.BLUE_MAHOE_FENCE);
+                        entries.add(ModBlocks.BLUE_MAHOE_FENCE_GATE);
+                        entries.add(ModBlocks.BLUE_MAHOE_DOOR);
+                        entries.add(ModBlocks.BLUE_MAHOE_TRAPDOOR);
+                        entries.add(ModBlocks.BLUE_MAHOE_PRESSURE_PLATE);
+                        entries.add(ModBlocks.BLUE_MAHOE_BUTTON);
+                        entries.add(ModBlocks.BLUE_MAHOE_SAPLING);
+                        entries.add(ModBlocks.BLUE_MAHOE_LEAVES);
+                        entries.add(ModBlocks.CHISELED_BLUE_MAHOE_PLANKS);
+                        entries.add(ModBlocks.BLUE_MAHOE_FENCING);
+
+                        entries.add(ModBlocks.MANGO_LOG);
+                        entries.add(ModBlocks.MANGO_WOOD);
+                        entries.add(ModBlocks.STRIPPED_MANGO_LOG);
+                        entries.add(ModBlocks.STRIPPED_MANGO_WOOD);
+                        entries.add(ModBlocks.MANGO_PLANKS);
+                        entries.add(ModBlocks.MANGO_STAIRS);
+                        entries.add(ModBlocks.MANGO_SLAB);
+                        entries.add(ModBlocks.MANGO_FENCE);
+                        entries.add(ModBlocks.MANGO_FENCE_GATE);
+                        entries.add(ModBlocks.MANGO_DOOR);
+                        entries.add(ModBlocks.MANGO_TRAPDOOR);
+                        entries.add(ModBlocks.MANGO_PRESSURE_PLATE);
+                        entries.add(ModBlocks.MANGO_BUTTON);
+                        entries.add(ModBlocks.MANGO_LEAVES);
+                        entries.add(ModBlocks.MANGO_BEARING_LEAVES);
+                        entries.add(ModBlocks.MANGO_SAPLING);
+                        entries.add(ModBlocks.CHISELED_MANGO_PLANKS);
+                        entries.add(ModBlocks.MANGO_FENCING);
+
                         entries.add(ModBlocks.GIANT_PINECONE_BLOCK);
                         entries.add(ModBlocks.GIANT_PINECONE_STAIRS);
                         entries.add(ModBlocks.GIANT_PINECONE_PEDUNCLE);
@@ -259,12 +465,54 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STONE_SHELL_PAVEMENT);
                         entries.add(ModBlocks.CRUMBLING_STONE_BRICKS);
 
-                        entries.add(ModBlocks.MAGENTA_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.BLACK_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.GRAY_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.WHITE_CLAY_ROOF_TILES);
                         entries.add(ModBlocks.PINK_CLAY_ROOF_TILES);
-                        entries.add(ModBlocks.MAGENTA_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.MAGENTA_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.PURPLE_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.BLUE_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.CYAN_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.GREEN_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.LIME_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.YELLOW_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.ORANGE_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.RED_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.BROWN_CLAY_ROOF_TILES);
+                        entries.add(ModBlocks.BLACK_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.GRAY_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.WHITE_CLAY_ROOF_TILE_STAIRS);
                         entries.add(ModBlocks.PINK_CLAY_ROOF_TILE_STAIRS);
-                        entries.add(ModBlocks.MAGENTA_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.MAGENTA_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.PURPLE_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.BLUE_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.CYAN_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.GREEN_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.LIME_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.YELLOW_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.ORANGE_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.RED_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.BROWN_CLAY_ROOF_TILE_STAIRS);
+                        entries.add(ModBlocks.BLACK_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.GRAY_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.WHITE_CLAY_ROOF_TILE_SLAB);
                         entries.add(ModBlocks.PINK_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.MAGENTA_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.PURPLE_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.BLUE_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.CYAN_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.GREEN_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.LIME_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.YELLOW_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.ORANGE_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.RED_CLAY_ROOF_TILE_SLAB);
+                        entries.add(ModBlocks.BROWN_CLAY_ROOF_TILE_SLAB);
 
                         entries.add(ModBlocks.WROUGHT_IRON_FENCE);
 
@@ -605,9 +853,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.POLISHED_LATERITE_ROCK_STAIRS);
                         entries.add(ModBlocks.POLISHED_LATERITE_ROCK_SLAB);
 
-                        entries.add(ModBlocks.BLUE_CANDY_CANE);
-                        entries.add(ModBlocks.RED_CANDY_CANE);
-
                         entries.add(ModBlocks.FEATHER_BLOCK);
 
                         entries.add(ModBlocks.DUMORTIERITE);
@@ -723,6 +968,14 @@ public class ModItemGroups {
                         entries.add(ModBlocks.POLISHED_BURGUNDY_SILTSTONE_STAIRS);
                         entries.add(ModBlocks.POLISHED_BURGUNDY_SILTSTONE_SLAB);
                         entries.add(ModBlocks.POLISHED_BURGUNDY_SILTSTONE_WALL);
+
+                        entries.add(ModBlocks.KIMBERLITE);
+                        entries.add(ModBlocks.KIMBERLITE_STAIRS);
+                        entries.add(ModBlocks.KIMBERLITE_SLAB);
+                        entries.add(ModBlocks.POLISHED_KIMBERLITE);
+                        entries.add(ModBlocks.POLISHED_KIMBERLITE_STAIRS);
+                        entries.add(ModBlocks.POLISHED_KIMBERLITE_SLAB);
+                        entries.add(ModBlocks.POLISHED_KIMBERLITE_WALL);
 
                         entries.add(ModBlocks.TRAVERTINE);
                         entries.add(ModBlocks.TRAVERTINE_STAIRS);
@@ -840,6 +1093,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ORTHOCLASE_FELDSPAR_TILE_STAIRS);
                         entries.add(ModBlocks.ORTHOCLASE_FELDSPAR_TILE_SLAB);
 
+                        entries.add(ModBlocks.SALT_BLOCK);
+                        entries.add(ModBlocks.SALT_STAIRS);
+                        entries.add(ModBlocks.SALT_SLAB);
+                        entries.add(ModBlocks.SALT_WALL);
+
                         entries.add(ModBlocks.SALT_LAMP);
                         entries.add(ModBlocks.KHEWRA_SALT_BLOCK);
                         entries.add(ModBlocks.KHEWRA_SALT_STAIRS);
@@ -852,12 +1110,124 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PACKED_KAOLINITE_CLAY_SLAB);
                         entries.add(ModBlocks.PACKED_KAOLINITE_CLAY_WALL);
                         entries.add(ModBlocks.KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.WHITE_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.GRAY_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.BLACK_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.BROWN_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.RED_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.ORANGE_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.YELLOW_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.LIME_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.GREEN_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.CYAN_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.BLUE_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.PURPLE_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.MAGENTA_KAOLINITE_BRICKS);
+                        entries.add(ModBlocks.PINK_KAOLINITE_BRICKS);
                         entries.add(ModBlocks.KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.WHITE_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.GRAY_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.BLACK_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.BROWN_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.RED_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.ORANGE_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.YELLOW_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.LIME_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.GREEN_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.CYAN_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.BLUE_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.PURPLE_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.MAGENTA_KAOLINITE_BRICK_STAIRS);
+                        entries.add(ModBlocks.PINK_KAOLINITE_BRICK_STAIRS);
                         entries.add(ModBlocks.KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.WHITE_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.GRAY_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.BLACK_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.BROWN_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.RED_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.ORANGE_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.YELLOW_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.LIME_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.GREEN_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.CYAN_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.BLUE_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.PURPLE_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.MAGENTA_KAOLINITE_BRICK_SLAB);
+                        entries.add(ModBlocks.PINK_KAOLINITE_BRICK_SLAB);
                         entries.add(ModBlocks.KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.WHITE_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.GRAY_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.BLACK_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.BROWN_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.RED_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.ORANGE_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.YELLOW_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.LIME_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.GREEN_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.CYAN_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.BLUE_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.PURPLE_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.MAGENTA_KAOLINITE_BRICK_WALL);
+                        entries.add(ModBlocks.PINK_KAOLINITE_BRICK_WALL);
                         entries.add(ModBlocks.HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.RED_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY);
+                        entries.add(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY);
                         entries.add(ModBlocks.HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.RED_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY_STAIRS);
+                        entries.add(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY_STAIRS);
                         entries.add(ModBlocks.HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.RED_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY_SLAB);
+                        entries.add(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY_SLAB);
 
                         entries.add(ModBlocks.RAW_SUNSTONE);
                         entries.add(ModBlocks.RAW_SUNSTONE_STAIRS);

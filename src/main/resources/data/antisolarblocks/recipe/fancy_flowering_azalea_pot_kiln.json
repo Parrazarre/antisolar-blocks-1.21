@@ -1,0 +1,28 @@
+{
+  "type": "antisolarblocks:pottery_kiln",
+  "ingredients": [
+    {
+      "item": "minecraft:flowering_azalea"
+    },
+    {
+      "tag": "c:dyes/cyan"
+    },
+    {
+      "tag": "c:dyes/cyan"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    }
+  ],
+  "result": {
+    "id": "antisolarblocks:fancy_flowering_azalea_pot",
+    "count": 1
+  },
+  "cooking_time": 200
+}

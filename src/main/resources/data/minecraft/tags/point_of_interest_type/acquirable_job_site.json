@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "antisolarblocks:geologist_poi",
+      "required": false
+    },
+    {
+      "id": "antisolarblocks:botanist_poi",
+      "required": false
+    }
+  ]
+}

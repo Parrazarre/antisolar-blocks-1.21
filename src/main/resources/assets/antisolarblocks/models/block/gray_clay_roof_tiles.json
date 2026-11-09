@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "antisolarblocks:block/gray_clay_roof_tiles"
+  }
+}

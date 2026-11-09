@@ -1,0 +1,28 @@
+{
+  "type": "antisolarblocks:pottery_kiln",
+  "ingredients": [
+    {
+      "item": "antisolarblocks:sky_blue_wall_iris"
+    },
+    {
+      "tag": "c:dyes/cyan"
+    },
+    {
+      "tag": "c:dyes/cyan"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    }
+  ],
+  "result": {
+    "id": "antisolarblocks:fancy_sky_blue_wall_iris_pot",
+    "count": 1
+  },
+  "cooking_time": 200
+}

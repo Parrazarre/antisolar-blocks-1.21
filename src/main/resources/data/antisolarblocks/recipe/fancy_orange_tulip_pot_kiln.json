@@ -1,0 +1,28 @@
+{
+  "type": "antisolarblocks:pottery_kiln",
+  "ingredients": [
+    {
+      "item": "minecraft:orange_tulip"
+    },
+    {
+      "tag": "c:dyes/light_gray"
+    },
+    {
+      "tag": "c:dyes/orange"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "antisolarblocks:kaolinite_clay_chunk"
+    }
+  ],
+  "result": {
+    "id": "antisolarblocks:fancy_orange_tulip_pot",
+    "count": 1
+  },
+  "cooking_time": 200
+}

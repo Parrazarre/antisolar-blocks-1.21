@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=true": {
+      "model": "antisolarblocks:block/banana_bunch"
+    },
+    "hanging=false": {
+      "model": "antisolarblocks:block/banana_bunch"
+    }
+  }
+}

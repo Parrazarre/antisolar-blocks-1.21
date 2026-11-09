@@ -1,0 +1,28 @@
+{
+  "type": "antisolarblocks:pottery_kiln",
+  "ingredients": [
+    {
+      "item": "minecraft:pink_tulip"
+    },
+    {
+      "tag": "c:dyes/pink"
+    },
+    {
+      "tag": "c:dyes/pink"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "antisolarblocks:kaolinite_clay_chunk"
+    }
+  ],
+  "result": {
+    "id": "antisolarblocks:fancy_pink_tulip_pot",
+    "count": 1
+  },
+  "cooking_time": 200
+}

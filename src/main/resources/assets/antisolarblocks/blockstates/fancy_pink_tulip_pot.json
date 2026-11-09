@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
-      "model": "antisolarblocks:block/fancy_pot_empty_pink_tulip"
+    "facing=south": {
+      "model": "antisolarblocks:block/fancy_pot_empty_pink_tulip_south"
+    },
+    "facing=west": {
+      "model": "antisolarblocks:block/fancy_pot_empty_pink_tulip_west"
+    },
+    "facing=north": {
+      "model": "antisolarblocks:block/fancy_pot_empty_pink_tulip_north"
+    },
+    "facing=east": {
+      "model": "antisolarblocks:block/fancy_pot_empty_pink_tulip_east"
     }
   }
 }

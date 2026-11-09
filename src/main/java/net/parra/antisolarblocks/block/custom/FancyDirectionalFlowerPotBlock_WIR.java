@@ -67,7 +67,7 @@ public class FancyDirectionalFlowerPotBlock_WIR extends Block {
 
     protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         BlockState blockState = (stack.getItem() instanceof BlockItem blockItem
-                ? (Block)CONTENT_TO_POTTED.getOrDefault(blockItem.getBlock(), Blocks.AIR)
+                ? CONTENT_TO_POTTED.getOrDefault(blockItem.getBlock(), Blocks.AIR)
                 : Blocks.AIR)
                 .getDefaultState();
         if (blockState.isAir()) {
@@ -75,6 +75,7 @@ public class FancyDirectionalFlowerPotBlock_WIR extends Block {
         } else if (!this.isEmpty()) {
             return ItemActionResult.CONSUME;
         } else {
+            blockState = blockState.with(FACING, state.get(FACING));
             world.setBlockState(pos, blockState, Block.NOTIFY_ALL);
             world.emitGameEvent(player, GameEvent.BLOCK_CHANGE, pos);
             player.incrementStat(Stats.POT_FLOWER);
@@ -92,7 +93,11 @@ public class FancyDirectionalFlowerPotBlock_WIR extends Block {
                 player.dropItem(itemStack, false);
             }
 
-            world.setBlockState(pos, ModBlocks.FANCY_WITHER_ROSE_POT.getDefaultState(), Block.NOTIFY_ALL);
+            BlockState emptyPotState = ModBlocks.FANCY_WITHER_ROSE_POT
+                    .getDefaultState()
+                    .with(FACING, state.get(FACING));
+
+            world.setBlockState(pos, emptyPotState, Block.NOTIFY_ALL);
             world.emitGameEvent(player, GameEvent.BLOCK_CHANGE, pos);
             return ActionResult.success(world.isClient);
         }

@@ -3,6 +3,17 @@
     "snowy=false": [
       {
         "model": "antisolarblocks:block/cobblestone_path"
+      },
+      {
+        "model": "antisolarblocks:block/cobblestone_path2"
+      },
+      {
+        "model": "antisolarblocks:block/cobblestone_path",
+        "y": 180
+      },
+      {
+        "model": "antisolarblocks:block/cobblestone_path2",
+        "y": 180
       }
     ],
     "snowy=true": {

@@ -3,7 +3,15 @@
 	"package": "net.parra.antisolarblocks.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"PlantBlockMixin",
+		"CactusBlockMixin",
+		"SugarCaneBlockMixin",
+		"BambooMixin",
+		"BambooBlockPlacementMixin",
+		"SmallDripleafBlockMixin",
+		"BigDripleafBlockMixin",
+		"MushroomPlantBlockMixin",
+		"StructurePoolAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

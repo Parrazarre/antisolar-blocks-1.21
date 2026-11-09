@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "antisolarblocks:block/light_blue_clay_roof_tiles_east",
+    "side": "antisolarblocks:block/light_blue_clay_roof_tiles",
+    "top": "antisolarblocks:block/light_blue_clay_roof_tiles_east"
+  }
+}

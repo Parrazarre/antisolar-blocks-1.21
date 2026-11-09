@@ -4,25 +4,31 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.FlowerPotBlock;
+import net.minecraft.block.CarrotsBlock;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.loot.condition.LootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
+import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.parra.antisolarblocks.block.ModBlocks;
 import net.parra.antisolarblocks.block.custom.*;
 import net.parra.antisolarblocks.item.ModItems;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
@@ -38,6 +44,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.LARGE_BUSH);
         addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_LARGE_BUSH);
         addDrop(ModBlocks.LARGE_DRY_BUSH);
+        addDrop(ModBlocks.TALL_WHITE_PAMPAS_GRASS);
+        addDrop(ModBlocks.WHITE_PAMPAS_GRASS);
         addDrop(ModBlocks.WEAVERS_BROOM);
         addDrop(ModBlocks.DARK_WILD_GRASS);
         addPottedPlantDrops(ModBlocks.POTTED_DARK_WILD_GRASS);
@@ -45,6 +53,55 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.LIGHT_WILD_GRASS);
         addPottedPlantDrops(ModBlocks.POTTED_LIGHT_WILD_GRASS);
         addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_LIGHT_WILD_GRASS);
+
+        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
+        LootCondition.Builder builder3 = BlockStatePropertyLootCondition.builder(ModBlocks.LEEK).properties(StatePredicate.Builder.create().exactMatch(CarrotsBlock.AGE, 7));
+        this.addDrop(ModBlocks.LEEK, this.applyExplosionDecay(ModBlocks.LEEK, LootTable.builder().pool(LootPool.builder().with(ItemEntry.builder(ModItems.LEEK))).pool(LootPool.builder().conditionally(builder3).with(ItemEntry.builder(ModItems.LEEK).apply(ApplyBonusLootFunction.binomialWithBonusCount(impl.getOrThrow(Enchantments.FORTUNE), 0.5714286F, 3))))));
+
+        addDrop(ModBlocks.GIANT_RED_RADISH, multipleOreDrops(ModBlocks.GIANT_RED_RADISH, ModItems.MIXED_RADISH_SEEDS, 1,9));
+        addDrop(ModBlocks.GIANT_BLACK_RADISH, multipleOreDrops(ModBlocks.GIANT_BLACK_RADISH, ModItems.MIXED_RADISH_SEEDS, 1,9));
+        addDrop(ModBlocks.GIANT_WHITE_RADISH, multipleOreDrops(ModBlocks.GIANT_WHITE_RADISH, ModItems.MIXED_RADISH_SEEDS, 1,9));
+
+        addDrop(ModBlocks.BOXWOOD);
+        addFancyFlowerPot_BOXDrops(ModBlocks.FANCY_POTTED_BOXWOOD);
+        addPottedPlantDrops(ModBlocks.POTTED_BOXWOOD);
+
+        this.addDrop(
+                ModBlocks.RADISH_CROP,
+                cropDrops(
+                        ModBlocks.RADISH_CROP,
+                        List.of(
+                                ModItems.RED_RADISH,
+                                ModItems.BLACK_RADISH,
+                                ModItems.WHITE_RADISH
+                        ),
+                        ModItems.MIXED_RADISH_SEEDS,
+
+                        BlockStatePropertyLootCondition.builder(ModBlocks.RADISH_CROP)
+                                .properties(
+                                        StatePredicate.Builder.create()
+                                                .exactMatch(RadishCropBlock.AGE, 4)
+                                ),
+
+                        BlockStatePropertyLootCondition.builder(ModBlocks.RADISH_CROP)
+                                .properties(
+                                        StatePredicate.Builder.create()
+                                                .exactMatch(RadishCropBlock.AGE, 5)
+                                ),
+
+                        BlockStatePropertyLootCondition.builder(ModBlocks.RADISH_CROP)
+                                .properties(
+                                        StatePredicate.Builder.create()
+                                                .exactMatch(RadishCropBlock.AGE, 6)
+                                ),
+
+                        BlockStatePropertyLootCondition.builder(ModBlocks.RADISH_CROP)
+                                .properties(
+                                        StatePredicate.Builder.create()
+                                                .exactMatch(RadishCropBlock.AGE, 7)
+                                )
+                )
+        );
 
         addDrop(ModBlocks.PINK_VIOLA_TRICOLOR);
         addPottedPlantDrops(ModBlocks.POTTED_PINK_VIOLA_TRICOLOR);
@@ -116,6 +173,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CHISELED_SUGAR_MAPLE_PLANKS);
         addDrop(ModBlocks.CHISELED_WHITE_PINE_PLANKS);
         addDrop(ModBlocks.CHISELED_YEW_PLANKS);
+        addDrop(ModBlocks.CHISELED_PEAR_PLANKS);
+        addDrop(ModBlocks.CHISELED_MUSA_PLANKS);
+        addDrop(ModBlocks.CHISELED_ORANGE_PLANKS);
+        addDrop(ModBlocks.CHISELED_ROWAN_PLANKS);
+        addDrop(ModBlocks.CHISELED_BLUE_MAHOE_PLANKS);
 
         addDrop(ModBlocks.SUGAR_MAPLE_LOG);
         addDrop(ModBlocks.SUGAR_MAPLE_WOOD);
@@ -419,8 +481,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.POLISHED_LATERITE_ROCK_STAIRS);
         addDrop(ModBlocks.POLISHED_LATERITE_ROCK_SLAB, slabDrops(ModBlocks.POLISHED_LATERITE_ROCK_SLAB));
 
-        addDrop(ModBlocks.BLUE_CANDY_CANE);
-        addDrop(ModBlocks.RED_CANDY_CANE);
 
         addDrop(ModBlocks.DUMORTIERITE);
         addDrop(ModBlocks.POLISHED_DUMORTIERITE);
@@ -539,6 +599,12 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addPottedPlantDrops(ModBlocks.POTTED_RED_BLANKET_FLOWER);
         addDrop(ModBlocks.RED_NEMESIA);
         addTriplePottedPlantDrops(ModBlocks.POTTED_RED_NEMESIA);
+        addDrop(ModBlocks.WHITE_DAFFODIL);
+        addPottedPlantDrops(ModBlocks.POTTED_WHITE_DAFFODIL);
+        addDrop(ModBlocks.YELLOW_DAFFODIL);
+        addPottedPlantDrops(ModBlocks.POTTED_YELLOW_DAFFODIL);
+        addDrop(ModBlocks.PINK_DAFFODIL);
+        addPottedPlantDrops(ModBlocks.POTTED_PINK_DAFFODIL);
         addDrop(ModBlocks.EUPHORBIA_X_MARTINI);
         addDrop(ModBlocks.EMPETRUM);
 
@@ -571,6 +637,97 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addPottedPlantDrops(ModBlocks.POTTED_YEW_SAPLING);
         addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_YEW_SAPLING);
 
+
+        addDrop(ModBlocks.GIANT_PEAR, multipleOreDrops(ModBlocks.GIANT_PEAR, ModItems.PEAR,4, 9));
+        addDrop(ModBlocks.PEAR_LOG);
+        addDrop(ModBlocks.PEAR_WOOD);
+        addDrop(ModBlocks.STRIPPED_PEAR_LOG);
+        addDrop(ModBlocks.STRIPPED_PEAR_WOOD);
+        addDrop(ModBlocks.PEAR_PLANKS);
+        addDrop(ModBlocks.PEAR_STAIRS);
+        addDrop(ModBlocks.PEAR_SLAB, slabDrops(ModBlocks.PEAR_SLAB));
+        addDrop(ModBlocks.PEAR_FENCE);
+        addDrop(ModBlocks.PEAR_FENCE_GATE);
+        addDrop(ModBlocks.PEAR_DOOR, doorDrops(ModBlocks.PEAR_DOOR));
+        addDrop(ModBlocks.PEAR_TRAPDOOR);
+        addDrop(ModBlocks.PEAR_PRESSURE_PLATE);
+        addDrop(ModBlocks.PEAR_BUTTON);
+        addDrop(ModBlocks.PEAR_LEAVES, leavesDrops(ModBlocks.PEAR_LEAVES, ModBlocks.PEAR_SAPLING, 0.0625f));
+        addDrop(ModBlocks.PEAR_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_PEAR_SAPLING);
+
+        addDrop(ModBlocks.BANANA_BUNCH, multipleOreDrops(ModBlocks.BANANA_BUNCH, ModItems.BANANA,4, 9));
+        addDrop(ModBlocks.MUSA_LOG);
+        addDrop(ModBlocks.MUSA_WOOD);
+        addDrop(ModBlocks.STRIPPED_MUSA_LOG);
+        addDrop(ModBlocks.STRIPPED_MUSA_WOOD);
+        addDrop(ModBlocks.MUSA_PLANKS);
+        addDrop(ModBlocks.MUSA_STAIRS);
+        addDrop(ModBlocks.MUSA_SLAB, slabDrops(ModBlocks.MUSA_SLAB));
+        addDrop(ModBlocks.MUSA_FENCE);
+        addDrop(ModBlocks.MUSA_FENCE_GATE);
+        addDrop(ModBlocks.MUSA_DOOR, doorDrops(ModBlocks.MUSA_DOOR));
+        addDrop(ModBlocks.MUSA_TRAPDOOR);
+        addDrop(ModBlocks.MUSA_PRESSURE_PLATE);
+        addDrop(ModBlocks.MUSA_BUTTON);
+        addDrop(ModBlocks.MUSA_LEAVES, leavesDrops(ModBlocks.MUSA_LEAVES, ModBlocks.MUSA_SAPLING, 0.125f));
+        addDrop(ModBlocks.MUSA_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_MUSA_SAPLING);
+
+        addDrop(ModBlocks.ORANGE_LOG);
+        addDrop(ModBlocks.ORANGE_WOOD);
+        addDrop(ModBlocks.STRIPPED_ORANGE_LOG);
+        addDrop(ModBlocks.STRIPPED_ORANGE_WOOD);
+        addDrop(ModBlocks.ORANGE_PLANKS);
+        addDrop(ModBlocks.ORANGE_STAIRS);
+        addDrop(ModBlocks.ORANGE_SLAB, slabDrops(ModBlocks.ORANGE_SLAB));
+        addDrop(ModBlocks.ORANGE_FENCE);
+        addDrop(ModBlocks.ORANGE_FENCE_GATE);
+        addDrop(ModBlocks.ORANGE_DOOR, doorDrops(ModBlocks.ORANGE_DOOR));
+        addDrop(ModBlocks.ORANGE_TRAPDOOR);
+        addDrop(ModBlocks.ORANGE_PRESSURE_PLATE);
+        addDrop(ModBlocks.ORANGE_BUTTON);
+        addDrop(ModBlocks.ORANGE_LEAVES, leavesDrops(ModBlocks.ORANGE_LEAVES, ModBlocks.ORANGE_SAPLING, 0.125f));
+        addDrop(ModBlocks.ORANGE_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_ORANGE_SAPLING);
+
+        addDrop(ModBlocks.ROWAN_LOG);
+        addDrop(ModBlocks.ROWAN_WOOD);
+        addDrop(ModBlocks.STRIPPED_ROWAN_LOG);
+        addDrop(ModBlocks.STRIPPED_ROWAN_WOOD);
+        addDrop(ModBlocks.ROWAN_PLANKS);
+        addDrop(ModBlocks.ROWAN_STAIRS);
+        addDrop(ModBlocks.ROWAN_SLAB, slabDrops(ModBlocks.ROWAN_SLAB));
+        addDrop(ModBlocks.ROWAN_FENCE);
+        addDrop(ModBlocks.ROWAN_FENCE_GATE);
+        addDrop(ModBlocks.ROWAN_DOOR, doorDrops(ModBlocks.ROWAN_DOOR));
+        addDrop(ModBlocks.ROWAN_TRAPDOOR);
+        addDrop(ModBlocks.ROWAN_PRESSURE_PLATE);
+        addDrop(ModBlocks.ROWAN_BUTTON);
+        addDrop(ModBlocks.RED_ROWAN_LEAVES, leavesDrops(ModBlocks.RED_ROWAN_LEAVES, ModBlocks.RED_ROWAN_SAPLING, 0.125f));
+        addDrop(ModBlocks.RED_ROWAN_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_RED_ROWAN_SAPLING);
+        addDrop(ModBlocks.YELLOW_ROWAN_LEAVES, leavesDrops(ModBlocks.YELLOW_ROWAN_LEAVES, ModBlocks.YELLOW_ROWAN_SAPLING, 0.125f));
+        addDrop(ModBlocks.YELLOW_ROWAN_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_YELLOW_ROWAN_SAPLING);
+
+        addDrop(ModBlocks.BLUE_MAHOE_LOG);
+        addDrop(ModBlocks.BLUE_MAHOE_WOOD);
+        addDrop(ModBlocks.STRIPPED_BLUE_MAHOE_LOG);
+        addDrop(ModBlocks.STRIPPED_BLUE_MAHOE_WOOD);
+        addDrop(ModBlocks.BLUE_MAHOE_PLANKS);
+        addDrop(ModBlocks.BLUE_MAHOE_STAIRS);
+        addDrop(ModBlocks.BLUE_MAHOE_SLAB, slabDrops(ModBlocks.BLUE_MAHOE_SLAB));
+        addDrop(ModBlocks.BLUE_MAHOE_FENCE);
+        addDrop(ModBlocks.BLUE_MAHOE_FENCE_GATE);
+        addDrop(ModBlocks.BLUE_MAHOE_DOOR, doorDrops(ModBlocks.BLUE_MAHOE_DOOR));
+        addDrop(ModBlocks.BLUE_MAHOE_TRAPDOOR);
+        addDrop(ModBlocks.BLUE_MAHOE_PRESSURE_PLATE);
+        addDrop(ModBlocks.BLUE_MAHOE_BUTTON);
+        addDrop(ModBlocks.BLUE_MAHOE_LEAVES, leavesDrops(ModBlocks.BLUE_MAHOE_LEAVES, ModBlocks.BLUE_MAHOE_SAPLING, 0.125f));
+        addDrop(ModBlocks.BLUE_MAHOE_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_BLUE_MAHOE_SAPLING);
+
         addDrop(ModBlocks.GRAY_SILTSTONE);
         addDrop(ModBlocks.GRAY_SILTSTONE_STAIRS);
         addDrop(ModBlocks.GRAY_SILTSTONE_SLAB, slabDrops(ModBlocks.GRAY_SILTSTONE_SLAB));
@@ -583,6 +740,16 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.BURGUNDY_SILTSTONE);
         addDrop(ModBlocks.BURGUNDY_SILTSTONE_STAIRS);
         addDrop(ModBlocks.BURGUNDY_SILTSTONE_SLAB, slabDrops(ModBlocks.BURGUNDY_SILTSTONE_SLAB));
+
+        addDrop(ModBlocks.BOTANY_TABLE);
+
+        addDrop(ModBlocks.KIMBERLITE);
+        addDrop(ModBlocks.KIMBERLITE_STAIRS);
+        addDrop(ModBlocks.KIMBERLITE_SLAB, slabDrops(ModBlocks.KIMBERLITE_SLAB));
+        addDrop(ModBlocks.POLISHED_KIMBERLITE);
+        addDrop(ModBlocks.POLISHED_KIMBERLITE_STAIRS);
+        addDrop(ModBlocks.POLISHED_KIMBERLITE_SLAB, slabDrops(ModBlocks.POLISHED_KIMBERLITE_SLAB));
+        addDrop(ModBlocks.POLISHED_KIMBERLITE_WALL);
 
         addDrop(ModBlocks.POLISHED_GRAY_SILTSTONE);
         addDrop(ModBlocks.POLISHED_GRAY_SILTSTONE_STAIRS);
@@ -635,13 +802,54 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.LAVENDER_BALL);
         addDrop(ModBlocks.DOG_ROSE_BUSH);
 
-        addDrop(ModBlocks.MAGENTA_CLAY_ROOF_TILES);
-        addDrop(ModBlocks.MAGENTA_CLAY_ROOF_TILE_STAIRS);
-        addDrop(ModBlocks.MAGENTA_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.MAGENTA_CLAY_ROOF_TILE_SLAB));
-
-        addDrop(ModBlocks.PINK_CLAY_ROOF_TILES);
-        addDrop(ModBlocks.PINK_CLAY_ROOF_TILE_STAIRS);
-        addDrop(ModBlocks.PINK_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.PINK_CLAY_ROOF_TILE_SLAB));
+        addDrop(ModBlocks.BLACK_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.GRAY_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.WHITE_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.PINK_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.MAGENTA_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.PURPLE_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.BLUE_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.CYAN_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.GREEN_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.LIME_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.YELLOW_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.ORANGE_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.RED_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.BROWN_CLAY_ROOF_TILES);
+                addDrop(ModBlocks.BLACK_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.GRAY_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.WHITE_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.PINK_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.MAGENTA_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.PURPLE_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.BLUE_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.CYAN_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.GREEN_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.LIME_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.YELLOW_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.ORANGE_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.RED_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.BROWN_CLAY_ROOF_TILE_STAIRS);
+                addDrop(ModBlocks.BLACK_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.BLACK_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.GRAY_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.GRAY_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.WHITE_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.WHITE_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.PINK_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.PINK_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.MAGENTA_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.MAGENTA_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.PURPLE_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.PURPLE_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.BLUE_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.BLUE_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.CYAN_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.CYAN_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.GREEN_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.GREEN_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.LIME_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.LIME_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.YELLOW_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.YELLOW_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.ORANGE_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.ORANGE_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.RED_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.RED_CLAY_ROOF_TILE_SLAB));
+                addDrop(ModBlocks.BROWN_CLAY_ROOF_TILE_SLAB, slabDrops(ModBlocks.BROWN_CLAY_ROOF_TILE_SLAB));
 
         addDrop(ModBlocks.TRACHYANDESITE);
         addDrop(ModBlocks.TRACHYANDESITE_STAIRS);
@@ -669,11 +877,69 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CATTAILS, doorDrops(ModBlocks.CATTAILS));
 
         addDrop(ModBlocks.BLAHAJ);
+
+        addDrop(ModBlocks.AXOLOTL_PLUSHIE_BLUE);
+        addDrop(ModBlocks.AXOLOTL_PLUSHIE_BROWN);
+        addDrop(ModBlocks.AXOLOTL_PLUSHIE_CYAN);
+        addDrop(ModBlocks.AXOLOTL_PLUSHIE_GOLD);
+        addDrop(ModBlocks.AXOLOTL_PLUSHIE_PINK);
+
         addDrop(ModBlocks.TETO_PLUSHIE);
+        addDrop(ModBlocks.PEARTO_PLUSHIE);
         addDrop(ModBlocks.MIKU_PLUSHIE);
+        addDrop(ModBlocks.FIREWORK_MIKU_PLUSHIE);
+        addDrop(ModBlocks.CHERRY_MIKU_PLUSHIE);
         addDrop(ModBlocks.AKITA_NERU_PLUSHIE);
+        addDrop(ModBlocks.LUKA_PLUSHIE);
+        addDrop(ModBlocks.MEIKO_PLUSHIE);
+        addDrop(ModBlocks.KAITO_PLUSHIE);
+        addDrop(ModBlocks.RIN_PLUSHIE);
+        addDrop(ModBlocks.LEN_PLUSHIE);
+        addDrop(ModBlocks.LEN_FILIPINO_PLUSHIE);
         addDrop(ModBlocks.GUMI_PLUSHIE);
         addDrop(ModBlocks.OSAGE_CHAN_PLUSHIE);
+        addDrop(ModBlocks.FAUST_PLUSHIE);
+        addDrop(ModBlocks.LOPUNNY_PLUSHIE);
+        addDrop(ModBlocks.OWL_PLUSHIE);
+        addDrop(ModBlocks.FLYNN_PLUSHIE);
+        addDrop(ModBlocks.HEATHCLIFF_PLUSHIE);
+        addDrop(ModBlocks.PARRA_PLUSHIE);
+
+        addDrop(ModBlocks.GIANT_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_WHITE_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_GRAY_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_BLACK_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_PINK_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_MAGENTA_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_PURPLE_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_BLUE_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_CYAN_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_GREEN_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_LIME_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_YELLOW_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_ORANGE_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_RED_HARDENED_KAOLINITE_CLAY_POT);
+        addDrop(ModBlocks.GIANT_BROWN_HARDENED_KAOLINITE_CLAY_POT);
+
+        addDrop(ModBlocks.GIANT_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_WHITE_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_LIGHT_GRAY_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_GRAY_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_BLACK_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_PINK_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_MAGENTA_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_PURPLE_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_BLUE_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_LIGHT_BLUE_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_CYAN_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_GREEN_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_LIME_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_YELLOW_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_ORANGE_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_RED_TERRACOTTA_POT);
+        addDrop(ModBlocks.GIANT_BROWN_TERRACOTTA_POT);
 
         addDrop(ModBlocks.CHLORAPATITE);
         addDrop(ModBlocks.CHLORAPATITE_STAIRS);
@@ -752,6 +1018,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SUGAR_MAPLE_FENCING);
         addDrop(ModBlocks.WHITE_PINE_FENCING);
         addDrop(ModBlocks.YEW_FENCING);
+        addDrop(ModBlocks.PEAR_FENCING);
+        addDrop(ModBlocks.MUSA_FENCING);
+        addDrop(ModBlocks.ORANGE_FENCING);
+        addDrop(ModBlocks.ROWAN_FENCING);
+        addDrop(ModBlocks.BLUE_MAHOE_FENCING);
 
         addDrop(ModBlocks.GABBRO);
         addDrop(ModBlocks.GABBRO_STAIRS);
@@ -804,12 +1075,124 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PACKED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.PACKED_KAOLINITE_CLAY_SLAB));
         addDrop(ModBlocks.PACKED_KAOLINITE_CLAY_WALL);
         addDrop(ModBlocks.KAOLINITE_BRICKS);
+        addDrop(ModBlocks.WHITE_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.GRAY_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.BLACK_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.BROWN_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.RED_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.ORANGE_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.YELLOW_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.LIME_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.GREEN_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.CYAN_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.BLUE_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.PURPLE_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.MAGENTA_KAOLINITE_BRICKS);
+        addDrop(ModBlocks.PINK_KAOLINITE_BRICKS);
         addDrop(ModBlocks.KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.WHITE_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.GRAY_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.BLACK_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.BROWN_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.RED_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.ORANGE_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.YELLOW_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.LIME_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.GREEN_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.CYAN_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.BLUE_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.PURPLE_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.MAGENTA_KAOLINITE_BRICK_STAIRS);
+        addDrop(ModBlocks.PINK_KAOLINITE_BRICK_STAIRS);
         addDrop(ModBlocks.KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.WHITE_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.WHITE_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.GRAY_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.GRAY_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.BLACK_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.BLACK_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.BROWN_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.BROWN_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.RED_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.RED_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.ORANGE_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.ORANGE_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.YELLOW_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.YELLOW_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.LIME_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.LIME_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.GREEN_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.GREEN_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.CYAN_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.CYAN_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.BLUE_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.BLUE_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.PURPLE_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.PURPLE_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.MAGENTA_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.MAGENTA_KAOLINITE_BRICK_SLAB));
+        addDrop(ModBlocks.PINK_KAOLINITE_BRICK_SLAB, slabDrops(ModBlocks.PINK_KAOLINITE_BRICK_SLAB));
         addDrop(ModBlocks.KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.WHITE_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.GRAY_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.BLACK_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.BROWN_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.RED_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.ORANGE_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.YELLOW_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.LIME_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.GREEN_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.CYAN_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.BLUE_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.PURPLE_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.MAGENTA_KAOLINITE_BRICK_WALL);
+        addDrop(ModBlocks.PINK_KAOLINITE_BRICK_WALL);
         addDrop(ModBlocks.HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.RED_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY);
+        addDrop(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY);
         addDrop(ModBlocks.HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.RED_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY_STAIRS);
+        addDrop(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY_STAIRS);
         addDrop(ModBlocks.HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.RED_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.RED_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY_SLAB));
+        addDrop(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY_SLAB, slabDrops(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY_SLAB));
 
         addDrop(ModBlocks.ROPE);
 
@@ -1027,7 +1410,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addFancyFlowerPot_OTLDrops(ModBlocks.FANCY_POTTED_ORANGE_TULIP);
         addDrop(ModBlocks.FANCY_ORANGE_TULIP_POT);
 
-        addFancyFlowerPot_PTLDrops(ModBlocks.FANCY_POTTED_PINK_TULIP);
+        addFancyDirectionalFlowerPotBlock_PTLDrops(ModBlocks.FANCY_POTTED_PINK_TULIP);
         addDrop(ModBlocks.FANCY_PINK_TULIP_POT);
 
         addFancyFlowerPot_CRNDrops(ModBlocks.FANCY_POTTED_CORNFLOWER);
@@ -1482,11 +1865,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
     }
 
-    public void addFancyFlowerPot_PTLDrops(Block block) {
-        this.addDrop(block, fancyFlowerPot_PTL -> this.FancyFlowerPot_PTLDrops(((FancyFlowerPot_PTL)fancyFlowerPot_PTL).getContent()));
+    public void addFancyDirectionalFlowerPotBlock_PTLDrops(Block block) {
+        this.addDrop(block, fancyDirectionalFlowerPotBlock_PTL -> this.FancyDirectionalFlowerPotBlock_PTLDrops(((FancyDirectionalFlowerPotBlock_PTL)fancyDirectionalFlowerPotBlock_PTL).getContent()));
     }
 
-    public final LootTable.Builder FancyFlowerPot_PTLDrops(ItemConvertible drop) {
+    public final LootTable.Builder FancyDirectionalFlowerPotBlock_PTLDrops(ItemConvertible drop) {
         return LootTable.builder()
                 .pool(
                         this.addSurvivesExplosionCondition(
@@ -1508,5 +1891,126 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                         )
                 )
                 .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public void addFancyFlowerPot_BOXDrops(Block block) {
+        this.addDrop(block, fancyFlowerPot_BOX -> this.FancyFlowerPot_BOXDrops(((FancyFlowerPot_BOX)fancyFlowerPot_BOX).getContent()));
+    }
+
+    public final LootTable.Builder FancyFlowerPot_BOXDrops(ItemConvertible drop) {
+        return LootTable.builder()
+                .pool(
+                        this.addSurvivesExplosionCondition(
+                                ModBlocks.FANCY_BOXWOOD_POT, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(ModBlocks.FANCY_BOXWOOD_POT))
+                        )
+                )
+                .pool(this.addSurvivesExplosionCondition(drop, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
+    }
+
+    public LootTable.Builder cropDrops(
+            Block crop,
+            List<ItemConvertible> cropItems,
+            Item seeds,
+            LootCondition.Builder age4Condition,
+            LootCondition.Builder age5Condition,
+            LootCondition.Builder age6Condition,
+            LootCondition.Builder age7Condition
+    ) {
+        RegistryWrapper.Impl<Enchantment> impl =
+                this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
+
+        // Random radish: RED, BLACK, or WHITE
+        LootPoolEntry.Builder<?> radishDrop =
+                ItemEntry.builder(cropItems.get(0));
+
+        for (int i = 1; i < cropItems.size(); i++) {
+            radishDrop = radishDrop.alternatively(
+                    ItemEntry.builder(cropItems.get(i))
+            );
+        }
+
+        return this.applyExplosionDecay(
+                crop,
+                LootTable.builder()
+
+                        // AGE 4 - exactly 1 random radish
+                        .pool(
+                                LootPool.builder()
+                                        .conditionally(age4Condition)
+                                        .with(radishDrop)
+                        )
+
+                        // AGE 5 - exactly 1 random radish
+                        .pool(
+                                LootPool.builder()
+                                        .conditionally(age5Condition)
+                                        .with(radishDrop)
+                        )
+
+                        // AGE 6 - exactly 1 random radish
+                        .pool(
+                                LootPool.builder()
+                                        .conditionally(age6Condition)
+                                        .with(radishDrop)
+                        )
+
+                        // AGE 7 - ALWAYS 1 random radish
+                        .pool(
+                                LootPool.builder()
+                                        .conditionally(age7Condition)
+                                        .with(radishDrop)
+                        )
+
+                        // AGE 7 - additional radishes affected by Fortune
+                        .pool(
+                                LootPool.builder()
+                                        .conditionally(age7Condition)
+                                        .with(
+                                                ItemEntry.builder(cropItems.get(0))
+                                                        .apply(
+                                                                ApplyBonusLootFunction.binomialWithBonusCount(
+                                                                        impl.getOrThrow(Enchantments.FORTUNE),
+                                                                        0.5714286F,
+                                                                        3
+                                                                )
+                                                        )
+                                        )
+                                        .with(
+                                                ItemEntry.builder(cropItems.get(1))
+                                                        .apply(
+                                                                ApplyBonusLootFunction.binomialWithBonusCount(
+                                                                        impl.getOrThrow(Enchantments.FORTUNE),
+                                                                        0.5714286F,
+                                                                        3
+                                                                )
+                                                        )
+                                        )
+                                        .with(
+                                                ItemEntry.builder(cropItems.get(2))
+                                                        .apply(
+                                                                ApplyBonusLootFunction.binomialWithBonusCount(
+                                                                        impl.getOrThrow(Enchantments.FORTUNE),
+                                                                        0.5714286F,
+                                                                        3
+                                                                )
+                                                        )
+                                        )
+                        )
+
+                        // SEEDS - independent of age
+                        .pool(
+                                LootPool.builder()
+                                        .with(
+                                                ItemEntry.builder(seeds)
+                                                        .apply(
+                                                                ApplyBonusLootFunction.binomialWithBonusCount(
+                                                                        impl.getOrThrow(Enchantments.FORTUNE),
+                                                                        0.5714286F,
+                                                                        3
+                                                                )
+                                                        )
+                                        )
+                        )
+        );
     }
 }

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "antisolarblocks:block/axolotl_plushie_cyan"
+    },
+    "facing=west": {
+      "model": "antisolarblocks:block/axolotl_plushie_cyan",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "antisolarblocks:block/axolotl_plushie_cyan",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "antisolarblocks:block/axolotl_plushie_cyan",
+      "y": 270
+    }
+  }
+}

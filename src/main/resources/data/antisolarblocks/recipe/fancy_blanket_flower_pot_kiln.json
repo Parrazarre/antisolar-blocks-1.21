@@ -1,0 +1,28 @@
+{
+  "type": "antisolarblocks:pottery_kiln",
+  "ingredients": [
+    {
+      "item": "antisolarblocks:blanket_flower"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "antisolarblocks:kaolinite_clay_chunk"
+    },
+    {
+      "item": "antisolarblocks:kaolinite_clay_chunk"
+    },
+    {
+      "item": "antisolarblocks:kaolinite_clay_chunk"
+    }
+  ],
+  "result": {
+    "id": "antisolarblocks:fancy_blanket_flower_pot",
+    "count": 1
+  },
+  "cooking_time": 200
+}

@@ -198,6 +198,34 @@ public class ModBlocks {
             )
     );
 
+    public static final Block TALL_WHITE_PAMPAS_GRASS = registerBlock("tall_white_pampas_grass",
+            new TallPlantBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .offset(AbstractBlock.OffsetType.XYZ)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+
+    public static final Block WHITE_PAMPAS_GRASS = registerBlock("white_pampas_grass",
+            new FlowerBlock(
+                    StatusEffects.WEAVING,
+                    0.35F,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .offset(AbstractBlock.OffsetType.XYZ)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+
     public static final Block PINK_VIOLA_TRICOLOR = registerBlock("pink_viola_tricolor",
             new FlowerBlock(
                     StatusEffects.REGENERATION,
@@ -814,6 +842,69 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block WHITE_DAFFODIL = registerBlock("white_daffodil",
+            new FlowerBlock(
+                    StatusEffects.SLOWNESS,
+                    0.30F,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_WHITE_DAFFODIL = registerBlockNoItem("potted_white_daffodil",
+            new FlowerPotBlock(WHITE_DAFFODIL,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block YELLOW_DAFFODIL = registerBlock("yellow_daffodil",
+            new FlowerBlock(
+                    StatusEffects.SLOWNESS,
+                    0.30F,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_YELLOW_DAFFODIL = registerBlockNoItem("potted_yellow_daffodil",
+            new FlowerPotBlock(YELLOW_DAFFODIL,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block PINK_DAFFODIL = registerBlock("pink_daffodil",
+            new FlowerBlock(
+                    StatusEffects.SLOWNESS,
+                    0.30F,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_PINK_DAFFODIL = registerBlockNoItem("potted_pink_daffodil",
+            new FlowerPotBlock(PINK_DAFFODIL,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block STAR_JASMINE = registerBlock("star_jasmine",
             new GlowLichenBlock(
                     AbstractBlock.Settings.create()
@@ -824,6 +915,7 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+
     public static final Block BASKET_OF_GOLD = registerBlock("basket_of_gold",
             new GlowLichenBlock(
                     AbstractBlock.Settings.create()
@@ -1049,6 +1141,30 @@ public class ModBlocks {
                             .strength(1.5F, 6.0F)
             )
     );
+    public static final Block BOXWOOD = registerBlock("boxwood",
+            new BoxwoodBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIME)
+                            .strength(0.5F, 3.0F)
+                            .sounds(BlockSoundGroup.AZALEA_LEAVES)
+                            .nonOpaque()
+            )
+    );
+
+    public static final Block FANCY_BOXWOOD_POT = registerBlock("fancy_boxwood_pot"
+            , createFancyFlowerPot_BOX(Blocks.AIR));
+    public static final Block FANCY_POTTED_BOXWOOD = registerBlockNoItem("fancy_potted_boxwood"
+            , createFancyFlowerPot_BOX(ModBlocks.BOXWOOD));
+
+    public static final Block POTTED_BOXWOOD = registerBlockNoItem("potted_boxwood",
+            new FlowerPotBlock(BOXWOOD,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+
     public static final Block COBBLESTONE_BRICK_WALL = registerBlock("cobblestone_brick_wall",
             new WallBlock(
                     AbstractBlock.Settings.create()
@@ -3788,24 +3904,6 @@ public class ModBlocks {
                             .strength(1.5F, 6.0F)
             )
     );
-    public static final Block BLUE_CANDY_CANE = registerBlock("blue_candy_cane",
-            new PillarBlock(
-                    AbstractBlock.Settings.create()
-                            .mapColor(MapColor.WHITE)
-                            .instrument(NoteBlockInstrument.XYLOPHONE)
-                            .sounds(BlockSoundGroup.BONE)
-                            .strength(2.0F, 3.0F)
-            )
-    );
-    public static final Block RED_CANDY_CANE = registerBlock("red_candy_cane",
-            new PillarBlock(
-                    AbstractBlock.Settings.create()
-                            .mapColor(MapColor.WHITE)
-                            .instrument(NoteBlockInstrument.XYLOPHONE)
-                            .sounds(BlockSoundGroup.BONE)
-                            .strength(2.0F, 3.0F)
-            )
-    );
     public static final Block DUMORTIERITE = registerBlock("dumortierite",
             new Block(
                     AbstractBlock.Settings.create()
@@ -4138,6 +4236,7 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+
     public static final Block CHAROITE_ORE = registerBlock("charoite_ore",
             new ExperienceDroppingBlock(
                     UniformIntProvider.create(1, 3),
@@ -5077,6 +5176,1290 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block PEAR_LOG = registerBlock("pear_log",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(state -> state.get(PillarBlock.AXIS) == Direction.Axis.Y ? MapColor.ORANGE : MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block PEAR_WOOD = registerBlock("pear_wood",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block STRIPPED_PEAR_LOG = registerBlock("stripped_pear_log",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block STRIPPED_PEAR_WOOD = registerBlock("stripped_pear_wood",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block PEAR_PLANKS = registerBlock("pear_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block CHISELED_PEAR_PLANKS = registerBlock("chiseled_pear_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block PEAR_STAIRS = registerBlock("pear_stairs",
+            new StairsBlock(
+                    ModBlocks.PEAR_PLANKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block PEAR_SLAB = registerBlock("pear_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block PEAR_FENCE = registerBlock("pear_fence",
+            new FenceBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block PEAR_FENCE_GATE = registerBlock("pear_fence_gate",
+            new FenceGateBlock(WoodType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block PEAR_DOOR = registerBlock("pear_door",
+            new DoorBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block PEAR_TRAPDOOR = registerBlock("pear_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block PEAR_PRESSURE_PLATE = registerBlock("pear_pressure_plate",
+            new PressurePlateBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block PEAR_BUTTON = registerBlock("pear_button",
+            new ButtonBlock(BlockSetType.OAK,
+                    30,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .noCollision()
+            )
+    );
+    public static final Block PEAR_LEAVES = registerBlock("pear_leaves",
+            new LeavesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .strength(0.2F)
+                            .ticksRandomly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::canSpawnOnLeaves)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .solidBlock(Blocks::never)
+            )
+    );
+    public static final Block PEAR_BEARING_LEAVES = registerBlock("pear_bearing_leaves",
+            new PearBearingLeavesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .strength(0.2F)
+                            .ticksRandomly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::canSpawnOnLeaves)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .solidBlock(Blocks::never)
+            )
+    );
+    public static final Block PEAR_SAPLING = registerBlock("pear_sapling",
+            new SaplingBlock(
+                    ModSaplingGenerators.PEAR,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .ticksRandomly()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block GIANT_PEAR = registerBlock("giant_pear",
+            new GiantPearBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_YELLOW)
+                            .breakInstantly()
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOD)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+
+            )
+    );
+    public static final Block POTTED_PEAR_SAPLING = registerBlockNoItem("potted_pear_sapling",
+            new FlowerPotBlock(PEAR_SAPLING,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block PEAR_FENCING = registerBlock("pear_fencing",
+            new FenceWithSpikesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block MUSA_LOG = registerBlock("musa_log",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(state -> state.get(PillarBlock.AXIS) == Direction.Axis.Y ? MapColor.DARK_RED : MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MUSA_WOOD = registerBlock("musa_wood",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block STRIPPED_MUSA_LOG = registerBlock("stripped_musa_log",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block STRIPPED_MUSA_WOOD = registerBlock("stripped_musa_wood",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MUSA_PLANKS = registerBlock("musa_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block CHISELED_MUSA_PLANKS = registerBlock("chiseled_musa_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MUSA_STAIRS = registerBlock("musa_stairs",
+            new StairsBlock(
+                    ModBlocks.MUSA_PLANKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MUSA_SLAB = registerBlock("musa_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MUSA_FENCE = registerBlock("musa_fence",
+            new FenceBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MUSA_FENCE_GATE = registerBlock("musa_fence_gate",
+            new FenceGateBlock(WoodType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MUSA_DOOR = registerBlock("musa_door",
+            new DoorBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block MUSA_TRAPDOOR = registerBlock("musa_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block MUSA_PRESSURE_PLATE = registerBlock("musa_pressure_plate",
+            new PressurePlateBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MUSA_BUTTON = registerBlock("musa_button",
+            new ButtonBlock(BlockSetType.OAK,
+                    30,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_RED)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .noCollision()
+            )
+    );
+    public static final Block MUSA_LEAVES = registerBlock("musa_leaves",
+            new BananaBearingLeavesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .strength(0.2F)
+                            .ticksRandomly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::canSpawnOnLeaves)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .solidBlock(Blocks::never)
+            )
+    );
+    public static final Block MUSA_SAPLING = registerBlock("musa_sapling",
+            new SaplingBlock(
+                    ModSaplingGenerators.MUSA,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .ticksRandomly()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block BANANA_BUNCH = registerBlock("banana_bunch",
+            new BananaBunchBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.YELLOW)
+                            .breakInstantly()
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOD)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+
+            )
+    );
+    public static final Block POTTED_MUSA_SAPLING = registerBlockNoItem("potted_musa_sapling",
+            new FlowerPotBlock(MUSA_SAPLING,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block MUSA_FENCING = registerBlock("musa_fencing",
+            new FenceWithSpikesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block ORANGE_LOG = registerBlock("orange_log",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(state -> state.get(PillarBlock.AXIS) == Direction.Axis.Y ? MapColor.PALE_YELLOW : MapColor.GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ORANGE_WOOD = registerBlock("orange_wood",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block STRIPPED_ORANGE_LOG = registerBlock("stripped_orange_log",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block STRIPPED_ORANGE_WOOD = registerBlock("stripped_orange_wood",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ORANGE_PLANKS = registerBlock("orange_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block CHISELED_ORANGE_PLANKS = registerBlock("chiseled_orange_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ORANGE_STAIRS = registerBlock("orange_stairs",
+            new StairsBlock(
+                    ModBlocks.ORANGE_PLANKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ORANGE_SLAB = registerBlock("orange_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ORANGE_FENCE = registerBlock("orange_fence",
+            new FenceBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ORANGE_FENCE_GATE = registerBlock("orange_fence_gate",
+            new FenceGateBlock(WoodType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ORANGE_DOOR = registerBlock("orange_door",
+            new DoorBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block ORANGE_TRAPDOOR = registerBlock("orange_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block ORANGE_PRESSURE_PLATE = registerBlock("orange_pressure_plate",
+            new PressurePlateBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ORANGE_BUTTON = registerBlock("orange_button",
+            new ButtonBlock(BlockSetType.OAK,
+                    30,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .noCollision()
+            )
+    );
+    public static final Block ORANGE_LEAVES = registerBlock("orange_leaves",
+            new LeavesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .strength(0.2F)
+                            .ticksRandomly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::canSpawnOnLeaves)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .solidBlock(Blocks::never)
+            )
+    );
+    public static final Block ORANGE_BEARING_LEAVES = registerBlock("orange_bearing_leaves",
+            new LeavesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .strength(0.2F)
+                            .ticksRandomly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::canSpawnOnLeaves)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .solidBlock(Blocks::never)
+            )
+    );
+    public static final Block ORANGE_SAPLING = registerBlock("orange_sapling",
+            new SaplingBlock(
+                    ModSaplingGenerators.ORANGE,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .ticksRandomly()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_ORANGE_SAPLING = registerBlockNoItem("potted_orange_sapling",
+            new FlowerPotBlock(ORANGE_SAPLING,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block ORANGE_FENCING = registerBlock("orange_fencing",
+            new FenceWithSpikesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block ROWAN_LOG = registerBlock("rowan_log",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(state -> state.get(PillarBlock.AXIS) == Direction.Axis.Y ? MapColor.PALE_GREEN : MapColor.SPRUCE_BROWN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ROWAN_WOOD = registerBlock("rowan_wood",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.SPRUCE_BROWN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block STRIPPED_ROWAN_LOG = registerBlock("stripped_rowan_log",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block STRIPPED_ROWAN_WOOD = registerBlock("stripped_rowan_wood",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ROWAN_PLANKS = registerBlock("rowan_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block CHISELED_ROWAN_PLANKS = registerBlock("chiseled_rowan_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ROWAN_STAIRS = registerBlock("rowan_stairs",
+            new StairsBlock(
+                    ModBlocks.ROWAN_PLANKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ROWAN_SLAB = registerBlock("rowan_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ROWAN_FENCE = registerBlock("rowan_fence",
+            new FenceBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ROWAN_FENCE_GATE = registerBlock("rowan_fence_gate",
+            new FenceGateBlock(WoodType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ROWAN_DOOR = registerBlock("rowan_door",
+            new DoorBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block ROWAN_TRAPDOOR = registerBlock("rowan_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block ROWAN_PRESSURE_PLATE = registerBlock("rowan_pressure_plate",
+            new PressurePlateBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block ROWAN_BUTTON = registerBlock("rowan_button",
+            new ButtonBlock(BlockSetType.OAK,
+                    30,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_GREEN)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .noCollision()
+            )
+    );
+    public static final Block RED_ROWAN_LEAVES = registerBlock("red_rowan_leaves",
+            new LeavesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GREEN)
+                            .strength(0.2F)
+                            .ticksRandomly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::canSpawnOnLeaves)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .solidBlock(Blocks::never)
+            )
+    );
+    public static final Block RED_ROWAN_BEARING_LEAVES = registerBlock("red_rowan_bearing_leaves",
+            new LeavesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GREEN)
+                            .strength(0.2F)
+                            .ticksRandomly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::canSpawnOnLeaves)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .solidBlock(Blocks::never)
+            )
+    );
+    public static final Block RED_ROWAN_SAPLING = registerBlock("red_rowan_sapling",
+            new SaplingBlock(
+                    ModSaplingGenerators.RED_ROWAN,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .ticksRandomly()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_RED_ROWAN_SAPLING = registerBlockNoItem("potted_red_rowan_sapling",
+            new FlowerPotBlock(RED_ROWAN_SAPLING,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block YELLOW_ROWAN_LEAVES = registerBlock("yellow_rowan_leaves",
+            new LeavesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .strength(0.2F)
+                            .ticksRandomly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::canSpawnOnLeaves)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .solidBlock(Blocks::never)
+            )
+    );
+    public static final Block YELLOW_ROWAN_BEARING_LEAVES = registerBlock("yellow_rowan_bearing_leaves",
+            new LeavesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .strength(0.2F)
+                            .ticksRandomly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::canSpawnOnLeaves)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .solidBlock(Blocks::never)
+            )
+    );
+    public static final Block YELLOW_ROWAN_SAPLING = registerBlock("yellow_rowan_sapling",
+            new SaplingBlock(
+                    ModSaplingGenerators.YELLOW_ROWAN,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .ticksRandomly()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_YELLOW_ROWAN_SAPLING = registerBlockNoItem("potted_yellow_rowan_sapling",
+            new FlowerPotBlock(YELLOW_ROWAN_SAPLING,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block ROWAN_FENCING = registerBlock("rowan_fencing",
+            new FenceWithSpikesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block BLUE_MAHOE_LOG = registerBlock("blue_mahoe_log",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(state -> state.get(PillarBlock.AXIS) == Direction.Axis.Y ? MapColor.LIGHT_BLUE : MapColor.DEEPSLATE_GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block BLUE_MAHOE_WOOD = registerBlock("blue_mahoe_wood",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DEEPSLATE_GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block STRIPPED_BLUE_MAHOE_LOG = registerBlock("stripped_blue_mahoe_log",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block STRIPPED_BLUE_MAHOE_WOOD = registerBlock("stripped_blue_mahoe_wood",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block BLUE_MAHOE_PLANKS = registerBlock("blue_mahoe_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block CHISELED_BLUE_MAHOE_PLANKS = registerBlock("chiseled_blue_mahoe_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block BLUE_MAHOE_STAIRS = registerBlock("blue_mahoe_stairs",
+            new StairsBlock(
+                    ModBlocks.BLUE_MAHOE_PLANKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block BLUE_MAHOE_SLAB = registerBlock("blue_mahoe_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block BLUE_MAHOE_FENCE = registerBlock("blue_mahoe_fence",
+            new FenceBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block BLUE_MAHOE_FENCE_GATE = registerBlock("blue_mahoe_fence_gate",
+            new FenceGateBlock(WoodType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block BLUE_MAHOE_DOOR = registerBlock("blue_mahoe_door",
+            new DoorBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block BLUE_MAHOE_TRAPDOOR = registerBlock("blue_mahoe_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block BLUE_MAHOE_PRESSURE_PLATE = registerBlock("blue_mahoe_pressure_plate",
+            new PressurePlateBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block BLUE_MAHOE_BUTTON = registerBlock("blue_mahoe_button",
+            new ButtonBlock(BlockSetType.OAK,
+                    30,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .noCollision()
+            )
+    );
+    public static final Block BLUE_MAHOE_LEAVES = registerBlock("blue_mahoe_leaves",
+            new LeavesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .strength(0.2F)
+                            .ticksRandomly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::canSpawnOnLeaves)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .solidBlock(Blocks::never)
+            )
+    );
+    public static final Block BLUE_MAHOE_SAPLING = registerBlock("blue_mahoe_sapling",
+            new SaplingBlock(
+                    ModSaplingGenerators.BLUE_MAHOE,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .ticksRandomly()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_BLUE_MAHOE_SAPLING = registerBlockNoItem("potted_blue_mahoe_sapling",
+            new FlowerPotBlock(BLUE_MAHOE_SAPLING,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block BLUE_MAHOE_FENCING = registerBlock("blue_mahoe_fencing",
+            new FenceWithSpikesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block MANGO_LOG = registerBlock("mango_log",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(state -> state.get(PillarBlock.AXIS) == Direction.Axis.Y ? MapColor.OAK_TAN : MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MANGO_WOOD = registerBlock("mango_wood",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block STRIPPED_MANGO_LOG = registerBlock("stripped_mango_log",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block STRIPPED_MANGO_WOOD = registerBlock("stripped_mango_wood",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MANGO_PLANKS = registerBlock("mango_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block CHISELED_MANGO_PLANKS = registerBlock("chiseled_mango_planks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MANGO_STAIRS = registerBlock("mango_stairs",
+            new StairsBlock(
+                    ModBlocks.MANGO_PLANKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MANGO_SLAB = registerBlock("mango_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MANGO_FENCE = registerBlock("mango_fence",
+            new FenceBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MANGO_FENCE_GATE = registerBlock("mango_fence_gate",
+            new FenceGateBlock(WoodType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MANGO_DOOR = registerBlock("mango_door",
+            new DoorBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block MANGO_TRAPDOOR = registerBlock("mango_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
+    public static final Block MANGO_PRESSURE_PLATE = registerBlock("mango_pressure_plate",
+            new PressurePlateBlock(BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block MANGO_BUTTON = registerBlock("mango_button",
+            new ButtonBlock(BlockSetType.OAK,
+                    30,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .noCollision()
+            )
+    );
+    public static final Block MANGO_LEAVES = registerBlock("mango_leaves",
+            new LeavesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .strength(0.2F)
+                            .ticksRandomly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::canSpawnOnLeaves)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .solidBlock(Blocks::never)
+            )
+    );
+    public static final Block MANGO_BEARING_LEAVES = registerBlock("mango_bearing_leaves",
+            new LeavesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .strength(0.2F)
+                            .ticksRandomly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::canSpawnOnLeaves)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .solidBlock(Blocks::never)
+            )
+    );
+    public static final Block MANGO_SAPLING = registerBlock("mango_sapling",
+            new SaplingBlock(
+                    ModSaplingGenerators.MANGO,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .ticksRandomly()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_MANGO_SAPLING = registerBlockNoItem("potted_mango_sapling",
+            new FlowerPotBlock(MANGO_SAPLING,
+                    AbstractBlock.Settings.create()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block MANGO_FENCING = registerBlock("mango_fencing",
+            new FenceWithSpikesBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .nonOpaque()
+            )
+    );
     public static final Block GRAY_SILTSTONE = registerBlock("gray_siltstone",
             new Block(
                     AbstractBlock.Settings.create()
@@ -5338,6 +6721,72 @@ public class ModBlocks {
                             .strength(1.5F, 6.0F)
             )
     );
+
+    public static final Block KIMBERLITE = registerBlock("kimberlite",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block KIMBERLITE_STAIRS = registerBlock("kimberlite_stairs",
+            new StairsBlock(
+                    ModBlocks.KIMBERLITE.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block KIMBERLITE_SLAB = registerBlock("kimberlite_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block POLISHED_KIMBERLITE = registerBlock("polished_kimberlite",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block POLISHED_KIMBERLITE_STAIRS = registerBlock("polished_kimberlite_stairs",
+            new StairsBlock(
+                    ModBlocks.POLISHED_KIMBERLITE.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block POLISHED_KIMBERLITE_SLAB = registerBlock("polished_kimberlite_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block POLISHED_KIMBERLITE_WALL = registerBlock("polished_kimberlite_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
     public static final Block PARRADIO = registerBlock("parradio",
             new ParradioBlock(
                     AbstractBlock.Settings.create()
@@ -5359,8 +6808,63 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block AXOLOTL_PLUSHIE_BLUE = registerBlockNoItem("axolotl_plushie_blue",
+            new AxolotlBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.GUITAR)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block AXOLOTL_PLUSHIE_BROWN = registerBlockNoItem("axolotl_plushie_brown",
+            new AxolotlBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.SPRUCE_BROWN)
+                            .instrument(NoteBlockInstrument.GUITAR)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block AXOLOTL_PLUSHIE_CYAN = registerBlockNoItem("axolotl_plushie_cyan",
+            new AxolotlBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DIAMOND_BLUE)
+                            .instrument(NoteBlockInstrument.GUITAR)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block AXOLOTL_PLUSHIE_GOLD = registerBlockNoItem("axolotl_plushie_gold",
+            new AxolotlBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GOLD)
+                            .instrument(NoteBlockInstrument.GUITAR)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block AXOLOTL_PLUSHIE_PINK = registerBlockNoItem("axolotl_plushie_pink",
+            new AxolotlBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PINK)
+                            .instrument(NoteBlockInstrument.GUITAR)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block TETO_PLUSHIE = registerBlockNoItem("teto_plushie",
-            new TetoBlock(
+            new TetoHoldingBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.BRIGHT_RED)
                             .instrument(NoteBlockInstrument.FLUTE)
@@ -5370,8 +6874,19 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
-    public static final Block MIKU_PLUSHIE = registerBlockNoItem("miku_plushie",
+    public static final Block PEARTO_PLUSHIE = registerBlockNoItem("pearto_plushie",
             new TetoBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_YELLOW)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block MIKU_PLUSHIE = registerBlockNoItem("miku_plushie",
+            new TetoHoldingBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.CYAN)
                             .instrument(NoteBlockInstrument.FLUTE)
@@ -5381,8 +6896,30 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block FIREWORK_MIKU_PLUSHIE = registerBlockNoItem("firework_miku_plushie",
+            new TetoHoldingBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.CYAN)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block CHERRY_MIKU_PLUSHIE = registerBlockNoItem("cherry_miku_plushie",
+            new TetoHoldingBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PINK)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block AKITA_NERU_PLUSHIE = registerBlockNoItem("akita_neru_plushie",
-            new TetoBlock(
+            new TetoHoldingBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.YELLOW)
                             .instrument(NoteBlockInstrument.FLUTE)
@@ -5392,8 +6929,74 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block LUKA_PLUSHIE = registerBlockNoItem("luka_plushie",
+            new TetoHoldingBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PINK)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block MEIKO_PLUSHIE = registerBlockNoItem("meiko_plushie",
+            new TetoHoldingBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.SPRUCE_BROWN)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block KAITO_PLUSHIE = registerBlockNoItem("kaito_plushie",
+            new TetoHoldingBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LAPIS_BLUE)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block RIN_PLUSHIE = registerBlockNoItem("rin_plushie",
+            new TetoHoldingBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GOLD)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block LEN_PLUSHIE = registerBlockNoItem("len_plushie",
+            new TetoHoldingBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GOLD)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block LEN_FILIPINO_PLUSHIE = registerBlockNoItem("len_filipino_plushie",
+            new TetoHoldingBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.RED)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block GUMI_PLUSHIE = registerBlockNoItem("gumi_plushie",
-            new TetoBlock(
+            new TetoHoldingBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.EMERALD_GREEN)
                             .instrument(NoteBlockInstrument.FLUTE)
@@ -5404,7 +7007,7 @@ public class ModBlocks {
             )
     );
     public static final Block OSAGE_CHAN_PLUSHIE = registerBlockNoItem("osage_chan_plushie",
-            new TetoBlock(
+            new TetoHoldingBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.BLACK)
                             .instrument(NoteBlockInstrument.FLUTE)
@@ -5413,6 +7016,176 @@ public class ModBlocks {
                             .sounds(BlockSoundGroup.WOOL)
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
+    );
+    public static final Block FAUST_PLUSHIE = registerBlockNoItem("faust_plushie",
+            new TetoCreatorBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.STONE_GRAY)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block LOPUNNY_PLUSHIE = registerBlockNoItem("lopunny_plushie",
+            new TetoCreatorBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PINK)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block OWL_PLUSHIE = registerBlockNoItem("owl_plushie",
+            new TetoCreatorBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block FLYNN_PLUSHIE = registerBlockNoItem("flynn_plushie",
+            new TetoCreatorBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLACK)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block HEATHCLIFF_PLUSHIE = registerBlockNoItem("heathcliff_plushie",
+            new TetoCreatorBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BROWN)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block PARRA_PLUSHIE = registerBlockNoItem("parra_plushie",
+            new ParraCreatorBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.WHITE)
+                            .instrument(NoteBlockInstrument.FLUTE)
+                            .strength(0.8F)
+                            .nonOpaque()
+                            .sounds(BlockSoundGroup.WOOL)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block GIANT_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_WHITE_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_white_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_light_gray_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_GRAY_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_gray_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_BLACK_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_black_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_PINK_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_pink_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_MAGENTA_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_magenta_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_PURPLE_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_purple_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_BLUE_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_blue_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_light_blue_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_CYAN_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_cyan_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_GREEN_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_green_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_LIME_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_lime_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_YELLOW_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_yellow_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_ORANGE_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_orange_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_RED_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_red_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_BROWN_HARDENED_KAOLINITE_CLAY_POT = registerBlock("giant_brown_hardened_kaolinite_clay_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+
+
+    public static final Block GIANT_TERRACOTTA_POT = registerBlock("giant_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_WHITE_TERRACOTTA_POT = registerBlock("giant_white_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_LIGHT_GRAY_TERRACOTTA_POT = registerBlock("giant_light_gray_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_GRAY_TERRACOTTA_POT = registerBlock("giant_gray_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_BLACK_TERRACOTTA_POT = registerBlock("giant_black_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_PINK_TERRACOTTA_POT = registerBlock("giant_pink_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_MAGENTA_TERRACOTTA_POT = registerBlock("giant_magenta_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_PURPLE_TERRACOTTA_POT = registerBlock("giant_purple_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_BLUE_TERRACOTTA_POT = registerBlock("giant_blue_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_LIGHT_BLUE_TERRACOTTA_POT = registerBlock("giant_light_blue_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_CYAN_TERRACOTTA_POT = registerBlock("giant_cyan_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_GREEN_TERRACOTTA_POT = registerBlock("giant_green_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_LIME_TERRACOTTA_POT = registerBlock("giant_lime_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_YELLOW_TERRACOTTA_POT = registerBlock("giant_yellow_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_ORANGE_TERRACOTTA_POT = registerBlock("giant_orange_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_RED_TERRACOTTA_POT = registerBlock("giant_red_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
+    );
+    public static final Block GIANT_BROWN_TERRACOTTA_POT = registerBlock("giant_brown_terracotta_pot",
+            new GiantPotBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F).nonOpaque())
     );
     public static final Block BLOCK_OF_RUBBLE = registerBlock("block_of_rubble",
             new Block(
@@ -5545,31 +7318,40 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
-    public static final Block MAGENTA_CLAY_ROOF_TILES = registerBlock("magenta_clay_roof_tiles",
+    public static final Block BLACK_CLAY_ROOF_TILES = registerBlock("black_clay_roof_tiles",
             new GlazedTerracottaBlock(
                     AbstractBlock.Settings.create()
-                            .mapColor(MapColor.TERRACOTTA_MAGENTA)
+                            .mapColor(MapColor.TERRACOTTA_BLACK)
                             .instrument(NoteBlockInstrument.BASEDRUM)
                             .sounds(BlockSoundGroup.DECORATED_POT)
                             .requiresTool()
                             .strength(1.5F, 6.0F)
             )
     );
-    public static final Block MAGENTA_CLAY_ROOF_TILE_STAIRS = registerBlock("magenta_clay_roof_tile_stairs",
-            new StairsBlock(
-                    ModBlocks.MAGENTA_CLAY_ROOF_TILES.getDefaultState(),
+    public static final Block GRAY_CLAY_ROOF_TILES = registerBlock("gray_clay_roof_tiles",
+            new GlazedTerracottaBlock(
                     AbstractBlock.Settings.create()
-                            .mapColor(MapColor.TERRACOTTA_MAGENTA)
+                            .mapColor(MapColor.TERRACOTTA_GRAY)
                             .instrument(NoteBlockInstrument.BASEDRUM)
                             .sounds(BlockSoundGroup.DECORATED_POT)
                             .requiresTool()
                             .strength(1.5F, 6.0F)
             )
     );
-    public static final Block MAGENTA_CLAY_ROOF_TILE_SLAB = registerBlock("magenta_clay_roof_tile_slab",
-            new DirectionalSlabBlock(
+    public static final Block LIGHT_GRAY_CLAY_ROOF_TILES = registerBlock("light_gray_clay_roof_tiles",
+            new GlazedTerracottaBlock(
                     AbstractBlock.Settings.create()
-                            .mapColor(MapColor.TERRACOTTA_MAGENTA)
+                            .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block WHITE_CLAY_ROOF_TILES = registerBlock("white_clay_roof_tiles",
+            new GlazedTerracottaBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_WHITE)
                             .instrument(NoteBlockInstrument.BASEDRUM)
                             .sounds(BlockSoundGroup.DECORATED_POT)
                             .requiresTool()
@@ -5580,6 +7362,160 @@ public class ModBlocks {
             new GlazedTerracottaBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.TERRACOTTA_PINK)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MAGENTA_CLAY_ROOF_TILES = registerBlock("magenta_clay_roof_tiles",
+            new GlazedTerracottaBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_MAGENTA)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PURPLE_CLAY_ROOF_TILES = registerBlock("purple_clay_roof_tiles",
+            new GlazedTerracottaBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_PURPLE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLUE_CLAY_ROOF_TILES = registerBlock("blue_clay_roof_tiles",
+            new GlazedTerracottaBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BLUE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_BLUE_CLAY_ROOF_TILES = registerBlock("light_blue_clay_roof_tiles",
+            new GlazedTerracottaBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block CYAN_CLAY_ROOF_TILES = registerBlock("cyan_clay_roof_tiles",
+            new GlazedTerracottaBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_CYAN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GREEN_CLAY_ROOF_TILES = registerBlock("green_clay_roof_tiles",
+            new GlazedTerracottaBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_GREEN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIME_CLAY_ROOF_TILES = registerBlock("lime_clay_roof_tiles",
+            new GlazedTerracottaBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIME)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block YELLOW_CLAY_ROOF_TILES = registerBlock("yellow_clay_roof_tiles",
+            new GlazedTerracottaBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_YELLOW)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ORANGE_CLAY_ROOF_TILES = registerBlock("orange_clay_roof_tiles",
+            new GlazedTerracottaBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_ORANGE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RED_CLAY_ROOF_TILES = registerBlock("red_clay_roof_tiles",
+            new GlazedTerracottaBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_RED)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BROWN_CLAY_ROOF_TILES = registerBlock("brown_clay_roof_tiles",
+            new GlazedTerracottaBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BROWN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLACK_CLAY_ROOF_TILE_STAIRS = registerBlock("black_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.BLACK_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BLACK)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GRAY_CLAY_ROOF_TILE_STAIRS = registerBlock("gray_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.GRAY_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_GRAY_CLAY_ROOF_TILE_STAIRS = registerBlock("light_gray_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block WHITE_CLAY_ROOF_TILE_STAIRS = registerBlock("white_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.WHITE_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_WHITE)
                             .instrument(NoteBlockInstrument.BASEDRUM)
                             .sounds(BlockSoundGroup.DECORATED_POT)
                             .requiresTool()
@@ -5597,10 +7533,281 @@ public class ModBlocks {
                             .strength(1.5F, 6.0F)
             )
     );
+    public static final Block MAGENTA_CLAY_ROOF_TILE_STAIRS = registerBlock("magenta_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.MAGENTA_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_MAGENTA)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PURPLE_CLAY_ROOF_TILE_STAIRS = registerBlock("purple_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.PURPLE_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_PURPLE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLUE_CLAY_ROOF_TILE_STAIRS = registerBlock("blue_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.BLUE_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BLUE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_BLUE_CLAY_ROOF_TILE_STAIRS = registerBlock("light_blue_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block CYAN_CLAY_ROOF_TILE_STAIRS = registerBlock("cyan_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.CYAN_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_CYAN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GREEN_CLAY_ROOF_TILE_STAIRS = registerBlock("green_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.GREEN_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_GREEN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIME_CLAY_ROOF_TILE_STAIRS = registerBlock("lime_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.LIME_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIME)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block YELLOW_CLAY_ROOF_TILE_STAIRS = registerBlock("yellow_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.YELLOW_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_YELLOW)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ORANGE_CLAY_ROOF_TILE_STAIRS = registerBlock("orange_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.ORANGE_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_ORANGE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RED_CLAY_ROOF_TILE_STAIRS = registerBlock("red_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.RED_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_RED)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BROWN_CLAY_ROOF_TILE_STAIRS = registerBlock("brown_clay_roof_tile_stairs",
+            new StairsBlock(
+                    ModBlocks.BROWN_CLAY_ROOF_TILES.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BROWN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLACK_CLAY_ROOF_TILE_SLAB = registerBlock("black_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BLACK)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GRAY_CLAY_ROOF_TILE_SLAB = registerBlock("gray_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_GRAY_CLAY_ROOF_TILE_SLAB = registerBlock("light_gray_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block WHITE_CLAY_ROOF_TILE_SLAB = registerBlock("white_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_WHITE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
     public static final Block PINK_CLAY_ROOF_TILE_SLAB = registerBlock("pink_clay_roof_tile_slab",
             new DirectionalSlabBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.TERRACOTTA_PINK)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MAGENTA_CLAY_ROOF_TILE_SLAB = registerBlock("magenta_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_MAGENTA)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PURPLE_CLAY_ROOF_TILE_SLAB = registerBlock("purple_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_PURPLE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLUE_CLAY_ROOF_TILE_SLAB = registerBlock("blue_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BLUE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_BLUE_CLAY_ROOF_TILE_SLAB = registerBlock("light_blue_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block CYAN_CLAY_ROOF_TILE_SLAB = registerBlock("cyan_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_CYAN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GREEN_CLAY_ROOF_TILE_SLAB = registerBlock("green_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_GREEN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIME_CLAY_ROOF_TILE_SLAB = registerBlock("lime_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_LIME)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block YELLOW_CLAY_ROOF_TILE_SLAB = registerBlock("yellow_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_YELLOW)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ORANGE_CLAY_ROOF_TILE_SLAB = registerBlock("orange_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_ORANGE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RED_CLAY_ROOF_TILE_SLAB = registerBlock("red_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_RED)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DECORATED_POT)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BROWN_CLAY_ROOF_TILE_SLAB = registerBlock("brown_clay_roof_tile_slab",
+            new DirectionalSlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.TERRACOTTA_BROWN)
                             .instrument(NoteBlockInstrument.BASEDRUM)
                             .sounds(BlockSoundGroup.DECORATED_POT)
                             .requiresTool()
@@ -6643,6 +8850,43 @@ public class ModBlocks {
                             .strength(1.5F, 6.0F)
             )
     );
+    public static final Block SALT_BLOCK = registerBlock("salt_block",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.WHITE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block SALT_STAIRS = registerBlock("salt_stairs",
+            new StairsBlock(
+                    ModBlocks.SALT_BLOCK.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.WHITE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block SALT_SLAB = registerBlock("salt_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.WHITE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block SALT_WALL = registerBlock("salt_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.WHITE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
     public static final Block KHEWRA_SALT_BLOCK = registerBlock("khewra_salt_block",
             new Block(
                     AbstractBlock.Settings.create()
@@ -6735,12 +8979,316 @@ public class ModBlocks {
                             .strength(1.5F, 6.0F)
             )
     );
+    public static final Block WHITE_KAOLINITE_BRICKS = registerBlock("white_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.WHITE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_GRAY_KAOLINITE_BRICKS = registerBlock("light_gray_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GRAY_KAOLINITE_BRICKS = registerBlock("gray_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLACK_KAOLINITE_BRICKS = registerBlock("black_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLACK)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BROWN_KAOLINITE_BRICKS = registerBlock("brown_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RED_KAOLINITE_BRICKS = registerBlock("red_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ORANGE_KAOLINITE_BRICKS = registerBlock("orange_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block YELLOW_KAOLINITE_BRICKS= registerBlock("yellow_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIME_KAOLINITE_BRICKS = registerBlock("lime_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIME)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GREEN_KAOLINITE_BRICKS = registerBlock("green_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block CYAN_KAOLINITE_BRICKS = registerBlock("cyan_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.CYAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_BLUE_KAOLINITE_BRICKS = registerBlock("light_blue_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLUE_KAOLINITE_BRICKS = registerBlock("blue_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PURPLE_KAOLINITE_BRICKS = registerBlock("purple_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PURPLE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MAGENTA_KAOLINITE_BRICKS = registerBlock("magenta_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.MAGENTA)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PINK_KAOLINITE_BRICKS = registerBlock("pink_kaolinite_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PINK)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
     public static final Block KAOLINITE_BRICK_STAIRS = registerBlock("kaolinite_brick_stairs",
             new StairsBlock(
                     ModBlocks.KAOLINITE_BRICKS.getDefaultState(),
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.OAK_TAN)
-                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block WHITE_KAOLINITE_BRICK_STAIRS = registerBlock("white_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.WHITE_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.WHITE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_GRAY_KAOLINITE_BRICK_STAIRS = registerBlock("light_gray_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.LIGHT_GRAY_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GRAY_KAOLINITE_BRICK_STAIRS = registerBlock("gray_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.GRAY_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLACK_KAOLINITE_BRICK_STAIRS = registerBlock("black_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.BLACK_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLACK)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BROWN_KAOLINITE_BRICK_STAIRS = registerBlock("brown_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.BROWN_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RED_KAOLINITE_BRICK_STAIRS = registerBlock("red_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.RED_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ORANGE_KAOLINITE_BRICK_STAIRS = registerBlock("orange_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.ORANGE_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block YELLOW_KAOLINITE_BRICK_STAIRS = registerBlock("yellow_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.YELLOW_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIME_KAOLINITE_BRICK_STAIRS = registerBlock("lime_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.LIME_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIME)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GREEN_KAOLINITE_BRICK_STAIRS = registerBlock("green_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.GREEN_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block CYAN_KAOLINITE_BRICK_STAIRS = registerBlock("cyan_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.CYAN_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.CYAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_BLUE_KAOLINITE_BRICK_STAIRS = registerBlock("light_blue_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.LIGHT_BLUE_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLUE_KAOLINITE_BRICK_STAIRS = registerBlock("blue_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.BLUE_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PURPLE_KAOLINITE_BRICK_STAIRS = registerBlock("purple_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.PURPLE_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PURPLE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MAGENTA_KAOLINITE_BRICK_STAIRS = registerBlock("magenta_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.MAGENTA_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.MAGENTA)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PINK_KAOLINITE_BRICK_STAIRS = registerBlock("pink_kaolinite_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.PINK_KAOLINITE_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PINK)
+                            .instrument(NoteBlockInstrument.BASS)
                             .requiresTool()
                             .strength(1.5F, 6.0F)
             )
@@ -6754,6 +9302,150 @@ public class ModBlocks {
                             .strength(1.5F, 6.0F)
             )
     );
+    public static final Block WHITE_KAOLINITE_BRICK_SLAB = registerBlock("white_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.WHITE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_GRAY_KAOLINITE_BRICK_SLAB = registerBlock("light_gray_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GRAY_KAOLINITE_BRICK_SLAB = registerBlock("gray_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLACK_KAOLINITE_BRICK_SLAB = registerBlock("black_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLACK)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BROWN_KAOLINITE_BRICK_SLAB = registerBlock("brown_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RED_KAOLINITE_BRICK_SLAB = registerBlock("red_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ORANGE_KAOLINITE_BRICK_SLAB = registerBlock("orange_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block YELLOW_KAOLINITE_BRICK_SLAB = registerBlock("yellow_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIME_KAOLINITE_BRICK_SLAB = registerBlock("lime_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIME)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GREEN_KAOLINITE_BRICK_SLAB = registerBlock("green_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block CYAN_KAOLINITE_BRICK_SLAB = registerBlock("cyan_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.CYAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_BLUE_KAOLINITE_BRICK_SLAB = registerBlock("light_blue_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLUE_KAOLINITE_BRICK_SLAB = registerBlock("blue_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PURPLE_KAOLINITE_BRICK_SLAB = registerBlock("purple_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PURPLE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MAGENTA_KAOLINITE_BRICK_SLAB = registerBlock("magenta_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.MAGENTA)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PINK_KAOLINITE_BRICK_SLAB = registerBlock("pink_kaolinite_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PINK)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
     public static final Block KAOLINITE_BRICK_WALL = registerBlock("kaolinite_brick_wall",
             new WallBlock(
                     AbstractBlock.Settings.create()
@@ -6763,10 +9455,298 @@ public class ModBlocks {
                             .strength(1.5F, 6.0F)
             )
     );
+    public static final Block WHITE_KAOLINITE_BRICK_WALL = registerBlock("white_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.WHITE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_GRAY_KAOLINITE_BRICK_WALL = registerBlock("light_gray_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GRAY_KAOLINITE_BRICK_WALL = registerBlock("gray_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLACK_KAOLINITE_BRICK_WALL = registerBlock("black_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLACK)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BROWN_KAOLINITE_BRICK_WALL = registerBlock("brown_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RED_KAOLINITE_BRICK_WALL = registerBlock("red_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ORANGE_KAOLINITE_BRICK_WALL = registerBlock("orange_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block YELLOW_KAOLINITE_BRICK_WALL = registerBlock("yellow_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIME_KAOLINITE_BRICK_WALL = registerBlock("lime_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIME)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GREEN_KAOLINITE_BRICK_WALL = registerBlock("green_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block CYAN_KAOLINITE_BRICK_WALL = registerBlock("cyan_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.CYAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_BLUE_KAOLINITE_BRICK_WALL = registerBlock("light_blue_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLUE_KAOLINITE_BRICK_WALL = registerBlock("blue_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PURPLE_KAOLINITE_BRICK_WALL = registerBlock("purple_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PURPLE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MAGENTA_KAOLINITE_BRICK_WALL = registerBlock("magenta_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.MAGENTA)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PINK_KAOLINITE_BRICK_WALL = registerBlock("pink_kaolinite_brick_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PINK)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
     public static final Block HARDENED_KAOLINITE_CLAY = registerBlock("hardened_kaolinite_clay",
             new Block(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.OAK_TAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block WHITE_HARDENED_KAOLINITE_CLAY = registerBlock("white_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.WHITE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_GRAY_HARDENED_KAOLINITE_CLAY = registerBlock("light_gray_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GRAY_HARDENED_KAOLINITE_CLAY = registerBlock("gray_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLACK_HARDENED_KAOLINITE_CLAY = registerBlock("black_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLACK)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BROWN_HARDENED_KAOLINITE_CLAY = registerBlock("brown_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RED_HARDENED_KAOLINITE_CLAY = registerBlock("red_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ORANGE_HARDENED_KAOLINITE_CLAY = registerBlock("orange_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block YELLOW_HARDENED_KAOLINITE_CLAY = registerBlock("yellow_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIME_HARDENED_KAOLINITE_CLAY = registerBlock("lime_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIME)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GREEN_HARDENED_KAOLINITE_CLAY = registerBlock("green_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block CYAN_HARDENED_KAOLINITE_CLAY = registerBlock("cyan_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.CYAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_BLUE_HARDENED_KAOLINITE_CLAY = registerBlock("light_blue_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLUE_HARDENED_KAOLINITE_CLAY = registerBlock("blue_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PURPLE_HARDENED_KAOLINITE_CLAY = registerBlock("purple_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PURPLE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MAGENTA_HARDENED_KAOLINITE_CLAY = registerBlock("magenta_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.MAGENTA)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PINK_HARDENED_KAOLINITE_CLAY = registerBlock("pink_hardened_kaolinite_clay",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PINK)
                             .instrument(NoteBlockInstrument.BASEDRUM)
                             .requiresTool()
                             .strength(1.5F, 6.0F)
@@ -6777,7 +9757,167 @@ public class ModBlocks {
                     ModBlocks.HARDENED_KAOLINITE_CLAY.getDefaultState(),
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.OAK_TAN)
-                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block WHITE_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("white_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.WHITE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("light_gray_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GRAY_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("gray_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLACK_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("black_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLACK)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BROWN_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("brown_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RED_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("red_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.RED_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ORANGE_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("orange_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block YELLOW_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("yellow_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIME_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("lime_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.LIME_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIME)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GREEN_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("green_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block CYAN_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("cyan_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.CYAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("light_blue_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLUE_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("blue_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PURPLE_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("purple_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PURPLE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MAGENTA_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("magenta_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.MAGENTA)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PINK_HARDENED_KAOLINITE_CLAY_STAIRS = registerBlock("pink_hardened_kaolinite_clay_stairs",
+            new StairsBlock(
+                    ModBlocks.PINK_HARDENED_KAOLINITE_CLAY.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PINK)
+                            .instrument(NoteBlockInstrument.BASS)
                             .requiresTool()
                             .strength(1.5F, 6.0F)
             )
@@ -6787,6 +9927,150 @@ public class ModBlocks {
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.OAK_TAN)
                             .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block WHITE_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("white_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.WHITE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("light_gray_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GRAY_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("gray_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLACK_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("black_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLACK)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BROWN_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("brown_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BROWN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block RED_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("red_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.RED)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block ORANGE_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("orange_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block YELLOW_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("yellow_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PALE_YELLOW)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIME_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("lime_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIME)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block GREEN_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("green_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GREEN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block CYAN_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("cyan_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.CYAN)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("light_blue_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block BLUE_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("blue_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLUE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PURPLE_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("purple_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PURPLE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block MAGENTA_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("magenta_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.MAGENTA)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .requiresTool()
+                            .strength(1.5F, 6.0F)
+            )
+    );
+    public static final Block PINK_HARDENED_KAOLINITE_CLAY_SLAB = registerBlock("pink_hardened_kaolinite_clay_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.PINK)
+                            .instrument(NoteBlockInstrument.BASS)
                             .requiresTool()
                             .strength(1.5F, 6.0F)
             )
@@ -7588,6 +10872,59 @@ public class ModBlocks {
                             .strength(1.5F, 6.0F)
             )
     );
+    public static final Block RADISH_CROP = registerBlockNoItem("radish_crop",
+            new RadishCropBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .ticksRandomly()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.CROP)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block LEEK = registerBlockNoItem("leek",
+            new LeekCropBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .ticksRandomly()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.CROP)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .offset(AbstractBlock.OffsetType.XZ)
+
+            )
+    );
+
+    public static final Block GIANT_RED_RADISH = registerBlock("giant_red_radish",
+            new GiantRadishBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.RED)
+                            .sounds(BlockSoundGroup.MOSS_BLOCK)
+                            .pistonBehavior(PistonBehavior.NORMAL)
+                            .nonOpaque()
+            )
+    );
+    public static final Block GIANT_BLACK_RADISH = registerBlock("giant_black_radish",
+            new GiantRadishBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLACK)
+                            .sounds(BlockSoundGroup.MOSS_BLOCK)
+                            .pistonBehavior(PistonBehavior.NORMAL)
+                            .nonOpaque()
+            )
+    );
+    public static final Block GIANT_WHITE_RADISH = registerBlock("giant_white_radish",
+            new GiantRadishBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.WHITE)
+                            .sounds(BlockSoundGroup.MOSS_BLOCK)
+                            .pistonBehavior(PistonBehavior.NORMAL)
+                            .nonOpaque()
+            )
+    );
+
 
     public static final Block POTTERY_KILN = registerBlock("pottery_kiln",
             new PotteryKilnBlock(
@@ -7596,6 +10933,13 @@ public class ModBlocks {
                             .instrument(NoteBlockInstrument.BASEDRUM)
                             .requiresTool()
                             .strength(1.5F, 6.0F)
+            )
+    );
+
+    public static final Block BOTANY_TABLE = registerBlock("botany_table",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.SPRUCE_BROWN)
             )
     );
 
@@ -7939,10 +11283,9 @@ public class ModBlocks {
             , createFancyFlowerPot_OTL(Blocks.ORANGE_TULIP));
 
     public static final Block FANCY_PINK_TULIP_POT = registerBlock("fancy_pink_tulip_pot"
-            , createFancyFlowerPot_PTL(Blocks.AIR));
-
+            , createFancyDirectionalFlowerPotBlock_PTL(Blocks.AIR));
     public static final Block FANCY_POTTED_PINK_TULIP = registerBlockNoItem("fancy_potted_pink_tulip"
-            , createFancyFlowerPot_PTL(Blocks.PINK_TULIP));
+            , createFancyDirectionalFlowerPotBlock_PTL(Blocks.PINK_TULIP));
 
     public static final Block FANCY_CORNFLOWER_POT = registerBlock("fancy_cornflower_pot"
             , createFancyFlowerPot_CRN(Blocks.AIR));
@@ -8095,12 +11438,16 @@ public class ModBlocks {
         return new FancyFlowerPot_AZA(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
     }
 
-    public static Block createFancyFlowerPot_PTL(Block flower) {
-        return new FancyFlowerPot_PTL(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    public static Block createFancyDirectionalFlowerPotBlock_PTL(Block flower) {
+        return new FancyDirectionalFlowerPotBlock_PTL(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
     }
 
     public static Block createFancyFlowerPot_SIV(Block flower) {
         return new FancyFlowerPot_SIV(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    public static Block createFancyFlowerPot_BOX(Block flower) {
+        return new FancyFlowerPot_BOX(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
     }
 
     private static Block registerBlock(String name, Block block) {

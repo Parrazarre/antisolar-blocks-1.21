@@ -11,10 +11,13 @@ import net.parra.antisolarblocks.entity.custom.CobbleProjectileEntity;
 public class ModEntities {
 
     public static final EntityType<CobbleProjectileEntity> COBBLE = Registry.register(Registries.ENTITY_TYPE,
-            Identifier.of(AntisolarBlocks.MOD_ID, "cobble_trown"),
+            Identifier.of(AntisolarBlocks.MOD_ID, "cobble_thrown"),
             EntityType.Builder
-                    .<CobbleProjectileEntity>create(CobbleProjectileEntity::new,SpawnGroup.MISC)
-                    .dimensions(0.2F,0.2F).build()
+                    .<CobbleProjectileEntity>create(CobbleProjectileEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.25F, 0.25F)
+                    .maxTrackingRange(4)
+                    .trackingTickInterval(10)
+                    .build()
         )
     ;
 

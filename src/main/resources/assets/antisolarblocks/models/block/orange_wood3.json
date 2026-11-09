@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/cube_column",
+	"textures": {
+		"end": "antisolarblocks:block/orange_log3",
+		"side": "antisolarblocks:block/orange_log3"
+	}
+}

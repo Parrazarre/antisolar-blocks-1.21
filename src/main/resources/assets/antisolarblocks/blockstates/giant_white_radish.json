@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "on=true": {
+      "model": "antisolarblocks:block/giant_white_radish"
+    },
+    "on=false": {
+      "model": "antisolarblocks:block/giant_white_radish_cut"
+    }
+  }
+}

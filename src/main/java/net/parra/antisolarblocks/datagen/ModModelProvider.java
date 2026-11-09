@@ -5,8 +5,10 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
+import net.minecraft.data.family.BlockFamily;
 import net.minecraft.util.Identifier;
 import net.parra.antisolarblocks.block.ModBlocks;
+import net.parra.antisolarblocks.block.custom.RadishCropBlock;
 import net.parra.antisolarblocks.item.ModItems;
 
 import java.util.Optional;
@@ -243,6 +245,30 @@ public class ModModelProvider extends FabricModelProvider {
                 .registerCubeAllModelTexturePool(ModBlocks.YEW_PLANKS);
 
         BlockStateModelGenerator.BlockTexturePool
+                pearPlanksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.PEAR_PLANKS);
+
+        BlockStateModelGenerator.BlockTexturePool
+                musaPlanksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.MUSA_PLANKS);
+
+        BlockStateModelGenerator.BlockTexturePool
+                orangePlanksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.ORANGE_PLANKS);
+
+        BlockStateModelGenerator.BlockTexturePool
+                rowanPlanksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.ROWAN_PLANKS);
+
+        BlockStateModelGenerator.BlockTexturePool
+                blueMahoePlanksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.BLUE_MAHOE_PLANKS);
+
+        BlockStateModelGenerator.BlockTexturePool
+                mangoPlanksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.MANGO_PLANKS);
+
+        BlockStateModelGenerator.BlockTexturePool
                 charoiteBlockPool = blockStateModelGenerator
                 .registerCubeAllModelTexturePool(ModBlocks.CHAROITE_BLOCK);
         BlockStateModelGenerator.BlockTexturePool
@@ -352,6 +378,13 @@ public class ModModelProvider extends FabricModelProvider {
                 .registerCubeAllModelTexturePool(ModBlocks.POLISHED_BURGUNDY_SILTSTONE);
 
         BlockStateModelGenerator.BlockTexturePool
+                kimberlitePool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.KIMBERLITE);
+        BlockStateModelGenerator.BlockTexturePool
+                polishedKimberlitePool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.POLISHED_KIMBERLITE);
+
+        BlockStateModelGenerator.BlockTexturePool
                 travertinePool = blockStateModelGenerator
                 .registerCubeAllModelTexturePool(ModBlocks.TRAVERTINE);
         BlockStateModelGenerator.BlockTexturePool
@@ -447,6 +480,10 @@ public class ModModelProvider extends FabricModelProvider {
                 .registerCubeAllModelTexturePool(ModBlocks.ORTHOCLASE_FELDSPAR_TILES);
 
         BlockStateModelGenerator.BlockTexturePool
+                saltBlockPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.SALT_BLOCK);
+
+        BlockStateModelGenerator.BlockTexturePool
                 khewraSaltBlockPool = blockStateModelGenerator
                 .registerCubeAllModelTexturePool(ModBlocks.KHEWRA_SALT_BLOCK);
 
@@ -457,8 +494,105 @@ public class ModModelProvider extends FabricModelProvider {
                 kaoliniteBricksPool = blockStateModelGenerator
                 .registerCubeAllModelTexturePool(ModBlocks.KAOLINITE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool
+                whiteKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.WHITE_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                lightGrayKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                grayKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.GRAY_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                blackKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.BLACK_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                brownKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.BROWN_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                redKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.RED_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                orangeKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.ORANGE_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                yellowKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.YELLOW_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                limeKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.LIME_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                greenKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.GREEN_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                cyanKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.CYAN_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                lightBlueKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                blueKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.BLUE_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                purpleKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.PURPLE_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                magentaKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.MAGENTA_KAOLINITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool
+                pinkKaoliniteBricksPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.PINK_KAOLINITE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool
                 hardenedKaoliniteClayPool = blockStateModelGenerator
                 .registerCubeAllModelTexturePool(ModBlocks.HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                whiteHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                lightGrayHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                grayHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                blackHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                brownHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                redHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.RED_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                orangeHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                yellowHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                limeHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                greenHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                cyanHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                lightBlueHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                blueHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                purpleHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                magentaHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY);
+        BlockStateModelGenerator.BlockTexturePool
+                pinkHardenedKaoliniteClayPool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY);
 
         BlockStateModelGenerator.BlockTexturePool
                 sunstonePool = blockStateModelGenerator
@@ -567,6 +701,12 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_SUGAR_MAPLE_PLANKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_WHITE_PINE_PLANKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_YEW_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_PEAR_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_MUSA_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_ORANGE_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_ROWAN_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_BLUE_MAHOE_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_MANGO_PLANKS);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_BLUESCHIST);
 
@@ -599,6 +739,68 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.YEW_TRAPDOOR);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.YEW_SAPLING, ModBlocks.POTTED_YEW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YEW_LEAVES);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.PEAR_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.PEAR_TRAPDOOR);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.PEAR_SAPLING, ModBlocks.POTTED_PEAR_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerLog(ModBlocks.PEAR_LOG)
+                .log(ModBlocks.PEAR_LOG)
+                .wood(ModBlocks.PEAR_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_PEAR_LOG)
+                .log(ModBlocks.STRIPPED_PEAR_LOG)
+                .wood(ModBlocks.STRIPPED_PEAR_WOOD);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.MUSA_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.MUSA_TRAPDOOR);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.MUSA_SAPLING, ModBlocks.POTTED_MUSA_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerLog(ModBlocks.MUSA_LOG)
+                .log(ModBlocks.MUSA_LOG)
+                .wood(ModBlocks.MUSA_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_MUSA_LOG)
+                .log(ModBlocks.STRIPPED_MUSA_LOG)
+                .wood(ModBlocks.STRIPPED_MUSA_WOOD);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.ORANGE_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.ORANGE_TRAPDOOR);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.ORANGE_SAPLING, ModBlocks.POTTED_ORANGE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_ORANGE_LOG)
+                .log(ModBlocks.STRIPPED_ORANGE_LOG)
+                .wood(ModBlocks.STRIPPED_ORANGE_WOOD);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.ROWAN_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.ROWAN_TRAPDOOR);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.RED_ROWAN_SAPLING, ModBlocks.POTTED_RED_ROWAN_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.YELLOW_ROWAN_SAPLING, ModBlocks.POTTED_YELLOW_ROWAN_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerLog(ModBlocks.ROWAN_LOG)
+                .log(ModBlocks.ROWAN_LOG)
+                .wood(ModBlocks.ROWAN_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_ROWAN_LOG)
+                .log(ModBlocks.STRIPPED_ROWAN_LOG)
+                .wood(ModBlocks.STRIPPED_ROWAN_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RED_ROWAN_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RED_ROWAN_BEARING_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YELLOW_ROWAN_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YELLOW_ROWAN_BEARING_LEAVES);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.BLUE_MAHOE_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.BLUE_MAHOE_TRAPDOOR);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.BLUE_MAHOE_SAPLING, ModBlocks.POTTED_BLUE_MAHOE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerLog(ModBlocks.BLUE_MAHOE_LOG)
+                .log(ModBlocks.BLUE_MAHOE_LOG)
+                .wood(ModBlocks.BLUE_MAHOE_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_BLUE_MAHOE_LOG)
+                .log(ModBlocks.STRIPPED_BLUE_MAHOE_LOG)
+                .wood(ModBlocks.STRIPPED_BLUE_MAHOE_WOOD);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.MANGO_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.MANGO_TRAPDOOR);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.MANGO_SAPLING, ModBlocks.POTTED_MANGO_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerLog(ModBlocks.MANGO_LOG)
+                .log(ModBlocks.MANGO_LOG)
+                .wood(ModBlocks.MANGO_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_MANGO_LOG)
+                .log(ModBlocks.STRIPPED_MANGO_LOG)
+                .wood(ModBlocks.STRIPPED_MANGO_WOOD);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHAROITE_ORE);
 
@@ -903,6 +1105,53 @@ public class ModModelProvider extends FabricModelProvider {
         yewPlanksPool.pressurePlate(ModBlocks.YEW_PRESSURE_PLATE);
         yewPlanksPool.button(ModBlocks.YEW_BUTTON);
 
+
+        pearPlanksPool.stairs(ModBlocks.PEAR_STAIRS);
+        pearPlanksPool.slab(ModBlocks.PEAR_SLAB);
+        pearPlanksPool.fence(ModBlocks.PEAR_FENCE);
+        pearPlanksPool.fenceGate(ModBlocks.PEAR_FENCE_GATE);
+        pearPlanksPool.pressurePlate(ModBlocks.PEAR_PRESSURE_PLATE);
+        pearPlanksPool.button(ModBlocks.PEAR_BUTTON);
+        blockStateModelGenerator.registerSingleton(ModBlocks.PEAR_LEAVES, TexturedModel.LEAVES);
+
+        musaPlanksPool.stairs(ModBlocks.MUSA_STAIRS);
+        musaPlanksPool.slab(ModBlocks.MUSA_SLAB);
+        musaPlanksPool.fence(ModBlocks.MUSA_FENCE);
+        musaPlanksPool.fenceGate(ModBlocks.MUSA_FENCE_GATE);
+        musaPlanksPool.pressurePlate(ModBlocks.MUSA_PRESSURE_PLATE);
+        musaPlanksPool.button(ModBlocks.MUSA_BUTTON);
+
+        orangePlanksPool.stairs(ModBlocks.ORANGE_STAIRS);
+        orangePlanksPool.slab(ModBlocks.ORANGE_SLAB);
+        orangePlanksPool.fence(ModBlocks.ORANGE_FENCE);
+        orangePlanksPool.fenceGate(ModBlocks.ORANGE_FENCE_GATE);
+        orangePlanksPool.pressurePlate(ModBlocks.ORANGE_PRESSURE_PLATE);
+        orangePlanksPool.button(ModBlocks.ORANGE_BUTTON);
+        blockStateModelGenerator.registerSingleton(ModBlocks.ORANGE_LEAVES, TexturedModel.LEAVES);
+
+        rowanPlanksPool.stairs(ModBlocks.ROWAN_STAIRS);
+        rowanPlanksPool.slab(ModBlocks.ROWAN_SLAB);
+        rowanPlanksPool.fence(ModBlocks.ROWAN_FENCE);
+        rowanPlanksPool.fenceGate(ModBlocks.ROWAN_FENCE_GATE);
+        rowanPlanksPool.pressurePlate(ModBlocks.ROWAN_PRESSURE_PLATE);
+        rowanPlanksPool.button(ModBlocks.ROWAN_BUTTON);
+        
+        blueMahoePlanksPool.stairs(ModBlocks.BLUE_MAHOE_STAIRS);
+        blueMahoePlanksPool.slab(ModBlocks.BLUE_MAHOE_SLAB);
+        blueMahoePlanksPool.fence(ModBlocks.BLUE_MAHOE_FENCE);
+        blueMahoePlanksPool.fenceGate(ModBlocks.BLUE_MAHOE_FENCE_GATE);
+        blueMahoePlanksPool.pressurePlate(ModBlocks.BLUE_MAHOE_PRESSURE_PLATE);
+        blueMahoePlanksPool.button(ModBlocks.BLUE_MAHOE_BUTTON);
+        blockStateModelGenerator.registerSingleton(ModBlocks.BLUE_MAHOE_LEAVES, TexturedModel.LEAVES);
+        
+        mangoPlanksPool.stairs(ModBlocks.MANGO_STAIRS);
+        mangoPlanksPool.slab(ModBlocks.MANGO_SLAB);
+        mangoPlanksPool.fence(ModBlocks.MANGO_FENCE);
+        mangoPlanksPool.fenceGate(ModBlocks.MANGO_FENCE_GATE);
+        mangoPlanksPool.pressurePlate(ModBlocks.MANGO_PRESSURE_PLATE);
+        mangoPlanksPool.button(ModBlocks.MANGO_BUTTON);
+        blockStateModelGenerator.registerSingleton(ModBlocks.MANGO_LEAVES, TexturedModel.LEAVES);
+        
         charoiteBlockPool.stairs(ModBlocks.CHAROITE_STAIRS);
         charoiteBlockPool.slab(ModBlocks.CHAROITE_SLAB);
         charoiteBlockPool.wall(ModBlocks.CHAROITE_WALL);
@@ -1016,7 +1265,13 @@ public class ModModelProvider extends FabricModelProvider {
         polishedBurgundySiltstonePool.stairs(ModBlocks.POLISHED_BURGUNDY_SILTSTONE_STAIRS);
         polishedBurgundySiltstonePool.slab(ModBlocks.POLISHED_BURGUNDY_SILTSTONE_SLAB);
         polishedBurgundySiltstonePool.wall(ModBlocks.POLISHED_BURGUNDY_SILTSTONE_WALL);
-
+        
+        polishedKimberlitePool.stairs(ModBlocks.POLISHED_KIMBERLITE_STAIRS);
+        polishedKimberlitePool.slab(ModBlocks.POLISHED_KIMBERLITE_SLAB);
+        polishedKimberlitePool.wall(ModBlocks.POLISHED_KIMBERLITE_WALL);
+        kimberlitePool.stairs(ModBlocks.KIMBERLITE_STAIRS);
+        kimberlitePool.slab(ModBlocks.KIMBERLITE_SLAB);
+        
         travertinePool.stairs(ModBlocks.TRAVERTINE_STAIRS);
         travertinePool.slab(ModBlocks.TRAVERTINE_SLAB);
         travertinePool.wall(ModBlocks.TRAVERTINE_WALL);
@@ -1115,6 +1370,10 @@ public class ModModelProvider extends FabricModelProvider {
         orthoclaseFeldsparTilesPool.stairs(ModBlocks.ORTHOCLASE_FELDSPAR_TILE_STAIRS);
         orthoclaseFeldsparTilesPool.slab(ModBlocks.ORTHOCLASE_FELDSPAR_TILE_SLAB);
 
+        saltBlockPool.stairs(ModBlocks.SALT_STAIRS);
+        saltBlockPool.slab(ModBlocks.SALT_SLAB);
+        saltBlockPool.wall(ModBlocks.SALT_WALL);
+
         khewraSaltBlockPool.stairs(ModBlocks.KHEWRA_SALT_STAIRS);
         khewraSaltBlockPool.slab(ModBlocks.KHEWRA_SALT_SLAB);
         khewraSaltBlockPool.wall(ModBlocks.KHEWRA_SALT_WALL);
@@ -1126,9 +1385,89 @@ public class ModModelProvider extends FabricModelProvider {
         kaoliniteBricksPool.stairs(ModBlocks.KAOLINITE_BRICK_STAIRS);
         kaoliniteBricksPool.slab(ModBlocks.KAOLINITE_BRICK_SLAB);
         kaoliniteBricksPool.wall(ModBlocks.KAOLINITE_BRICK_WALL);
+        whiteKaoliniteBricksPool.stairs(ModBlocks.WHITE_KAOLINITE_BRICK_STAIRS);
+        whiteKaoliniteBricksPool.slab(ModBlocks.WHITE_KAOLINITE_BRICK_SLAB);
+        whiteKaoliniteBricksPool.wall(ModBlocks.WHITE_KAOLINITE_BRICK_WALL);
+        lightGrayKaoliniteBricksPool.stairs(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_STAIRS);
+        lightGrayKaoliniteBricksPool.slab(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_SLAB);
+        lightGrayKaoliniteBricksPool.wall(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_WALL);
+        grayKaoliniteBricksPool.stairs(ModBlocks.GRAY_KAOLINITE_BRICK_STAIRS);
+        grayKaoliniteBricksPool.slab(ModBlocks.GRAY_KAOLINITE_BRICK_SLAB);
+        grayKaoliniteBricksPool.wall(ModBlocks.GRAY_KAOLINITE_BRICK_WALL);
+        blackKaoliniteBricksPool.stairs(ModBlocks.BLACK_KAOLINITE_BRICK_STAIRS);
+        blackKaoliniteBricksPool.slab(ModBlocks.BLACK_KAOLINITE_BRICK_SLAB);
+        blackKaoliniteBricksPool.wall(ModBlocks.BLACK_KAOLINITE_BRICK_WALL);
+        brownKaoliniteBricksPool.stairs(ModBlocks.BROWN_KAOLINITE_BRICK_STAIRS);
+        brownKaoliniteBricksPool.slab(ModBlocks.BROWN_KAOLINITE_BRICK_SLAB);
+        brownKaoliniteBricksPool.wall(ModBlocks.BROWN_KAOLINITE_BRICK_WALL);
+        redKaoliniteBricksPool.stairs(ModBlocks.RED_KAOLINITE_BRICK_STAIRS);
+        redKaoliniteBricksPool.slab(ModBlocks.RED_KAOLINITE_BRICK_SLAB);
+        redKaoliniteBricksPool.wall(ModBlocks.RED_KAOLINITE_BRICK_WALL);
+        orangeKaoliniteBricksPool.stairs(ModBlocks.ORANGE_KAOLINITE_BRICK_STAIRS);
+        orangeKaoliniteBricksPool.slab(ModBlocks.ORANGE_KAOLINITE_BRICK_SLAB);
+        orangeKaoliniteBricksPool.wall(ModBlocks.ORANGE_KAOLINITE_BRICK_WALL);
+        yellowKaoliniteBricksPool.stairs(ModBlocks.YELLOW_KAOLINITE_BRICK_STAIRS);
+        yellowKaoliniteBricksPool.slab(ModBlocks.YELLOW_KAOLINITE_BRICK_SLAB);
+        yellowKaoliniteBricksPool.wall(ModBlocks.YELLOW_KAOLINITE_BRICK_WALL);
+        limeKaoliniteBricksPool.stairs(ModBlocks.LIME_KAOLINITE_BRICK_STAIRS);
+        limeKaoliniteBricksPool.slab(ModBlocks.LIME_KAOLINITE_BRICK_SLAB);
+        limeKaoliniteBricksPool.wall(ModBlocks.LIME_KAOLINITE_BRICK_WALL);
+        greenKaoliniteBricksPool.stairs(ModBlocks.GREEN_KAOLINITE_BRICK_STAIRS);
+        greenKaoliniteBricksPool.slab(ModBlocks.GREEN_KAOLINITE_BRICK_SLAB);
+        greenKaoliniteBricksPool.wall(ModBlocks.GREEN_KAOLINITE_BRICK_WALL);
+        cyanKaoliniteBricksPool.stairs(ModBlocks.CYAN_KAOLINITE_BRICK_STAIRS);
+        cyanKaoliniteBricksPool.slab(ModBlocks.CYAN_KAOLINITE_BRICK_SLAB);
+        cyanKaoliniteBricksPool.wall(ModBlocks.CYAN_KAOLINITE_BRICK_WALL);
+        lightBlueKaoliniteBricksPool.stairs(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_STAIRS);
+        lightBlueKaoliniteBricksPool.slab(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_SLAB);
+        lightBlueKaoliniteBricksPool.wall(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_WALL);
+        blueKaoliniteBricksPool.stairs(ModBlocks.BLUE_KAOLINITE_BRICK_STAIRS);
+        blueKaoliniteBricksPool.slab(ModBlocks.BLUE_KAOLINITE_BRICK_SLAB);
+        blueKaoliniteBricksPool.wall(ModBlocks.BLUE_KAOLINITE_BRICK_WALL);
+        purpleKaoliniteBricksPool.stairs(ModBlocks.PURPLE_KAOLINITE_BRICK_STAIRS);
+        purpleKaoliniteBricksPool.slab(ModBlocks.PURPLE_KAOLINITE_BRICK_SLAB);
+        purpleKaoliniteBricksPool.wall(ModBlocks.PURPLE_KAOLINITE_BRICK_WALL);
+        magentaKaoliniteBricksPool.stairs(ModBlocks.MAGENTA_KAOLINITE_BRICK_STAIRS);
+        magentaKaoliniteBricksPool.slab(ModBlocks.MAGENTA_KAOLINITE_BRICK_SLAB);
+        magentaKaoliniteBricksPool.wall(ModBlocks.MAGENTA_KAOLINITE_BRICK_WALL);
+        pinkKaoliniteBricksPool.stairs(ModBlocks.PINK_KAOLINITE_BRICK_STAIRS);
+        pinkKaoliniteBricksPool.slab(ModBlocks.PINK_KAOLINITE_BRICK_SLAB);
+        pinkKaoliniteBricksPool.wall(ModBlocks.PINK_KAOLINITE_BRICK_WALL);
 
         hardenedKaoliniteClayPool.stairs(ModBlocks.HARDENED_KAOLINITE_CLAY_STAIRS);
         hardenedKaoliniteClayPool.slab(ModBlocks.HARDENED_KAOLINITE_CLAY_SLAB);
+        whiteHardenedKaoliniteClayPool.stairs(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY_STAIRS);
+        whiteHardenedKaoliniteClayPool.slab(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY_SLAB);
+        lightGrayHardenedKaoliniteClayPool.stairs(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_STAIRS);
+        lightGrayHardenedKaoliniteClayPool.slab(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_SLAB);
+        grayHardenedKaoliniteClayPool.stairs(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY_STAIRS);
+        grayHardenedKaoliniteClayPool.slab(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY_SLAB);
+        blackHardenedKaoliniteClayPool.stairs(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY_STAIRS);
+        blackHardenedKaoliniteClayPool.slab(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY_SLAB);
+        brownHardenedKaoliniteClayPool.stairs(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY_STAIRS);
+        brownHardenedKaoliniteClayPool.slab(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY_SLAB);
+        redHardenedKaoliniteClayPool.stairs(ModBlocks.RED_HARDENED_KAOLINITE_CLAY_STAIRS);
+        redHardenedKaoliniteClayPool.slab(ModBlocks.RED_HARDENED_KAOLINITE_CLAY_SLAB);
+        orangeHardenedKaoliniteClayPool.stairs(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY_STAIRS);
+        orangeHardenedKaoliniteClayPool.slab(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY_SLAB);
+        yellowHardenedKaoliniteClayPool.stairs(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY_STAIRS);
+        yellowHardenedKaoliniteClayPool.slab(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY_SLAB);
+        limeHardenedKaoliniteClayPool.stairs(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY_STAIRS);
+        limeHardenedKaoliniteClayPool.slab(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY_SLAB);
+        greenHardenedKaoliniteClayPool.stairs(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY_STAIRS);
+        greenHardenedKaoliniteClayPool.slab(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY_SLAB);
+        cyanHardenedKaoliniteClayPool.stairs(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY_STAIRS);
+        cyanHardenedKaoliniteClayPool.slab(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY_SLAB);
+        lightBlueHardenedKaoliniteClayPool.stairs(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_STAIRS);
+        lightBlueHardenedKaoliniteClayPool.slab(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_SLAB);
+        blueHardenedKaoliniteClayPool.stairs(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY_STAIRS);
+        blueHardenedKaoliniteClayPool.slab(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY_SLAB);
+        purpleHardenedKaoliniteClayPool.stairs(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY_STAIRS);
+        purpleHardenedKaoliniteClayPool.slab(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY_SLAB);
+        magentaHardenedKaoliniteClayPool.stairs(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY_STAIRS);
+        magentaHardenedKaoliniteClayPool.slab(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY_SLAB);
+        pinkHardenedKaoliniteClayPool.stairs(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY_STAIRS);
+        pinkHardenedKaoliniteClayPool.slab(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY_SLAB);
 
         sunstonePool.stairs(ModBlocks.SUNSTONE_STAIRS);
         sunstonePool.slab(ModBlocks.SUNSTONE_SLAB);

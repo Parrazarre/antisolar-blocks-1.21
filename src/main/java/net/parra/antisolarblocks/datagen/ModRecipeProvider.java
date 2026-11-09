@@ -7,13 +7,17 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.util.Identifier;
+import net.parra.antisolarblocks.AntisolarBlocks;
 import net.parra.antisolarblocks.block.ModBlocks;
 import net.parra.antisolarblocks.item.ModItems;
+import net.parra.antisolarblocks.recipe.custom.PotteryKilnRecipe;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -26,25 +30,36 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
 
-        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ACACIA_PLANKS, Blocks.BAMBOO_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ACACIA_PLANKS, Blocks.ACACIA_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BAMBOO_PLANKS, Blocks.BAMBOO_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BIRCH_PLANKS, Blocks.BIRCH_SLAB);
-        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_CHERRY_PLANKS, Blocks.BAMBOO_SLAB);
-        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_CRIMSON_PLANKS, Blocks.BAMBOO_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_CHERRY_PLANKS, Blocks.CHERRY_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_CRIMSON_PLANKS, Blocks.CRIMSON_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_JUNGLE_PLANKS, Blocks.JUNGLE_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_MANGROVE_PLANKS, Blocks.MANGROVE_SLAB);
-        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_OAK_PLANKS, Blocks.MANGROVE_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_OAK_PLANKS, Blocks.OAK_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_DARK_OAK_PLANKS, Blocks.DARK_OAK_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_SPRUCE_PLANKS, Blocks.SPRUCE_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_WARPED_PLANKS, Blocks.WARPED_SLAB);
-        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_SUGAR_MAPLE_PLANKS, Blocks.WARPED_SLAB);
-        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_WHITE_PINE_PLANKS, Blocks.WARPED_SLAB);
-        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_YEW_PLANKS, Blocks.WARPED_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_SUGAR_MAPLE_PLANKS, ModBlocks.SUGAR_MAPLE_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_WHITE_PINE_PLANKS, ModBlocks.WHITE_PINE_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_YEW_PLANKS, ModBlocks.YEW_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_PEAR_PLANKS, ModBlocks.PEAR_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_MUSA_PLANKS, ModBlocks.MUSA_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ORANGE_PLANKS, ModBlocks.ORANGE_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ROWAN_PLANKS, ModBlocks.ROWAN_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BLUE_MAHOE_PLANKS, ModBlocks.BLUE_MAHOE_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_MANGO_PLANKS, ModBlocks.MANGO_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ANDESITE, Blocks.ANDESITE_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ANDESITE_BRICKS, ModBlocks.ANDESITE_BRICK_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BLUESCHIST, ModBlocks.BLUESCHIST_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_JADE, ModBlocks.JADE_BLOCK_SLAB);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_GREENSCHIST, ModBlocks.GREENSCHIST_SLAB);
+
+        offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE);
+        offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE, Blocks.DRIPSTONE_BLOCK);
+        offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIPSTONE_BRICKS, ModBlocks.POLISHED_DRIPSTONE);
+        offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIPSTONE_TILES, ModBlocks.DRIPSTONE_BRICKS);
 
         offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_CLAY, ModItems.ANCIENT_CLAY_BALL);
         offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_BRICKS, ModItems.ANCIENT_BRICK);
@@ -58,6 +73,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.ROSE_QUARTZ, RecipeCategory.MISC, ModBlocks.RAW_ROSE_QUARTZ);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.CHAROITE, RecipeCategory.MISC, ModBlocks.CHAROITE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.HIMALAYAN_SALT, RecipeCategory.MISC, ModBlocks.KHEWRA_SALT_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.SALT, RecipeCategory.MISC, ModBlocks.SALT_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.FOOD, ModItems.PEAR, RecipeCategory.MISC, ModBlocks.GIANT_PEAR);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.FOOD, ModItems.BANANA, RecipeCategory.MISC, ModBlocks.BANANA_BUNCH);
 
         offerBarkBlockRecipe(exporter, ModBlocks.SUGAR_MAPLE_WOOD, ModBlocks.SUGAR_MAPLE_LOG);
         offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_SUGAR_MAPLE_WOOD, ModBlocks.STRIPPED_SUGAR_MAPLE_LOG);
@@ -146,6 +164,180 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.YEW_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.YEW_PLANKS))
                 .offerTo(exporter);
 
+        offerBarkBlockRecipe(exporter, ModBlocks.PEAR_WOOD, ModBlocks.PEAR_LOG);
+        offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_PEAR_WOOD, ModBlocks.STRIPPED_PEAR_LOG);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PEAR_SLAB, ModBlocks.PEAR_PLANKS);
+        offerPlanksRecipe(exporter, ModBlocks.PEAR_PLANKS, ModItemTagProvider.ModTags.Items.PEAR_LOGS, 4);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PEAR_STAIRS, 4)
+                .input('T', ModBlocks.PEAR_PLANKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PEAR_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.PEAR_PLANKS))
+                .offerTo(exporter);
+        createFenceRecipe(ModBlocks.PEAR_FENCE, Ingredient.ofItems(ModBlocks.PEAR_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PEAR_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.PEAR_PLANKS))
+                .offerTo(exporter);
+        createFenceGateRecipe(ModBlocks.PEAR_FENCE_GATE, Ingredient.ofItems(ModBlocks.PEAR_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PEAR_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.PEAR_PLANKS))
+                .offerTo(exporter);
+        createDoorRecipe(ModBlocks.PEAR_DOOR, Ingredient.ofItems(ModBlocks.PEAR_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PEAR_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.PEAR_PLANKS))
+                .offerTo(exporter);
+        createTrapdoorRecipe(ModBlocks.PEAR_TRAPDOOR, Ingredient.ofItems(ModBlocks.PEAR_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PEAR_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.PEAR_PLANKS))
+                .offerTo(exporter);
+        offerPressurePlateRecipe(exporter, ModBlocks.PEAR_PRESSURE_PLATE, ModBlocks.PEAR_PLANKS);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.PEAR_BUTTON)
+                .input(ModBlocks.PEAR_PLANKS)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PEAR_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.PEAR_PLANKS))
+                .offerTo(exporter);
+
+        offerBarkBlockRecipe(exporter, ModBlocks.MUSA_WOOD, ModBlocks.MUSA_LOG);
+        offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_MUSA_WOOD, ModBlocks.STRIPPED_MUSA_LOG);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUSA_SLAB, ModBlocks.MUSA_PLANKS);
+        offerPlanksRecipe(exporter, ModBlocks.MUSA_PLANKS, ModItemTagProvider.ModTags.Items.MUSA_LOGS, 4);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MUSA_STAIRS, 4)
+                .input('T', ModBlocks.MUSA_PLANKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MUSA_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MUSA_PLANKS))
+                .offerTo(exporter);
+        createFenceRecipe(ModBlocks.MUSA_FENCE, Ingredient.ofItems(ModBlocks.MUSA_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MUSA_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MUSA_PLANKS))
+                .offerTo(exporter);
+        createFenceGateRecipe(ModBlocks.MUSA_FENCE_GATE, Ingredient.ofItems(ModBlocks.MUSA_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MUSA_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MUSA_PLANKS))
+                .offerTo(exporter);
+        createDoorRecipe(ModBlocks.MUSA_DOOR, Ingredient.ofItems(ModBlocks.MUSA_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MUSA_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MUSA_PLANKS))
+                .offerTo(exporter);
+        createTrapdoorRecipe(ModBlocks.MUSA_TRAPDOOR, Ingredient.ofItems(ModBlocks.MUSA_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MUSA_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MUSA_PLANKS))
+                .offerTo(exporter);
+        offerPressurePlateRecipe(exporter, ModBlocks.MUSA_PRESSURE_PLATE, ModBlocks.MUSA_PLANKS);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.MUSA_BUTTON)
+                .input(ModBlocks.MUSA_PLANKS)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MUSA_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MUSA_PLANKS))
+                .offerTo(exporter);
+
+        offerBarkBlockRecipe(exporter, ModBlocks.ORANGE_WOOD, ModBlocks.ORANGE_LOG);
+        offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_ORANGE_WOOD, ModBlocks.STRIPPED_ORANGE_LOG);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_SLAB, ModBlocks.ORANGE_PLANKS);
+        offerPlanksRecipe(exporter, ModBlocks.ORANGE_PLANKS, ModItemTagProvider.ModTags.Items.ORANGE_LOGS, 4);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ORANGE_STAIRS, 4)
+                .input('T', ModBlocks.ORANGE_PLANKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                .offerTo(exporter);
+        createFenceRecipe(ModBlocks.ORANGE_FENCE, Ingredient.ofItems(ModBlocks.ORANGE_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                .offerTo(exporter);
+        createFenceGateRecipe(ModBlocks.ORANGE_FENCE_GATE, Ingredient.ofItems(ModBlocks.ORANGE_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                .offerTo(exporter);
+        createDoorRecipe(ModBlocks.ORANGE_DOOR, Ingredient.ofItems(ModBlocks.ORANGE_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                .offerTo(exporter);
+        createTrapdoorRecipe(ModBlocks.ORANGE_TRAPDOOR, Ingredient.ofItems(ModBlocks.ORANGE_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                .offerTo(exporter);
+        offerPressurePlateRecipe(exporter, ModBlocks.ORANGE_PRESSURE_PLATE, ModBlocks.ORANGE_PLANKS);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.ORANGE_BUTTON)
+                .input(ModBlocks.ORANGE_PLANKS)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                .offerTo(exporter);
+
+        offerBarkBlockRecipe(exporter, ModBlocks.ROWAN_WOOD, ModBlocks.ROWAN_LOG);
+        offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_ROWAN_WOOD, ModBlocks.STRIPPED_ROWAN_LOG);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROWAN_SLAB, ModBlocks.ROWAN_PLANKS);
+        offerPlanksRecipe(exporter, ModBlocks.ROWAN_PLANKS, ModItemTagProvider.ModTags.Items.ROWAN_LOGS, 4);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ROWAN_STAIRS, 4)
+                .input('T', ModBlocks.ROWAN_PLANKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ROWAN_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ROWAN_PLANKS))
+                .offerTo(exporter);
+        createFenceRecipe(ModBlocks.ROWAN_FENCE, Ingredient.ofItems(ModBlocks.ROWAN_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ROWAN_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ROWAN_PLANKS))
+                .offerTo(exporter);
+        createFenceGateRecipe(ModBlocks.ROWAN_FENCE_GATE, Ingredient.ofItems(ModBlocks.ROWAN_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ROWAN_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ROWAN_PLANKS))
+                .offerTo(exporter);
+        createDoorRecipe(ModBlocks.ROWAN_DOOR, Ingredient.ofItems(ModBlocks.ROWAN_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ROWAN_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ROWAN_PLANKS))
+                .offerTo(exporter);
+        createTrapdoorRecipe(ModBlocks.ROWAN_TRAPDOOR, Ingredient.ofItems(ModBlocks.ROWAN_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ROWAN_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ROWAN_PLANKS))
+                .offerTo(exporter);
+        offerPressurePlateRecipe(exporter, ModBlocks.ROWAN_PRESSURE_PLATE, ModBlocks.ROWAN_PLANKS);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.ROWAN_BUTTON)
+                .input(ModBlocks.ROWAN_PLANKS)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ROWAN_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ROWAN_PLANKS))
+                .offerTo(exporter);
+
+        offerBarkBlockRecipe(exporter, ModBlocks.BLUE_MAHOE_WOOD, ModBlocks.BLUE_MAHOE_LOG);
+        offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_BLUE_MAHOE_WOOD, ModBlocks.STRIPPED_BLUE_MAHOE_LOG);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_MAHOE_SLAB, ModBlocks.BLUE_MAHOE_PLANKS);
+        offerPlanksRecipe(exporter, ModBlocks.BLUE_MAHOE_PLANKS, ModItemTagProvider.ModTags.Items.BLUE_MAHOE_LOGS, 4);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLUE_MAHOE_STAIRS, 4)
+                .input('T', ModBlocks.BLUE_MAHOE_PLANKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_MAHOE_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_MAHOE_PLANKS))
+                .offerTo(exporter);
+        createFenceRecipe(ModBlocks.BLUE_MAHOE_FENCE, Ingredient.ofItems(ModBlocks.BLUE_MAHOE_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_MAHOE_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_MAHOE_PLANKS))
+                .offerTo(exporter);
+        createFenceGateRecipe(ModBlocks.BLUE_MAHOE_FENCE_GATE, Ingredient.ofItems(ModBlocks.BLUE_MAHOE_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_MAHOE_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_MAHOE_PLANKS))
+                .offerTo(exporter);
+        createDoorRecipe(ModBlocks.BLUE_MAHOE_DOOR, Ingredient.ofItems(ModBlocks.BLUE_MAHOE_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_MAHOE_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_MAHOE_PLANKS))
+                .offerTo(exporter);
+        createTrapdoorRecipe(ModBlocks.BLUE_MAHOE_TRAPDOOR, Ingredient.ofItems(ModBlocks.BLUE_MAHOE_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_MAHOE_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_MAHOE_PLANKS))
+                .offerTo(exporter);
+        offerPressurePlateRecipe(exporter, ModBlocks.BLUE_MAHOE_PRESSURE_PLATE, ModBlocks.BLUE_MAHOE_PLANKS);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.BLUE_MAHOE_BUTTON)
+                .input(ModBlocks.BLUE_MAHOE_PLANKS)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_MAHOE_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_MAHOE_PLANKS))
+                .offerTo(exporter);
+
+        offerBarkBlockRecipe(exporter, ModBlocks.MANGO_WOOD, ModBlocks.MANGO_LOG);
+        offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_MANGO_WOOD, ModBlocks.STRIPPED_MANGO_LOG);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MANGO_SLAB, ModBlocks.MANGO_PLANKS);
+        offerPlanksRecipe(exporter, ModBlocks.MANGO_PLANKS, ModItemTagProvider.ModTags.Items.MANGO_LOGS, 4);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MANGO_STAIRS, 4)
+                .input('T', ModBlocks.MANGO_PLANKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MANGO_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MANGO_PLANKS))
+                .offerTo(exporter);
+        createFenceRecipe(ModBlocks.MANGO_FENCE, Ingredient.ofItems(ModBlocks.MANGO_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MANGO_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MANGO_PLANKS))
+                .offerTo(exporter);
+        createFenceGateRecipe(ModBlocks.MANGO_FENCE_GATE, Ingredient.ofItems(ModBlocks.MANGO_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MANGO_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MANGO_PLANKS))
+                .offerTo(exporter);
+        createDoorRecipe(ModBlocks.MANGO_DOOR, Ingredient.ofItems(ModBlocks.MANGO_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MANGO_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MANGO_PLANKS))
+                .offerTo(exporter);
+        createTrapdoorRecipe(ModBlocks.MANGO_TRAPDOOR, Ingredient.ofItems(ModBlocks.MANGO_PLANKS.asItem()))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MANGO_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MANGO_PLANKS))
+                .offerTo(exporter);
+        offerPressurePlateRecipe(exporter, ModBlocks.MANGO_PRESSURE_PLATE, ModBlocks.MANGO_PLANKS);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.MANGO_BUTTON)
+                .input(ModBlocks.MANGO_PLANKS)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MANGO_PLANKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MANGO_PLANKS))
+                .offerTo(exporter);
+        
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROUGH_COBBLESTONE_BRICK_SLAB, ModBlocks.ROUGH_COBBLESTONE_BRICKS);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ROUGH_COBBLESTONE_BRICK_STAIRS, ModBlocks.ROUGH_COBBLESTONE_BRICKS);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ROUGH_COBBLESTONE_BRICK_SLAB, ModBlocks.ROUGH_COBBLESTONE_BRICKS, 2);
@@ -169,8 +361,56 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("TTT")
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.COBBLESTONE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.COBBLESTONE_BRICKS))
                 .offerTo(exporter);
-
-        offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CLAY_ROOF_TILES, Blocks.PINK_TERRACOTTA);
+        
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_CLAY_ROOF_TILES, Blocks.BLACK_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLACK_CLAY_ROOF_TILES, Blocks.BLACK_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_CLAY_ROOF_TILE_SLAB, ModBlocks.BLACK_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLACK_CLAY_ROOF_TILE_STAIRS, ModBlocks.BLACK_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLACK_CLAY_ROOF_TILE_SLAB, ModBlocks.BLACK_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLACK_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.BLACK_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLACK_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLACK_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_CLAY_ROOF_TILES, Blocks.GRAY_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GRAY_CLAY_ROOF_TILES, Blocks.GRAY_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_CLAY_ROOF_TILE_SLAB, ModBlocks.GRAY_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GRAY_CLAY_ROOF_TILE_STAIRS, ModBlocks.GRAY_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GRAY_CLAY_ROOF_TILE_SLAB, ModBlocks.GRAY_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GRAY_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.GRAY_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GRAY_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.GRAY_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILES, Blocks.LIGHT_GRAY_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILES, Blocks.LIGHT_GRAY_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILE_SLAB, ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILE_STAIRS, ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILE_SLAB, ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIGHT_GRAY_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_CLAY_ROOF_TILES, Blocks.WHITE_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.WHITE_CLAY_ROOF_TILES, Blocks.WHITE_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_CLAY_ROOF_TILE_SLAB, ModBlocks.WHITE_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.WHITE_CLAY_ROOF_TILE_STAIRS, ModBlocks.WHITE_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.WHITE_CLAY_ROOF_TILE_SLAB, ModBlocks.WHITE_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.WHITE_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.WHITE_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.WHITE_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.WHITE_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CLAY_ROOF_TILES, Blocks.PINK_TERRACOTTA);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_CLAY_ROOF_TILES, Blocks.PINK_TERRACOTTA);
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CLAY_ROOF_TILE_SLAB, ModBlocks.PINK_CLAY_ROOF_TILES);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_CLAY_ROOF_TILE_STAIRS, ModBlocks.PINK_CLAY_ROOF_TILES);
@@ -181,6 +421,138 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("TT ")
                 .pattern("TTT")
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.PINK_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.PINK_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_CLAY_ROOF_TILES, Blocks.MAGENTA_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MAGENTA_CLAY_ROOF_TILES, Blocks.MAGENTA_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_CLAY_ROOF_TILE_SLAB, ModBlocks.MAGENTA_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MAGENTA_CLAY_ROOF_TILE_STAIRS, ModBlocks.MAGENTA_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MAGENTA_CLAY_ROOF_TILE_SLAB, ModBlocks.MAGENTA_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MAGENTA_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.MAGENTA_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MAGENTA_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.MAGENTA_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_CLAY_ROOF_TILES, Blocks.PURPLE_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PURPLE_CLAY_ROOF_TILES, Blocks.PURPLE_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_CLAY_ROOF_TILE_SLAB, ModBlocks.PURPLE_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PURPLE_CLAY_ROOF_TILE_STAIRS, ModBlocks.PURPLE_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PURPLE_CLAY_ROOF_TILE_SLAB, ModBlocks.PURPLE_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PURPLE_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.PURPLE_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PURPLE_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.PURPLE_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_CLAY_ROOF_TILES, Blocks.BLUE_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLUE_CLAY_ROOF_TILES, Blocks.BLUE_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_CLAY_ROOF_TILE_SLAB, ModBlocks.BLUE_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLUE_CLAY_ROOF_TILE_STAIRS, ModBlocks.BLUE_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLUE_CLAY_ROOF_TILE_SLAB, ModBlocks.BLUE_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLUE_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.BLUE_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILES, Blocks.LIGHT_BLUE_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILES, Blocks.LIGHT_BLUE_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILE_SLAB, ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILE_STAIRS, ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILE_SLAB, ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIGHT_BLUE_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_CLAY_ROOF_TILES, Blocks.CYAN_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.CYAN_CLAY_ROOF_TILES, Blocks.CYAN_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_CLAY_ROOF_TILE_SLAB, ModBlocks.CYAN_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.CYAN_CLAY_ROOF_TILE_STAIRS, ModBlocks.CYAN_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.CYAN_CLAY_ROOF_TILE_SLAB, ModBlocks.CYAN_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CYAN_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.CYAN_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.CYAN_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.CYAN_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_CLAY_ROOF_TILES, Blocks.GREEN_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GREEN_CLAY_ROOF_TILES, Blocks.GREEN_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_CLAY_ROOF_TILE_SLAB, ModBlocks.GREEN_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GREEN_CLAY_ROOF_TILE_STAIRS, ModBlocks.GREEN_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GREEN_CLAY_ROOF_TILE_SLAB, ModBlocks.GREEN_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GREEN_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.GREEN_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GREEN_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.GREEN_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_CLAY_ROOF_TILES, Blocks.LIME_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIME_CLAY_ROOF_TILES, Blocks.LIME_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_CLAY_ROOF_TILE_SLAB, ModBlocks.LIME_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIME_CLAY_ROOF_TILE_STAIRS, ModBlocks.LIME_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIME_CLAY_ROOF_TILE_SLAB, ModBlocks.LIME_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIME_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.LIME_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIME_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIME_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_CLAY_ROOF_TILES, Blocks.YELLOW_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.YELLOW_CLAY_ROOF_TILES, Blocks.YELLOW_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_CLAY_ROOF_TILE_SLAB, ModBlocks.YELLOW_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.YELLOW_CLAY_ROOF_TILE_STAIRS, ModBlocks.YELLOW_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.YELLOW_CLAY_ROOF_TILE_SLAB, ModBlocks.YELLOW_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.YELLOW_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.YELLOW_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.YELLOW_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.YELLOW_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_CLAY_ROOF_TILES, Blocks.ORANGE_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORANGE_CLAY_ROOF_TILES, Blocks.ORANGE_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_CLAY_ROOF_TILE_SLAB, ModBlocks.ORANGE_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORANGE_CLAY_ROOF_TILE_STAIRS, ModBlocks.ORANGE_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORANGE_CLAY_ROOF_TILE_SLAB, ModBlocks.ORANGE_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ORANGE_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.ORANGE_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_CLAY_ROOF_TILES, Blocks.RED_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RED_CLAY_ROOF_TILES, Blocks.RED_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_CLAY_ROOF_TILE_SLAB, ModBlocks.RED_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RED_CLAY_ROOF_TILE_STAIRS, ModBlocks.RED_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RED_CLAY_ROOF_TILE_SLAB, ModBlocks.RED_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RED_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.RED_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.RED_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.RED_CLAY_ROOF_TILES))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CLAY_ROOF_TILES, Blocks.BROWN_TERRACOTTA);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BROWN_CLAY_ROOF_TILES, Blocks.BROWN_TERRACOTTA);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CLAY_ROOF_TILE_SLAB, ModBlocks.BROWN_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BROWN_CLAY_ROOF_TILE_STAIRS, ModBlocks.BROWN_CLAY_ROOF_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BROWN_CLAY_ROOF_TILE_SLAB, ModBlocks.BROWN_CLAY_ROOF_TILES, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BROWN_CLAY_ROOF_TILE_STAIRS, 4)
+                .input('T', ModBlocks.BROWN_CLAY_ROOF_TILES)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BROWN_CLAY_ROOF_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.BROWN_CLAY_ROOF_TILES))
                 .offerTo(exporter);
 
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PERIDOTITE_SLAB, ModBlocks.PERIDOTITE);
@@ -1348,6 +1720,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.LARGE_BUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.LARGE_BUSH))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LARGE_DRY_BUSH, 5)
+                .input('L',Blocks.ACACIA_LEAVES)
+                .input('T',Blocks.DEAD_BUSH)
+                .pattern("LLL")
+                .pattern("LTL")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LARGE_DRY_BUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.LARGE_DRY_BUSH))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.TALL_WHITE_PAMPAS_GRASS, 2)
+                .input('P',ModBlocks.WHITE_PAMPAS_GRASS)
+                .pattern("P")
+                .pattern("P")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TALL_WHITE_PAMPAS_GRASS), FabricRecipeProvider.conditionsFromItem(ModBlocks.TALL_WHITE_PAMPAS_GRASS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.WHITE_PAMPAS_GRASS, 2)
+                .input('P',ModBlocks.WHITE_PAMPAS_GRASS)
+                .pattern("P")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.WHITE_PAMPAS_GRASS), FabricRecipeProvider.conditionsFromItem(ModBlocks.WHITE_PAMPAS_GRASS))
+                .offerTo(exporter);
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TWIG, 8)
                 .input(Blocks.OAK_LEAVES)
                 .criterion(FabricRecipeProvider.hasItem(ModItems.TWIG), FabricRecipeProvider.conditionsFromItem(ModItems.TWIG))
@@ -1410,6 +1803,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.SUGAR_MAPLE_FENCING, ModBlocks.SUGAR_MAPLE_FENCE);
         offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.WHITE_PINE_FENCING, ModBlocks.WHITE_PINE_FENCE);
         offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.YEW_FENCING, ModBlocks.YEW_FENCE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.PEAR_FENCING, ModBlocks.PEAR_FENCE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.MUSA_FENCING, ModBlocks.MUSA_FENCE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORANGE_FENCING, ModBlocks.ORANGE_FENCE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.ROWAN_FENCING, ModBlocks.ROWAN_FENCE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLUE_MAHOE_FENCING, ModBlocks.BLUE_MAHOE_FENCE);
+
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_ANCIENT_CLAY)
                 .input(ModBlocks.ANCIENT_CLAY)
@@ -1515,22 +1914,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.LATERITE_ROCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.LATERITE_ROCK))
                 .offerTo(exporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLUE_CANDY_CANE)
-                .input('S', Items.SUGAR)
-                .input('D', Items.LIGHT_BLUE_DYE)
-                .pattern("SSS")
-                .pattern("SDS")
-                .pattern("SSS")
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_CANDY_CANE), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_CANDY_CANE))
-                .offerTo(exporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RED_CANDY_CANE)
-                .input('S', Items.SUGAR)
-                .input('D', Items.RED_DYE)
-                .pattern("SSS")
-                .pattern("SDS")
-                .pattern("SSS")
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.RED_CANDY_CANE), FabricRecipeProvider.conditionsFromItem(ModBlocks.RED_CANDY_CANE))
-                .offerTo(exporter);
 
         offerSmelting(exporter, List.of(ModBlocks.JADE_ORE), RecipeCategory.MISC, ModItems.JADE, 5f,200, "jade_ore");
         offerSmelting(exporter, List.of(ModBlocks.ROSE_QUARTZ_ORE), RecipeCategory.MISC, ModItems.ROSE_QUARTZ, 5f,200, "rose_quartz_ore");
@@ -1550,273 +1933,300 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.MIXED_STONE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MIXED_STONE_BRICKS))
                 .offerTo(exporter);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.LEEK_SOUP, 1)
+                .input(ModItems.LEEK)
+                .input(Items.BAKED_POTATO)
+                .input(Items.CARROT)
+                .input(Items.BOWL)
+                .group("leek_soup")
+                .criterion(FabricRecipeProvider.hasItem(ModItems.LEEK), FabricRecipeProvider.conditionsFromItem(ModItems.LEEK))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "leek_soup"));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.YELLOW_DYE, 2)
                 .input(ModBlocks.WEAVERS_BROOM)
                 .group("weavers_broom")
                 .criterion(FabricRecipeProvider.hasItem(Items.YELLOW_DYE), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_DYE))
-                .offerTo(exporter,"weavers_broom");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"weavers_broom"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PURPLE_DYE, 2)
                 .input(ModBlocks.LAVENDER_BALL)
                 .group("lavender_ball")
                 .criterion(FabricRecipeProvider.hasItem(Items.PURPLE_DYE), FabricRecipeProvider.conditionsFromItem(Items.PURPLE_DYE))
-                .offerTo(exporter,"lavender_ball");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"lavender_ball"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.ORANGE_DYE, 2)
                 .input(ModBlocks.DOG_ROSE_BUSH)
                 .group("dog_rose_bush")
                 .criterion(FabricRecipeProvider.hasItem(Items.ORANGE_DYE), FabricRecipeProvider.conditionsFromItem(Items.ORANGE_DYE))
-                .offerTo(exporter,"dog_rose_bush");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"dog_rose_bush"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PURPLE_DYE, 2)
                 .input(ModBlocks.GIANT_PASSIFLORA_INCARNATA)
                 .group("giant_passiflora_incarnata")
                 .criterion(FabricRecipeProvider.hasItem(Items.PURPLE_DYE), FabricRecipeProvider.conditionsFromItem(Items.PURPLE_DYE))
-                .offerTo(exporter,"giant_passiflora_incarnata");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"giant_passiflora_incarnata"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.WHITE_DYE, 2)
                 .input(ModBlocks.GIANT_PASSIFLORA_CAERULA)
                 .group("giant_passiflora_caerula")
                 .criterion(FabricRecipeProvider.hasItem(Items.WHITE_DYE), FabricRecipeProvider.conditionsFromItem(Items.WHITE_DYE))
-                .offerTo(exporter,"giant_passiflora_caerula");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"giant_passiflora_caerula"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.BROWN_DYE, 2)
                 .input(ModBlocks.CATTAILS)
                 .group("cattails")
                 .criterion(FabricRecipeProvider.hasItem(Items.BROWN_DYE), FabricRecipeProvider.conditionsFromItem(Items.BROWN_DYE))
-                .offerTo(exporter,"cattails");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"cattails"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PINK_DYE)
                 .input(ModBlocks.PINK_VIOLA_TRICOLOR)
                 .group("pink_viola_tricolor")
                 .criterion(FabricRecipeProvider.hasItem(Items.PINK_DYE), FabricRecipeProvider.conditionsFromItem(Items.PINK_DYE))
-                .offerTo(exporter,"pink_viola_tricolor");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"pink_viola_tricolor"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.LIGHT_BLUE_DYE)
                 .input(ModBlocks.INDIGO_WHITE_VIOLA_TRICOLOR)
                 .group("indigo_white_viola_tricolor")
                 .criterion(FabricRecipeProvider.hasItem(Items.LIGHT_BLUE_DYE), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_BLUE_DYE))
-                .offerTo(exporter,"indigo_white_viola_tricolor");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"indigo_white_viola_tricolor"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.WHITE_DYE)
                 .input(ModBlocks.WHITE_VIOLA_TRICOLOR)
                 .group("white_viola_tricolor")
                 .criterion(FabricRecipeProvider.hasItem(Items.WHITE_DYE), FabricRecipeProvider.conditionsFromItem(Items.WHITE_DYE))
-                .offerTo(exporter,"white_viola_tricolor");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"white_viola_tricolor"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.YELLOW_DYE)
                 .input(ModBlocks.HONEY_VIOLA_TRICOLOR)
                 .group("honey_viola_tricolor")
                 .criterion(FabricRecipeProvider.hasItem(Items.YELLOW_DYE), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_DYE))
-                .offerTo(exporter,"honey_viola_tricolor");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"honey_viola_tricolor"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.YELLOW_DYE)
                 .input(ModBlocks.YELLOW_VIOLA_TRICOLOR)
                 .group("yellow_viola_tricolor")
                 .criterion(FabricRecipeProvider.hasItem(Items.YELLOW_DYE), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_DYE))
-                .offerTo(exporter,"yellow_viola_tricolor");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"yellow_viola_tricolor"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MAGENTA_DYE)
                 .input(ModBlocks.PURPLE_VIOLA_TRICOLOR)
                 .group("purple_viola_tricolor")
                 .criterion(FabricRecipeProvider.hasItem(Items.MAGENTA_DYE), FabricRecipeProvider.conditionsFromItem(Items.MAGENTA_DYE))
-                .offerTo(exporter,"purple_viola_tricolor");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"purple_viola_tricolor"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MAGENTA_DYE)
                 .input(ModBlocks.PURPLE_CROWN_VIOLA_TRICOLOR)
                 .group("purple_crown_viola_tricolor")
                 .criterion(FabricRecipeProvider.hasItem(Items.MAGENTA_DYE), FabricRecipeProvider.conditionsFromItem(Items.MAGENTA_DYE))
-                .offerTo(exporter,"purple_crown_viola_tricolor");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"purple_crown_viola_tricolor"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.LIGHT_GRAY_DYE)
                 .input(ModBlocks.VIOLA_TRICOLOR)
                 .group("viola_tricolor")
                 .criterion(FabricRecipeProvider.hasItem(Items.LIGHT_GRAY_DYE), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_GRAY_DYE))
-                .offerTo(exporter,"viola_tricolor");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"viola_tricolor"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PURPLE_DYE)
                 .input(ModBlocks.PEARL_VIOLET_VIOLA_TRICOLOR)
                 .group("pearl_violet_viola_tricolor")
                 .criterion(FabricRecipeProvider.hasItem(Items.PURPLE_DYE), FabricRecipeProvider.conditionsFromItem(Items.PURPLE_DYE))
-                .offerTo(exporter,"pearl_violet_viola_tricolor");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"pearl_violet_viola_tricolor"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PURPLE_DYE)
                 .input(ModBlocks.HONEY_VIOLET_VIOLA_TRICOLOR)
                 .group("honey_violet_viola_tricolor")
                 .criterion(FabricRecipeProvider.hasItem(Items.PURPLE_DYE), FabricRecipeProvider.conditionsFromItem(Items.PURPLE_DYE))
-                .offerTo(exporter,"honey_violet_viola_tricolor");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"honey_violet_viola_tricolor"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PINK_DYE)
                 .input(ModBlocks.LIGHT_PINK_VIOLA_TRICOLOR)
                 .group("light_pink_viola_tricolor")
                 .criterion(FabricRecipeProvider.hasItem(Items.PINK_DYE), FabricRecipeProvider.conditionsFromItem(Items.PINK_DYE))
-                .offerTo(exporter,"light_pink_viola_tricolor");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"light_pink_viola_tricolor"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.LIGHT_BLUE_DYE)
                 .input(ModBlocks.LIGHT_BLUE_VIOLA_TRICOLOR)
                 .group("light_blue_viola_tricolor")
                 .criterion(FabricRecipeProvider.hasItem(Items.LIGHT_BLUE_DYE), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_BLUE_DYE))
-                .offerTo(exporter,"light_blue_viola_tricolor");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"light_blue_viola_tricolor"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.BLUE_DYE)
                 .input(ModBlocks.BLUE_VIOLA_TRICOLOR)
                 .group("blue_viola_tricolor")
                 .criterion(FabricRecipeProvider.hasItem(Items.BLUE_DYE), FabricRecipeProvider.conditionsFromItem(Items.BLUE_DYE))
-                .offerTo(exporter,"blue_viola_tricolor");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"blue_viola_tricolor"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.CYAN_DYE)
                 .input(ModBlocks.COBALT_VIOLA_TRICOLOR)
                 .group("cobalt_viola_tricolor")
                 .criterion(FabricRecipeProvider.hasItem(Items.CYAN_DYE), FabricRecipeProvider.conditionsFromItem(Items.CYAN_DYE))
-                .offerTo(exporter,"cobalt_viola_tricolor");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"cobalt_viola_tricolor"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PINK_DYE)
                 .input(ModBlocks.HOT_PINK_HYACINTH)
                 .group("hot_pink_hyacinth")
                 .criterion(FabricRecipeProvider.hasItem(Items.PINK_DYE), FabricRecipeProvider.conditionsFromItem(Items.PINK_DYE))
-                .offerTo(exporter,"hot_pink_hyacinth");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"hot_pink_hyacinth"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.ORANGE_DYE)
                 .input(ModBlocks.CORAL_HYACINTH)
                 .group("coral_hyacinth")
                 .criterion(FabricRecipeProvider.hasItem(Items.ORANGE_DYE), FabricRecipeProvider.conditionsFromItem(Items.ORANGE_DYE))
-                .offerTo(exporter,"coral_hyacinth");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"coral_hyacinth"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.YELLOW_DYE)
                 .input(ModBlocks.YELLOW_HYACINTH)
                 .group("yellow_hyacinth")
                 .criterion(FabricRecipeProvider.hasItem(Items.YELLOW_DYE), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_DYE))
-                .offerTo(exporter,"yellow_hyacinth");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"yellow_hyacinth"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.LIGHT_BLUE_DYE)
                 .input(ModBlocks.BLUE_HYACINTH)
                 .group("blue_hyacinth")
                 .criterion(FabricRecipeProvider.hasItem(Items.LIGHT_BLUE_DYE), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_BLUE_DYE))
-                .offerTo(exporter,"blue_hyacinth");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"blue_hyacinth"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PURPLE_DYE)
                 .input(ModBlocks.PURPLE_HYACINTH)
                 .group("purple_hyacinth")
                 .criterion(FabricRecipeProvider.hasItem(Items.PURPLE_DYE), FabricRecipeProvider.conditionsFromItem(Items.PURPLE_DYE))
-                .offerTo(exporter,"purple_hyacinth");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"purple_hyacinth"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.BLUE_DYE)
                 .input(ModBlocks.INDIGO_HYACINTH)
                 .group("indigo_hyacinth")
                 .criterion(FabricRecipeProvider.hasItem(Items.BLUE_DYE), FabricRecipeProvider.conditionsFromItem(Items.BLUE_DYE))
-                .offerTo(exporter,"indigo_hyacinth");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"indigo_hyacinth"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PINK_DYE)
                 .input(ModBlocks.PINK_HYACINTH)
                 .group("pink_hyacinth")
                 .criterion(FabricRecipeProvider.hasItem(Items.PINK_DYE), FabricRecipeProvider.conditionsFromItem(Items.PINK_DYE))
-                .offerTo(exporter,"pink_hyacinth");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"pink_hyacinth"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PINK_DYE)
                 .input(ModBlocks.LIGHT_PINK_HYACINTH)
                 .group("light_pink_hyacinth")
                 .criterion(FabricRecipeProvider.hasItem(Items.PINK_DYE), FabricRecipeProvider.conditionsFromItem(Items.PINK_DYE))
-                .offerTo(exporter,"light_pink_hyacinth");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"light_pink_hyacinth"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.WHITE_DYE)
                 .input(ModBlocks.WHITE_HYACINTH)
                 .group("white_hyacinth")
                 .criterion(FabricRecipeProvider.hasItem(Items.WHITE_DYE), FabricRecipeProvider.conditionsFromItem(Items.WHITE_DYE))
-                .offerTo(exporter,"white_hyacinth");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"white_hyacinth"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.LIGHT_BLUE_DYE)
                 .input(ModBlocks.BLUE_STARS)
                 .group("blue_stars")
                 .criterion(FabricRecipeProvider.hasItem(Items.LIGHT_BLUE_DYE), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_BLUE_DYE))
-                .offerTo(exporter, "blue_stars");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "blue_stars"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.LIGHT_BLUE_DYE)
                 .input(ModBlocks.LAVENDER_BLUE_WALL_IRIS)
                 .group("lavender_blue_wall_iris")
                 .criterion(FabricRecipeProvider.hasItem(Items.LIGHT_BLUE_DYE), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_BLUE_DYE))
-                .offerTo(exporter,"lavender_blue_wall_iris");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"lavender_blue_wall_iris"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.WHITE_DYE)
                 .input(ModBlocks.WHITE_WALL_IRIS)
                 .group("white_wall_iris")
                 .criterion(FabricRecipeProvider.hasItem(Items.WHITE_DYE), FabricRecipeProvider.conditionsFromItem(Items.WHITE_DYE))
-                .offerTo(exporter,"white_wall_iris");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"white_wall_iris"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.LIGHT_BLUE_DYE)
                 .input(ModBlocks.BLUE_LILAC_WALL_IRIS)
                 .group("blue_lilac_wall_iris")
                 .criterion(FabricRecipeProvider.hasItem(Items.LIGHT_BLUE_DYE), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_BLUE_DYE))
-                .offerTo(exporter,"blue_lilac_wall_iris");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"blue_lilac_wall_iris"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PURPLE_DYE)
                 .input(ModBlocks.PURPLE_BLUE_WALL_IRIS)
                 .group("purple_blue_wall_iris")
                 .criterion(FabricRecipeProvider.hasItem(Items.PURPLE_DYE), FabricRecipeProvider.conditionsFromItem(Items.PURPLE_DYE))
-                .offerTo(exporter,"purple_blue_wall_iris");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"purple_blue_wall_iris"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.LIGHT_BLUE_DYE)
                 .input(ModBlocks.SKY_BLUE_WALL_IRIS)
                 .group("sky_blue_wall_iris")
                 .criterion(FabricRecipeProvider.hasItem(Items.LIGHT_BLUE_DYE), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_BLUE_DYE))
-                .offerTo(exporter,"sky_blue_wall_iris");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"sky_blue_wall_iris"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PURPLE_DYE)
                 .input(ModBlocks.BLUISH_VIOLET_WALL_IRIS)
                 .group("bluish_violet_wall_iris")
                 .criterion(FabricRecipeProvider.hasItem(Items.PURPLE_DYE), FabricRecipeProvider.conditionsFromItem(Items.PURPLE_DYE))
-                .offerTo(exporter,"bluish_violet_wall_iris");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"bluish_violet_wall_iris"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PINK_DYE)
                 .input(ModBlocks.BLANKET_FLOWER)
                 .group("blanket_flower")
                 .criterion(FabricRecipeProvider.hasItem(Items.PINK_DYE), FabricRecipeProvider.conditionsFromItem(Items.PINK_DYE))
-                .offerTo(exporter,"blanket_flower");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"blanket_flower"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.RED_DYE)
                 .input(ModBlocks.RED_BLANKET_FLOWER)
                 .group("red_blanket_flower")
                 .criterion(FabricRecipeProvider.hasItem(Items.RED_DYE), FabricRecipeProvider.conditionsFromItem(Items.RED_DYE))
-                .offerTo(exporter,"red_blanket_flower");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"red_blanket_flower"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.RED_DYE)
                 .input(ModBlocks.RED_NEMESIA)
                 .group("red_nemesia")
                 .criterion(FabricRecipeProvider.hasItem(Items.RED_DYE), FabricRecipeProvider.conditionsFromItem(Items.RED_DYE))
-                .offerTo(exporter,"red_nemesia");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"red_nemesia"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.RED_DYE)
+                .input(ModBlocks.WHITE_DAFFODIL)
+                .group("white_daffodil")
+                .criterion(FabricRecipeProvider.hasItem(Items.LIGHT_GRAY_DYE), FabricRecipeProvider.conditionsFromItem(Items.LIGHT_GRAY_DYE))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"white_daffodil"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.RED_DYE)
+                .input(ModBlocks.YELLOW_DAFFODIL)
+                .group("yellow_daffodil")
+                .criterion(FabricRecipeProvider.hasItem(Items.YELLOW_DYE), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_DYE))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"yellow_daffodil"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.RED_DYE)
+                .input(ModBlocks.PINK_DAFFODIL)
+                .group("pink_daffodil")
+                .criterion(FabricRecipeProvider.hasItem(Items.PINK_DYE), FabricRecipeProvider.conditionsFromItem(Items.PINK_DYE))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"pink_daffodil"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.WHITE_DYE)
                 .input(ModBlocks.STAR_JASMINE)
                 .group("star_jasmine")
                 .criterion(FabricRecipeProvider.hasItem(Items.WHITE_DYE), FabricRecipeProvider.conditionsFromItem(Items.WHITE_DYE))
-                .offerTo(exporter,"star_jasmine");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"star_jasmine"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.YELLOW_DYE)
                 .input(ModBlocks.BASKET_OF_GOLD)
                 .group("basket_of_gold")
                 .criterion(FabricRecipeProvider.hasItem(Items.YELLOW_DYE), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_DYE))
-                .offerTo(exporter,"basket_of_gold");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"basket_of_gold"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.RED_DYE)
                 .input(ModBlocks.JAPANESE_QUINCE)
                 .group("japanese_quince")
                 .criterion(FabricRecipeProvider.hasItem(Items.RED_DYE), FabricRecipeProvider.conditionsFromItem(Items.RED_DYE))
-                .offerTo(exporter,"japanese_quince");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"japanese_quince"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.RED_DYE)
                 .input(ModBlocks.FLOWERING_OXYRIA)
                 .group("flowering_oxyria")
                 .criterion(FabricRecipeProvider.hasItem(Items.RED_DYE), FabricRecipeProvider.conditionsFromItem(Items.RED_DYE))
-                .offerTo(exporter,"flowering_oxyria");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"flowering_oxyria"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.LIME_DYE)
                 .input(ModBlocks.EUPHORBIA_X_MARTINI)
                 .group("euphorbia_x_martini")
                 .criterion(FabricRecipeProvider.hasItem(Items.LIME_DYE), FabricRecipeProvider.conditionsFromItem(Items.LIME_DYE))
-                .offerTo(exporter,"euphorbia_x_martini");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"euphorbia_x_martini"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PINK_DYE)
                 .input(ModBlocks.SILVER_VASE)
                 .group("silver_vase")
                 .criterion(FabricRecipeProvider.hasItem(Items.PINK_DYE), FabricRecipeProvider.conditionsFromItem(Items.PINK_DYE))
-                .offerTo(exporter,"silver_vase");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"silver_vase"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PURPLE_DYE)
                 .input(ModBlocks.WILD_COSMOS_AND_BACHELOR_BUTTONS)
                 .group("wild_cosmos_and_bachelor_buttons")
                 .criterion(FabricRecipeProvider.hasItem(Items.PURPLE_DYE), FabricRecipeProvider.conditionsFromItem(Items.PURPLE_DYE))
-                .offerTo(exporter,"wild_cosmos_and_bachelor_buttons");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"wild_cosmos_and_bachelor_buttons"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.CYAN_DYE)
                 .input(ModBlocks.LUMINESCENT_BRIAR)
                 .group("luminescent_briar")
                 .criterion(FabricRecipeProvider.hasItem(Items.CYAN_DYE), FabricRecipeProvider.conditionsFromItem(Items.CYAN_DYE))
-                .offerTo(exporter,"luminescent_briar");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"luminescent_briar"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.WHITE_DYE)
                 .input(ModBlocks.WHITE_LOTUS_FLOWER)
                 .group("white_lotus_flower")
                 .criterion(FabricRecipeProvider.hasItem(Items.WHITE_DYE), FabricRecipeProvider.conditionsFromItem(Items.WHITE_DYE))
-                .offerTo(exporter,"white_lotus_flower");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"white_lotus_flower"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PINK_DYE)
                 .input(ModBlocks.PINK_LOTUS_FLOWER)
                 .group("pink_lotus_flower")
                 .criterion(FabricRecipeProvider.hasItem(Items.PINK_DYE), FabricRecipeProvider.conditionsFromItem(Items.PINK_DYE))
-                .offerTo(exporter,"pink_lotus_flower");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"pink_lotus_flower"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MAGENTA_DYE)
                 .input(ModBlocks.HUMMINGBIRD_FUCHSIA)
                 .group("hummingbird_fuchsia")
                 .criterion(FabricRecipeProvider.hasItem(Items.MAGENTA_DYE), FabricRecipeProvider.conditionsFromItem(Items.MAGENTA_DYE))
-                .offerTo(exporter,"hummingbird_fuchsia");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"hummingbird_fuchsia"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PINK_DYE)
                 .input(ModBlocks.ASIAN_BLEEDING_HEART)
                 .group("asian_bleeding_heart")
                 .criterion(FabricRecipeProvider.hasItem(Items.PINK_DYE), FabricRecipeProvider.conditionsFromItem(Items.PINK_DYE))
-                .offerTo(exporter,"asian_bleeding_heart");
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID,"asian_bleeding_heart"));
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, Items.FEATHER, RecipeCategory.MISC, ModBlocks.FEATHER_BLOCK);
 
@@ -2167,6 +2577,34 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_BURGUNDY_SILTSTONE), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_BURGUNDY_SILTSTONE))
                 .offerTo(exporter);
 
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KIMBERLITE_SLAB, ModBlocks.KIMBERLITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.KIMBERLITE_STAIRS, ModBlocks.KIMBERLITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.KIMBERLITE_SLAB, ModBlocks.KIMBERLITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_KIMBERLITE, ModBlocks.KIMBERLITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_KIMBERLITE_STAIRS, ModBlocks.KIMBERLITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_KIMBERLITE_SLAB, ModBlocks.KIMBERLITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_KIMBERLITE_WALL, ModBlocks.KIMBERLITE);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.KIMBERLITE_STAIRS, 4)
+                .input('T', ModBlocks.KIMBERLITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.KIMBERLITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.KIMBERLITE))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_KIMBERLITE_SLAB, ModBlocks.POLISHED_KIMBERLITE);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_KIMBERLITE_WALL, ModBlocks.POLISHED_KIMBERLITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_KIMBERLITE_STAIRS, ModBlocks.POLISHED_KIMBERLITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_KIMBERLITE_SLAB, ModBlocks.POLISHED_KIMBERLITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.POLISHED_KIMBERLITE_WALL, ModBlocks.POLISHED_KIMBERLITE);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POLISHED_KIMBERLITE_STAIRS, 4)
+                .input('T', ModBlocks.POLISHED_KIMBERLITE)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.POLISHED_KIMBERLITE), FabricRecipeProvider.conditionsFromItem(ModBlocks.POLISHED_KIMBERLITE))
+                .offerTo(exporter);
+        
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_BRICK_SLAB, ModBlocks.ANCIENT_BRICKS);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ANCIENT_BRICK_STAIRS, ModBlocks.ANCIENT_BRICKS);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ANCIENT_BRICK_SLAB, ModBlocks.ANCIENT_BRICKS, 2);
@@ -2907,6 +3345,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORTHOCLASE_FELDSPAR_TILES), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORTHOCLASE_FELDSPAR_TILES))
                 .offerTo(exporter);
 
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SALT_SLAB, ModBlocks.SALT_BLOCK);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.SALT_WALL, ModBlocks.SALT_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SALT_STAIRS, ModBlocks.SALT_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SALT_SLAB, ModBlocks.SALT_BLOCK, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.SALT_WALL, ModBlocks.SALT_BLOCK);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SALT_STAIRS, 4)
+                .input('T', ModBlocks.SALT_BLOCK)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.SALT_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.SALT_BLOCK))
+                .offerTo(exporter);
+
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KHEWRA_SALT_SLAB, ModBlocks.KHEWRA_SALT_BLOCK);
         offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.KHEWRA_SALT_WALL, ModBlocks.KHEWRA_SALT_BLOCK);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.KHEWRA_SALT_STAIRS, ModBlocks.KHEWRA_SALT_BLOCK);
@@ -2944,6 +3395,311 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.WHITE_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.LIGHT_GRAY_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.GRAY_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.BLACK_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.BROWN_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RED_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.RED_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.RED_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RED_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.RED_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RED_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.RED_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RED_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.RED_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.RED_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.RED_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.ORANGE_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.YELLOW_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIME_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.LIME_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.LIME_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIME_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.LIME_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIME_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.LIME_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIME_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.LIME_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.GREEN_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.CYAN_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.LIGHT_BLUE_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.BLUE_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.PURPLE_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.MAGENTA_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PINK_HARDENED_KAOLINITE_CLAY, 8)
+                .input('H', ModItemTagProvider.ModTags.Items.HARDENED_KAOLINITE_CLAY)
+                .input('D', ConventionalItemTags.PINK_DYES)
+                .pattern("HHH")
+                .pattern("HDH")
+                .pattern("HHH")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.PINK_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_HARDENED_KAOLINITE_CLAY_STAIRS, ModBlocks.PINK_HARDENED_KAOLINITE_CLAY);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_HARDENED_KAOLINITE_CLAY_SLAB, ModBlocks.PINK_HARDENED_KAOLINITE_CLAY, 2);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PINK_HARDENED_KAOLINITE_CLAY_STAIRS, 4)
+                .input('T', ModBlocks.PINK_HARDENED_KAOLINITE_CLAY)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider.conditionsFromItem(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KAOLINITE_BRICK_SLAB, ModBlocks.KAOLINITE_BRICKS);
         offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.KAOLINITE_BRICK_WALL, ModBlocks.KAOLINITE_BRICKS);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.KAOLINITE_BRICK_STAIRS, ModBlocks.KAOLINITE_BRICKS);
@@ -2955,6 +3711,214 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("TT ")
                 .pattern("TTT")
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_KAOLINITE_BRICK_SLAB, ModBlocks.WHITE_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.WHITE_KAOLINITE_BRICK_WALL, ModBlocks.WHITE_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.WHITE_KAOLINITE_BRICK_STAIRS, ModBlocks.WHITE_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.WHITE_KAOLINITE_BRICK_SLAB, ModBlocks.WHITE_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.WHITE_KAOLINITE_BRICK_WALL, ModBlocks.WHITE_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.WHITE_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.WHITE_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.WHITE_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.WHITE_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_SLAB, ModBlocks.LIGHT_GRAY_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_WALL, ModBlocks.LIGHT_GRAY_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_STAIRS, ModBlocks.LIGHT_GRAY_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_SLAB, ModBlocks.LIGHT_GRAY_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_WALL, ModBlocks.LIGHT_GRAY_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.LIGHT_GRAY_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIGHT_GRAY_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_KAOLINITE_BRICK_SLAB, ModBlocks.GRAY_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.GRAY_KAOLINITE_BRICK_WALL, ModBlocks.GRAY_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GRAY_KAOLINITE_BRICK_STAIRS, ModBlocks.GRAY_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GRAY_KAOLINITE_BRICK_SLAB, ModBlocks.GRAY_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GRAY_KAOLINITE_BRICK_WALL, ModBlocks.GRAY_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GRAY_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.GRAY_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GRAY_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.GRAY_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_KAOLINITE_BRICK_SLAB, ModBlocks.BLACK_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLACK_KAOLINITE_BRICK_WALL, ModBlocks.BLACK_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLACK_KAOLINITE_BRICK_STAIRS, ModBlocks.BLACK_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLACK_KAOLINITE_BRICK_SLAB, ModBlocks.BLACK_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLACK_KAOLINITE_BRICK_WALL, ModBlocks.BLACK_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLACK_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.BLACK_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLACK_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLACK_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_KAOLINITE_BRICK_SLAB, ModBlocks.BROWN_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.BROWN_KAOLINITE_BRICK_WALL, ModBlocks.BROWN_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BROWN_KAOLINITE_BRICK_STAIRS, ModBlocks.BROWN_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BROWN_KAOLINITE_BRICK_SLAB, ModBlocks.BROWN_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BROWN_KAOLINITE_BRICK_WALL, ModBlocks.BROWN_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BROWN_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.BROWN_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BROWN_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.BROWN_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_KAOLINITE_BRICK_SLAB, ModBlocks.RED_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.RED_KAOLINITE_BRICK_WALL, ModBlocks.RED_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RED_KAOLINITE_BRICK_STAIRS, ModBlocks.RED_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RED_KAOLINITE_BRICK_SLAB, ModBlocks.RED_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RED_KAOLINITE_BRICK_WALL, ModBlocks.RED_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RED_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.RED_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.RED_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.RED_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_KAOLINITE_BRICK_SLAB, ModBlocks.ORANGE_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORANGE_KAOLINITE_BRICK_WALL, ModBlocks.ORANGE_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORANGE_KAOLINITE_BRICK_STAIRS, ModBlocks.ORANGE_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORANGE_KAOLINITE_BRICK_SLAB, ModBlocks.ORANGE_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.ORANGE_KAOLINITE_BRICK_WALL, ModBlocks.ORANGE_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ORANGE_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.ORANGE_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_KAOLINITE_BRICK_SLAB, ModBlocks.YELLOW_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.YELLOW_KAOLINITE_BRICK_WALL, ModBlocks.YELLOW_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.YELLOW_KAOLINITE_BRICK_STAIRS, ModBlocks.YELLOW_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.YELLOW_KAOLINITE_BRICK_SLAB, ModBlocks.YELLOW_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.YELLOW_KAOLINITE_BRICK_WALL, ModBlocks.YELLOW_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.YELLOW_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.YELLOW_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.YELLOW_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.YELLOW_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_KAOLINITE_BRICK_SLAB, ModBlocks.LIME_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIME_KAOLINITE_BRICK_WALL, ModBlocks.LIME_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIME_KAOLINITE_BRICK_STAIRS, ModBlocks.LIME_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIME_KAOLINITE_BRICK_SLAB, ModBlocks.LIME_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIME_KAOLINITE_BRICK_WALL, ModBlocks.LIME_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIME_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.LIME_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIME_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIME_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_KAOLINITE_BRICK_SLAB, ModBlocks.GREEN_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.GREEN_KAOLINITE_BRICK_WALL, ModBlocks.GREEN_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GREEN_KAOLINITE_BRICK_STAIRS, ModBlocks.GREEN_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GREEN_KAOLINITE_BRICK_SLAB, ModBlocks.GREEN_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.GREEN_KAOLINITE_BRICK_WALL, ModBlocks.GREEN_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GREEN_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.GREEN_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.GREEN_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.GREEN_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_KAOLINITE_BRICK_SLAB, ModBlocks.CYAN_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.CYAN_KAOLINITE_BRICK_WALL, ModBlocks.CYAN_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.CYAN_KAOLINITE_BRICK_STAIRS, ModBlocks.CYAN_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.CYAN_KAOLINITE_BRICK_SLAB, ModBlocks.CYAN_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.CYAN_KAOLINITE_BRICK_WALL, ModBlocks.CYAN_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CYAN_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.CYAN_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.CYAN_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.CYAN_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_SLAB, ModBlocks.LIGHT_BLUE_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_WALL, ModBlocks.LIGHT_BLUE_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_STAIRS, ModBlocks.LIGHT_BLUE_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_SLAB, ModBlocks.LIGHT_BLUE_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_WALL, ModBlocks.LIGHT_BLUE_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.LIGHT_BLUE_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIGHT_BLUE_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_KAOLINITE_BRICK_SLAB, ModBlocks.BLUE_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLUE_KAOLINITE_BRICK_WALL, ModBlocks.BLUE_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLUE_KAOLINITE_BRICK_STAIRS, ModBlocks.BLUE_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLUE_KAOLINITE_BRICK_SLAB, ModBlocks.BLUE_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.BLUE_KAOLINITE_BRICK_WALL, ModBlocks.BLUE_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLUE_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.BLUE_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_KAOLINITE_BRICK_SLAB, ModBlocks.PURPLE_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.PURPLE_KAOLINITE_BRICK_WALL, ModBlocks.PURPLE_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PURPLE_KAOLINITE_BRICK_STAIRS, ModBlocks.PURPLE_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PURPLE_KAOLINITE_BRICK_SLAB, ModBlocks.PURPLE_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PURPLE_KAOLINITE_BRICK_WALL, ModBlocks.PURPLE_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PURPLE_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.PURPLE_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PURPLE_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.PURPLE_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_KAOLINITE_BRICK_SLAB, ModBlocks.MAGENTA_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.MAGENTA_KAOLINITE_BRICK_WALL, ModBlocks.MAGENTA_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MAGENTA_KAOLINITE_BRICK_STAIRS, ModBlocks.MAGENTA_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MAGENTA_KAOLINITE_BRICK_SLAB, ModBlocks.MAGENTA_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.MAGENTA_KAOLINITE_BRICK_WALL, ModBlocks.MAGENTA_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MAGENTA_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.MAGENTA_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.MAGENTA_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.MAGENTA_KAOLINITE_BRICKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_KAOLINITE_BRICK_SLAB, ModBlocks.PINK_KAOLINITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_KAOLINITE_BRICK_WALL, ModBlocks.PINK_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_KAOLINITE_BRICK_STAIRS, ModBlocks.PINK_KAOLINITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_KAOLINITE_BRICK_SLAB, ModBlocks.PINK_KAOLINITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_KAOLINITE_BRICK_WALL, ModBlocks.PINK_KAOLINITE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PINK_KAOLINITE_BRICK_STAIRS, 4)
+                .input('T', ModBlocks.PINK_KAOLINITE_BRICKS)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PINK_KAOLINITE_BRICKS), FabricRecipeProvider.conditionsFromItem(ModBlocks.PINK_KAOLINITE_BRICKS))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNSTONE,4)
@@ -3139,6 +4103,61 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.AXOLOTL_PLUSHIE_BLUE, 2)
+                .input('B', Blocks.BLUE_WOOL)
+                .input('H', ItemTags.FISHES)
+                .input('A', ModBlocks.AXOLOTL_PLUSHIE_BLUE)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("BHB")
+                .pattern("HAH")
+                .pattern("FHF")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.AXOLOTL_PLUSHIE_BROWN, 2)
+                .input('B', Blocks.BROWN_WOOL)
+                .input('H', ItemTags.FISHES)
+                .input('A', ModBlocks.AXOLOTL_PLUSHIE_BROWN)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("BHB")
+                .pattern("HAH")
+                .pattern("FHF")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.AXOLOTL_PLUSHIE_CYAN, 2)
+                .input('B', Blocks.LIGHT_BLUE_WOOL)
+                .input('H', ItemTags.FISHES)
+                .input('A', ModBlocks.AXOLOTL_PLUSHIE_CYAN)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("BHB")
+                .pattern("HAH")
+                .pattern("FHF")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.AXOLOTL_PLUSHIE_GOLD, 2)
+                .input('B', Blocks.YELLOW_WOOL)
+                .input('H', ItemTags.FISHES)
+                .input('A', ModBlocks.AXOLOTL_PLUSHIE_GOLD)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("BHB")
+                .pattern("HAH")
+                .pattern("FHF")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.AXOLOTL_PLUSHIE_PINK, 2)
+                .input('B', Blocks.PINK_WOOL)
+                .input('H', ItemTags.FISHES)
+                .input('A', ModBlocks.AXOLOTL_PLUSHIE_PINK)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("BHB")
+                .pattern("HAH")
+                .pattern("FHF")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.TETO_PLUSHIE,2)
                 .input('R', Blocks.RED_WOOL)
                 .input('G', Blocks.GRAY_WOOL)
@@ -3151,10 +4170,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.PEARTO_PLUSHIE,1)
+                .input('G', ModBlocks.GIANT_PEAR)
+                .input('T', ModBlocks.TETO_PLUSHIE)
+                .pattern("GGG")
+                .pattern("GTG")
+                .pattern("GGG")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.TETO_PLUSHIE,1)
+                        .input(ModBlocks.PEARTO_PLUSHIE)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PEARTO_PLUSHIE), FabricRecipeProvider.conditionsFromItem(ModBlocks.PEARTO_PLUSHIE))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "revert_pearto"));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.MIKU_PLUSHIE,2)
                 .input('L', Blocks.LIGHT_BLUE_WOOL)
                 .input('G', Blocks.LIGHT_GRAY_WOOL)
-                .input('A', Blocks.ALLIUM)
+                .input('A', ModItems.LEEK)
                 .input('M', ModBlocks.MIKU_PLUSHIE)
                 .input('F', ModBlocks.FEATHER_BLOCK)
                 .pattern("LAL")
@@ -3162,6 +4195,40 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("GAG")
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
                 .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.FIREWORK_MIKU_PLUSHIE,1)
+                .input('L', Blocks.BLUE_WOOL)
+                .input('G', Blocks.YELLOW_WOOL)
+                .input('A', Items.FIREWORK_ROCKET)
+                .input('M', ModBlocks.MIKU_PLUSHIE)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LAL")
+                .pattern("FMF")
+                .pattern("GAG")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.MIKU_PLUSHIE,1)
+                .input(ModBlocks.FIREWORK_MIKU_PLUSHIE)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FIREWORK_MIKU_PLUSHIE), FabricRecipeProvider.conditionsFromItem(ModBlocks.FIREWORK_MIKU_PLUSHIE))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "revert_miku_firework"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.CHERRY_MIKU_PLUSHIE,1)
+                .input('L', Blocks.PINK_WOOL)
+                .input('G', Blocks.PINK_WOOL)
+                .input('A', Blocks.PINK_PETALS)
+                .input('M', ModBlocks.MIKU_PLUSHIE)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LAL")
+                .pattern("FMF")
+                .pattern("GAG")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.MIKU_PLUSHIE,1)
+                .input(ModBlocks.CHERRY_MIKU_PLUSHIE)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.CHERRY_MIKU_PLUSHIE), FabricRecipeProvider.conditionsFromItem(ModBlocks.CHERRY_MIKU_PLUSHIE))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "revert_miku_cherry"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.AKITA_NERU_PLUSHIE,2)
                 .input('Y', Blocks.YELLOW_WOOL)
@@ -3198,5 +4265,612 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("LEL")
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
                 .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.LUKA_PLUSHIE,2)
+                .input('L', Blocks.PINK_WOOL)
+                .input('O', Blocks.BLACK_WOOL)
+                .input('C', ItemTags.FISHES)
+                .input('G', ModBlocks.LUKA_PLUSHIE)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LCL")
+                .pattern("FGF")
+                .pattern("OCO")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.MEIKO_PLUSHIE,2)
+                .input('L', Blocks.BROWN_WOOL)
+                .input('O', Blocks.RED_WOOL)
+                .input('C', Items.GLASS_BOTTLE)
+                .input('G', ModBlocks.MEIKO_PLUSHIE)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LCL")
+                .pattern("FGF")
+                .pattern("OCO")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.KAITO_PLUSHIE,2)
+                .input('L', Blocks.BLUE_WOOL)
+                .input('O', Blocks.WHITE_WOOL)
+                .input('C', Blocks.BLUE_ICE)
+                .input('G', ModBlocks.KAITO_PLUSHIE)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LCL")
+                .pattern("FGF")
+                .pattern("OCO")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.LEN_PLUSHIE,2)
+                .input('L', Blocks.YELLOW_WOOL)
+                .input('O', Blocks.GRAY_WOOL)
+                .input('C', ModItems.BANANA)
+                .input('G', ModBlocks.LEN_PLUSHIE)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LCL")
+                .pattern("FGF")
+                .pattern("OCO")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.LEN_FILIPINO_PLUSHIE,1)
+                .input('L', Blocks.RED_WOOL)
+                .input('O', Blocks.WHITE_WOOL)
+                .input('C', ModItems.BANANA)
+                .input('G', ModBlocks.LEN_PLUSHIE)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LCL")
+                .pattern("FGF")
+                .pattern("OCO")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+        
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.LEN_PLUSHIE,1)
+                .input(ModBlocks.LEN_FILIPINO_PLUSHIE)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LEN_FILIPINO_PLUSHIE), FabricRecipeProvider.conditionsFromItem(ModBlocks.LEN_FILIPINO_PLUSHIE))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "revert_len_filipino"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.RIN_PLUSHIE,2)
+                .input('L', Blocks.YELLOW_WOOL)
+                .input('O', Blocks.LIGHT_GRAY_WOOL)
+                .input('C', ModItems.ORANGE)
+                .input('G', ModBlocks.RIN_PLUSHIE)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LCL")
+                .pattern("FGF")
+                .pattern("OCO")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.FAUST_PLUSHIE,1)
+                .input('L', Blocks.LIGHT_GRAY_WOOL)
+                .input('O', Blocks.BLACK_WOOL)
+                .input('C', Blocks.NETHERRACK)
+                .input('G', Items.HEART_OF_THE_SEA)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LCL")
+                .pattern("FGF")
+                .pattern("OCO")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.LOPUNNY_PLUSHIE,1)
+                .input('L', Blocks.BROWN_WOOL)
+                .input('O', Blocks.PINK_WOOL)
+                .input('C', Items.GOLDEN_CARROT)
+                .input('G', Items.HEART_OF_THE_SEA)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LCL")
+                .pattern("FGF")
+                .pattern("OCO")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.OWL_PLUSHIE,1)
+                .input('L', Blocks.BROWN_WOOL)
+                .input('O', Blocks.GREEN_WOOL)
+                .input('C', Blocks.DANDELION)
+                .input('G', Items.HEART_OF_THE_SEA)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LCL")
+                .pattern("FGF")
+                .pattern("OCO")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.FLYNN_PLUSHIE,1)
+                .input('L', Blocks.BLACK_WOOL)
+                .input('O', Blocks.WHITE_WOOL)
+                .input('C', ModBlocks.SHORT_STINGING_NETTLE)
+                .input('G', Items.HEART_OF_THE_SEA)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LCL")
+                .pattern("FGF")
+                .pattern("OCO")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.HEATHCLIFF_PLUSHIE,1)
+                .input('L', Blocks.PURPLE_WOOL)
+                .input('O', Blocks.BLACK_WOOL)
+                .input('C', Items.IRON_INGOT)
+                .input('G', Items.HEART_OF_THE_SEA)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LCL")
+                .pattern("FGF")
+                .pattern("OCO")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModBlocks.PARRA_PLUSHIE,1)
+                .input('L', ItemTags.WOOL)
+                .input('O', ItemTags.WOOL)
+                .input('C', Blocks.BLUE_ORCHID)
+                .input('G', Items.HEART_OF_THE_SEA)
+                .input('F', ModBlocks.FEATHER_BLOCK)
+                .pattern("LCL")
+                .pattern("FGF")
+                .pattern("OCO")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.FEATHER_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.FEATHER_BLOCK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CAMOUFLAGED_FLOWER_POT,1)
+                .input('T', Blocks.FLOWER_POT)
+                .input('S', ItemTags.LEAVES)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.FLOWER_POT), FabricRecipeProvider.conditionsFromItem(Blocks.FLOWER_POT))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "camouflaged_pot_crafting"));
+
+    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TRIPLE_FLOWER_POT,3)
+                .input('T', Blocks.FLOWER_POT)
+                .pattern("T T")
+                .pattern(" T ")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.FLOWER_POT), FabricRecipeProvider.conditionsFromItem(Blocks.FLOWER_POT))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "triple_flower_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_SUNFLOWER_POT,6)
+                .input('T', Blocks.TERRACOTTA)
+                .input('S', ModBlocks.FANCY_SUNFLOWER_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.SUNFLOWER), FabricRecipeProvider.conditionsFromItem(Blocks.SUNFLOWER))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_sunflower_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_FLOWERING_AZALEA_POT,6)
+                .input('T', Blocks.CYAN_TERRACOTTA)
+                .input('S', ModBlocks.FANCY_FLOWERING_AZALEA_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.FLOWERING_AZALEA), FabricRecipeProvider.conditionsFromItem(Blocks.FLOWERING_AZALEA))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_flowering_azalea_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_AZALEA_POT,1)
+                .input('S', ModBlocks.FANCY_FLOWERING_AZALEA_POT)
+                .pattern("S")
+                .pattern("S")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.AZALEA), FabricRecipeProvider.conditionsFromItem(Blocks.AZALEA))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_azalea_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_BLUE_HYACINTH_POT,4)
+                .input('T', Blocks.BARREL)
+                .input('S', ModBlocks.BLUE_HYACINTH)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_HYACINTH), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_HYACINTH))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_blue_hyacinth_pot_crafting"));
+        
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_ROSE_BUSH_POT,6)
+                .input('T', ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY)
+                .input('S', ModBlocks.FANCY_ROSE_BUSH_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.ROSE_BUSH), FabricRecipeProvider.conditionsFromItem(Blocks.ROSE_BUSH))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_rose_bush_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_PURPLE_CROWN_VIOLA_TRICOLOR_POT,6)
+                .input('T', ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY)
+                .input('S', ModBlocks.FANCY_PURPLE_CROWN_VIOLA_TRICOLOR_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.PURPLE_CROWN_VIOLA_TRICOLOR), FabricRecipeProvider.conditionsFromItem(ModBlocks.PURPLE_CROWN_VIOLA_TRICOLOR))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_purple_crown_viola_tricolor_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_POPPY_POT,6)
+                .input('T', Blocks.GRAY_TERRACOTTA)
+                .input('S', ModBlocks.FANCY_POPPY_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.POPPY), FabricRecipeProvider.conditionsFromItem(Blocks.POPPY))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_poppy_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_LAVENDER_BALL_POT,6)
+                .input('T', Blocks.TERRACOTTA)
+                .input('S', ModBlocks.FANCY_LAVENDER_BALL_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LAVENDER_BALL), FabricRecipeProvider.conditionsFromItem(ModBlocks.LAVENDER_BALL))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_lavender_ball_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_RED_MUSHROOM_POT,4)
+                .input('T', Blocks.RED_MUSHROOM_BLOCK)
+                .input('S', Blocks.RED_MUSHROOM)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.RED_MUSHROOM), FabricRecipeProvider.conditionsFromItem(Blocks.RED_MUSHROOM))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_red_mushroom_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_ORANGE_TULIP_POT,6)
+                .input('T', Blocks.LIGHT_GRAY_TERRACOTTA)
+                .input('S', ModBlocks.FANCY_ORANGE_TULIP_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.ORANGE_TULIP), FabricRecipeProvider.conditionsFromItem(Blocks.ORANGE_TULIP))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_orange_tulip_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_INDIGO_HYACINTH_POT,2)
+                .input('T', Blocks.CAULDRON)
+                .input('S', ModBlocks.INDIGO_HYACINTH)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.INDIGO_HYACINTH), FabricRecipeProvider.conditionsFromItem(ModBlocks.INDIGO_HYACINTH))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_indigo_hyacinth_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_DOG_ROSE_BUSH_POT,6)
+                .input('T', ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY)
+                .input('S', ModBlocks.FANCY_DOG_ROSE_BUSH_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.DOG_ROSE_BUSH), FabricRecipeProvider.conditionsFromItem(ModBlocks.DOG_ROSE_BUSH))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_dog_rose_bush_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_DEAD_BUSH_POT,6)
+                .input('T', Blocks.STONE)
+                .input('S', Blocks.DEAD_BUSH)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.DEAD_BUSH), FabricRecipeProvider.conditionsFromItem(Blocks.DEAD_BUSH))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_dead_bush_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_ALLIUM_POT,6)
+                .input('T', ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY)
+                .input('S', Blocks.ALLIUM)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.ALLIUM), FabricRecipeProvider.conditionsFromItem(Blocks.ALLIUM))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_allium_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_DARK_WILD_GRASS_POT,4)
+                .input('T', ItemTags.PLANKS)
+                .input('S', ModBlocks.DARK_WILD_GRASS)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.DARK_WILD_GRASS), FabricRecipeProvider.conditionsFromItem(ModBlocks.DARK_WILD_GRASS))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_dark_wild_grass_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_WHITE_HYACINTH_POT,1)
+                .input('T', Blocks.PUMPKIN)
+                .input('S', ModBlocks.WHITE_HYACINTH)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.WHITE_HYACINTH), FabricRecipeProvider.conditionsFromItem(ModBlocks.WHITE_HYACINTH))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_white_hyacinth_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_PINK_TULIP_POT,6)
+                .input('T', Blocks.PINK_TERRACOTTA)
+                .input('S', ModBlocks.FANCY_PINK_TULIP_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.PINK_TULIP), FabricRecipeProvider.conditionsFromItem(Blocks.PINK_TULIP))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_pink_tulip_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_SILVER_VASE_POT,6)
+                .input('T', ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY)
+                .input('S', ModBlocks.FANCY_SILVER_VASE_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.SILVER_VASE), FabricRecipeProvider.conditionsFromItem(ModBlocks.SILVER_VASE))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_silver_vase_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_BLANKET_FLOWER_POT,6)
+                .input('T', ModBlocks.HARDENED_KAOLINITE_CLAY)
+                .input('S', ModBlocks.FANCY_BLANKET_FLOWER_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLANKET_FLOWER), FabricRecipeProvider.conditionsFromItem(ModBlocks.BLANKET_FLOWER))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_blanket_flower_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_SKY_BLUE_WALL_IRIS_POT,6)
+                .input('T', Blocks.CYAN_TERRACOTTA)
+                .input('S', ModBlocks.FANCY_SKY_BLUE_WALL_IRIS_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.SKY_BLUE_WALL_IRIS), FabricRecipeProvider.conditionsFromItem(ModBlocks.SKY_BLUE_WALL_IRIS))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_sky_blue_wall_iris_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_RED_TULIP_POT,6)
+                .input('T', Blocks.ORANGE_GLAZED_TERRACOTTA)
+                .input('S', ModBlocks.FANCY_RED_TULIP_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.RED_TULIP), FabricRecipeProvider.conditionsFromItem(Blocks.RED_TULIP))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_red_tulip_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_BOXWOOD_POT,6)
+                .input('T', ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY)
+                .input('S', ModBlocks.FANCY_BOXWOOD_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BOXWOOD), FabricRecipeProvider.conditionsFromItem(ModBlocks.BOXWOOD))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_bowxood_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_RED_BLANKET_FLOWER_POT,6)
+                .input('T', Blocks.GREEN_TERRACOTTA)
+                .input('S', ModBlocks.FANCY_RED_BLANKET_FLOWER_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.RED_BLANKET_FLOWER), FabricRecipeProvider.conditionsFromItem(ModBlocks.RED_BLANKET_FLOWER))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_red_blanket_flower_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_JAPANESE_QUINCE_POT,6)
+                .input('T', ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY)
+                .input('S', ModBlocks.FANCY_JAPANESE_QUINCE_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.JAPANESE_QUINCE), FabricRecipeProvider.conditionsFromItem(ModBlocks.JAPANESE_QUINCE))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_japanese_quince_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_CORNFLOWER_POT,6)
+                .input('T', Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA)
+                .input('S', ModBlocks.FANCY_CORNFLOWER_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.CORNFLOWER), FabricRecipeProvider.conditionsFromItem(Blocks.CORNFLOWER))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_cornflower_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_EUPHORBIA_X_MARTINI_POT,6)
+                .input('T', ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY)
+                .input('S', ModBlocks.FANCY_EUPHORBIA_X_MARTINI_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.EUPHORBIA_X_MARTINI), FabricRecipeProvider.conditionsFromItem(ModBlocks.EUPHORBIA_X_MARTINI))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_euphorbia_x_martini_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_WILD_COSMOS_AND_BACHELOR_BUTTONS_POT,6)
+                .input('T', ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY)
+                .input('S', ModBlocks.FANCY_WILD_COSMOS_AND_BACHELOR_BUTTONS_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.EUPHORBIA_X_MARTINI), FabricRecipeProvider.conditionsFromItem(ModBlocks.EUPHORBIA_X_MARTINI))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_wild_cosmos_and_bachelor_buttons_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_LILY_OF_THE_VALLEY_POT,6)
+                .input('T', ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY)
+                .input('S', ModBlocks.FANCY_LILY_OF_THE_VALLEY_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.LILY_OF_THE_VALLEY), FabricRecipeProvider.conditionsFromItem(Blocks.LILY_OF_THE_VALLEY))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_liy_of_the_valley_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_YELLOW_VIOLA_TRICOLOR_POT,6)
+                .input('T', Blocks.TERRACOTTA)
+                .input('S', ModBlocks.FANCY_YELLOW_VIOLA_TRICOLOR_POT)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.YELLOW_VIOLA_TRICOLOR), FabricRecipeProvider.conditionsFromItem(ModBlocks.YELLOW_VIOLA_TRICOLOR))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_yellow_viola_tricolor_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_WITHER_ROSE_POT,16)
+                .input('T', Blocks.DEEPSLATE)
+                .input('S', Blocks.WITHER_ROSE)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.WITHER_ROSE), FabricRecipeProvider.conditionsFromItem(Blocks.WITHER_ROSE))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_wither_rose_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FANCY_WITHER_ROSE_POT,6)
+                .input('T', Blocks.PINK_STAINED_GLASS)
+                .input('S', ModBlocks.LIGHT_PINK_VIOLA_TRICOLOR)
+                .pattern("S")
+                .pattern("T")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.LIGHT_PINK_VIOLA_TRICOLOR), FabricRecipeProvider.conditionsFromItem(ModBlocks.LIGHT_PINK_VIOLA_TRICOLOR))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "fancy_light_pink_viola_tricolor_pot_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BOTANY_TABLE,1)
+                .input('T', Blocks.SPRUCE_PLANKS)
+                .input('S', ItemTags.SMALL_FLOWERS)
+                .pattern("SS")
+                .pattern("TT")
+                .pattern("TT")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.SPRUCE_PLANKS), FabricRecipeProvider.conditionsFromItem(Blocks.SPRUCE_PLANKS))
+                .offerTo(exporter, Identifier.of(AntisolarBlocks.MOD_ID, "botany_table_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_WHITE_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.WHITE_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_LIGHT_GRAY_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.LIGHT_GRAY_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_GRAY_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.GRAY_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_BLACK_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.BLACK_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_PINK_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.PINK_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.PINK_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_MAGENTA_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.MAGENTA_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_PURPLE_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.PURPLE_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_BLUE_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.BLUE_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_LIGHT_BLUE_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.LIGHT_BLUE_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_CYAN_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.CYAN_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_GREEN_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.GREEN_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_LIME_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.LIME_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.LIME_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_YELLOW_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.YELLOW_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_ORANGE_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.ORANGE_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_RED_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.RED_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.RED_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.RED_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_BROWN_HARDENED_KAOLINITE_CLAY_POT,1)
+                .input('O', ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY), FabricRecipeProvider
+                        .conditionsFromItem(ModBlocks.BROWN_HARDENED_KAOLINITE_CLAY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_TERRACOTTA_POT,1)
+                .input('O', Blocks.TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_WHITE_TERRACOTTA_POT,1)
+                .input('O', Blocks.WHITE_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.WHITE_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.WHITE_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_LIGHT_GRAY_TERRACOTTA_POT,1)
+                .input('O', Blocks.LIGHT_GRAY_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.LIGHT_GRAY_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.LIGHT_GRAY_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_GRAY_TERRACOTTA_POT,1)
+                .input('O', Blocks.GRAY_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.GRAY_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.GRAY_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_BLACK_TERRACOTTA_POT,1)
+                .input('O', Blocks.BLACK_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.BLACK_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.BLACK_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_PINK_TERRACOTTA_POT,1)
+                .input('O', Blocks.PINK_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.PINK_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.PINK_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_MAGENTA_TERRACOTTA_POT,1)
+                .input('O', Blocks.MAGENTA_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.MAGENTA_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.MAGENTA_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_PURPLE_TERRACOTTA_POT,1)
+                .input('O', Blocks.PURPLE_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.PURPLE_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.PURPLE_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_BLUE_TERRACOTTA_POT,1)
+                .input('O', Blocks.BLUE_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.BLUE_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.BLUE_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_LIGHT_BLUE_TERRACOTTA_POT,1)
+                .input('O', Blocks.LIGHT_BLUE_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.LIGHT_BLUE_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.LIGHT_BLUE_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_CYAN_TERRACOTTA_POT,1)
+                .input('O', Blocks.CYAN_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.CYAN_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.CYAN_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_GREEN_TERRACOTTA_POT,1)
+                .input('O', Blocks.GREEN_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.GREEN_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.GREEN_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_LIME_TERRACOTTA_POT,1)
+                .input('O', Blocks.LIME_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.LIME_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.LIME_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_YELLOW_TERRACOTTA_POT,1)
+                .input('O', Blocks.YELLOW_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.YELLOW_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.YELLOW_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_ORANGE_TERRACOTTA_POT,1)
+                .input('O', Blocks.ORANGE_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.ORANGE_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.ORANGE_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_RED_TERRACOTTA_POT,1)
+                .input('O', Blocks.RED_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.RED_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.RED_TERRACOTTA))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_BROWN_TERRACOTTA_POT,1)
+                .input('O', Blocks.BROWN_TERRACOTTA).pattern("O O").pattern(" O ").criterion(FabricRecipeProvider
+                        .hasItem(Blocks.BROWN_TERRACOTTA), FabricRecipeProvider
+                        .conditionsFromItem(Blocks.BROWN_TERRACOTTA))
+                .offerTo(exporter);
+        
+        
+        
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.RADISH_TOAST, 2)
+                .input('T', Items.BREAD)
+                .input('R', ModItems.RED_RADISH)
+                .input('B', ModItems.BLACK_RADISH)
+                .input('W', ModItems.WHITE_RADISH)
+                .pattern("RBW")
+                .pattern(" T ")
+                .criterion(FabricRecipeProvider.hasItem(ModItems.MIXED_RADISH_SEEDS), FabricRecipeProvider.conditionsFromItem(ModItems.MIXED_RADISH_SEEDS))
+                .offerTo(exporter);
+
+
+
     }
 }
