@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 public class PotteryKilnCategory implements DisplayCategory<BasicDisplay> {
     private static final Identifier TEXTURE =
             Identifier.of(AntisolarBlocks.MOD_ID,
-                    "textures/gui/container/kiln.png");
+                    "textures/gui/container/pottery_kiln.png");
 
     public static final CategoryIdentifier<PotteryKilnDisplay> POTTERY_KILN =
             CategoryIdentifier.of(AntisolarBlocks.MOD_ID, "pottery_kiln");

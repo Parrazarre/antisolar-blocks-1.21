@@ -1,0 +1,23 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made by Parrazarre",
+	"textures": {
+		"particle": "antisolarblocks:block/boxwood",
+		"wall": "antisolarblocks:block/boxwood"
+	},
+	"elements": [
+		{
+			"name": "Center post",
+			"from": [1, 0, 1],
+			"to": [15, 16, 15],
+			"faces": {
+				"north": {"uv": [1, 0, 15, 16], "texture": "#wall"},
+				"east": {"uv": [1, 0, 15, 16], "texture": "#wall"},
+				"south": {"uv": [1, 0, 15, 16], "texture": "#wall"},
+				"west": {"uv": [1, 0, 15, 16], "texture": "#wall"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#wall", "cullface": "up"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#wall", "cullface": "down"}
+			}
+		}
+	]
+}
