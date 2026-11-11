@@ -1,7 +1,7 @@
 {
 	"parent": "minecraft:block/cube_column_horizontal",
 	"textures": {
-		"end": "antisolarblocks:block/ornate_picture_window",
+		"end": "antisolarblocks:block/simple_picture_window",
 		"side": "antisolarblocks:block/large_picture_window_top"
 	}
 }

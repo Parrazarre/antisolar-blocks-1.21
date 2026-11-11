@@ -224,6 +224,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerBarkBlockRecipe(exporter, ModBlocks.ORANGE_WOOD, ModBlocks.ORANGE_LOG);
         offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_ORANGE_WOOD, ModBlocks.STRIPPED_ORANGE_LOG);
+        offerBarkBlockRecipe(exporter, ModBlocks.LICHENOUS_ORANGE_WOOD, ModBlocks.LICHENOUS_ORANGE_LOG);
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_SLAB, ModBlocks.ORANGE_PLANKS);
         offerPlanksRecipe(exporter, ModBlocks.ORANGE_PLANKS, ModItemTagProvider.ModTags.Items.ORANGE_LOGS, 4);
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ORANGE_STAIRS, 4)
@@ -2426,10 +2427,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ORNATE_PICTURE_WINDOW,8)
                 .input('G',Blocks.GLASS)
                 .input('I',Items.IRON_NUGGET)
+                .pattern("GIG")
+                .pattern("IGI")
+                .pattern("GIG")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORNATE_PICTURE_WINDOW), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORNATE_PICTURE_WINDOW))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SIMPLE_PICTURE_WINDOW,8)
+                .input('G',Blocks.GLASS)
+                .input('I',Items.IRON_NUGGET)
                 .pattern("GGG")
                 .pattern("GIG")
                 .pattern("GGG")
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORNATE_PICTURE_WINDOW), FabricRecipeProvider.conditionsFromItem(ModBlocks.ORNATE_PICTURE_WINDOW))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.SIMPLE_PICTURE_WINDOW), FabricRecipeProvider.conditionsFromItem(ModBlocks.SIMPLE_PICTURE_WINDOW))
                 .offerTo(exporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LARGE_PICTURE_WINDOW_MIDDLE,7)
                 .input('G',Blocks.GLASS)

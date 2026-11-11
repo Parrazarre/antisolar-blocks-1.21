@@ -46,7 +46,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.STRIPPED_MUSA_LOG.asItem())
                 .add(ModBlocks.STRIPPED_MUSA_WOOD.asItem())
                 .add(ModBlocks.ORANGE_LOG.asItem())
+                .add(ModBlocks.LICHENOUS_ORANGE_LOG.asItem())
                 .add(ModBlocks.ORANGE_WOOD.asItem())
+                .add(ModBlocks.LICHENOUS_ORANGE_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_ORANGE_LOG.asItem())
                 .add(ModBlocks.STRIPPED_ORANGE_WOOD.asItem())
                 .add(ModBlocks.ROWAN_LOG.asItem())
@@ -289,7 +291,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ModTags.Items.ORANGE_LOGS)
                 .add(ModBlocks.ORANGE_LOG.asItem())
+                .add(ModBlocks.LICHENOUS_ORANGE_LOG.asItem())
                 .add(ModBlocks.ORANGE_WOOD.asItem())
+                .add(ModBlocks.LICHENOUS_ORANGE_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_ORANGE_LOG.asItem())
                 .add(ModBlocks.STRIPPED_ORANGE_WOOD.asItem());
 

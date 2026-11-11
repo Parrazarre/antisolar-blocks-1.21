@@ -366,7 +366,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MUSA_FENCING);
 
                         entries.add(ModBlocks.ORANGE_LOG);
+                        entries.add(ModBlocks.LICHENOUS_ORANGE_LOG);
                         entries.add(ModBlocks.ORANGE_WOOD);
+                        entries.add(ModBlocks.LICHENOUS_ORANGE_WOOD);
                         entries.add(ModBlocks.STRIPPED_ORANGE_LOG);
                         entries.add(ModBlocks.STRIPPED_ORANGE_WOOD);
                         entries.add(ModBlocks.ORANGE_PLANKS);
@@ -516,6 +518,7 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.WROUGHT_IRON_FENCE);
 
+                        entries.add(ModBlocks.SIMPLE_PICTURE_WINDOW);
                         entries.add(ModBlocks.ORNATE_PICTURE_WINDOW);
                         entries.add(ModBlocks.LARGE_PICTURE_WINDOW_BOTTOM);
                         entries.add(ModBlocks.LARGE_PICTURE_WINDOW_MIDDLE);

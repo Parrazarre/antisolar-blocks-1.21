@@ -763,6 +763,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ModBlocks.ORANGE_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.ORANGE_TRAPDOOR);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.ORANGE_SAPLING, ModBlocks.POTTED_ORANGE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerLog(ModBlocks.ORANGE_LOG)
+                .log(ModBlocks.ORANGE_LOG)
+                .wood(ModBlocks.ORANGE_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_ORANGE_LOG)
                 .log(ModBlocks.STRIPPED_ORANGE_LOG)
                 .wood(ModBlocks.STRIPPED_ORANGE_WOOD);
@@ -822,6 +825,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.JAPANESE_MAPLE_SAPLING, ModBlocks.POTTED_JAPANESE_MAPLE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SIMPLE_PICTURE_WINDOW);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ORNATE_PICTURE_WINDOW);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GLACIAL_TILL);

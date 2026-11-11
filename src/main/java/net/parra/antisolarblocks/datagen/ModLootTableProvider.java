@@ -544,6 +544,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addPottedPlantDrops(ModBlocks.POTTED_WHITE_PINE_SAPLING);
         addCamouflagedPottedPlantDrops(ModBlocks.CAMOUFLAGED_POTTED_WHITE_PINE_SAPLING);
 
+        addDropWithSilkTouch(ModBlocks.SIMPLE_PICTURE_WINDOW);
         addDropWithSilkTouch(ModBlocks.ORNATE_PICTURE_WINDOW);
         addDropWithSilkTouch(ModBlocks.LARGE_PICTURE_WINDOW_BOTTOM);
         addDropWithSilkTouch(ModBlocks.LARGE_PICTURE_WINDOW_MIDDLE);
@@ -675,7 +676,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addPottedPlantDrops(ModBlocks.POTTED_MUSA_SAPLING);
 
         addDrop(ModBlocks.ORANGE_LOG);
+        addDrop(ModBlocks.LICHENOUS_ORANGE_LOG);
         addDrop(ModBlocks.ORANGE_WOOD);
+        addDrop(ModBlocks.LICHENOUS_ORANGE_WOOD);
         addDrop(ModBlocks.STRIPPED_ORANGE_LOG);
         addDrop(ModBlocks.STRIPPED_ORANGE_WOOD);
         addDrop(ModBlocks.ORANGE_PLANKS);

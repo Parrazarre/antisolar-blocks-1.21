@@ -105,7 +105,10 @@ public class ModConfiguredFeatures {
 
 
         register(context, ORANGE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                        BlockStateProvider.of(ModBlocks.ORANGE_LOG),
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder()
+                                .add(ModBlocks.ORANGE_LOG.getDefaultState(), 3)
+                                .add(ModBlocks.LICHENOUS_ORANGE_LOG.getDefaultState(), 1)
+                                .build()),
                         new ForkingTrunkPlacer(5, 3, 3),
                         new WeightedBlockStateProvider(DataPool.<BlockState>builder()
                                 .add(ModBlocks.ORANGE_LEAVES.getDefaultState(), 4)

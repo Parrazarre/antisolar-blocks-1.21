@@ -112,6 +112,8 @@ public class AntisolarBlocks implements ModInitializer {
 		StrippableBlockRegistry.register(ModBlocks.MUSA_LOG, ModBlocks.STRIPPED_MUSA_LOG);
 		StrippableBlockRegistry.register(ModBlocks.MUSA_WOOD, ModBlocks.STRIPPED_MUSA_WOOD);
 
+		StrippableBlockRegistry.register(ModBlocks.LICHENOUS_ORANGE_LOG, ModBlocks.ORANGE_LOG);
+		StrippableBlockRegistry.register(ModBlocks.LICHENOUS_ORANGE_WOOD, ModBlocks.ORANGE_WOOD);
 		StrippableBlockRegistry.register(ModBlocks.ORANGE_LOG, ModBlocks.STRIPPED_ORANGE_LOG);
 		StrippableBlockRegistry.register(ModBlocks.ORANGE_WOOD, ModBlocks.STRIPPED_ORANGE_WOOD);
 
@@ -204,7 +206,9 @@ public class AntisolarBlocks implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MUSA_LEAVES, 30, 60);
 
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ORANGE_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.LICHENOUS_ORANGE_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ORANGE_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.LICHENOUS_ORANGE_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_ORANGE_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_ORANGE_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ORANGE_PLANKS, 5, 20);

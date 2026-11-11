@@ -4623,6 +4623,19 @@ public class ModBlocks {
                             .blockVision(Blocks::never)
             )
     );
+    public static final Block SIMPLE_PICTURE_WINDOW = registerBlock("simple_picture_window",
+            new PictureWindowBlock(
+                    AbstractBlock.Settings.create()
+                            .instrument(NoteBlockInstrument.HAT)
+                            .strength(0.3F)
+                            .sounds(BlockSoundGroup.GLASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::never)
+                            .solidBlock(Blocks::never)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+            )
+    );
     public static final Block LARGE_PICTURE_WINDOW_BOTTOM = registerBlock("large_picture_window_bottom",
             new PictureWindowBlock(
                     AbstractBlock.Settings.create()
@@ -5606,7 +5619,27 @@ public class ModBlocks {
                             .burnable()
             )
     );
+    public static final Block LICHENOUS_ORANGE_LOG = registerBlock("lichenous_orange_log",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(state -> state.get(PillarBlock.AXIS) == Direction.Axis.Y ? MapColor.PALE_YELLOW : MapColor.GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
     public static final Block ORANGE_WOOD = registerBlock("orange_wood",
+            new PillarBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.GRAY)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+            )
+    );
+    public static final Block LICHENOUS_ORANGE_WOOD = registerBlock("lichenous_orange_wood",
             new PillarBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.GRAY)
